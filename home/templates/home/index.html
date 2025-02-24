@@ -2,15 +2,65 @@
 {% load static %}
 
 {% block extra_title %}- Home{% endblock %}
-
-{% block content %}
-<div class="container h-100">
-  <div class="row -h-100 align-items-center">
-    <div class="col-12">
-      <h1 class="text-center"></h1>
+{% block page_header %}
+  <div class="header-container container">
+    <div class="row">
+      <div class="col"></div>
     </div>
   </div>
-</div>
+{% endblock %}
+
+{% block content %}
+  <div class="container h-100">
+    <div class="row -h-100 align-items-center">
+      <div class="row h-100">
+        <div class="col-8 my-auto">
+          <h1 class="text-center display-5">Get your latest read</h1>
+        </div>
+        <div class="my-5">
+          <h4>
+            <a href="" class="btn btn-primary rounded-5 text-uppercase py-3">Shop now</a>
+          </h4>
+        </div>
+      </div>
+      <div class="col-12">
+        <h1 class="text-center">Bestsellers</h1>
+        <div>
+          <div class="row">
+            <div class="col-12 col-md-4 col-lg-3">
+              <div class="card">
+                <img src="{% static 'images/book1.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Book 1</h5>
+                  <a href="#" class="btn btn-primary">Buy</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="{% static 'images/book2.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Book 2</h5>
+                  <a href="#" class="btn btn-primary">Buy</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="{% static 'images/book3.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Book 3</h5>
+                  <a href="#" class="btn btn-primary">Buy</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="{% static 'images/book4.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Book 4</h5>
+                  <a href="#" class="btn btn-primary">Buy</a>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <!--
 <div class="col-lg-6">
