@@ -35,6 +35,11 @@ a {
     border-color: #0b254b;
 }
 
+.btn-navy {
+    background-color: #0b254b;
+    color: #faf2f2;
+}
+
 .search-bar {
     width: 100%;
     padding: 10px;
