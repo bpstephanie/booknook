@@ -3,8 +3,19 @@ html {
 }
 
 body {
-    height: calc(100vh - 164px);
+    padding-top: 224px;
     font-family: 'Roboto', sans-serif;
+    background: url('/media/hero-image.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
 }
 
 a {
@@ -52,6 +63,17 @@ a {
 
 .icon-list li {
     padding: 0 5% 0 5%;
+}
+
+.overlay {
+    background-color: #faf2f2;
+    opacity: 0.8;
+    border-radius: 5px;
+
+}
+
+.card {
+    width: 200px;
 }
 
 /* ---------------------------------------- Media Queries */
