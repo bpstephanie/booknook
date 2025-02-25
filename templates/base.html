@@ -61,55 +61,93 @@
               <i class="fa-solid fa-bars"></i>
             </button>
           </div>
-          <div class="col-12 col-sm-12 col-md-4 order-3 order-md-2 text-center">
-            <div class="d-flex justify-content-center">
-              <div class="row search-bar p-2">
-                <div class="col-11 mx-auto">
-                  <p>SEARCH BAR</p>
-                </div>
-                <div class="col-1">
-                  <button class="border-0 bg-transparent" aria-label="Search button">
-                    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+          <div class="col-12 col-md-4 order-3 order-md-2 text-center">
+            <form method="GET" action="">
+              <div class="input-group w-100">
+                <input class="form-control border-navy rounded-0" type="search" placeholder="Search" aria-label="Search the products in the store" name="q">
+                <div class="input-group-append">
+                  <button class="form-control btn btn-navy border-navy rounded-0" type="submit">
+                    <span class="icon">
+                      <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                    </span>
                   </button>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
           <div class="col-6 col-sm-8 col-md-4 order-2 order-md-3 d-flex gap-5 align-items-center justify-content-center justify-content-sm-end">
             <ul class="d-flex justify-content-end list-unstyled m-0 icon-list">
-              <li class="text-center">
-                <a href="">
-                  <i class="fa-solid fa-user fa-lg" aria-label="My account"></i>
+              <li class="list-inline-item dropdown">
+                <a class="text-navy nav-link" href="" id="account-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <div class="text-center">
+                    <div>
+                      <i class="fa-solid fa-user fa-lg" aria-label="My account"></i>
+                    </div>
+                  </div>
+                </a>
+                <div class="dropdown-menu border-navy" aria-labelledby="account-options">
+                  {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                      <a class="dropdown-item" href="">Product Management</a>
+                    {% endif %}
+                    <a class="dropdown-item" href="">My Profile</a>
+                    <a class="dropdown-item" href="">My Events</a>
+                    <a class="dropdown-item" href="">Forum</a>
+                    <a class="dropdown-item" href="">Logout</a>
+                  {% else %}
+                    <a class="dropdown-item" href="">Login</a>
+                    <a class="dropdown-item" href="">Register</a>
+                  {% endif %}
+                </div>
+              </li>
+              <li class="list-inline-item">
+                <a class="text-navy nav-link" href="">
+                  <div class="text-center">
+                    <div>
+                      <i class="fa-solid fa-heart fa-lg" aria-label="Wishlist"></i>
+                    </div>
+                  </div>
                 </a>
               </li>
-              <li class="text-center">
-                <a href="">
-                  <i class="fa-solid fa-heart fa-lg" aria-label="Wishlist"></i>
+              <li class="list-inline-item">
+                <a class="text-navy nav-link" href="">
+                  <div class="text-center">
+                    <div>
+                      <i class="fa-solid fa-shopping-cart fa-lg" aria-label="Shopping cart"></i>
+                    </div>
+                    <p class="my-0">
+                      {% if grand_total %}
+                        £{{ grand_total }}
+                      {% else %}
+                        £0.00
+                      {% endif %}
+                    </p>
+                  </div>
                 </a>
-              </li>
-              <li class="text-center">
-                <a href="">
-                  <i class="fa-solid fa-shopping-cart fa-lg" aria-label="Shopping bart"></i>
-                </a>
-              </li>
+              </li> 
             </ul>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-12 align-items-center px-3">
-            <ul class="navbar-nav list-unstyled d-flex flex-row gap-3 lg-gap-5 justify-content-center flex-wrap align-items-center mb-0 text-uppercase text-dark">
-              <li class="nav-item">
+            <ul class="d-flex list-unstyled m-0 icon-list justify-content-center text-uppercase text-navy">
+              <li class="list-inline-item">
                 <a class="nav-link" href="">Home</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle pe-3" role="button" id="pages" data-bs-toggle="dropdown" aria-expanded="false" href="">Pages</a>
-                <ul class="dropdown-menu border-0 p-3 rounded-shadow" aria-labelledby="pages">
-                  <li><a class="dropdown-item" href="">Bestsellers</a></li>
-                  <li><a class="dropdown-item" href="">Books</a></li>
-                  <li><a class="dropdown-item" href="">Accessories</a></li>
-                  <li><a class="dropdown-item" href="">Contact Us</a></li>
-                  <li><a class="dropdown-item" href="">Community</a></li>
-                </ul>
+              <li class="list-inline-item dropdown">
+                <a class="text-navy nav-link" href="" id="pages-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <div class="text-center">
+                    <div><p>Pages</p>
+                    </div>
+                  </div>
+                </a>
+                <div class="dropdown-menu border-navy" aria-labelledby="pages-options">
+                  <a class="dropdown-item" href="">Bestsellers</a>
+                  <a class="dropdown-item" href="">Books</a>
+                  <a class="dropdown-item" href="">Accessories</a>
+                  <a class="dropdown-item" href="">Contact Us</a>
+                  <a class="dropdown-item" href="">Community</a>
+                </div>
               </li>
             </ul>
           </div>
