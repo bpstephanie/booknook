@@ -51,6 +51,11 @@ a {
     color: #faf2f2;
 }
 
+.ns-button {
+    background-color: #faf2f2;
+    border: none;
+}
+
 .search-bar {
     width: 100%;
     padding: 10px;
@@ -59,6 +64,29 @@ a {
     background-color: #faf2f2;
     margin: 0 auto;
     box-sizing: border-box;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+    margin-left: 0;
+    border-radius: 0.25rem;
+}
+
+.dropdown-submenu:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item.dropdown-toggle:after {
+    content: "f0da";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    float: right;
 }
 
 .icon-list li {
