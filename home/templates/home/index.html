@@ -1,84 +1,79 @@
 {% extends "base.html" %}
-{% load static %}
-
-{% block extra_title %}- Home{% endblock %}
-{% block page_header %}
-  <div class="header-container container">
-    <div class="row">
-      <div class="col"></div>
-    </div>
-  </div>
+{% load static %} 
+{% block extra_title %}- Home
 {% endblock %}
-
-{% block content %}
-  <div class="container h-100">
-    <div class="row -h-100 align-items-center">
-      <div class="row h-100">
-        <div class="col-8 my-auto">
-          <h1 class="text-center display-5">Get your latest read</h1>
-        </div>
-        <div class="my-5">
-          <h4>
-            <a href="" class="btn btn-navy rounded-5 text-uppercase py-3">Shop now</a>
-          </h4>
-        </div>
+{% block page_header %}
+<div class="header-container container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %} {% block content %}
+<div class="container h-100">
+  <div class="row h-100 align-items-center">
+    <div class="row h-100 overlay">
+      <div class="col-8 my-auto">
+        <h1 class="text-center display-5">Get your latest read</h1>
       </div>
-      <div class="col-12">
-        <h1 class="text-center">Bestsellers</h1>
-        <div>
-          <div class="row">
-            <div class="col-12 col-md-4 col-lg-3">
-              <div class="card">
-                <img src="{% static 'images/book1.jpg' %}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Book 1</h5>
-                  <a href="#" class="btn btn-navy">Buy</a>
-                </div>
-              </div>
-              <div class="card">
-                <img src="{% static 'images/book2.jpg' %}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Book 2</h5>
-                  <a href="#" class="btn btn-navy">Buy</a>
-                </div>
-              </div>
-              <div class="card">
-                <img src="{% static 'images/book3.jpg' %}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Book 3</h5>
-                  <a href="#" class="btn btn-navy">Buy</a>
-                </div>
-              </div>
-              <div class="card">
-                <img src="{% static 'images/book4.jpg' %}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Book 4</h5>
-                  <a href="#" class="btn btn-navy">Buy</a>
-                </div>
+      <div class="my-5">
+        <h4>
+          <a href="" class="btn btn-navy rounded-5 text-uppercase py-3">Shop now</a>
+        </h4>
+      </div>
+    </div>
+    <div class="col-12">
+      <h1 class="text-center">Bestsellers</h1>
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex flex-wrap justify-content-center">
+            <div class="card m-2">
+              <img
+                src="{{ '/media/atlwcs.webp' }}"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">All The Light We Cannot See</h5>
+                <a href="#" class="btn btn-navy">Buy</a>
               </div>
             </div>
+            <div class="card m-2">
+              <img
+                src="{{ '/media/acomaf.webp' }}"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">A Court of Mist and Fury</h5>
+                <a href="#" class="btn btn-navy">Buy</a>
+              </div>
+            </div>
+            <div class="card m-2">
+              <img
+                src="{{ '/media/eoicf.webp'}}"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Eleanor Oliphant Is Completely Fine</h5>
+                <a href="#" class="btn btn-navy">Buy</a>
+              </div>
+            </div>
+            <div class="card m-2">
+              <img
+                src="{{ '/media/rpo.webp'}}"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Ready Player One</h5>
+                <a href="#" class="btn btn-navy">Buy</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
-<!--
-<div class="col-lg-6">
-          <ul class="navbar-nav list-unstyled d-flex flex-row gap-3 lg-gap-5 justify-content-center flex-wrap align-items-center mb-0 text-uppercase text-dark">
-            <li class="nav-item">
-              <a class="nav-link" href="">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle pe-3" role="button" id="pages" data-bs-toggle="dropdown" aria-expanded="false" href="">Pages</a>
-              <ul class="dropdown-menu border-0 p-3 rounded-shadow" aria-labelledby="pages">
-                <li><a class="dropdown-item" href="">Bestsellers</a></li>
-                <li><a class="dropdown-item" href="">Books</a></li>
-                <li><a class="dropdown-item" href="">Accessories</a></li>
-                <li><a class="dropdown-item" href="">Contact Us</a></li>
-                <li><a class="dropdown-item" href="">Community</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
--->
+</div>
 {% endblock %}
