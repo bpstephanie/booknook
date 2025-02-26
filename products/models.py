@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes.fields import GenericForeignKey
 from django.utils.text import slugify
+import uuid
 
 
 # Create your models here.
@@ -28,7 +29,11 @@ class Product(models.Model):
     def save(self, *args, **kwargs):
         # Automatically set content_type and object_id
         if not self.slug:
-            self.slug = slugify(self.name)
+            self.slug = original_slug = slugify(self.name)
+        for i in range(1, 1000):
+            if not Product.objects.filter(slug=self.slug).exists():
+                break
+            self.slug = f'{original_slug}-{i}'
         if not self.content_type:
             self.content_type = ContentType.objects.get_for_model(self)
         self.object_id = self.pk
@@ -56,8 +61,7 @@ class Genre(models.Model):
 
 
 class Book(Product):
-    book_id = models.CharField(max_length=100)
-    title = models.CharField(max_length=200)
+    book_id = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     author = models.CharField(max_length=200)
     genre = models.ForeignKey(
         Genre, null=True, blank=True, on_delete=models.SET_NULL
@@ -65,7 +69,7 @@ class Book(Product):
     isbn = models.CharField(max_length=13)
 
     def __str__(self):
-        return self.title
+        return self.name
 
 
 class Category(models.Model):
@@ -79,7 +83,7 @@ class Category(models.Model):
 
 
 class Accessory(Product):
-    accessories_id = models.CharField(max_length=100)
+    accessories_id = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     category = models.ForeignKey(
         Category, null=True, blank=True, on_delete=models.SET_NULL
     )
