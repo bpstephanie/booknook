@@ -73,6 +73,10 @@ class Book(Product):
 
 
 class Category(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Categories'
+
     category_id = models.AutoField(primary_key=True)  # Explicit id field
     name = models.CharField(max_length=100)
     friendly_name = models.CharField(max_length=255, null=True, blank=True)
@@ -83,6 +87,10 @@ class Category(models.Model):
 
 
 class Accessory(Product):
+
+    class Meta:
+        verbose_name_plural = 'Accessories'
+
     accessories_id = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     category = models.ForeignKey(
         Category, null=True, blank=True, on_delete=models.SET_NULL
