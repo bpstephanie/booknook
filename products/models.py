@@ -46,6 +46,9 @@ class Product(models.Model):
 
         super(Product, self).save(*args, **kwargs)
 
+    def is_book(self):
+        return isinstance(self, Book)
+
     def __str__(self):
         return self.friendly_name if self.friendly_name else self.name
 
@@ -69,7 +72,7 @@ class Book(Product):
     isbn = models.CharField(max_length=13)
 
     def __str__(self):
-        return self.name
+        return f"{self.name} by {self.author}"
 
 
 class Category(models.Model):

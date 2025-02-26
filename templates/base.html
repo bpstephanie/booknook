@@ -44,9 +44,11 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-      <div class="row bg-navy text-cream">
-        <div class="col-12 text-center">
-          <p class="m-0">FREE DELIVERY ON ORDERS OVER ${{ free_shipping_threshold }}</p>
+      <div class="banner-container">
+        <div class="banner bg-navy text-cream">
+            <div class="banner-item text-uppercase">50% off on all books!</div>
+            <div class="banner-item text-uppercase">Buy 1 Get 1 Free on accessories!</div>
+            <div class="banner-item">FREE DELIVERY ON ORDERS OVER £{{ free_shipping_threshold }}</div>
         </div>
       </div>
       <div>
@@ -90,10 +92,10 @@
                     <a class="dropdown-item" href="">My Profile</a>
                     <a class="dropdown-item" href="">My Events</a>
                     <a class="dropdown-item" href="">Forum</a>
-                    <a class="dropdown-item" href="">Logout</a>
+                    <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
                   {% else %}
-                    <a class="dropdown-item" href="">Login</a>
-                    <a class="dropdown-item" href="">Register</a>
+                    <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
+                    <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
                   {% endif %}
                 </div>
               </li>
@@ -131,65 +133,41 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             {% include 'includes/pages-nav.html' %}
-        </nav>
-          <!-- <div class="col-lg-12 align-items-center px-3">
-            <ul class="d-flex list-unstyled m-0 icon-list justify-content-center text-uppercase text-navy">
-              <li class="list-inline-item">
-                <a class="nav-link" href="">Home</a>
-              </li>
-              <li class="list-inline-item dropdown">
-                <button class="text-navy nav-link navbar-toggler ns-button" type="button" href="" id="pages-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <div class="text-center">
-                    <div><p>Pages</p>
-                    </div>
-                  </div>
-                </button> 
-                
-              </li>
-            </ul>
-          </div>-->
+          </nav>
         </div>
       </div>
     </header>
-    <div class="banner-container">
-      <div class="banner">
-          <div class="banner-item">50% off on all books!</div>
-          <div class="banner-item">Buy 1 Get 1 Free on accessories!</div>
-      </div>
-  </div>    
-    
-    
-    {% if messages %}
-        <div class="message-container"></div>
-    {% endif %}
+      {% if messages %}
+          <div class="message-container"></div>
+      {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+      {% block page_header %}
+      {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+      {% block content %}
+      {% endblock %}
 
     {% block postloadjs %}
-    <script>
-      $(document).ready(function(){
-        const banner = $('.banner');
-        const bannerItems = document.querySelectorAll('.banner-item');
-        const bannerWidth = bannerItems.length * bannerItems.outerWidth(true);
-  
-        banner.append(bannerItems.clone());
-  
-        function moveBanner() {
-          banner.animate({
-            transform: `translateX(-${bannerWidth}px)`
-          }, 10000, 'linear', function() {
-            banner.css('transform', 'translateX(0)');
-            moveBanner();
-          });
-        }
-  
-        moveBanner(;)
-      });
+      <script>
+        $(document).ready(function(){
+          const banner = $('.banner');
+          const bannerItems = document.querySelectorAll('.banner-item');
+          const bannerWidth = bannerItems.length * bannerItems.outerWidth(true);
+    
+          banner.append(bannerItems.clone());
+    
+          function moveBanner() {
+            banner.animate({
+              transform: `translateX(-${bannerWidth}px)`
+            }, 10000, 'linear', function() {
+              banner.css('transform', 'translateX(0)');
+              moveBanner();
+            });
+          }
+    
+          moveBanner();
+        });
+      </script>
     {% endblock %}
-  </script>
   </body>
 </html>
