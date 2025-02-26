@@ -150,7 +150,13 @@
           </div>-->
         </div>
       </div>
-    </header>    
+    </header>
+    <div class="banner-container">
+      <div class="banner">
+          <div class="banner-item">50% off on all books!</div>
+          <div class="banner-item">Buy 1 Get 1 Free on accessories!</div>
+      </div>
+  </div>    
     
     
     {% if messages %}
@@ -164,8 +170,26 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <script>
+      $(document).ready(function(){
+        const banner = $('.banner');
+        const bannerItems = document.querySelectorAll('.banner-item');
+        const bannerWidth = bannerItems.length * bannerItems.outerWidth(true);
+  
+        banner.append(bannerItems.clone());
+  
+        function moveBanner() {
+          banner.animate({
+            transform: `translateX(-${bannerWidth}px)`
+          }, 10000, 'linear', function() {
+            banner.css('transform', 'translateX(0)');
+            moveBanner();
+          });
+        }
+  
+        moveBanner(;)
+      });
     {% endblock %}
-    
-   
+  </script>
   </body>
 </html>
