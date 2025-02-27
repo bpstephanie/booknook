@@ -61,7 +61,7 @@
             </div>
           </div>
           <div class="col-12 col-md-4 order-3 order-md-2 text-center">
-            <form method="GET" action="">
+            <form method="GET" action="{% url 'products' %}">
               <div class="input-group w-100">
                 <input class="form-control border-navy rounded-0" type="search" placeholder="Search" aria-label="Search the products in the store" name="q">
                 <div class="input-group-append">
@@ -152,7 +152,7 @@
       <script>
         $(document).ready(function(){
           const banner = $('.banner');
-          const bannerItems = document.querySelectorAll('.banner-item');
+          const bannerItems = $('.banner-item');
           const bannerWidth = bannerItems.length * bannerItems.outerWidth(true);
     
           banner.append(bannerItems.clone());
