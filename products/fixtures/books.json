@@ -15,7 +15,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "J.K. Rowling",
       "isbn": "9781419354366",
-      "genre": [1, 3, 2, 4, 5, 6]
+      "genre": 1
     }
   },
   {
@@ -34,7 +34,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "J.K. Rowling",
       "isbn": "9780545582971",
-      "genre": [3, 2, 4, 5, 6]
+      "genre": 1
     }
   },
   {
@@ -53,7 +53,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "J.K. Rowling",
       "isbn": "9780545582889",
-      "genre": [1, 2, 3, 4]
+      "genre": 1
     }
   },
   {
@@ -72,7 +72,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "J.K. Rowling",
       "isbn": "9781526606174",
-      "genre": [1, 2, 3, 4]
+      "genre": 1
     }
   },
   {
@@ -91,7 +91,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "J.K. Rowling",
       "isbn": "9781338299175",
-      "genre": [1, 3, 2, 4]
+      "genre": 1
     }
   },
   {
@@ -110,7 +110,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "J.K. Rowling",
       "isbn": "9780439682589",
-      "genre": [1, 3, 2, 4, 6, 7, 5]
+      "genre": 1
     }
   },
   {
@@ -129,7 +129,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "J.K. Rowling",
       "isbn": "9780545162074",
-      "genre": [1, 2, 3, 4, 5, 8, 6]
+      "genre": 1
     }
   },
   {
@@ -148,7 +148,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Douglas Adams",
       "isbn": "9781529046137",
-      "genre": [9, 2, 10, 1, 11]
+      "genre": 9
     }
   },
   {
@@ -167,7 +167,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Douglas Adams",
       "isbn": "9780517124857",
-      "genre": [9, 2, 10, 1, 8, 11]
+      "genre": 9
     }
   },
   {
@@ -186,7 +186,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Bill Bryson",
       "isbn": "9780767908184",
-      "genre": [12, 13, 14, 10, 15, 16]
+      "genre": 10
     }
   },
   {
@@ -205,7 +205,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Bill Bryson",
       "isbn": "9780767903868",
-      "genre": [19, 12, 10, 17, 14]
+      "genre": 19
     }
   },
   {
@@ -224,7 +224,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Bill Bryson",
       "isbn": "9780767903813",
-      "genre": [12, 19, 10, 17, 18]
+      "genre": 19
     }
   },
   {
@@ -243,7 +243,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Bill Bryson",
       "isbn": "9780060920081",
-      "genre": [19, 12, 10, 17, 18]
+      "genre": 19
     }
   },
   {
@@ -262,7 +262,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Bill Bryson",
       "isbn": "9780380713806",
-      "genre": [19, 12, 10, 17, 18]
+      "genre": 19
     }
   },
   {
@@ -281,7 +281,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Bill Bryson",
       "isbn": "9781839042201",
-      "genre": [19, 12, 10, 17, 18]
+      "genre": 19
     }
   },
   {
@@ -300,7 +300,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Bill Bryson",
       "isbn": "9780380715435",
-      "genre": [12, 14, 10]
+      "genre": 14
       }
   },
   {
@@ -319,7 +319,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "J.R.R. Tolkien",
       "isbn": "9780345538376",
-      "genre": [1, 2, 8, 6]
+      "genre": 1
     }
   },
   {
@@ -338,7 +338,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "J.R.R. Tolkien",
       "isbn": "9780547952017",
-      "genre": [1, 8, 2, 6]
+      "genre": 1
     }
   },
   {
@@ -357,7 +357,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Gary Paulsen",
       "isbn": "9781416936473",
-      "genre": [2, 3, 8, 6, 5]
+      "genre": 3
     }
   },
   {
@@ -376,7 +376,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Delia Sherman",
       "isbn": "9780142411889",
-      "genre": [1, 3, 2,  5]
+      "genre": 1
     }
   },
   {
@@ -395,7 +395,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Zilpha Keatley Snyder",
       "isbn": "9780440412007",
-      "genre": [2, 3, 1, 5, 58]
+      "genre": 58
     }
   },
   {
@@ -414,7 +414,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Edward P. Jones",
       "isbn": "9780060557553",
-      "genre": [2, 59, 20, 16]
+      "genre": 59
     }
   },
   {
@@ -433,7 +433,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "John McPhee",
       "isbn": "9780374522872",
-      "genre": [12, 19, 21, 14, 13, 6]
+      "genre": 6
     }
   },
   {
@@ -452,7 +452,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Johanna Spyri",
       "isbn": "9781788004749",
-      "genre": [8, 2, 5, 3, 59, 16]
+      "genre": 8
     }
   },
   {
@@ -471,7 +471,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Frank Herbert",
       "isbn": "9780593098271",
-      "genre": [9, 2, 1, 8]
+      "genre": 9
     }
   },
   {
@@ -490,7 +490,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Frank Herbert",
       "isbn": "9780593098240",
-      "genre": [9, 2, 1, 8]
+      "genre": 9
     }
   },
   {
@@ -509,7 +509,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Frank Herbert",
       "isbn": "9780593098264",
-      "genre": [9, 2, 1, 8]
+      "genre": 9
     }
   },
   {
@@ -528,7 +528,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Bryce Courtenay",
       "isbn": "9780345410054",
-      "genre": [2, 59, 8, 58, 16]
+      "genre": 59
     }
   },
   {
@@ -547,7 +547,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "George Smoot",
       "isbn": "9780061344442",
-      "genre": [13, 15, 12, 14, 18]
+      "genre": 13
     }
   },
   {
@@ -566,7 +566,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Tom Wolfe",
       "isbn": "9780312424442",
-      "genre": [2, 22, 58]
+      "genre": 58
     }
   },
   {
@@ -585,7 +585,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Henry Miller",
       "isbn": "9781614278627",
-      "genre": [2, 8, 23, 24]
+      "genre": 8
     }
   },
   {
@@ -604,7 +604,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Henry Miller",
       "isbn": "9780802151827",
-      "genre": [2, 8, 24]
+      "genre": 8
     }
   },
   {
@@ -614,7 +614,7 @@
       "name": "the_air_conditioned_nightmare",
       "friendly_name": "The Air-Conditioned Nightmare",
       "slug": "the-air-conditioned-nightmare",
-      "description": "In 1939, after ten years as an expatriate, Henry Miller returned to the United States with a keen desire to see what his native land was really likeâ€”to get to the roots of the American nature and experience. He set out on a journey that was to last three years, visiting many sections of the country and making friends of all descriptions. The Air-Conditioned Nightmare is the result of that odyssey.",
+      "description": "In 1939, after ten years as an expatriate, Henry Miller returned to the United States with a keen desire to see what his native land was really like to get to the roots of the American nature and experience. He set out on a journey that was to last three years, visiting many sections of the country and making friends of all descriptions. The Air-Conditioned Nightmare is the result of that odyssey.",
       "price": 4.5,
       "rating": 3.82,
       "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1347469025i/253.jpg",
@@ -623,7 +623,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Henry Miller",
       "isbn": "9780811201063",
-      "genre": [2, 19, 8]
+      "genre": 8
     }
   },
   {
@@ -642,7 +642,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Henry James",
       "isbn": "9781719335546",
-      "genre": [2, 8, 59, 26]
+      "genre": 8
     }
   },
   {
@@ -661,7 +661,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Marguerite Duras",
       "isbn": "9780375700521",
-      "genre": [2, 8, 26, 59]
+      "genre": 59
     }
   },
   {
@@ -680,7 +680,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Kahlil Gibran",
       "isbn": "9781979253185",
-      "genre": [8, 27, 2, 26, 28]
+      "genre": 26
     }
   },
   {
@@ -699,7 +699,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Robert Louis Stevenson",
       "isbn": "9798623553805",
-      "genre": [8, 2, 6, 59, 3, 5]
+      "genre": 3
     }
 
   },
@@ -719,7 +719,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "George Eliot",
       "isbn": "9788411781329",
-      "genre": [8, 2, 59]
+      "genre": 59
     }
   },
   {
@@ -738,7 +738,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Gabriel Garcia Marquez",
       "isbn": "9780061120091",
-      "genre": [2, 1, 59]
+      "genre": 59
     }
   },
   {
@@ -757,7 +757,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Patrick Saskind",
       "isbn": "9780375725845",
-      "genre": [2, 8, 59, 60, 29, 30, 31]
+      "genre": 60
     }
   },
   {
@@ -776,7 +776,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Robert A. Heinlein",
       "isbn": "9780575120723",
-      "genre": [9, 2, 1, 8, 6]
+      "genre": 9
     }
   },
   {
@@ -786,7 +786,7 @@
       "name": "stranger_in_a_strange_land",
       "friendly_name": "Stranger in a Strange Land",
       "slug": "stranger-in-a-strange-land",
-      "description": "NAME: Valentine Michael SmithANCESTRY: HumanORIGIN: MarsValentine Michael Smith is a human being raised on Mars, newly returned to Earth. Among his people for the first time, he struggles to understand the social mores and prejudices of human nature that are so alien to him, while teaching them his own fundamental beliefs in grokking, watersharing, and love.",
+      "description": "NAME: Valentine Michael Smith, ANCESTRY: Human, ORIGIN: Mars. Valentine Michael Smith is a human being raised on Mars, newly returned to Earth. Among his people for the first time, he struggles to understand the social mores and prejudices of human nature that are so alien to him, while teaching them his own fundamental beliefs in grokking, watersharing, and love.",
       "price": 6.5,
       "rating": 3.92,
       "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1156897088i/350.jpg",
@@ -795,7 +795,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Robert A. Heinlein",
       "isbn": "9781984802781",
-      "genre": [9, 2, 8, 1, 41]
+      "genre": 9
     }
   },
   {
@@ -814,7 +814,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Robert A. Heinlein",
       "isbn": "9781451637496",
-      "genre": [9, 2, 3, 6]
+      "genre": 9
     }
   },
   {
@@ -833,7 +833,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Robert A. Heinlein",
       "isbn": "9780441810765",
-      "genre": [9, 2, 1, 8]
+      "genre": 9
     }
   },
   {
@@ -852,7 +852,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Robert A. Heinlein",
       "isbn": "9780345316509",
-      "genre": [9, 2, 1, 10]
+      "genre": 10
     }
   },
   {
@@ -871,7 +871,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Douglas Adams",
       "isbn": "9780345460950",
-      "genre": [9, 2, 10, 1, 11, 33]
+      "genre": 9
     }
   },
   {
@@ -890,7 +890,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Douglas Adams",
       "isbn": "9781476782997",
-      "genre": [9, 2, 1, 10, 30, 11]
+      "genre": 9
     }
   },
   {
@@ -909,7 +909,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Joan Didion",
       "isbn": "9780671226855",
-      "genre": [12, 17, 8, 14, 34, 18]
+      "genre": 17
     }
   },
   {
@@ -928,7 +928,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Paul Auster",
       "isbn": "9780312429003",
-      "genre": [2]
+      "genre": 2
     }
   },
   {
@@ -947,7 +947,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Paul Auster",
       "isbn": "9780140115857",
-      "genre": [2, 8]
+      "genre": 8
     }
   },
   {
@@ -966,7 +966,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Paul Auster",
       "isbn": "9780140178135",
-      "genre": [2]
+      "genre": 2
     }
   },
   {
@@ -976,7 +976,7 @@
       "name": "killing_yourself_to_live_85_percent_of_a_true_story",
       "friendly_name": "Killing Yourself to Live: 85% of a True Story",
       "slug": "killing-yourself-to-live-85-percent-of-a-true-story",
-      "description": "Building on the national bestselling success of Sex, Drugs, and Cocoa Puffs , preeminent pop culture writer Chuck Klosterman unleashes his best book yetâ€”the story of his cross-country tour of sites where rock stars have died and his search for love, excitement, and the meaning of death.For 6,557 miles, Chuck Klosterman thought about dying. He drove a rental car from New York to Rhode Island to Georgia to Mississippi to Iowa to Minneapolis to Fargo to Seattle, and he chased death and rock â€˜nâ€™ roll all the way. Within the span of twenty-one days, Chuck had three relationships endâ€”one by choice, one by chance, and one by exhaustion. He snorted cocaine in a graveyard. He walked a half-mile through a bean field. A man in Dickinson, North Dakota, explained to him why we have fewer windmills than we used to. He listened to the KISS solo albums and the Rod Stewart box set. At one point, poisonous snakes became involved. The road is hard. From the Chelsea Hotel to the swampland where Lynyrd Skynyrdâ€™s plane went down to the site where Kurt Cobain blew his head off, Chuck explored every brand of rock star demise. He wanted to know why the greatest career move any musician can make is to stop breathing...and what this means for the rest of us.",
+      "description": "Building on the national bestselling success of Sex, Drugs, and Cocoa Puffs , preeminent pop culture writer Chuck Klosterman unleashes his best book yet, the story of his cross-country tour of sites where rock stars have died and his search for love, excitement, and the meaning of death.For 6,557 miles, Chuck Klosterman thought about dying. He drove a rental car from New York to Rhode Island to Georgia to Mississippi to Iowa to Minneapolis to Fargo to Seattle, and he chased death and rock â€˜nâ€™ roll all the way. Within the span of twenty-one days, Chuck had three relationships endâ€”one by choice, one by chance, and one by exhaustion. He snorted cocaine in a graveyard. He walked a half-mile through a bean field. A man in Dickinson, North Dakota, explained to him why we have fewer windmills than we used to. He listened to the KISS solo albums and the Rod Stewart box set. At one point, poisonous snakes became involved. The road is hard. From the Chelsea Hotel to the swampland where Lynyrd Skynyrdâ€™s plane went down to the site where Kurt Cobain blew his head off, Chuck explored every brand of rock star demise. He wanted to know why the greatest career move any musician can make is to stop breathing...and what this means for the rest of us.",
       "price": 11.99,
       "rating": 3.85,
       "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1695134262i/597.jpg",
@@ -985,7 +985,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Chuck Klosterman",
       "isbn": "9780743264464",
-      "genre": [12, 35, 17, 10, 19]
+      "genre": 19
     }
   },
   {
@@ -1004,7 +1004,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Chuck Klosterman",
       "isbn": "9780743236010",
-      "genre": [12, 10, 35, 36, 17]
+      "genre": 36
     }
   },
   {
@@ -1023,7 +1023,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Robert M. Pirsig",
       "isbn": "9780061673733",
-      "genre": [28, 2, 8, 37, 19, 38]
+      "genre": 19
     }
   },
   {
@@ -1042,7 +1042,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Leo Tolstoy",
       "isbn": "9781400079988",
-      "genre": [8, 2, 59, 39]
+      "genre": 59
     }
   },
   {
@@ -1052,7 +1052,7 @@
       "name": "atlas_shrugged",
       "friendly_name": "Atlas Shrugged",
       "slug": "atlas-shrugged",
-      "description": "This is the story of a man who said that he would stop the motor of the world and did. Was he a destroyer or the greatest of liberators?Why did he have to fight his battle, not against his enemies, but against those who needed him most, and his hardest battle against the woman he loved? What is the worldâ€™s motor â€” and the motive power of every man? You will know the answer to these questions when you discover the reason behind the baffling events that play havoc with the lives of the characters in this story. Tremendous in its scope, this novel presents an astounding panorama of human life â€” from the productive genius who becomes a worthless playboy â€” to the great steel industrialist who does not know that he is working for his own destruction â€” to the philosopher who becomes a pirate â€” to the composer who gives up his career on the night of his triumph â€” to the woman who runs a transcontinental railroad â€” to the lowest track worker in her Terminal tunnels. You must be prepared, when you read this novel, to check every premise at the root of your convictions.This is a mystery story, not about the murder and rebirth of man's spirit. It is a philosophical revolution, told in the form of an action thriller of violent events, a ruthlessly brilliant plot structure and an irresistible suspense. Do you say this is impossible? Well, that is the first of your premises to check.",
+      "description": "This is the story of a man who said that he would stop the motor of the world and did. Was he a destroyer or the greatest of liberators? Why did he have to fight his battle, not against his enemies, but against those who needed him most, and his hardest battle against the woman he loved? What is the world's motor and the motive power of every man? You will know the answer to these questions when you discover the reason behind the baffling events that play havoc with the lives of the characters in this story. Tremendous in its scope, this novel presents an astounding panorama of human life from the productive genius who becomes a worthless playboy to the great steel industrialist who does not know that he is working for his own destruction to the philosopher who becomes a pirate to the composer who gives up his career on the night of his triumph to the woman who runs a transcontinental railroad to the lowest track worker in her Terminal tunnels. You must be prepared, when you read this novel, to check every premise at the root of your convictions.This is a mystery story, not about the murder and rebirth of man's spirit. It is a philosophical revolution, told in the form of an action thriller of violent events, a ruthlessly brilliant plot structure and an irresistible suspense. Do you say this is impossible? Well, that is the first of your premises to check.",
       "price": 3.99,
       "rating": 3.69,
       "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1405868167i/662.jpg",
@@ -1061,7 +1061,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Ayn Rand",
       "isbn": "9780451191144",
-      "genre": [2, 8, 28, 40, 9]
+      "genre": 9
     }
   },
   {
@@ -1080,7 +1080,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Ayn Rand",
       "isbn": "9781503250703",
-      "genre": [2, 8, 28, 9]
+      "genre": 9
     }
   },
   {
@@ -1099,7 +1099,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "John Steinbeck",
       "isbn": "9780140177398",
-      "genre": [2, 8, 59]
+      "genre": 8
     }
   },
   {
@@ -1118,7 +1118,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Arthur Golden",
       "isbn": "9780679781585",
-      "genre": [2, 59, 26, 16, 41]
+      "genre": 59
     }
   },
   {
@@ -1137,7 +1137,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Dan Brown",
       "isbn": "9780743486224",
-      "genre": [2, 30, 29, 32, 6, 31]
+      "genre": 29
     }
   },
   {
@@ -1156,7 +1156,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Dan Brown",
       "isbn": "9780274808328",
-      "genre": [2, 30, 29, 32, 6]
+      "genre": 29
     }
   },
   {
@@ -1175,7 +1175,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Dan Brown",
       "isbn": "9780743497466",
-      "genre": [2, 6, 9, 31, 42]
+      "genre": 9
     }
   },
   {
@@ -1194,7 +1194,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Pearl S. Buck",
       "isbn": "9781982147174",
-      "genre": [8, 2, 16]
+      "genre": 8
     }
   },
   {
@@ -1213,7 +1213,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Eric Schlosser",
       "isbn": "9780547750330",
-      "genre": [12, 43, 44, 45, 40, 14, 13]
+      "genre": 12
     }
   },
   {
@@ -1232,7 +1232,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Homer",
       "isbn": "9780140275360",
-      "genre": [47, 59, 48, 16]
+      "genre": 48
     }
   },
   {
@@ -1251,7 +1251,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Homer",
       "isbn": "9780147712554",
-      "genre": [8, 2, 27, 47, 1, 59]
+      "genre": 59
     }
   },
   {
@@ -1270,7 +1270,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Homer",
       "isbn": "9780140268867",
-      "genre": [8, 2, 27, 47, 1]
+      "genre": 47
     }
   },
   {
@@ -1289,7 +1289,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "William Shakespeare",
       "isbn": "9781451669411",
-      "genre": [8, 2, 49]
+      "genre": 8
     }
   },
   {
@@ -1308,7 +1308,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Mark Haddon",
       "isbn": "9781400032716",
-      "genre": [2, 30, 3, 8]
+      "genre": 30
     }
   },
   {
@@ -1327,7 +1327,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "William Shakespeare",
       "isbn": "9798630574824",
-      "genre": [2, 1, 26, 27]
+      "genre": 11
     }
   },
   {
@@ -1346,7 +1346,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Beryl Markham",
       "isbn": "9780865477636",
-      "genre": [12, 17, 18, 19, 14, 6]
+      "genre": 17
     }
   },
   {
@@ -1365,7 +1365,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "William Shakespeare",
       "isbn": "9780743482776",
-      "genre": [2, 8, 26, 50]
+      "genre": 26
     }
   },
   {
@@ -1384,7 +1384,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Annie Proulx",
       "isbn": "9780743271325",
-      "genre": [2, 33, 51, 26, 52, 53]
+      "genre": 51
     }
   },
   {
@@ -1403,7 +1403,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Jack London",
       "isbn": "9781673349511",
-      "genre": [2, 8, 6, 3, 59]
+      "genre": 6
     }
   },
   {
@@ -1422,7 +1422,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Jane Austen",
       "isbn": "9780141439518",
-      "genre": [2, 59, 16]
+      "genre": 59
     }
   },
   {
@@ -1441,7 +1441,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Jon Krakauer",
       "isbn": "9780385494786",
-      "genre": [12, 6, 17, 19, 18, 14]
+      "genre": 17
     }
   },
   {
@@ -1460,7 +1460,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Thomas L. Friedman",
       "isbn": "9780739461624",
-      "genre": [12, 14, 62, 40, 46, 45]
+      "genre": 14
     }
   },
   {
@@ -1479,7 +1479,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Louisa May Alcott",
       "isbn": "9780141192413",
-      "genre": [2, 59, 3, 26, 16, 5]
+      "genre": 59
     }
   },
   {
@@ -1498,7 +1498,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Charles Dickens",
       "isbn": "9781657599086",
-      "genre": [8, 2, 59, 16]
+      "genre": 8
     }
   },
   {
@@ -1517,7 +1517,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Raymond Chandler",
       "isbn": "9781618953292",
-      "genre": [30, 2, 8, 31, 61]
+      "genre": 30
     }
   },
   {
@@ -1536,7 +1536,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Raymond Chandler",
       "isbn": "9798311372589",
-      "genre": [30, 2, 31, 61, 8]
+      "genre": 30
     }
   },
   {
@@ -1555,7 +1555,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Daniel C. Dennett",
       "isbn": "9780684824710",
-      "genre": [13, 28, 12, 14]
+      "genre": 13
     }
   },
   {
@@ -1574,7 +1574,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Stephen Hawking",
       "isbn": "9789355432742",
-      "genre": [13, 12, 15, 14, 28]
+      "genre": 13
     }
   },
   {
@@ -1593,7 +1593,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Stephen Hawking",
       "isbn": "9780553802023",
-      "genre": [13, 12, 15]
+      "genre": 13
     }
   },
   {
@@ -1612,7 +1612,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Karen Joy Fowler",
       "isbn": "9780452286535",
-      "genre": [2, 26]
+      "genre": 26
     }
   },
   {
@@ -1631,7 +1631,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Jane Austen",
       "isbn": "9780141439686",
-      "genre": [2, 8, 59, 16]
+      "genre": 59
     }
   },
   {
@@ -1650,7 +1650,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Jeffery Deaver",
       "isbn": "9780451469793",
-      "genre": [30, 29, 2, 31, 32]
+      "genre": 30
     }
   },
   {
@@ -1669,7 +1669,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Terry Pratchett",
       "isbn": "9780063385566",
-      "genre": [1, 2, 10, 11, 4]
+      "genre": 1
     }
   },
   {
@@ -1688,7 +1688,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "H.G. Wells",
       "isbn": "9780553213515",
-      "genre": [9, 2, 8, 1]
+      "genre": 9
     }
   },
   {
@@ -1707,7 +1707,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "H.G. Wells",
       "isbn": "9798529318386",
-      "genre": [9, 2, 8, 1, 60]
+      "genre": 9
     }
   },
   {
@@ -1726,7 +1726,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Jose Saramago",
       "isbn": "9780156007757",
-      "genre": [2, 8, 9]
+      "genre": 9
     }
   },
   {
@@ -1745,7 +1745,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Charles Dickens",
       "isbn": "9781981149681",
-      "genre": [8, 2, 59]
+      "genre": 8
     }
   },
   {
@@ -1764,7 +1764,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Harper Lee",
       "isbn": "9780060935467",
-      "genre": [8, 2, 59, 3, 16]
+      "genre": 8
     }
   },
   {
@@ -1783,7 +1783,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Jonathan Swift",
       "isbn": "9781416500391",
-      "genre": [8, 2, 1, 10, 6]
+      "genre": 1
     }
   },
   {
@@ -1802,7 +1802,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Geoffrey Chaucer",
       "isbn": "9780140424386",
-      "genre": [8, 2, 27, 33, 59]
+      "genre": 59
     }
   },
   {
@@ -1821,7 +1821,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Monique Truong",
       "isbn": "9780618446889",
-      "genre": [2, 59, 51, 52, 16, 43]
+      "genre": 59
     }
   },
   {
@@ -1840,7 +1840,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Dave Pelzer",
       "isbn": "9781558745155",
-      "genre": [12, 17, 18, 57]
+      "genre": 57
     }
   },
   {
@@ -1859,7 +1859,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Katherine Paterson",
       "isbn": "9780690013597",
-      "genre": [2, 3, 8, 1, 5]
+      "genre": 3
     }
   },
   {
@@ -1878,7 +1878,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Tracy Chevalier",
       "isbn": "9780452282155",
-      "genre": [59, 2, 16, 8, 26]
+      "genre": 26
     }
   },
   {
@@ -1897,7 +1897,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Daniel Defoe",
       "isbn": "9781853260452",
-      "genre": [2, 8, 6, 59]
+      "genre": 59
     }
   },
   {
@@ -1916,7 +1916,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Mark Twain",
       "isbn": "9780486280615",
-      "genre": [2, 8, 59, 3, 6]
+      "genre": 3
     }
   },
   {
@@ -1935,7 +1935,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Frances Hodgson Burnett",
       "isbn": "9781840227543",
-      "genre": [8, 2, 5, 3, 59, 1]
+      "genre": 3
     }
   },
   {
@@ -1954,7 +1954,7 @@
       "updated_at": "2025-02-27T23:42:00Z",
       "author": "Frances Hodgson Burnett",
       "isbn": "9789388369084",
-      "genre": [8, 2, 5, 3, 59, 16]
+      "genre": 3
     }
   }
 ]
