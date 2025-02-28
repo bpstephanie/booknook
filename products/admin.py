@@ -1,8 +1,20 @@
 from django.contrib import admin
-from .models import Genre, Category, Book, Accessory
+from .models import Product, Genre, Category, Book, Accessory
 
 
 # Register your models here.
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = (
+            'name',
+            'friendly_name',
+            'price',
+            'rating',
+            'created_at',
+            'updated_at'
+        )
+
+
 class GenreAdmin(admin.ModelAdmin):
     list_display = (
         'name',
