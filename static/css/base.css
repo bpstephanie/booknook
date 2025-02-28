@@ -193,6 +193,12 @@ a {
 }
 
 /* ---------------------------------------- Media Queries */
+@media (min-width: 1200px) {
+    .container{
+        max-width: 80%;
+    }
+}
+
 @media (max-width: 992px) {
     .search-bar {
         width: 90%;
