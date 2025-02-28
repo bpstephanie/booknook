@@ -12,6 +12,8 @@ def all_products(request, type=None):
     query = request.GET.get('q') if 'q' in request.GET else None
     categories = None
     genres = None
+    sort = None
+    direction = None
 
     # Initialize the products queryset based on type
     if product_type == 'books':
@@ -25,6 +27,19 @@ def all_products(request, type=None):
         page_title = 'All Products'
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                products = products.annotate(lower_name=Lower('name'))
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            products = products.order_by(sortkey)
+
         if 'category' in request.GET:  # and product_type == 'accessories':
             category_names = request.GET.get('category').split(',')
             if product_type == 'accessories':

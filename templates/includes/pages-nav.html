@@ -5,25 +5,30 @@
                 All Products
             </a>
             <div class="dropdown-menu no-border bg-cream" aria-labelledby="all-products-link">
-                <a class="dropdown-item" href="">By Price</a>
+                <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">By Price</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="">By Rating</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'products' %}?category">By Category</a>
+                <a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">By Rating</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="text-uppercase font-weight-bold nav-link text-navy mr-5" href="#" id="all-books-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="text-uppercase font-weight-bold nav-link text-navy mr-5" href="{% url 'all_books' %}" id="all-books-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Books
             </a>
             <div class="dropdown-menu no-border bg-cream" aria-labelledby="all-books-link">
-                <a class="dropdown-item" href="">By Price</a>
+                <a class="dropdown-item" href="{% url 'all_books' %}?sort=price&direction=asc">By Price</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="">By Rating</a>
+                <a class="dropdown-item" href="{% url 'all_books' %}?sort=rating&direction=desc">By Rating</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'products' %}?genre">By Genre</a>
+                <a class="dropdown-item dropdown-toggle" href="{% url 'all_books' %}">By Genre</a>
+                <ul class="dropdown-menu bg-cream">
+                    <li><a class="dropdown-item" href="{% url 'products' %}?genre=sciencefiction">Science Fiction</a></li>
+                    <div class="dropdown-divider"></div>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?genre=romance">Romance</a></li>
+                    <div class="dropdown-divider"></div>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?genre=Horror">Horror</a></li>
+                </ul>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'all_books' %}">All Books</a>
             </div>
@@ -33,21 +38,24 @@
                 Accessories
             </a>
             <div class="dropdown-menu no-border bg-cream" aria-labelledby="accessories-link">
-                <a class="dropdown-item" href="">By Price</a>
+                <a class="dropdown-item" href="{% url 'all_accessories' %}?sort=price&direction=asc">By Price</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="">By Rating</a>
+                <a class="dropdown-item" href="{% url 'all_accessories' %}?sort=rating&direction=desc">By Rating</a>
                 <div class="dropdown-divider"></div>
                 <div class="dropdown-submenu">
                 <a class="dropdown-item dropdown-toggle" href="">By Category</a>
-                <ul class="dropdown-menu bg-cream border-0">
+                <ul class="dropdown-menu bg-cream">
                     <li><a class="dropdown-item" href="{% url 'products' %}?category=bookmarks">Bookmarks</a></li>
+                    <div class="dropdown-divider"></div>
                     <li><a class="dropdown-item" href="{% url 'products' %}?category=totebags">Tote Bags</a></li>
+                    <div class="dropdown-divider"></div>
                     <li><a class="dropdown-item" href="{% url 'products' %}?category=mugs">Mugs</a></li>
+                    <div class="dropdown-divider"></div>
                     <li><a class="dropdown-item" href="{% url 'all_accessories' %}">All Categories</a></li>
                 </ul>
             </div>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="">All Accessories</a>
+            <a class="dropdown-item" href="{% url 'all_accessories' %}">All Accessories</a>
         </li>
         <li class="nav-item dropdown">
             <a class="text-uppercase font-weight-bold nav-link text-navy mr-5" href="#" id="community-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

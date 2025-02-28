@@ -23,6 +23,7 @@ header {
     position: relative;
     top: 224px;
     width: 100%;
+    padding-top: 5%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -43,6 +44,11 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.product-details-container {
+    height: 400px; /* Adjust the height as needed */
+    overflow-y: auto;
 }
 
 /* from Bulma */
@@ -119,7 +125,7 @@ a {
 }
 
 .dropdown-item.dropdown-toggle:after {
-    content: "f0da";
+    content: "\f054";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     float: right;
