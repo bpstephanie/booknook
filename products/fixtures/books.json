@@ -1,0 +1,1960 @@
+[
+  {
+    "pk": 1,
+    "model": "products.book",
+      "fields": {
+      "name": "harry_potter_and_the_half_blood_prince",
+      "friendly_name": "Harry Potter and the Half-Blood Prince",
+      "slug": "harry-potter-and-the-half-blood-prince",
+      "description": "It is the middle of the summer, but there is an unseasonal mist pressing against the windowpanes. Harry Potter is waiting nervously in his bedroom at the Dursleys' house in Privet Drive for a visit from Professor Dumbledore himself. One of the last times he saw the Headmaster, he was in a fierce one-to-one duel with Lord Voldemort, and Harry can't quite believe that Professor Dumbledore will actually appear at the Dursleys' of all places. Why is the Professor coming to visit him now? What is it that cannot wait until Harry returns to Hogwarts in a few weeks' time? Harry's sixth year at Hogwarts has already got off to an unusual start, as the worlds of Muggle and magic start to intertwine...",
+      "price": 8.5,
+      "rating": 4.58,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1587697303i/1.jpg",
+      "image": "1.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "J.K. Rowling",
+      "isbn": "9781419354366",
+      "genre": [1, 3, 2, 4, 5, 6]
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.book",
+    "fields": {
+      "name": "harry_potter_and_the_order_of_the_phoenix",
+      "friendly_name": "Harry Potter and the Order of the Phoenix",
+      "slug": "harry-potter-and-the-order-of-the-phoenix",
+      "description": "Harry Potter is about to start his fifth year at Hogwarts School of Witchcraft and Wizardry. Unlike most schoolboys, Harry never enjoys his summer holidays, but this summer is even worse than usual. The Dursleys, of course, are making his life a misery, but even his best friends, Ron and Hermione, seem to be neglecting him.Harry has had enough. He is beginning to think he must do something, anything, to change his situation, when the summer holidays come to an end in a very dramatic fashion. What Harry is about to discover in his new year at Hogwarts will turn his world upside down...",
+      "price": 8.5,
+      "rating": 4.5,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1546910265i/2.jpg",
+      "image": "2.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "J.K. Rowling",
+      "isbn": "9780545582971",
+      "genre": [3, 2, 4, 5, 6]
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.book",
+    "fields": {
+      "name": "harry_potter_and_the_sorcerers_stone",
+      "friendly_name": "Harry Potter and the Sorcerer's Stone",
+      "slug": "harry-potter-and-the-sorcerers-stone",
+      "description": "Harry Potter has no idea how famous he is. That's because he's being raised by his miserable aunt and uncle who are terrified Harry will learn that he's really a wizard, just as his parents were. But everything changes when Harry is summoned to attend an infamous school for wizards, and he begins to discover some clues about his illustrious birthright. From the surprising way he is greeted by a lovable giant, to the unique curriculum and colorful faculty at his unusual school, Harry finds himself drawn deep inside a mystical world he never knew existed and closer to his own noble destiny.",
+      "price": 8.5,
+      "rating": 4.47,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1474154022i/3.jpg",
+      "image": "3.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "J.K. Rowling",
+      "isbn": "9780545582889",
+      "genre": [1, 2, 3, 4]
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.book",
+    "fields": {
+      "name": "harry_potter_and_the_prisoner_of_azkaban",
+      "friendly_name": "Harry Potter and the Prisoner of Azkaban",
+      "slug": "harry-potter-and-the-prisoner-of-azkaban",
+      "description": "Harry Potter, along with his best friends, Ron and Hermione, is about to start his third year at Hogwarts School of Witchcraft and Wizardry. Harry can't wait to get back to school after the summer holidays. (Who wouldn't if they lived with the horrible Dursleys?) But when Harry gets to Hogwarts, the atmosphere is tense. There's an escaped mass murderer on the loose, and the sinister prison guards of Azkaban have been called in to guard the school...",
+      "price": 8.5,
+      "rating": 4.58,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1630547330i/5.jpg",
+      "image": "5.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "J.K. Rowling",
+      "isbn": "9781526606174",
+      "genre": [1, 2, 3, 4]
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.book",
+    "fields": {
+      "name": "harry_potter_and_the_goblet_of_fire",
+      "friendly_name": "Harry Potter and the Goblet of Fire",
+      "slug": "harry-potter-and-the-goblet-of-fire",
+      "description": "It is the summer holidays and soon Harry Potter will be starting his fourth year at Hogwarts School of Witchcraft and Wizardry. Harry is counting the days: there are new spells to be learnt, more Quidditch to be played, and Hogwarts castle to continue exploring. But Harry needs to be careful - there are unexpected dangers lurking...",
+      "price": 8.5,
+      "rating": 4.57,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554006152i/6.jpg",
+      "image": "6.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "J.K. Rowling",
+      "isbn": "9781338299175",
+      "genre": [1, 3, 2, 4]
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.book",
+    "fields": {
+      "name": "harry_potter_boxed_set_books_1_5",
+      "friendly_name": "Harry Potter Boxed Set, Books 1-5",
+      "slug": "harry-potter-boxed-set-books-1-5",
+      "description": "Box Set containing Harry Potter and the Sorcerer's Stone, Harry Potter and the Chamber Of Secrets, Harry Potter and the Prisoner of Azkaban, Harry Potter and the Goblet Of Fire, and Harry Potter and the Order of the Phoenix!",
+      "price": 30,
+      "rating": 4.72,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388185391i/8.jpg",
+      "image": "8.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "J.K. Rowling",
+      "isbn": "9780439682589",
+      "genre": [1, 3, 2, 4, 6, 7, 5]
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.book",
+    "fields": {
+      "name": "harry_potter_collection",
+      "friendly_name": "Harry Potter Collection",
+      "slug": "harry-potter-collection",
+      "description": "Six years of magic, adventure, and mystery make this luxurious boxed set the perfect gift for Harry Potter fans of all ages. Follow Harry from his first days at Hogwarts School for Witchcraft and Wizardry, through his many adventures with Hermione and Ron, to his confrontations with rival Draco Malfoy and the dreaded Professor Snape. From the thrilling search for the Sorcerer's Stone to the Triwizard Tournament to the return of He-Who-Must-Not-Be-Named, each adventure is more riveting and exhilarating than its predecessor, and now all six books are available together for the first time in an elegant hardcover boxed set.",
+      "price": 45,
+      "rating": 4.72,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1328867351i/10.jpg",
+      "image": "10.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "J.K. Rowling",
+      "isbn": "9780545162074",
+      "genre": [1, 2, 3, 4, 5, 8, 6]
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.book",
+    "fields": {
+      "name": "the_hitchhikers_guide_to_the_galaxy",
+      "friendly_name": "The Hitchhiker's Guide to the Galaxy",
+      "slug": "the-hitchhikers-guide-to-the-galaxy",
+      "description": "Seconds before the Earth is demolished to make way for a galactic freeway, Arthur Dent is plucked off the planet by his friend Ford Prefect, a researcher for the revised edition of The Hitchhiker's Guide to the Galaxy who, for the last fifteen years, has been posing as an out-of-work actor.Together this dynamic pair begin a journey through space aided by quotes from The Hitchhiker's Guide ('A towel is about the most massively useful thing an interstellar hitchhiker can have') and a galaxy-full of fellow travelers: Zaphod Beeblebrox--the two-headed, three-armed ex-hippie and totally out-to-lunch president of the galaxy; Trillian, Zaphod's girlfriend (formally Tricia McMillan), whom Arthur tried to pick up at a cocktail party once upon a time zone; Marvin, a paranoid, brilliant, and chronically depressed robot; Veet Voojagig, a former graduate student who is obsessed with the disappearance of all the ballpoint pens he bought over the years.Where are these pens? Why are we born? Why do we die? Why do we spend so much time between wearing digital watches? For all the answers stick your thumb to the stars. And don't forget to bring a towel!",
+      "price": 6,
+      "rating": 4.23,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1531891848i/11.jpg",
+      "image": "11.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Douglas Adams",
+      "isbn": "9781529046137",
+      "genre": [9, 2, 10, 1, 11]
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.book",
+    "fields": {
+      "name": "the_ultimate_hitchhikers_guide_to_the_galaxy",
+      "friendly_name": "The Ultimate Hitchhiker's Guide to the Galaxy",
+      "slug": "the-ultimate-hitchhikers-guide-to-the-galaxy",
+      "description": "At last in paperback in one complete volume, here are the five novels from Douglas Adams's Hitchhiker series. 'The Hitchhiker's Guide to the Galaxy' Seconds before the Earth is demolished for a galactic freeway, Arthur Dent is saved by Ford Prefect, a researcher for the revised Guide. Together they stick out their thumbs to the stars and begin a wild journey through time and space. 'The Restaurant at the End of the Universe' Facing annihilation at the hands of warmongers is a curious time to crave tea. It could only happen to the cosmically displaced Arthur Dent and his comrades as they hurtle across the galaxy in a desperate search for a place to eat. 'Life, the Universe and Everything' The unhappy inhabitants of planet Krikkit are sick of looking at the night sky- so they plan to destroy it. The universe, that is. Now only five individuals can avert Armageddon: mild-mannered Arthur Dent and his stalwart crew. 'So Long, and Thanks for All the Fish' Back on Earth, Arthur Dent is ready to believe that the past eight years were all just a figment of his stressed-out imagination. But a gift-wrapped fishbowl with a cryptic inscription conspires to thrust him back to reality. So to speak. 'Mostly Harmless' Just when Arthur Dent makes the terrible mistake of starting to enjoy life, all hell breaks loose. Can he save the Earth from total obliteration? Can he save the Guide from a hostile alien takeover? Can he save his daughter from herself?Also includes the short story 'Young Zaphod Plays It Safe'.",
+      "price": 6.5,
+      "rating": 4.38,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1404613595i/13.jpg",
+      "image": "13.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Douglas Adams",
+      "isbn": "9780517124857",
+      "genre": [9, 2, 10, 1, 8, 11]
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.book",
+    "fields": {
+      "name": "a_short_history_of_nearly_everything",
+      "friendly_name": "A Short History of Nearly Everything",
+      "slug": "a-short-history-of-nearly-everything",
+      "description": "Bill Bryson describes himself as a reluctant traveller, but even when he stays safely at home he can't contain his curiosity about the world around him. 'A Short History of Nearly Everything' is his quest to understand everything that has happened from the Big Bang to the rise of civilisation - how we got from there, being nothing at all, to here, being us. The ultimate eye-opening journey through time and space, revealing the world in a way most of us have never seen it before.",
+      "price": 4.99,
+      "rating": 4.21,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1433086293i/21.jpg",
+      "image": "21.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Bill Bryson",
+      "isbn": "9780767908184",
+      "genre": [12, 13, 14, 10, 15, 16]
+    }
+  },
+  {
+    "pk": 11,
+    "model": "products.book",
+    "fields": {
+      "name": "in_a_sunburned_country",
+      "friendly_name": "In a Sunburned Country",
+      "slug": "in-a-sunburned-country",
+      "description": "It is the driest, flattest, hottest, most infertile and climatically aggressive of all the inhabited continents, and still Australia teems with life - a large portion of it quite deadly. In fact, Australia has more things that can kill you in a very nasty way than anywhere else.Ignoring such dangers - and yet curiously obsessed by them - Bill Bryson journeyed to Australia and promptly fell in love with the country. And who can blame him? The people are cheerful, extroverted, quick-witted and unfailingly obliging: their cities are safe and clean and nearly always built on water; the food is excellent; the beer is cold and the sun nearly always shines. Life doesn't get much better than this...",
+      "price": 7.99,
+      "rating": 4.08,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388176242i/24.jpg",
+      "image": "24.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Bill Bryson",
+      "isbn": "9780767903868",
+      "genre": [19, 12, 10, 17, 14]
+    }
+  },
+  {
+    "pk": 12,
+    "model": "products.book",
+    "fields": {
+      "name": "im_a_stranger_here_myself_notes_on_returning_to_america_after_twenty_years_away",
+      "friendly_name": "I'm a Stranger Here Myself: Notes on Returning to America After Twenty Years Away",
+      "slug": "im-a-stranger-here-myself-notes-on-returning-to-america-after-twenty-years-away",
+      "description": "After living in Britain for two decades, Bill Bryson recently moved back to the United States with his English wife and four children (he had read somewhere that nearly 3 million Americans believed they had been abducted by aliens--as he later put it, 'it was clear my people needed me'). They were greeted by a new and improved America that boasts microwave pancakes, twenty-four-hour dental-floss hotlines, and the staunch conviction that ice is not a luxury item. Delivering the brilliant comic musings that are a Bryson hallmark, I'm a Stranger Here Myself recounts his sometimes disconcerting reunion with the land of his birth. The result is a book filled with hysterical scenes of one man's attempt to reacquaint himself with his own country, but it is also an extended if at times bemused love letter to the homeland he has returned to after twenty years away.",
+      "price": 5.5,
+      "rating": 3.9,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388184037i/25.jpg",
+      "image": "25.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Bill Bryson",
+      "isbn": "9780767903813",
+      "genre": [12, 19, 10, 17, 18]
+    }
+  },
+  {
+    "pk": 13,
+    "model": "products.book",
+    "fields": {
+      "name": "the_lost_continent_travels_in_small_town_america",
+      "friendly_name": "The Lost Continent: Travels in Small-Town America",
+      "slug": "the-lost-continent-travels-in-small-town-america",
+      "description": "'I come from Des Moines. Somebody had to'And, as soon as Bill Bryson was old enough, he left. Des Moines couldn't hold him, but it did lure him back. After ten years in England, he returned to the land of his youth, and drove almost 14,000 miles in search of a mythical small town called Amalgam, the kind of trim and sunny place where the films of his youth were set. Instead, his search led him to Anywhere, USA; a lookalike strip of gas stations, motels and hamburger outlets populated by lookalike people with a penchant for synthetic fibres. Travelling around thirty-eight of the lower states - united only in their mind-numbingly dreary uniformity - he discovered a continent that was doubly lost; lost to itself because blighted by greed, pollution, mobile homes and television; lost to him because he had become a stranger in his own land.The Lost Continent is a classic of travel literature - hilariously, stomach-achingly funny, yet tinged with heartache - and the book that first staked Bill Bryson's claim as the most beloved writer of his generation.",
+      "price": 7.99,
+      "rating": 3.81,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1404042682i/26.jpg",
+      "image": "26.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Bill Bryson",
+      "isbn": "9780060920081",
+      "genre": [19, 12, 10, 17, 18]
+    }
+  },
+  {
+    "pk": 14,
+    "model": "products.book",
+    "fields": {
+      "name": "neither_here_nor_there_travels_in_europe",
+      "friendly_name": "Neither Here nor There: Travels in Europe",
+      "slug": "neither-here-nor-there-travels-in-europe",
+      "description": "Bill Bryson's first travel book, The Lost Continent, was unanimously acclaimed as one of the funniest books in years. In Neither Here nor There he brings his unique brand of humour to bear on Europe as he shoulders his backpack, keeps a tight hold on his wallet, and journeys from Hammerfest, the northernmost town on the continent, to Istanbul on the cusp of Asia. Fluent in, oh, at least one language, he retraces his travels as a student twenty years before.Whether braving the homicidal motorist of Paris, being robbed by gypsies in Florence, attempting not to order tripe and eyeballs in a German restaurant, window-shopping in the sex shops of the Reeperbahn or disputing his hotel bill in Copenhagen, Bryson takes in the sights, dissects the culture and illuminates each place and person with his hilariously caustic observations. He even goes to Liechtenstein.",
+      "price": 6.5,
+      "rating": 3.86,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388187396i/27.jpg",
+      "image": "27.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Bill Bryson",
+      "isbn": "9780380713806",
+      "genre": [19, 12, 10, 17, 18]
+    }
+  },
+  {
+    "pk": 15,
+    "model": "products.book",
+    "fields": {
+      "name": "notes_from_a_small_island",
+      "friendly_name": "Notes from a Small Island",
+      "slug": "notes-from-a-small-island",
+      "description": "Suddenly, in the space of a moment, I realized what it was that I loved about Britain-which is to say, all of it.",
+      "price": 6.5,
+      "rating": 3.91,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1479653223i/28.jpg",
+      "image": "28.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Bill Bryson",
+      "isbn": "9781839042201",
+      "genre": [19, 12, 10, 17, 18]
+    }
+  },
+  {
+    "pk": 16,
+    "model": "products.book",
+      "fields": {
+      "name": "the_mother_tongue_english_and_how_it_got_that_way",
+      "friendly_name": "The Mother Tongue: English and How It Got That Way",
+      "slug": "the-mother-tongue-english-and-how-it-got-that-way",
+      "description": "Only Bill Bryson could make a book about the English language so entertaining. With his boundless enthusiasm and restless eye for the absurd, this is his astonishing tour of English.From its mongrel origins to its status as the world's most-spoken tongue; its apparent simplicity to its deceptive complexity; its vibrant swearing to its uncertain spelling and pronunciation; Bryson covers all this as well as the many curious eccentricities that make it as maddening to learn as it is flexible to use.Bill Bryson's classic Mother Tongue is a highly readable and hilarious tale of how English came to be the world's language.",
+      "price": 7.99,
+      "rating": 3.91,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388209925i/29.jpg",
+      "image": "29.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Bill Bryson",
+      "isbn": "9780380715435",
+      "genre": [12, 14, 10]
+      }
+  },
+  {
+    "pk": 17,
+    "model": "products.book",
+    "fields": {
+      "name": "jrr_tolkien_4_book_boxed_set_the_hobbit_and_the_lord_of_the_rings",
+      "friendly_name": "J.R.R. Tolkien 4-Book Boxed Set: The Hobbit and The Lord of the Rings",
+      "slug": "jrr-tolkien-4-book-boxed-set-the-hobbit-and-the-lord-of-the-rings",
+      "description": "This four-volume, boxed set contains J.R.R. Tolkien's epic masterworks The Hobbit and the three volumes of The Lord of the Rings (The Fellowship of the Ring, The Two Towers, and The Return of the King).In The Hobbit, Bilbo Baggins is whisked away from his comfortable, unambitious life in Hobbiton by the wizard Gandalf and a company of dwarves. He finds himself caught up in a plot to raid the treasure hoard of Smaug the Magnificent, a large and very dangerous dragon.The Lord of the Rings tells of the great quest undertaken by Frodo Baggins and the Fellowship of the Ring: Gandalf the wizard; the hobbits Merry, Pippin, and Sam; Gimli the dwarf; Legolas the elf; Boromir of Gondor; and a tall, mysterious stranger called Strider. J.R.R. Tolkien's three volume masterpiece is at once a classic myth and a modern fairy tale a story of high and heroic adventure set in the unforgettable landscape of Middle-earth",
+      "price": 25,
+      "rating": 4.61,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1656625315i/30.jpg",
+      "image": "30.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "J.R.R. Tolkien",
+      "isbn": "9780345538376",
+      "genre": [1, 2, 8, 6]
+    }
+  },
+  {
+    "pk": 18,
+    "model": "products.book",
+    "fields": {
+      "name": "the_fellowship_of_the_ring",
+      "friendly_name": "The Fellowship of the Ring",
+      "slug": "the-fellowship-of-the-ring",
+      "description": "One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkeness bind themIn ancient times the Rings of Power were crafted by the Elven-smiths, and Sauron, The Dark Lord, forged the One Ring, filling it with his own power so that he could rule all others. But the One Ring was taken from him, and though he sought it throughout Middle-earth, it remained lost to him. After many ages it fell into the hands of Bilbo Baggins, as told in The Hobbit.In a sleepy village in the Shire, young Frodo Baggins finds himself faced with an immense task, as his elderly cousin Bilbo entrusts the Ring to his care. Frodo must leave his home and make a perilous journey across Middle-earth to the Cracks of Doom, there to destroy the Ring and foil the Dark Lord in his evil purpose.--back cover",
+      "price": 10,
+      "rating": 4.39,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1298411339i/34.jpg",
+      "image": "34.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "J.R.R. Tolkien",
+      "isbn": "9780547952017",
+      "genre": [1, 8, 2, 6]
+    }
+  },
+  {
+    "pk": 19,
+    "model": "products.book",
+    "fields": {
+      "name": "hatchet",
+      "friendly_name": "Hatchet",
+      "slug": "hatchet",
+      "description": "Brian is on his way to Canada to visit his estranged father when the pilot of his small prop plane suffers a heart attack. Brian is forced to crash-land the plane in a lake--and finds himself stranded in the remote Canadian wilderness with only his clothing and the hatchet his mother gave him as a present before his departure. Brian had been distraught over his parents' impending divorce and the secret he carries about his mother, but now he is truly desolate and alone. Exhausted, terrified, and hungry, Brian struggles to find food and make a shelter for himself. He has no special knowledge of the woods, and he must find a new kind of awareness and patience as he meets each day's challenges. Is the water safe to drink? Are the berries he finds poisonous? Slowly, Brian learns to turn adversity to his advantage--an invading porcupine unexpectedly shows him how to make fire, a devastating tornado shows him how to retrieve supplies from the submerged airplane. Most of all, Brian leaves behind the self-pity he has felt about his predicament as he summons the courage to stay alive. A story of survival and of transformation, this riveting book has sparked many a reader's interest in venturing into the wild.",
+      "price": 9,
+      "rating": 3.78,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1385297074i/50.jpg",
+      "image": "50.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Gary Paulsen",
+      "isbn": "9781416936473",
+      "genre": [2, 3, 8, 6, 5]
+    }
+  },
+  {
+    "pk": 20,
+    "model": "products.book",
+    "fields": {
+      "name": "changeling",
+      "friendly_name": "Changeling",
+      "slug": "changeling",
+      "description": "Neef is a changeling, a human baby stolen by fairies and replaced with one of their own. She lives in 'New York Between,' a Manhattan alongside our own, home to creatures of folklore. Protected by her fairy godmother until she breaks a Fairy Law, now she must face the challenge of the Green Lady of Central Park or be sacrificed! Neef is determined, but time is running out.",
+      "price": 5,
+      "rating": 3.59,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1309282978i/58.jpg",
+      "image": "58.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Delia Sherman",
+      "isbn": "9780142411889",
+      "genre": [1, 3, 2,  5]
+    }
+  },
+  {
+    "pk": 21,
+    "model": "products.book",
+    "fields": {
+      "name": "the_changeling",
+      "friendly_name": "The Changeling",
+      "slug": "the-changeling",
+      "description": "Ivy Carson belonged to the notorious Carson family, which lived in a run-down house in suburban Rosewood. But Ivy was not a typical Carson. There was something wonderful about her. Ivy explained it by saying that she was a changeling, a child of supernatural parents who had been exchanged for the real Ivy Carson at birth. This classic book was first published in 1970. It was awarded a Christopher Medal and named an outstanding book for young people by the Junior Library Guild.",
+      "price": 5,
+      "rating": 4.18,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1386923583i/61.jpg",
+      "image": "61.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Zilpha Keatley Snyder",
+      "isbn": "9780440412007",
+      "genre": [2, 3, 1, 5, 58]
+    }
+  },
+  {
+    "pk": 22,
+    "model": "products.book",
+    "fields": {
+      "name": "the_known_world",
+      "friendly_name": "The Known World",
+      "slug": "the-known-world",
+      "description": "One of the most acclaimed novels in recent memory, The Known World is a daring and ambitious work by Pulitzer Prize winner Edward P. Jones.The Known World tells the story of Henry Townsend, a black farmer and former slave who falls under the tutelage of William Robbins, the most powerful man in Manchester County, Virginia. Making certain he never circumvents the law, Townsend runs his affairs with unusual discipline. But when death takes him unexpectedly, his widow, Caldonia, can't uphold the estate's order, and chaos ensues. Jones has woven a footnote of history into an epic that takes an unflinching look at slavery in all its moral complexities.",
+      "price": 5,
+      "rating": 3.83,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1538134660i/67.jpg",
+      "image": "67.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Edward P. Jones",
+      "isbn": "9780060557553",
+      "genre": [2, 59, 20, 16]
+    }
+  },
+  {
+    "pk": 23,
+    "model": "products.book",
+    "fields": {
+      "name": "coming_into_the_country",
+      "friendly_name": "Coming Into the Country",
+      "slug": "coming-into-the-country",
+      "description": "This is the story of Alaska and the Alaskans. Written with a vividness and clarity which shifts scenes frequently, and yet manages to tie the work into a rewarding whole, McPhee segues from the wilderness to life in urban Alaska to the remote bush country.",
+      "price": 12.99,
+      "rating": 4.21,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1671459571i/79.jpg",
+      "image": "79.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "John McPhee",
+      "isbn": "9780374522872",
+      "genre": [12, 19, 21, 14, 13, 6]
+    }
+  },
+  {
+    "pk": 24,
+    "model": "products.book",
+    "fields": {
+      "name": "heidi",
+      "friendly_name": "Heidi",
+      "slug": "heidi",
+      "description": "Little orphan Heidi goes to live high in the Alps with her gruff grandfather and brings happiness to all who know her on the mountain. When Heidi goes to Frankfurt to work in a wealthy household, she dreams of returning to the mountains and meadows, her friend Peter, and her beloved grandfather.",
+      "price": 12.99,
+      "rating": 4.03,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388462714i/93.jpg",
+      "image": "93.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Johanna Spyri",
+      "isbn": "9781788004749",
+      "genre": [8, 2, 5, 3, 59, 16]
+    }
+  },
+  {
+    "pk": 25,
+    "model": "products.book",
+    "fields": {
+      "name": "chapterhouse_dune",
+      "friendly_name": "Chapterhouse: Dune",
+      "slug": "chapterhouse-dune",
+      "description": "The desert planet Arrakis, called Dune, has been destroyed. Now, the Bene Gesserit, heirs to Dune's power, have colonized a green world--and are turning it into a desert, mile by scorched mile.Here is the last book Frank Herbert wrote before his death. A stunning climax to the epic Dune legend that will live on forever...",
+      "price": 4.99,
+      "rating": 3.9,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1559833930i/105.jpg",
+      "image": "105.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Frank Herbert",
+      "isbn": "9780593098271",
+      "genre": [9, 2, 1, 8]
+    }
+  },
+  {
+    "pk": 26,
+    "model": "products.book",
+    "fields": {
+      "name": "children_of_dune",
+      "friendly_name": "Children of Dune",
+      "slug": "children-of-dune",
+      "description": "The desert planet of Arrakis has begun to grow green and lush. The life-giving spice is abundant. The nine-year-old royal twins, possesing their father's supernatural powers, are being groomed as Messiahs.But there are those who think the Imperium does not need messiahs...",
+      "price": 4.99,
+      "rating": 3.96,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1391051267i/112.jpg",
+      "image": "112.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Frank Herbert",
+      "isbn": "9780593098240",
+      "genre": [9, 2, 1, 8]
+    }
+  },
+  {
+    "pk": 27,
+    "model": "products.book",
+    "fields": {
+      "name": "heretics_of_dune",
+      "friendly_name": "Heretics of Dune",
+      "slug": "heretics-of-dune",
+      "description": "Book Five in the Magnificent Dune Chronicles' the Bestselling Science Fiction Adventure of All TimeLeto Atreides, the God Emperor of Dune, is dead. In the fifteen hundred years since his passing, the Empire has fallen into ruin. The great Scattering saw millions abandon the crumbling civilization and spread out beyond the reaches of known space. The planet Arrakisâ€”now called Rakisâ€”has reverted to its desert climate, and its great sandworms are dying.Now the Lost Ones are returning home in pursuit of power. And as these factions vie for control over the remnants of the Empire, a girl named Sheeana rises to prominence in the wastelands of Rakis, sending religious fervor throughout the galaxy. For she possesses the abilities of the Fremen sandridersâ€”fulfilling a prophecy foretold by the late God Emperor....",
+      "price": 4.99,
+      "rating": 3.87,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388186151i/117.jpg",
+      "image": "117.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Frank Herbert",
+      "isbn": "9780593098264",
+      "genre": [9, 2, 1, 8]
+    }
+  },
+  {
+    "pk": 28,
+    "model": "products.book",
+    "fields": {
+      "name": "the_power_of_one",
+      "friendly_name": "The Power of One",
+      "slug": "the-power-of-one",
+      "description": "In 1939, as Hitler casts his enormous, cruel shadow across the world, the seeds of apartheid take root in South Africa. There, a boy called Peekay is born. His childhood is marked by humiliation and abandonment, yet he vows to survive and conceives heroic dreams, which are nothing compared to what life actually has in store for him. He embarks on an epic journey through a land of tribal superstition and modern prejudice where he will learn the power of words, the power to transform lives and the power of one.",
+      "price": 6.99,
+      "rating": 4.35,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388184360i/122.jpg",
+      "image": "122.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Bryce Courtenay",
+      "isbn": "9780345410054",
+      "genre": [2, 59, 8, 58, 16]
+    }
+  },
+  {
+    "pk": 29,
+    "model": "products.book",
+    "fields": {
+      "name": "wrinkles_in_time",
+      "friendly_name": "Wrinkles in Time",
+      "slug": "wrinkles-in-time",
+      "description": "In April 1992, a discovery was made that changed the way we view the world. Dr. George Smoot, a distinguished cosmologist and adventurer whose quest for cosmic knowledge had taken him from the Brazilian rain forest to the South Pole, unveiled his momentous discovery, bringing to light the very nature of the universe. For anyone who has ever looked up at the night sky and wondered, for anyone who has ever longed to pull aside the fabric of the universe for a glimpse of what lies behind it. Wrinkles in Time is the story of Smoot's search to uncover the cosmic seeds of the universe.Wrinkles in Time is the Double Helix of cosmology, an intimate look at the inner world of men and women who ask. 'Why are we here?' It tells the story of George Smoot's dogged pursuit of the cosmic wrinkles in the frozen wastes of Antarctica, on mountaintops, in experiments borne aloft aboard high-altitude balloons, U-2 spy planes, and finally a space satellite. Wrinkles in Time presents the hard science behind the structured violence of the big bang theory through breathtakingly clear, lucid images and meaningful comparisons. Scientists and nonscientists alike can follow with rapt attention the story of how, in a fiery creation, wrinkles formed in space ultimately to become stars, galaxies, and even greater delicate structures. Anyone can appreciate the implications of a universe whose end is written in its beginnings - whose course developed according to a kind of cosmic DNA, which guided the universe from simplicity and symmetry to ever-greater complexity and structure. As controversial as it may seem today, Wrinkles in Time reveals truths that, in an earlier century, would have doomed its proclaimers to the fiery stake. For four thousand years some people have accepted the Genesis account of cosmic origin; for most of this century, scientists debated two rival scientific explanations known as the steady state and big bang theories. And now, Wrinkles in Time tells what really happened. The personal story behind astrophysicist George Smoot's incredible discovery of the origin of the cosmos, hailed by Stephen Hawking as 'The scientific discovery of the century, if not of all time.'",
+      "price": 4.85,
+      "rating": 4.03,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1387740520i/180.jpg",
+      "image": "180.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "George Smoot",
+      "isbn": "9780061344442",
+      "genre": [13, 15, 12, 14, 18]
+    }
+  },
+  {
+    "pk": 30,
+    "model": "products.book",
+    "fields": {
+      "name": "i_am_charlotte_simmons",
+      "friendly_name": "I Am Charlotte Simmons",
+      "slug": "i-am-charlotte-simmons",
+      "description": "Tom Wolfe, the master social novelist of our time, the spot-on chronicler of all things contemporary and cultural, presents a sensational new novel about life, love, and learning--or the lack of it--amid today's American colleges.Our story unfolds at fictional Dupont University: those Olympian halls of scholarship housing the cream of America's youth, the roseate Gothic spires and manicured lawns suffused with tradition . . . Or so it appears to beautiful, brilliant Charlotte Simmons, a sheltered freshman from North Carolina. But Charlotte soon learns, to her mounting dismay, that for the upper-crust coeds of Dupont, sex, cool, and kegs trump academic achievement every time.As Charlotte encounters the paragons of Dupont's privileged elite--her roommate, Beverly, a Groton-educated Brahmin in lusty pursuit of lacrosse players; Jojo Johanssen, the only white starting player on Dupont's godlike basketball team, whose position is threatened by a hotshot black freshman from the projects; the Young Turk of Saint Ray fraternity, Hoyt Thorpe, whose heady sense of entitlement and social domination is clinched by his accidental brawl with a bodyguard for the governor of California; and Adam Geller, one of the Millennial Mutants who run the university's 'independent' newspaper and who consider themselves the last bastion of intellectual endeavor on the sex-crazed, jock-obsessed campus--she is seduced by the heady glamour of acceptance, betraying both her values and upbringing before she grasps the power of being different--and the exotic allure of her own innocence.With his trademark satirical wit and famously sharp eye for telling detail, Wolfe's I Am Charlotte Simmons draws on extensive observations at campuses across the country to immortalize the early-21st-century college-going experience.",
+      "price": 4.8,
+      "rating": 3.45,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1442453877i/231.jpg",
+      "image": "231.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Tom Wolfe",
+      "isbn": "9780312424442",
+      "genre": [2, 22, 58]
+    }
+  },
+  {
+    "pk": 31,
+    "model": "products.book",
+    "fields": {
+      "name": "tropic_of_cancer",
+      "friendly_name": "Tropic of Cancer",
+      "slug": "tropic-of-cancer",
+      "description": "Now hailed as an American classic Tropic of Cancer, Henry Miller's masterpiece, was banned as obscene in this country for twenty-seven years after its first publication in Paris in 1934. Only a historic court ruling that changed American censorship standards, ushering in a new era of freedom and frankness in modern literature, permitted the publication of this first volume of Miller's famed mixture of memoir and fiction, which chronicles with unapologetic gusto the bawdy adventures of a young expatriate writer, his friends, and the characters they meet in Paris in the 1930s. Tropic of Cancer is now considered, as Norman Mailer said, 'one of the ten or twenty great novels of our century.'",
+      "price": 5.5,
+      "rating": 3.66,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1655123174i/249.jpg",
+      "image": "249.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Henry Miller",
+      "isbn": "9781614278627",
+      "genre": [2, 8, 23, 24]
+    }
+  },
+  {
+    "pk": 32,
+    "model": "products.book",
+    "fields": {
+      "name": "tropic_of_capricorn",
+      "friendly_name": "Tropic of Capricorn",
+      "slug": "tropic-of-capricorn",
+      "description": "Banned in America for almost thirty years because of its explicit sexual content, this companion volume to Miller's Tropic of Cancer chronicles his life in 1920s New York City. Famous for its frank portrayal of life in Brooklyn's ethnic neighborhoods, and Miller's outrageous sexual exploits, Tropic of Capricorn is now considered a cornerstone of modern literature. ",
+      "price": 5.5,
+      "rating": 3.81,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1521304861i/250.jpg",
+      "image": "250.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Henry Miller",
+      "isbn": "9780802151827",
+      "genre": [2, 8, 24]
+    }
+  },
+  {
+    "pk": 33,
+    "model": "products.book",
+    "fields": {
+      "name": "the_air_conditioned_nightmare",
+      "friendly_name": "The Air-Conditioned Nightmare",
+      "slug": "the-air-conditioned-nightmare",
+      "description": "In 1939, after ten years as an expatriate, Henry Miller returned to the United States with a keen desire to see what his native land was really likeâ€”to get to the roots of the American nature and experience. He set out on a journey that was to last three years, visiting many sections of the country and making friends of all descriptions. The Air-Conditioned Nightmare is the result of that odyssey.",
+      "price": 4.5,
+      "rating": 3.82,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1347469025i/253.jpg",
+      "image": "253.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Henry Miller",
+      "isbn": "9780811201063",
+      "genre": [2, 19, 8]
+    }
+  },
+  {
+    "pk": 34,
+    "model": "products.book",
+    "fields": {
+      "name": "the_portrait_of_a_lady",
+      "friendly_name": "The Portrait of a Lady",
+      "slug": "the-portrait-of-a-lady",
+      "description": "When Isabel Archer, a beautiful, spirited American, is brought to Europe by her wealthy Aunt Touchett, it is expected that she will soon marry. But Isabel, resolved to determine her own fate, does not hesitate to turn down two eligible suitors. She then finds herself irresistibly drawn to Gilbert Osmond, who, beneath his veneer of charm and cultivation, is cruelty itself. A story of intense poignancy, Isabel's tale of love and betrayal still resonates with modern audiences.",
+      "price": 5.7,
+      "rating": 3.79,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1502148606i/264.jpg",
+      "image": "264.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Henry James",
+      "isbn": "9781719335546",
+      "genre": [2, 8, 59, 26]
+    }
+  },
+  {
+    "pk": 35,
+    "model": "products.book",
+    "fields": {
+      "name": "the_lover",
+      "friendly_name": "The Lover",
+      "slug": "the-lover",
+      "description": "Set against the backdrop of French colonial Vietnam, The Lover reveals the intimacies and intricacies of a clandestine romance between a pubescent girl from a financially strapped French family and an older, wealthy Chinese-Vietnamese man.",
+      "price": 3.99,
+      "rating": 3.72,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1657544478i/275.jpg",
+      "image": "275.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Marguerite Duras",
+      "isbn": "9780375700521",
+      "genre": [2, 8, 26, 59]
+    }
+  },
+  {
+    "pk": 36,
+    "model": "products.book",
+    "fields": {
+      "name": "the_broken_wings",
+      "friendly_name": "The Broken Wings",
+      "slug": "the-broken-wings",
+      "description": "A tender tale set in Beirut tells of first love between a youth and a young girl named Selma, who is promised in marriage to another man",
+      "price": 3.99,
+      "rating": 3.96,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1347637124i/291.jpg",
+      "image": "291.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Kahlil Gibran",
+      "isbn": "9781979253185",
+      "genre": [8, 27, 2, 26, 28]
+    }
+  },
+  {
+    "pk": 37,
+    "model": "products.book",
+    "fields": {
+      "name": "treasure_island",
+      "friendly_name": "Treasure Island",
+      "slug": "treasure-island",
+      "description": "For sheer storytelling delight and pure adventure, Treasure Island has never been surpassed. From the moment young Jim Hawkins first encounters the sinister Blind Pew at the Admiral Benbow Inn until the climactic battle for treasure on a tropic isle, the novel creates scenes and characters that have fired the imaginations of generations of readers. Written by a superb prose stylist, a master of both action and atmosphere, the story centers upon the conflict between good and evil - but in this case a particularly engaging form of evil. It is the villainy of that most ambiguous rogue Long John Silver that sets the tempo of this tale of treachery, greed, and daring. Designed to forever kindle a dream of high romance and distant horizons, Treasure Island is, in the words of G. K. Chesterton, 'the realization of an ideal, that which is promised in its provocative and beckoning map; a vision not only of white skeletons but also green palm trees and sapphire seas.' G. S. Fraser terms it 'an utterly original book' and goes on to write: 'There will always be a place for stories like Treasure Island that can keep boys and old men happy.",
+      "price": 6.99,
+      "rating": 3.84,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1485248909i/295.jpg",
+      "image": "295.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Robert Louis Stevenson",
+      "isbn": "9798623553805",
+      "genre": [8, 2, 6, 59, 3, 5]
+    }
+
+  },
+  {
+    "pk": 38,
+    "model": "products.book",
+    "fields": {
+      "name": "daniel_deronda",
+      "friendly_name": "Daniel Deronda",
+      "slug": "daniel-deronda",
+      "description": "A beautiful young woman stands poised over the gambling tables in an expensive hotel. She is aware of, and resents, the gaze of an unusual young man, a stranger, who seems to judge her, and find her wanting. The encounter will change her life.The strange young man is Daniel Deronda, brought up with his own origins shrouded in mystery, searching for a compelling outlet for his singular talents and remarkable capacity for empathy. Deronda's destiny will change the lives of many.",
+      "price": 6.99,
+      "rating": 3.86,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1632587921i/304.jpg",
+      "image": "304.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "George Eliot",
+      "isbn": "9788411781329",
+      "genre": [8, 2, 59]
+    }
+  },
+  {
+    "pk": 39,
+    "model": "products.book",
+    "fields": {
+      "name": "one_hundred_years_of_solitude",
+      "friendly_name": "One Hundred Years of Solitude",
+      "slug": "one-hundred-years-of-solitude",
+      "description": "The brilliant, bestselling, landmark novel that tells the story of the Buendia family, and chronicles the irreconcilable conflict between the desire for solitude and the need for love in rich, imaginative prose that has come to define an entire genre known as 'magical realism.'",
+      "price": 7.99,
+      "rating": 4.11,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327881361i/320.jpg",
+      "image": "320.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Gabriel Garcia Marquez",
+      "isbn": "9780061120091",
+      "genre": [2, 1, 59]
+    }
+  },
+  {
+    "pk": 40,
+    "model": "products.book",
+    "fields": {
+      "name": "perfume_the_story_of_a_murderer",
+      "friendly_name": "Perfume: The Story of a Murderer",
+      "slug": "perfume-the-story-of-a-murderer",
+      "description": "An acclaimed bestseller and international sensation, Patrick Suskind's classic novel provokes a terrifying examination of what happens when one man's indulgence in his greatest passionâ€”his sense of smellâ€”leads to murder.In the slums of eighteenth-century France, the infant Jean-Baptiste Grenouille is born with one sublime giftâ€”an absolute sense of smell. As a boy, he lives to decipher the odors of Paris, and apprentices himself to a prominent perfumer who teaches him the ancient art of mixing precious oils and herbs. But Grenouille's genius is such that he is not satisfied to stop there, and he becomes obsessed with capturing the smells of objects such as brass doorknobs and fresh-cut wood. Then one day he catches a hint of a scent that will drive him on an ever-more-terrifying quest to create the 'ultimate perfume', the scent of a beautiful young virgin. Told with dazzling narrative brilliance, Perfume is a hauntingly powerful tale of murder and sensual depravity.",
+      "price": 8.99,
+      "rating": 4.04,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1409112276i/343.jpg",
+      "image": "343.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Patrick Saskind",
+      "isbn": "9780375725845",
+      "genre": [2, 8, 59, 60, 29, 30, 31]
+    }
+  },
+  {
+    "pk": 41,
+    "model": "products.book",
+    "fields": {
+      "name": "the_door_into_summer",
+      "friendly_name": "The Door Into Summer",
+      "slug": "the-door-into-summer",
+      "description": "Electronics engineer Dan Davis has finally made the invention of a lifetime: a household robot with extraordinary abilities, destined to dramatically change the landscape of everyday routine. Then, Dan was tricked by an unscrupulous greedy business partner and a greedier fiancee into spending thirty years in suspended animation, the long sleep, just when he was on the verge of a success beyond his wildest dreams.They never imagine that the future time in which Dan, a modern-day and future-time, Rip Van Winkle, will awaken has mastered time travel, giving him a way to get back to them, and at them, and get his revenge!.",
+      "price": 6.5,
+      "rating": 4.02,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1342241886i/348.jpg",
+      "image": "348.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Robert A. Heinlein",
+      "isbn": "9780575120723",
+      "genre": [9, 2, 1, 8, 6]
+    }
+  },
+  {
+    "pk": 42,
+    "model": "products.book",
+    "fields": {
+      "name": "stranger_in_a_strange_land",
+      "friendly_name": "Stranger in a Strange Land",
+      "slug": "stranger-in-a-strange-land",
+      "description": "NAME: Valentine Michael SmithANCESTRY: HumanORIGIN: MarsValentine Michael Smith is a human being raised on Mars, newly returned to Earth. Among his people for the first time, he struggles to understand the social mores and prejudices of human nature that are so alien to him, while teaching them his own fundamental beliefs in grokking, watersharing, and love.",
+      "price": 6.5,
+      "rating": 3.92,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1156897088i/350.jpg",
+      "image": "350.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Robert A. Heinlein",
+      "isbn": "9781984802781",
+      "genre": [9, 2, 8, 1, 41]
+    }
+  },
+  {
+    "pk": 43,
+    "model": "products.book",
+    "fields": {
+      "name": "starman_jones",
+      "friendly_name": "Starman Jones",
+      "slug": "starman-jones",
+      "description": "The stars were closed to Max Jones. To get into space you either needed connections, a membership in the Guild, or a whole lot more money than Max, the son of a widowed, poor mother, was ever going to have. What Max does have going for him are his uncleâ€™s prized astrogation manualsâ€”book on star navigation that Max literally commits to memory word for word, equation for equation. From the First Golden Age of Heinlein, this is the so-called juvenile (written, Heinlein always claims, just as much for adults) that started them all and made Heinlein a legend for multiple generations of readers.",
+      "price": 7.5,
+      "rating": 3.88,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388342744i/351.jpg",
+      "image": "351.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Robert A. Heinlein",
+      "isbn": "9781451637496",
+      "genre": [9, 2, 3, 6]
+    }
+  },
+  {
+    "pk": 44,
+    "model": "products.book",
+    "fields": {
+      "name": "time_enough_for_love",
+      "friendly_name": "Time Enough for Love",
+      "slug": "time-enough-for-love",
+      "description": "The capstone and crowning achievement of Heinlein's famous Future History, Time Enough for Love follows Lazarus Long through a vast and magnificent timescape of centuries and worlds. Heinlein's longest and most ambitious work, it is the story of a man so in love with Life that he refused to stop living it; and so in love with Time that he became his own ancestor.",
+      "price": 7.5,
+      "rating": 3.97,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1218664355i/353.jpg",
+      "image": "353.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Robert A. Heinlein",
+      "isbn": "9780441810765",
+      "genre": [9, 2, 1, 8]
+    }
+  },
+  {
+    "pk": 45,
+    "model": "products.book",
+    "fields": {
+      "name": "job_a_comedy_of_justice",
+      "friendly_name": "Job: A Comedy of Justice",
+      "slug": "job-a-comedy-of-justice",
+      "description": "NEW YORK TIMES BESTSELLER Robert Heinlein at his superlative best. A fascinating and thought-provoking novel, one to make you smile, to make you wonder, and to make you care!After that firewalking gig in Polynesia, the whole world was suddenly changed around him. Instead of fundamentalist minister Alexander Hergensheimer, he was now supposed to be Alec Graham, an underworld figure in the middle of an affair with his stewardess Margretheâ€”who was the only good thing in the whole mess.Then there was an impossible iceberg that wrecked the ship in the tropics. Rescued by a Royal Â Mexican plane, they were hit by a double earthquake. From then on, as changed world followed changed world, things went from bad to worse.To Alex, all the signs increasingly pointed to Armageddon and the Day of Judgement. And Margrethe was a determined heathen. Somehow he had to bring her to a state of grace, for Heaven would be no paradise without her. But time was growing short.Â Somewhere, there had to be a solution to it all. And, of course, there was. But it was truly a Hell of a solution.",
+      "price": 8.99,
+      "rating": 3.78,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1438043968i/355.jpg",
+      "image": "355.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Robert A. Heinlein",
+      "isbn": "9780345316509",
+      "genre": [9, 2, 1, 10]
+    }
+  },
+  {
+    "pk": 46,
+    "model": "products.book",
+    "fields": {
+      "name": "the_salmon_of_doubt_hitchhiking_the_galaxy_one_last_time",
+      "friendly_name": "The Salmon of Doubt: Hitchhiking the Galaxy One Last Time",
+      "slug": "the-salmon-of-doubt-hitchhiking-the-galaxy-one-last-time",
+      "description": "Douglas Adams changed the face of science fiction with his cosmically comic novel The Hitchhiker's Guide to the Galaxy and its classic sequels. Sadly for his countless admirers, he hitched his own ride to the great beyond much too soon. Culled posthumously from Adamsâ€™s fleet of beloved Macintosh computers, this selection of essays, articles, anecdotes, and stories offers a fascinating and intimate portrait of the multifaceted artist and absurdist wordsmith.Join Adams on an excursion to climb Kilimanjaro dressed in a rhino costume; peek into the private life of Genghis Khan, warrior and world-class neurotic; root for the harried authorâ€™s efforts to get a Hitchhiker movie off the ground in Hollywood; thrill to the further exploits of private eye Dirk Gently and two-headed alien Zaphod Beeblebrox. Though Douglas Adams is gone, heâ€™s left us something very special to remember him by. Without a doubt.",
+      "price": 9,
+      "rating": 3.93,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388273676i/359.jpg",
+      "image": "359.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Douglas Adams",
+      "isbn": "9780345460950",
+      "genre": [9, 2, 10, 1, 11, 33]
+    }
+  },
+  {
+    "pk": 47,
+    "model": "products.book",
+    "fields": {
+      "name": "dirk_gentlys_holistic_detective_agency",
+      "friendly_name": "Dirk Gently's Holistic Detective Agency",
+      "slug": "dirk-gentlys-holistic-detective-agency",
+      "description": "What do a dead cat, a computer whiz-kid, an Electric Monk who believes the world is pink, quantum mechanics, a Chronologist over 200 years old, Samuel Taylor Coleridge (poet), and pizza have in common? Apparently not much; until Dirk Gently, self-styled private investigator, sets out to prove the fundamental interconnectedness of all things by solving a mysterious murder, assisting a mysterious professor, unravelling a mysterious mystery, and eating a lot of pizza, not to mention saving the entire human race from extinction along the way (at no extra charge). To find out more, read this book (better still, buy it, then read it) or contact Dirk Gently's Holistic Detective Agency. A thumping good detective-ghost-horror-whodunnit-time travel-romantic-musical-comedy epic.",
+      "price": 8.99,
+      "rating": 3.97,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554401296i/365.jpg",
+      "image": "365.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Douglas Adams",
+      "isbn": "9781476782997",
+      "genre": [9, 2, 1, 10, 30, 11]
+    }
+  },
+  {
+    "pk": 48,
+    "model": "products.book",
+    "fields": {
+      "name": "the_white_album",
+      "friendly_name": "The White Album",
+      "slug": "the-white-album",
+      "description": "First published in 1979, Joan Didion's The White Album records indelibly the upheavals and aftermaths of the 1960s. Examining key events, figures, and trends of the eraâ€”including Charles Manson, the Black Panthers, and the shopping mallâ€”through the lens of her own spiritual confusion, Joan Didion helped to define mass culture as we now understand it. Written with a commanding sureness of tone and linguistic precision, The White Album is a central text of American reportage and a classic of American autobiography.",
+      "price": 3.5,
+      "rating": 4.06,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1611928161i/421.jpg",
+      "image": "421.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Joan Didion",
+      "isbn": "9780671226855",
+      "genre": [12, 17, 8, 14, 34, 18]
+    }
+  },
+  {
+    "pk": 49,
+    "model": "products.book",
+    "fields": {
+      "name": "the_brooklyn_follies",
+      "friendly_name": "The Brooklyn Follies",
+      "slug": "the-brooklyn-follies",
+      "description": "Nathan Glass has come to Brooklyn to die. Divorced, retired, estranged from his only daughter, the former life insurance salesman seeks only solitude and anonymity. Then Glass encounters his long-lost nephew, Tom Wood, who is working in a local bookstoreâ€”a far cry from the brilliant academic career Tom had begun when Nathan saw him last. Tom's boss is the colorful and charismatic Harry Brightmanâ€”a.k.a. Harry Dunkelâ€”once the owner of a Chicago art gallery, whom fate has also brought to the 'ancient kingdom of Brooklyn, New York.' Through Tom and Harry, Nathan's world gradually broadens to include a new circle of acquaintances. He soon finds himself drawn into a scam involving a forged page of The Scarlet Letter, and begins to undertake his own literary venture, The Book of Human Folly, an account of every blunder, every pratfall, every embarrassment, every idiocy, every foible, and every inane act I have committed during my long and checkered career as a man. The Brooklyn Follies is Paul Auster's warmest, most exuberant novel, a moving, unforgettable hymn to the glories and mysteries of ordinary human life.",
+      "price": 12.99,
+      "rating": 3.86,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388285831i/446.jpg",
+      "image": "446.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Paul Auster",
+      "isbn": "9780312429003",
+      "genre": [2]
+    }
+  },
+  {
+    "pk": 50,
+    "model": "products.book",
+    "fields": {
+      "name": "moon_palace",
+      "friendly_name": "Moon Palace",
+      "slug": "moon-palace",
+      "description": "Marco Stanley Fogg is an orphan, a child of the sixties, a quester tirelessly seeking the key to his past, the answers to the ultimate riddle of his fate. As Marco sets out on a journey from the canyons of Manhattan to the deserts of Utah, he encounters a gallery of characters and a series of events as rich and surprising as any in modern fiction.Beginning during the summer that men first walked on the moon, and moving backward and forward in time to span three generations, Moon Palace is propelled by coincidence and memory, and illuminated by marvelous flights of lyricism and wit. Here is the most entertaining and moving novel yet from an author well known for his breathtaking imagination.",
+      "price": 11.99,
+      "rating": 3.98,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1390616212i/447.jpg",
+      "image": "447.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Paul Auster",
+      "isbn": "9780140115857",
+      "genre": [2, 8]
+    }
+  },
+  {
+    "pk": 51,
+    "model": "products.book",
+    "fields": {
+      "name": "leviathan",
+      "friendly_name": "Leviathan",
+      "slug": "leviathan",
+      "description": "New York Times' bestselling author Paul Auster (The New York Trilogy) opens Leviathan with the tearing of a bomb explosion and the death of one Benjamin Sachs. Benâ€™s one-time best friend, Peter Aaron, begins to retrospectively investigate the transformation that led Ben from his enviable stable life, to one of a recluse. Both were once intelligent, yet struggling novelists until Benâ€™s near-death experience falling from a fire escape triggers a tumble in which he becomes withdrawn and disturbed, living alone and building bombs in a far-off cabin. That is, until he mysteriously disappears, leaving behind only a manuscript titled Leviathan, pages rustling in the wind.",
+      "price": 10.99,
+      "rating": 3.97,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388371291i/456.jpg",
+      "image": "456.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Paul Auster",
+      "isbn": "9780140178135",
+      "genre": [2]
+    }
+  },
+  {
+    "pk": 52,
+    "model": "products.book",
+    "fields": {
+      "name": "killing_yourself_to_live_85_percent_of_a_true_story",
+      "friendly_name": "Killing Yourself to Live: 85% of a True Story",
+      "slug": "killing-yourself-to-live-85-percent-of-a-true-story",
+      "description": "Building on the national bestselling success of Sex, Drugs, and Cocoa Puffs , preeminent pop culture writer Chuck Klosterman unleashes his best book yetâ€”the story of his cross-country tour of sites where rock stars have died and his search for love, excitement, and the meaning of death.For 6,557 miles, Chuck Klosterman thought about dying. He drove a rental car from New York to Rhode Island to Georgia to Mississippi to Iowa to Minneapolis to Fargo to Seattle, and he chased death and rock â€˜nâ€™ roll all the way. Within the span of twenty-one days, Chuck had three relationships endâ€”one by choice, one by chance, and one by exhaustion. He snorted cocaine in a graveyard. He walked a half-mile through a bean field. A man in Dickinson, North Dakota, explained to him why we have fewer windmills than we used to. He listened to the KISS solo albums and the Rod Stewart box set. At one point, poisonous snakes became involved. The road is hard. From the Chelsea Hotel to the swampland where Lynyrd Skynyrdâ€™s plane went down to the site where Kurt Cobain blew his head off, Chuck explored every brand of rock star demise. He wanted to know why the greatest career move any musician can make is to stop breathing...and what this means for the rest of us.",
+      "price": 11.99,
+      "rating": 3.85,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1695134262i/597.jpg",
+      "image": "597.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Chuck Klosterman",
+      "isbn": "9780743264464",
+      "genre": [12, 35, 17, 10, 19]
+    }
+  },
+  {
+    "pk": 53,
+    "model": "products.book",
+    "fields": {
+      "name": "sex_drugs_and_cocoa_puffs_a_low_culture_manifesto",
+      "friendly_name": "Sex, Drugs, and Cocoa Puffs: A Low Culture Manifesto",
+      "slug": "sex-drugs-and-cocoa-puffs-a-low-culture-manifesto",
+      "description": "Countless writers and artists have spoken for a generation, but no one has done it quite like Chuck Klosterman. With an exhaustive knowledge of popular culture and an almost effortless ability to spin brilliant prose out of unlikely subject matter, Klosterman attacks the entire spectrum of postmodern America: reality TV, Internet porn, Pamela Anderson, literary Jesus freaks, and the real difference between apples and oranges (of which there is none). And don't even get him started on his love life and the whole Harry-Met-Sally situation. Whether deconstructing Saved by the Bell episodes or the artistic legacy of Billy Joel, the symbolic importance of The Empire Strikes Back or the Celtics/Lakers rivalry, Chuck will make you think, he'll make you laugh, and he'll drive you insane -- usually all at once. Sex, Drugs, and Cocoa Puffs is ostensibly about art, entertainment, infotainment, sports, politics, and kittens, but -- really -- it's about us. All of us. As Klosterman realizes late at night, in the moment before he falls asleep, 'In and of itself, nothing really matters. What matters is that nothing is ever 'in and of itself.' Read to believe.",
+      "price": 13.99,
+      "rating": 3.74,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1380742001i/599.jpg",
+      "image": "599.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Chuck Klosterman",
+      "isbn": "9780743236010",
+      "genre": [12, 10, 35, 36, 17]
+    }
+  },
+  {
+    "pk": 54,
+    "model": "products.book",
+    "fields": {
+      "name": "zen_and_the_art_of_motorcycle_maintenance_an_inquiry_into_values",
+      "friendly_name": "Zen and the Art of Motorcycle Maintenance: An Inquiry Into Values",
+      "slug": "zen-and-the-art-of-motorcycle-maintenance-an-inquiry-into-values",
+      "description": "Robert M. Pirsig's Zen & the Art of Motorcycle Maintenance is an examination of how we live, a meditation on how to live better set around the narration of a summer motorcycle trip across America's Northwest, undertaken by a father & his young son.",
+      "price": 6,
+      "rating": 3.78,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1410136019i/629.jpg",
+      "image": "629.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Robert M. Pirsig",
+      "isbn": "9780061673733",
+      "genre": [28, 2, 8, 37, 19, 38]
+    }
+  },
+  {
+    "pk": 55,
+    "model": "products.book",
+    "fields": {
+      "name": "war_and_peace",
+      "friendly_name": "War and Peace",
+      "slug": "war-and-peace",
+      "description": "In Russia's struggle with Napoleon, Tolstoy saw a tragedy that involved all mankind. War and Peace broadly focuses on Napoleonâ€™s invasion of Russia in 1812 and follows three of the most well-known characters in literature: Pierre Bezukhov, the illegitimate son of a count who is fighting for his inheritance and yearning for spiritual fulfillment; Prince Andrei Bolkonsky, who leaves his family behind to fight in the war against Napoleon; and Natasha Rostov, the beautiful young daughter of a nobleman who intrigues both men.As Napoleonâ€™s army invades, Tolstoy brilliantly follows characters from diverse backgrounds' peasants and nobility, civilians and soldiers' as they struggle with the problems unique to their era, their history, and their culture. And as the novel progresses, these characters transcend their specificity, becoming some of the most movingâ€”and humanâ€”figures in world literature.Tolstoy gave his personal approval to this translation, published here in a new single volume edition, which includes an introduction by Henry Gifford, and Tolstoy's important essay `Some Words about War and Peace'.",
+      "price": 8,
+      "rating": 4.16,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1413215930i/656.jpg",
+      "image": "656.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Leo Tolstoy",
+      "isbn": "9781400079988",
+      "genre": [8, 2, 59, 39]
+    }
+  },
+  {
+    "pk": 56,
+    "model": "products.book",
+    "fields": {
+      "name": "atlas_shrugged",
+      "friendly_name": "Atlas Shrugged",
+      "slug": "atlas-shrugged",
+      "description": "This is the story of a man who said that he would stop the motor of the world and did. Was he a destroyer or the greatest of liberators?Why did he have to fight his battle, not against his enemies, but against those who needed him most, and his hardest battle against the woman he loved? What is the worldâ€™s motor â€” and the motive power of every man? You will know the answer to these questions when you discover the reason behind the baffling events that play havoc with the lives of the characters in this story. Tremendous in its scope, this novel presents an astounding panorama of human life â€” from the productive genius who becomes a worthless playboy â€” to the great steel industrialist who does not know that he is working for his own destruction â€” to the philosopher who becomes a pirate â€” to the composer who gives up his career on the night of his triumph â€” to the woman who runs a transcontinental railroad â€” to the lowest track worker in her Terminal tunnels. You must be prepared, when you read this novel, to check every premise at the root of your convictions.This is a mystery story, not about the murder and rebirth of man's spirit. It is a philosophical revolution, told in the form of an action thriller of violent events, a ruthlessly brilliant plot structure and an irresistible suspense. Do you say this is impossible? Well, that is the first of your premises to check.",
+      "price": 3.99,
+      "rating": 3.69,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1405868167i/662.jpg",
+      "image": "662.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Ayn Rand",
+      "isbn": "9780451191144",
+      "genre": [2, 8, 28, 40, 9]
+    }
+  },
+  {
+    "pk": 57,
+    "model": "products.book",
+    "fields": {
+      "name": "anthem",
+      "friendly_name": "Anthem",
+      "slug": "anthem",
+      "description": "Anthem is Ayn Rand's classic tale of a dystopian future of the great 'We' a world that deprives individuals of a name or independence that anticipates her later masterpieces, The Fountainhead and Atlas Shrugged. They existed only to serve the state. They were conceived in controlled Palaces of Mating. They died in the Home of the Useless. From cradle to grave, the crowd was oneâ€”the great WE.In all that was left of humanity, there was only one man who dared to think, seek, and love. He lived in the dark ages of the future. In a loveless world, he dared to love the woman of his choice. In an age that had lost all trace of science and civilization, he had the courage to seek and find knowledge. But these were not the crimes for which he would be hunted. He was marked for death because he had committed the unpardonable sin: He had stood forth from the mindless human herd. He was a man alone. He had rediscovered the lost and holy word.'I worship individuals for their highest possibilities as individuals, and I loathe humanity, for its failure to live up to these possibilities.'",
+      "price": 12.99,
+      "rating": 3.61,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388190459i/667.jpg",
+      "image": "667.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Ayn Rand",
+      "isbn": "9781503250703",
+      "genre": [2, 8, 28, 9]
+    }
+  },
+  {
+    "pk": 58,
+    "model": "products.book",
+    "fields": {
+      "name": "of_mice_and_men",
+      "friendly_name": "Of Mice and Men",
+      "slug": "of-mice-and-men",
+      "description": "I got you to look after me, and you got me to look after you, and that's why. They are an unlikely pair: George is small and quick and dark of face; Lennie, a man of tremendous size, has the mind of a young child. Yet they have formed a family, clinging together in the face of loneliness and alienation. Laborers in California's dusty vegetable fields, they hustle work when they can, living a hand-to-mouth existence. But George and Lennie have a plan: to own an acre of land and a shack they can call their own.While the powerlessness of the laboring class is a recurring theme in Steinbeck's work of the late 1930s, he narrowed his focus when composing Of Mice and Men, creating an intimate portrait of two men facing a world marked by petty tyranny, misunderstanding, jealousy, and callousness. But though the scope is narrow, the theme is universal: a friendship and a shared dream that makes an individual's existence meaningful.A unique perspective on life's hardships, this story has achieved the status of timeless classic due to its remarkable success as a novel, a Broadway play, and three acclaimed films.",
+      "price": 12.99,
+      "rating": 3.88,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1511302904i/890.jpg",
+      "image": "890.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "John Steinbeck",
+      "isbn": "9780140177398",
+      "genre": [2, 8, 59]
+    }
+  },
+  {
+    "pk": 59,
+    "model": "products.book",
+    "fields": {
+      "name": "memoirs_of_a_geisha",
+      "friendly_name": "Memoirs of a Geisha",
+      "slug": "memoirs-of-a-geisha",
+      "description": "A literary sensation and runaway bestseller, this brilliant novel presents with seamless authenticity and exquisite lyricism the true confessions of one of Japan's most celebrated geisha.In 'Memoirs of a Geisha,' we enter a world where appearances are paramount; where a girl's virginity is auctioned to the highest bidder; where women are trained to beguile the most powerful men; and where love is scorned as illusion. It is a unique and triumphant work of fiction - at once romantic, erotic, suspenseful - and completely unforgettable.",
+      "price": 12.99,
+      "rating": 4.15,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388367666i/930.jpg",
+      "image": "930.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Arthur Golden",
+      "isbn": "9780679781585",
+      "genre": [2, 59, 26, 16, 41]
+    }
+  },
+  {
+    "pk": 60,
+    "model": "products.book",
+    "fields": {
+      "name": "angels_and_demons",
+      "friendly_name": "Angels & Demons",
+      "slug": "angels-and-demons",
+      "description": "When a world, renowned scientist is found brutally murdered in a Swiss research facility, a Harvard professor, Robert Langdon, is summoned to identify the mysterious symbol seared onto the dead man's chest. His baffling conclusion: it is the work of the Illuminati, a secret brotherhood presumed extinct for nearly four hundred years - reborn to continue their bitter vendetta against their sworn enemy, the Catholic church.In Rome, the college of cardinals assembles to elect a new pope. Yet somewhere within the walls of the Vatican, an unstoppable bomb of terrifying power relentlessly counts down to oblivion. While the minutes tick away, Langdon joins forces with Vittoria Vetra, a beautiful and mysterious Italian scientist, to decipher the labyrinthine trail of ancient symbols that snakes across Rome to the long-forgotten Illuminati lair - a secret refuge wherein lies the only hope for the Vatican.But with each revelation comes another twist, another turn in the plot, which leaves Langdon and Vetra reeling and at the mercy of a seemingly invisible enemy...",
+      "price": 4.99,
+      "rating": 3.94,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1696691404i/960.jpg",
+      "image": "960.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Dan Brown",
+      "isbn": "9780743486224",
+      "genre": [2, 30, 29, 32, 6, 31]
+    }
+  },
+  {
+    "pk": 61,
+    "model": "products.book",
+    "fields": {
+      "name": "the_da_vinci_code",
+      "friendly_name": "The Da Vinci Code",
+      "slug": "the-da-vinci-code",
+      "description": "While in Paris, Harvard symbologist Robert Langdon is awakened by a phone call in the dead of the night. The elderly curator of the Louvre has been murdered inside the museum, his body covered in baffling symbols. As Langdon and gifted French cryptologist Sophie Neveu sort through the bizarre riddles, they are stunned to discover a trail of clues hidden in the works of Leonardo da Vinciâ€”clues visible for all to see and yet ingeniously disguised by the painter.Even more startling, the late curator was involved in the Priory of Sionâ€”a secret society whose members included Sir Isaac Newton, Victor Hugo, and Da Vinci and he guarded a breathtaking historical secret. Unless Langdon and Neveu can decipher the labyrinthine puzzleâ€”while avoiding the faceless adversary who shadows their every moveâ€”the explosive, ancient truth will be lost forever.",
+      "price": 4.99,
+      "rating": 3.92,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1579621267i/968.jpg",
+      "image": "968.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Dan Brown",
+      "isbn": "9780274808328",
+      "genre": [2, 30, 29, 32, 6]
+    }
+  },
+  {
+    "pk": 62,
+    "model": "products.book",
+    "fields": {
+      "name": "deception_point",
+      "friendly_name": "Deception Point",
+      "slug": "deception-point",
+      "description": "A shocking scientific discovery. A conspiracy of staggering brilliance. A thriller unlike any you've ever read....When a NASA satellite discovers an astonishingly rare object buried deep in the Arctic ice, the floundering space agency proclaims a much-needed victory a victory with profound implications for NASA policy and the impending presidential election. To verify the authenticity of the find, the White House calls upon the skills of intelligence analyst Rachel Sexton. Accompanied by a team of experts, including the charismatic scholar Michael Tolland, Rachel travels to the Arctic and uncovers the unthinkable: evidence of scientific trickery a bold deception that threatens to plunge the world into controversy. But before she can warn the President, Rachel and Michael are ambushed by a deadly team of assassins. Fleeing for their lives across a desolate and lethal landscape, their only hope for survival is to discover who is behind this masterful plot. The truth, they will learn, is the most shocking deception of all.",
+      "price": 4.99,
+      "rating": 3.75,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1551277487i/976.jpg",
+      "image": "976.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Dan Brown",
+      "isbn": "9780743497466",
+      "genre": [2, 6, 9, 31, 42]
+    }
+  },
+  {
+    "pk": 63,
+    "model": "products.book",
+    "fields": {
+      "name": "the_good_earth",
+      "friendly_name": "The Good Earth",
+      "slug": "the-good-earth",
+      "description": "This tells the poignant tale of a Chinese farmer and his family in old agrarian China. The humble Wang Lung glories in the soil he works, nurturing the land as it nurtures him and his family. Nearby, the nobles of the House of Hwang consider themselves above the land and its workers; but they will soon meet their own downfall.Hard times come upon Wang Lung and his family when flood and drought force them to seek work in the city. The working people riot, breaking into the homes of the rich and forcing them to flee. When Wang Lung shows mercy to one noble and is rewarded, he begins to rise in the world, even as the House of Hwang falls.",
+      "price": 6.99,
+      "rating": 4,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1312497600i/1078.jpg",
+      "image": "1078.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Pearl S. Buck",
+      "isbn": "9781982147174",
+      "genre": [8, 2, 16]
+    }
+  },
+  {
+    "pk": 64,
+    "model": "products.book",
+    "fields": {
+      "name": "fast_food_nation_the_dark_side_of_the_all_american_meal",
+      "friendly_name": "Fast Food Nation: The Dark Side of the All-American Meal",
+      "slug": "fast-food-nation-the-dark-side-of-the-all-american-meal",
+      "description": "Fast food has hastened the malling of our landscape, widened the chasm between rich and poor, fueled an epidemic of obesity, and propelled American cultural imperialism abroad. That's a lengthy list of charges, but here Eric Schlosser makes them stick with an artful mix of first-rate reportage, wry wit, and careful reasoning.Schlosser's myth-shattering survey stretches from California's subdivisions where the business was born to the industrial corridor along the New Jersey Turnpike where many fast food's flavors are concocted. Along the way, he unearths a trove of fascinating, unsettling truths -- from the unholy alliance between fast food and Hollywood to the seismic changes the industry has wrought in food production, popular culture, and even real estate. (back cover)",
+      "price": 4.85,
+      "rating": 3.75,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554229727i/1097.jpg",
+      "image": "1097.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Eric Schlosser",
+      "isbn": "9780547750330",
+      "genre": [12, 43, 44, 45, 40, 14, 13]
+    }
+  },
+  {
+    "pk": 65,
+    "model": "products.book",
+    "fields": {
+      "name": "the_iliad",
+      "friendly_name": "The Iliad",
+      "slug": "the-iliad",
+      "description": "Dating to the ninth century B.C., Homer's timeless poem still vividly conveys the horror and heroism of men and gods wrestling with towering emotions and battling amidst devastation and destruction, as it moves inexorably to the wrenching, tragic conclusion of the Trojan War. Renowned classicist Bernard Knox observes in his superb introduction that although the violence of the Iliad is grim and relentless, it coexists with both images of civilized life and a poignant yearning for peace. Combining the skills of a poet and scholar, Robert Fagles, winner of the PEN/Ralph Manheim Medal for Translation and a 1996 Academy Award in Literature from the American Academy of Arts and Letters, brings the energy of contemporary language to this enduring heroic epic. He maintains the drive and metric music of Homer's poetry, and evokes the impact and nuance of the Iliad's mesmerizing repeated phrases in what Peter Levi calls â€œan astonishing performance.â€",
+      "price": 4.8,
+      "rating": 3.91,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1625333695i/1371.jpg",
+      "image": "1371.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Homer",
+      "isbn": "9780140275360",
+      "genre": [47, 59, 48, 16]
+    }
+  },
+  {
+    "pk": 66,
+    "model": "products.book",
+    "fields": {
+      "name": "the_iliad_the_odyssey",
+      "friendly_name": "The Iliad / The Odyssey",
+      "slug": "the-iliad-the-odyssey",
+      "description": "Gripping listeners and readers for more than 2,700 years, 'The Iliad' is the story of the Trojan War and the rage of Achilles. Combining the skills of a poet and scholar, Robert Fagles brings the energy of contemporary language to this enduring heroic epic. If 'The Iliad' is the world's greatest war story, then 'The Odyssey' is literature's greatest evocation of every man's journey through life. Here again, Fagles has performed the translator's task magnificently, giving us an Odyssey to read aloud, to savor, and to treasure for its sheer lyrical mastery. Each volume contains a superb introduction with textual and critical commentary by renowned classicist Bernard Knox.",
+      "price": 5.5,
+      "rating": 4.06,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388181863i/1375.jpg",
+      "image": "1375.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Homer",
+      "isbn": "9780147712554",
+      "genre": [8, 2, 27, 47, 1, 59]
+    }
+  },
+  {
+    "pk": 67,
+    "model": "products.book",
+    "fields": {
+      "name": "the_odyssey",
+      "friendly_name": "The Odyssey",
+      "slug": "the-odyssey",
+      "description": "Sing to me of the man, Muse, the man of twists and turnsdriven time and again off course, once he had plunderedthe hallowed heights of Troy.So begins Robert Fagles' magnificent translation of the Odyssey.If the Iliad is the world's greatest war epic, then the Odyssey is literature's grandest evocation of everyman's journey though life. Odysseus' reliance on his wit and wiliness for survival in his encounters with divine and natural forces, during his ten-year voyage home to Ithaca after the Trojan War, is at once a timeless human story and an individual test of moral endurance. In the myths and legends that are retold here, Fagles has captured the energy and poetry of Homer's original in a bold, contemporary idiom, and given us an Odyssey to read aloud, to savor, and to treasure for its sheer lyrical mastery.Renowned classicist Bernard Knox's superb Introduction and textual commentary provide new insights and background information for the general reader and scholar alike, intensifying the strength of Fagles' translation.This is an Odyssey to delight both the classicist and the public at large, and to captivate a new generation of Homer's students.--Robert Fagles, winner of the PEN/Ralph Manheim Medal for Translation and a 1996 Academy Award in Literature from the American Academy of Arts and Letters, presents us with Homer's best-loved and most accessible poem in a stunning new modern-verse translation.",
+      "price": 5.5,
+      "rating": 3.81,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1711957706i/1381.jpg",
+      "image": "1381.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Homer",
+      "isbn": "9780140268867",
+      "genre": [8, 2, 27, 47, 1]
+    }
+  },
+  {
+    "pk": 68,
+    "model": "products.book",
+    "fields": {
+      "name": "hamlet",
+      "friendly_name": "Hamlet",
+      "slug": "hamlet",
+      "description": "Among Shakespeare's plays, 'Hamlet' is considered by many his masterpiece. Among actors, the role of Hamlet, Prince of Denmark, is considered the jewel in the crown of a triumphant theatrical career. Now Kenneth Branagh plays the leading role and co-directs a brillant ensemble performance. Three generations of legendary leading actors, many of whom first assembled for the Oscar-winning film 'Henry V', gather here to perform the rarely heard complete version of the play. This clear, subtly nuanced, stunning dramatization, presented by The Renaissance Theatre Company in association with BBC Broadcasting, features such luminaries as Sir John Gielgud, Derek Jacobi, Emma Thompson and Christopher Ravenscroft. It combines a full cast with stirring music and sound effects to bring this magnificent Shakespearen classic vividly to life. Revealing new riches with each listening, this production of 'Hamlet' is an invaluable aid for students, teachers and all true lovers of Shakespeare - a recording to be treasured for decades to come.",
+      "price": 4.5,
+      "rating": 4.02,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1351051208i/1420.jpg",
+      "image": "1420.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "William Shakespeare",
+      "isbn": "9781451669411",
+      "genre": [8, 2, 49]
+    }
+  },
+  {
+    "pk": 69,
+    "model": "products.book",
+    "fields": {
+      "name": "the_curious_incident_of_the_dog_in_the_night_time",
+      "friendly_name": "The Curious Incident of the Dog in the Night-Time",
+      "slug": "the-curious-incident-of-the-dog-in-the-night-time",
+      "description": "Christopher John Francis Boone knows all the countries of the world and their capitals and every prime number up to 7,057. He relates well to animals but has no understanding of human emotions. He cannot stand to be touched. And he detests the color yellow. This improbable story of Christopherâ€™s quest to investigate the suspicious death of a neighborhood dog makes for one of the most captivating, unusual, and widely heralded novels in recent years.",
+      "price": 5.7,
+      "rating": 3.89,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1479863624i/1618.jpg",
+      "image": "1618.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Mark Haddon",
+      "isbn": "9781400032716",
+      "genre": [2, 30, 3, 8]
+    }
+  },
+  {
+    "pk": 70,
+    "model": "products.book",
+    "fields": {
+      "name": "a_midsummer_nights_dream",
+      "friendly_name": "A Midsummer Night's Dream",
+      "slug": "a-midsummer-nights-dream",
+      "description": "Shakespeare's intertwined love polygons begin to get complicated from the start--Demetrius and Lysander both want Hermia but she only has eyes for Lysander. Bad news is, Hermia's father wants Demetrius for a son-in-law. On the outside is Helena, whose unreturned love burns hot for Demetrius. Hermia and Lysander plan to flee from the city under cover of darkness but are pursued by an enraged Demetrius (who is himself pursued by an enraptured Helena). In the forest, unbeknownst to the mortals, Oberon and Titania (King and Queen of the faeries) are having a spat over a servant boy. The plot twists up when Oberon's head mischief-maker, Puck, runs loose with a flower which causes people to fall in love with the first thing they see upon waking. Throw in a group of labourers preparing a play for the Duke's wedding (one of whom is given a donkey's head and Titania for a lover by Puck) and the complications become fantastically funny.",
+      "price": 3.99,
+      "rating": 3.95,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327874534i/1622.jpg",
+      "image": "1622.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "William Shakespeare",
+      "isbn": "9798630574824",
+      "genre": [2, 1, 26, 27]
+    }
+  },
+  {
+    "pk": 71,
+    "model": "products.book",
+    "fields": {
+      "name": "west_with_the_night",
+      "friendly_name": "West with the Night",
+      "slug": "west-with-the-night",
+      "description": "This 1942 memoir (not a complete autobiography) by Beryl Markham chronicles her experiences growing up in Kenya (then British East Africa) in the early 1900s, and her stellar careers as racehorse trainer and bush pilot. Markham was the first woman in East Africa to be granted a commercial pilot's license, piloting passengers and supplies to remote corners of Africa. She became the first person to fly solo across the Atlantic from east to west. Considered a classic of outdoor literature and ranked #8 by National Geographic Adventure in 2008 on its list of the 100 best adventure books.",
+      "price": 3.99,
+      "rating": 4.15,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1368204688i/1624.jpg",
+      "image": "1624.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Beryl Markham",
+      "isbn": "9780865477636",
+      "genre": [12, 17, 18, 19, 14, 6]
+    }
+  },
+  {
+    "pk": 72,
+    "model": "products.book",
+    "fields": {
+      "name": "twelfth_night",
+      "friendly_name": "Twelfth Night",
+      "slug": "twelfth-night",
+      "description": "Named for the twelfth night after Christmas, the end of the Christmas season, Twelfth Night plays with love and power. The Countess Olivia, a woman with her own household, attracts Duke (or Count) Orsino. Two other would-be suitors are her pretentious steward, Malvolio, and Sir Andrew Aguecheek.Onto this scene arrive the twins Viola and Sebastian; caught in a shipwreck, each thinks the other has drowned. Viola disguises herself as a male page and enters Orsinoâ€™s service. Orsino sends her as his envoy to Oliviaâ€”only to have Olivia fall in love with the messenger. The play complicates, then wonderfully untangles, these relationships.",
+      "price": 6.99,
+      "rating": 3.97,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1561384026i/1625.jpg",
+      "image": "1625.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "William Shakespeare",
+      "isbn": "9780743482776",
+      "genre": [2, 8, 26, 50]
+    }
+  },
+  {
+    "pk": 73,
+    "model": "products.book",
+    "fields": {
+      "name": "brokeback_mountain",
+      "friendly_name": "Brokeback Mountain",
+      "slug": "brokeback-mountain",
+      "description": "Annie Proulx has written some of the most original and brilliant short stories in contemporary literature, and for many readers and reviewers, 'Brokeback Mountain' is her masterpiece.  Ennis del Mar and Jack Twist, two ranch hands, come together when they're working as sheepherder and camp tender one summer on a range above the tree line. At first, sharing an isolated tent, the attraction is casual, inevitable, but something deeper catches them that summer.  Both men work hard, marry, and have kids because that's what cowboys do. But over the course of many years and frequent separations this relationship becomes the most important thing in their lives, and they do anything they can to preserve it.  The New Yorker won the National Magazine Award for Fiction for its publication of 'Brokeback Mountain,' and the story was included in Prize Stories 1998: The O. Henry Awards. In gorgeous and haunting prose, Proulx limns the difficult, dangerous affair between two cowboys that survives everything but the world's violent intolerance.",
+      "price": 6.99,
+      "rating": 3.99,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1442919969i/1627.jpg",
+      "image": "1627.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Annie Proulx",
+      "isbn": "9780743271325",
+      "genre": [2, 33, 51, 26, 52, 53]
+    }
+  },
+  {
+    "pk": 74,
+    "model": "products.book",
+    "fields": {
+      "name": "the_call_of_the_wild",
+      "friendly_name": "The Call of the Wild",
+      "slug": "the-call-of-the-wild",
+      "description": "First published in 1903, The Call of the Wild is regarded as Jack London's masterpiece. Based on London's experiences as a gold prospector in the Canadian wilderness and his ideas about nature and the struggle for existence, The Call of the Wild is a tale about unbreakable spirit and the fight for survival in the frozen Alaskan Klondike.",
+      "price": 7.99,
+      "rating": 3.9,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1452291694i/1852.jpg",
+      "image": "1852.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Jack London",
+      "isbn": "9781673349511",
+      "genre": [2, 8, 6, 3, 59]
+    }
+  },
+  {
+    "pk": 75,
+    "model": "products.book",
+    "fields": {
+      "name": "pride_and_prejudice",
+      "friendly_name": "Pride and Prejudice",
+      "slug": "pride-and-prejudice",
+      "description": "Since its immediate success in 1813, Pride and Prejudice has remained one of the most popular novels in the English language. Jane Austen called this brilliant work 'her own darling child' and its vivacious heroine, Elizabeth Bennet, 'as delightful a creature as ever appeared in print.' The romantic clash between the opinionated Elizabeth and her proud beau, Mr. Darcy, is a splendid performance of civilized sparring. And Jane Austen's radiant wit sparkles as her characters dance a delicate quadrille of flirtation and intrigue, making this book the most superb comedy of manners of Regency England.",
+      "price": 8.99,
+      "rating": 4.29,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320399351i/1885.jpg",
+      "image": "1885.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Jane Austen",
+      "isbn": "9780141439518",
+      "genre": [2, 59, 16]
+    }
+  },
+  {
+    "pk": 76,
+    "model": "products.book",
+    "fields": {
+      "name": "into_thin_air_a_personal_account_of_the_mt_everest_disaster",
+      "friendly_name": "Into Thin Air: A Personal Account of the Mt. Everest Disaster",
+      "slug": "into-thin-air-a-personal-account-of-the-mt-everest-disaster",
+      "description": "When Jon Krakauer reached the summit of Mt. Everest in the early afternoon of May 10, 1996, he hadn't slept in fifty-seven hours and was reeling from the brain-altering effects of oxygen depletion. As he turned to begin his long, dangerous descent from 29,028 feet, twenty other climbers were still pushing doggedly toward the top. No one had noticed that the sky had begun to fill with clouds. Six hours later and 3,000 feet lower, in 70-knot winds and blinding snow, Krakauer collapsed in his tent, freezing, hallucinating from exhaustion and hypoxia, but safe. The following morning, he learned that six of his fellow climbers hadn't made it back to their camp and were desperately struggling for their lives. When the storm finally passed, five of them would be dead, and the sixth so horribly frostbitten that his right hand would have to be amputated.Into Thin Air is the definitive account of the deadliest season in the history of Everest by the acclaimed journalist and author of the bestseller Into the Wild. On assignment for Outside Magazine to report on the growing commercialization of the mountain, Krakauer, an accomplished climber, went to the Himalayas as a client of Rob Hall, the most respected high-altitude guide in the world. A rangy, thirty-five-year-old New Zealander, Hall had summited Everest four times between 1990 and 1995 and had led thirty-nine climbers to the top. Ascending the mountain in close proximity to Hall's team was a guided expedition led by Scott Fischer, a forty-year-old American with legendary strength and drive who had climbed the peak without supplemental oxygen in 1994. But neither Hall nor Fischer survived the rogue storm that struck in May 1996.Krakauer examines what it is about Everest that has compelled so many people -- including himself -- to throw caution to the wind, ignore the concerns of loved ones, and willingly subject themselves to such risk, hardship, and expense. Written with emotional clarity and supported by his unimpeachable reporting, Krakauer's eyewitness account of what happened on the roof of the world is a singular achievement.",
+      "price": 12.99,
+      "rating": 4.24,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1631501298i/1898.jpg",
+      "image": "1898.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Jon Krakauer",
+      "isbn": "9780385494786",
+      "genre": [12, 6, 17, 19, 18, 14]
+    }
+  },
+  {
+    "pk": 77,
+    "model": "products.book",
+    "fields": {
+      "name": "the_world_is_flat_a_brief_history_of_the_twenty_first_century",
+      "friendly_name": "The World Is Flat: A Brief History of the Twenty-first Century",
+      "slug": "the-world-is-flat-a-brief-history-of-the-twenty-first-century",
+      "description": "When scholars write the history of the world twenty years from now, and they come to the chapter Y2K to March 2004 , what will they say was the most crucial development? The attacks on the World Trade Center on 9/11 and the Iraq war? Or the convergence of technology and events that allowed India, China, and so many other countries to become part of the global supply chain for services and manufacturing, creating an explosion of wealth in the middle classes of the world's two biggest nations, giving them a huge new stake in the success of globalisation? And with this flattening' of the globe, which requires us to run faster in order to stay in one place, has the world got too small and too fast for human beings and their political systems to adjust in a stable manner?In this brilliant new book, the award-winning New York Times columnist Thomas Friedman demystifies the brave new world for readers, allowing them to make sense of the often bewildering global scene unfolding before their eyes. With his inimitable ability to translate complex foreign policy and economic issues, Friedman explains how the flattening of the world happened at the dawn of the 21st century; what it means to countries, companies, communities and individuals; and how governments and societies can, and must, adapt.",
+      "price": 4.99,
+      "rating": 3.69,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1442191453i/1911.jpg",
+      "image": "1911.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Thomas L. Friedman",
+      "isbn": "9780739461624",
+      "genre": [12, 14, 62, 40, 46, 45]
+    }
+  },
+  {
+    "pk": 78,
+    "model": "products.book",
+    "fields": {
+      "name": "little_women",
+      "friendly_name": "Little Women",
+      "slug": "little-women",
+      "description": "Generations of readers young and old, male and female, have fallen in love with the March sisters of Louisa May Alcottâ€™s most popular and enduring novel, Little Women. Here are talented tomboy and author-to-be Jo, tragically frail Beth, beautiful Meg, and romantic, spoiled Amy, united in their devotion to each other and their struggles to survive in New England during the Civil War.It is no secret that Alcott based Little Women on her own early life. While her father, the freethinking reformer and abolitionist Bronson Alcott, hobnobbed with such eminent male authors as Emerson, Thoreau, and Hawthorne, Louisa supported herself and her sisters with woman's work, including sewing, doing laundry, and acting as a domestic servant. But she soon discovered she could make more money writing. Little Women brought her lasting fame and fortune, and far from being the girl's book her publisher requested, it explores such timeless themes as love and death, war and peace, the conflict between personal ambition and family responsibilities, and the clash of cultures between Europe and America.",
+      "price": 4.99,
+      "rating": 4.15,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1562690475i/1934.jpg",
+      "image": "1934.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Louisa May Alcott",
+      "isbn": "9780141192413",
+      "genre": [2, 59, 3, 26, 16, 5]
+    }
+  },
+  {
+    "pk": 79,
+    "model": "products.book",
+    "fields": {
+      "name": "a_tale_of_two_cities",
+      "friendly_name": "A Tale of Two Cities",
+      "slug": "a-tale-of-two-cities",
+      "description": "A Tale of Two Cities is Charles Dickens's great historical novel, set against the violent upheaval of the French Revolution. The most famous and perhaps the most popular of his works, it compresses an event of immense complexity to the scale of a family history, with a cast of characters that includes a bloodthirsty ogress and an antihero as believably flawed as any in modern fiction. Though the least typical of the author's novels, A Tale of Two Cities still underscores many of his enduring themesâ€”imprisonment, injustice, social anarchy, resurrection, and the renunciation that fosters renewal.",
+      "price": 4.99,
+      "rating": 3.87,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1344922523i/1953.jpg",
+      "image": "1953.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Charles Dickens",
+      "isbn": "9781657599086",
+      "genre": [8, 2, 59, 16]
+    }
+  },
+  {
+    "pk": 80,
+    "model": "products.book",
+    "fields": {
+      "name": "the_big_sleep",
+      "friendly_name": "The Big Sleep",
+      "slug": "the-big-sleep",
+      "description": "Down these mean streets a man must go who is not himself mean, who is neither tarnished nor afraid....He is the hero; he is everything. He must be a complete man and a common man and yet an unusual man.This is the Code of the Private Eye as defined by Raymond Chandler in his 1944 essay The Simple Act of Murder. Such a man was Philip Marlowe, private eye, an educated, heroic, streetwise, rugged individualist and the hero of Chandler's first novel, The Big Sleep. This work established Chandler as the master of the 'hard-boiled' detective novel, and his articulate and literary style of writing won him a large audience, which ranged from the man in the street to the most sophisticated intellectual.",
+      "price": 6.99,
+      "rating": 3.95,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1371584712i/2052.jpg",
+      "image": "2052.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Raymond Chandler",
+      "isbn": "9781618953292",
+      "genre": [30, 2, 8, 31, 61]
+    }
+  },
+  {
+    "pk": 81,
+    "model": "products.book",
+    "fields": {
+      "name": "the_long_goodbye",
+      "friendly_name": "The Long Goodbye",
+      "slug": "the-long-goodbye",
+      "description": "Down-and-out drunk Terry Lennox has a problem: his millionaire wife is dead and he needs to get out of LA fast. So he turns to the only friend he can trust: private investigator Philip Marlowe. Marlowe is willing to help a man down on his luck, but later Lennox commits suicide in Mexico and things start to turn nasty. Marlowe is drawn into a sordid crowd of adulterers and alcoholics in LA's Idle Valley, where the rich are suffering one big suntanned hangover. Marlowe is sure Lennox didn't kill his wife, but how many stiffs will turn up before he gets to the truth?",
+      "price": 4.85,
+      "rating": 4.19,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1655478371i/2054.jpg",
+      "image": "2054.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Raymond Chandler",
+      "isbn": "9798311372589",
+      "genre": [30, 2, 31, 61, 8]
+    }
+  },
+  {
+    "pk": 82,
+    "model": "products.book",
+    "fields": {
+      "name": "darwins_dangerous_idea_evolution_and_the_meanings_of_life",
+      "friendly_name": "Darwin's Dangerous Idea: Evolution and the Meanings of Life",
+      "slug": "darwins-dangerous-idea-evolution-and-the-meanings-of-life",
+      "description": "In a book that is both groundbreaking and accessible, Daniel C. Dennett, whom Chet Raymo of The Boston Globe calls one of the most provocative thinkers on the planet, focuses his unerringly logical mind on the theory of natural selection, showing how Darwin's great idea transforms and illuminates our traditional view of humanity's place in the universe. Dennett vividly describes the theory itself and then extends Darwin's vision with impeccable arguments to their often surprising conclusions, challenging the views of some of the most famous scientists of our day.",
+      "price": 4.8,
+      "rating": 4.07,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1412689162i/2068.jpg",
+      "image": "2068.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Daniel C. Dennett",
+      "isbn": "9780684824710",
+      "genre": [13, 28, 12, 14]
+    }
+  },
+  {
+    "pk": 83,
+    "model": "products.book",
+    "fields": {
+      "name": "a_briefer_history_of_time",
+      "friendly_name": "A Briefer History of Time",
+      "slug": "a-briefer-history-of-time",
+      "description": "Stephen Hawking's worldwide bestseller, A Brief History of Time, has been a landmark volume in scientific writing. Its author's engaging voice is one reason, and the compelling subjects he addresses is another; the nature of space and time, the role of God in creation, the history and future of the universe. But it is also true that in the years since its publication, readers have repeatedly told Professor Hawking of their great difficulty in understanding some of the book's most important concepts. This is the origin of and the reason for A Briefer History of Time: its author's wish to make its content more accessible to readers - as well as to bring it up-to-date with the latest scientific observations and findings.Although this book is literally somewhat 'briefer', it actually expands on the great subjects of the original. Purely technical concepts, such as the mathematics of chaotic boundary conditions, are gone. Conversely, subjects of wide interest that were difficult to follow because they were interspersed throughout the book have now been given entire chapters of their own, including relativity, curved space, and quantum theory.This reorganization has allowed the authors to expand areas of special interest and recent progress, from the latest developments in string theory to exciting developments in the search for a complete unified theory of all the forces of physics. Like prior editions of the book - but even more so - A Briefer History of Time will guide nonscientists everywhere in the ongoing search for the tantalizing secrets at the heart of time and space. Thirty-seven full-color illustrations enhance the text and make A Briefer History of Time an exhilarating addition in its own right to the literature of science.",
+      "price": 5.5,
+      "rating": 4.26,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1386924782i/2094.jpg",
+      "image": "2094.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Stephen Hawking",
+      "isbn": "9789355432742",
+      "genre": [13, 12, 15, 14, 28]
+    }
+  },
+  {
+    "pk": 84,
+    "model": "products.book",
+    "fields": {
+      "name": "the_universe_in_a_nutshell",
+      "friendly_name": "The Universe in a Nutshell",
+      "slug": "the-universe-in-a-nutshell",
+      "description": "Stephen Hawking's phenomenal, multimillion-copy bestseller, A Brief History of Time, introduced the ideas of this brilliant theoretical physicist to readers all over the world.Now, in a major publishing event, Hawking returns with a lavishly illustrated sequel that unravels the mysteries of the major breakthroughs that have occurred in the years since the release of his acclaimed first book.",
+      "price": 5.5,
+      "rating": 4.18,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1526743965i/2095.jpg",
+      "image": "2095.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Stephen Hawking",
+      "isbn": "9780553802023",
+      "genre": [13, 12, 15]
+    }
+  },
+  {
+    "pk": 85,
+    "model": "products.book",
+    "fields": {
+      "name": "the_jane_austen_book_club",
+      "friendly_name": "The Jane Austen Book Club",
+      "slug": "the-jane-austen-book-club",
+      "description": "The Extraordinary New York Times Bestseller  In California's central valley, five women and one man join to discuss Jane Austen's novels. Over the six months they get together, marriages are tested, affairs begin, unsuitable arrangements become suitable, and love happens. With her eye for the frailties of human behavior and her ear for the absurdities of social intercourse, Karen Joy Fowler has never been wittier nor her characters more appealing. The result is a delicious dissection of modern relationships.Dedicated Austenites will delight in unearthing the echoes of Austen that run through the novel, but most readers will simply enjoy the vision and voice that, despite two centuries of separation, unite two great writers of brilliant social comedy.",
+      "price": 4.5,
+      "rating": 3.1,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1309282966i/2152.jpg",
+      "image": "2152.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Karen Joy Fowler",
+      "isbn": "9780452286535",
+      "genre": [2, 26]
+    }
+  },
+  {
+    "pk": 86,
+    "model": "products.book",
+    "fields": {
+      "name": "persuasion",
+      "friendly_name": "Persuasion",
+      "slug": "persuasion",
+      "description": "Persuasion is Jane Austen's last completed novel. She began it soon after she had finished Emma, completing it in August 1816. She died, aged 41, in 1817; Persuasion was published in December that year (but dated 1818). Persuasion is linked to Northanger Abbey not only by the fact that the two books were originally bound up in one volume and published together, but also because both stories are set partly in Bath, a fashionable city with which Austen was well acquainted, having lived there from 1801 to 1805. Besides the theme of persuasion, the novel evokes other topics, such as the Royal Navy, in which two of Jane Austen's brothers ultimately rose to the rank of admiral. As in Northanger Abbey, the superficial social life of Bath-well known to Austen, who spent several relatively unhappy and unproductive years there-is portrayed extensively and serves as a setting for the second half of the book. In many respects Persuasion marks a break with Austen's previous works, both in the more biting, even irritable satire directed at some of the novel's characters and in the regretful, resigned outlook of its otherwise admirable heroine, Anne Elliot, in the first part of the story. Against this is set the energy and appeal of the Royal Navy, which symbolises for Anne and the reader the possibility of a more outgoing, engaged, and fulfilling life, and it is this worldview which triumphs for the most part at the end of the novel.",
+      "price": 5.7,
+      "rating": 4.15,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1385172413i/2156.jpg",
+      "image": "2156.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Jane Austen",
+      "isbn": "9780141439686",
+      "genre": [2, 8, 59, 16]
+    }
+  },
+  {
+    "pk": 87,
+    "model": "products.book",
+    "fields": {
+      "name": "the_bone_collector",
+      "friendly_name": "The Bone Collector",
+      "slug": "the-bone-collector",
+      "description": "Lincoln Rhyme was once a brilliant criminologist, a genius in the field of forensics -- until an accident left him physically and emotionally shattered. But now a diabolical killer is challenging Rhyme to a terrifying and ingenious duel of wits. With police detective Amelia Sachs by his side, Rhyme must follow a labyrinth of clues that reaches back to a dark chapter in New York City's past -- and reach further into the darkness of the mind of a madman who won't stop until he has stripped life down to the bone.",
+      "price": 3.99,
+      "rating": 4.2,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1437538512i/2373.jpg",
+      "image": "2373.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Jeffery Deaver",
+      "isbn": "9780451469793",
+      "genre": [30, 29, 2, 31, 32]
+    }
+  },
+  {
+    "pk": 88,
+    "model": "products.book",
+    "fields": {
+      "name": "witches_abroad",
+      "friendly_name": "Witches Abroad",
+      "slug": "witches-abroad",
+      "description": "Be careful what you wish for...Once upon a time there was a fairy godmother named Desiderata who had a good heart, a wise head, and poor planning skills which unfortunately left the Princess Emberella in the care of her other (not quite so good and wise) godmother when DEATH came for Desiderata. So now it's up to Magrat Garlick, Granny Weatherwax, and Nanny Ogg to hop on broomsticks and make for far-distant Genua to ensure the servant girl doesn't marry the Prince.But the road to Genua is bumpy, and along the way the trio of witches encounters the occasional vampire, werewolf, and falling house (well this is a fairy tale, after all). The trouble really begins once these reluctant foster-godmothers arrive in Genua and must outwit their power-hungry counterpart who'll stop at nothing to achieve a proper 'happy ending'even if it means destroying a kingdom.",
+      "price": 3.99,
+      "rating": 4.25,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1403326937i/2442.jpg",
+      "image": "2442.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Terry Pratchett",
+      "isbn": "9780063385566",
+      "genre": [1, 2, 10, 11, 4]
+    }
+  },
+  {
+    "pk": 89,
+    "model": "products.book",
+    "fields": {
+      "name": "the_time_machine",
+      "friendly_name": "The Time Machine",
+      "slug": "the-time-machine",
+      "description": "'I've had a most amazing time....'So begins the Time Travellers astonishing firsthand account of his journey 800,000 years beyond his own era and the story that launched H.G. Wells's successful career and earned him his reputation as the father of science fiction. With a speculative leap that still fires the imagination, Wells sends his brave explorer to face a future burdened with our greatest hopes...and our darkest fears. A pull of the Time Machine's lever propels him to the age of a slowly dying Earth. There he discovers two bizarre races: the ethereal Eloi and the subterranean Morlocks who not only symbolize the duality of human nature, but offer a terrifying portrait of the men of tomorrow as well. Published in 1895, this masterpiece of invention captivated readers on the threshold of a new century. Thanks to Wells's expert storytelling and provocative insight, The Time Machine will continue to enthrall readers for generations to come.",
+      "price": 6.99,
+      "rating": 3.9,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327942880i/2493.jpg",
+      "image": "2493.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "H.G. Wells",
+      "isbn": "9780553213515",
+      "genre": [9, 2, 8, 1]
+    }
+  },
+  {
+    "pk": 90,
+    "model": "products.book",
+    "fields": {
+      "name": "the_war_of_the_worlds",
+      "friendly_name": "The War of the Worlds",
+      "slug": "the-war-of-the-worlds",
+      "description": "When an army of invading Martians lands in England, panic and terror seize the population. As the aliens traverse the country in huge three-legged machines, incinerating all in their path with a heat ray and spreading noxious toxic gases, the people of the Earth must come to terms with the prospect of the end of human civilization and the beginning of Martian rule.Inspiring films, radio dramas, comic-book adaptations, television series and sequels,The War of the Worlds is a prototypical work of science fiction which has influenced every alien story that has come since, and is unsurpassed in its ability to thrill, well over a century since it was first published.",
+      "price": 6.99,
+      "rating": 3.83,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1161046572i/2510.jpg",
+      "image": "2510.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "H.G. Wells",
+      "isbn": "9798529318386",
+      "genre": [9, 2, 8, 1, 60]
+    }
+  },
+  {
+    "pk": 91,
+    "model": "products.book",
+    "fields": {
+      "name": "blindness",
+      "friendly_name": "Blindness",
+      "slug": "blindness",
+      "description": "No food, no water, no government, no obligation, no order.Discover a chillingly powerful and prescient dystopian vision from one of Europe's greatest writers. A driver waiting at the traffic lights goes blind. An ophthalmologist tries to diagnose his distinctive white blindness, but is affected before he can read the textbooks. It becomes a contagion, spreading throughout the city. Trying to stem the epidemic, the authorities herd the afflicted into a mental asylum where the wards are terrorised by blind thugs. And when fire destroys the asylum, the inmates burst forth and the last links with a supposedly civilised society are snapped.This is not anarchy, this is blindness. 'Saramago repeatedly undertakes to unite the pressing demands of the present with an unfolding vision of the future. This is his most apocalyptic, and most optimistic, version of that project yet' Independent",
+      "price": 7.99,
+      "rating": 4.17,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327866409i/2526.jpg",
+      "image": "2526.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Jose Saramago",
+      "isbn": "9780156007757",
+      "genre": [2, 8, 9]
+    }
+  },
+  {
+    "pk": 92,
+    "model": "products.book",
+    "fields": {
+      "name": "great_expectations",
+      "friendly_name": "Great Expectations",
+      "slug": "great-expectations",
+      "description": "Great Expectations charts the progress of Pip from childhood through often painful experiences to adulthood, as he moves from the Kent marshes to busy, commercial London, encountering a variety of extraordinary characters ranging from Magwitch, the escaped convict, to Miss Havisham, locked up with her unhappy past and living with her ward, the arrogant, beautiful Estella.Pip must discover his true self, and his own set of values and priorities. Whether such values allow one to prosper in the complex world of early Victorian England is the major question posed by Great Expectations, one of Dickens's most fascinating, and disturbing, novels.This edition includes the original, discarded ending, Dickens's brief working notes, and the serial instalments and chapter divisions in different editions. It also uses the definitive Clarendon text.",
+      "price": 8.99,
+      "rating": 3.79,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1631687432i/2623.jpg",
+      "image": "2623.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Charles Dickens",
+      "isbn": "9781981149681",
+      "genre": [8, 2, 59]
+    }
+  },
+  {
+    "pk": 93,
+    "model": "products.book",
+    "fields": {
+      "name": "to_kill_a_mockingbird",
+      "friendly_name": "To Kill a Mockingbird",
+      "slug": "to-kill-a-mockingbird",
+      "description": "'Shoot all the bluejays you want, if you can hit 'em, but remember it's a sin to kill a mockingbird.'A lawyer's advice to his children as he defends the real mockingbird of Harper Lee's classic novel - a black man charged with the rape of a white girl. Through the young eyes of Scout and Jem Finch, Harper Lee explores with exuberant humour the irrationality of adult attitudes to race and class in the Deep South of the 1930s. The conscience of a town steeped in prejudice, violence and hypocrisy is pricked by the stamina of one man's struggle for justice. But the weight of history will only tolerate so much.",
+      "price": 12.99,
+      "rating": 4.26,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554368352i/2654.jpg",
+      "image": "2654.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Harper Lee",
+      "isbn": "9780060935467",
+      "genre": [8, 2, 59, 3, 16]
+    }
+  },
+  {
+    "pk": 94,
+    "model": "products.book",
+    "fields": {
+      "name": "gullivers_travels_a_modest_proposal",
+      "friendly_name": "Gulliver's Travels / A Modest Proposal",
+      "slug": "gullivers-travels-a-modest-proposal",
+      "description": "Enduring Literature Illuminated by Practical Scholarship  By turns a children's fantasy and a social satire for adults, Gulliver's Travels is one of the most popular adventure tales of all time. 'A Modest Proposal,' also an imaginative, enduring work, is political lampoonery at its finest.  This Enriched Classic Edition includes:  Â• A concise introduction that gives readers important background information  Â• A chronology of the author's life and work  Â• A timeline of significant events that provides the book's historical context  Â• An outline of key themes and plot points to help readers form their own interpretations  Â• Detailed explanatory notes  Â• Critical analysis, including contemporary and modern perspectives on the work. Discussion questions to promote lively classroom and book group interaction. A list of recommended related books and films to broaden the reader's experience  Enriched Classics offer readers affordable editions of great works of literature enhanced by helpful notes and insightful commentary. The scholarship provided in Enriched Classics enables readers to appreciate, understand, and enjoy the world's finest books to their full potential.  Series edited by Cynthia Brantley Johnson",
+      "price": 4.99,
+      "rating": 3.91,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1347332656i/2678.jpg",
+      "image": "2678.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Jonathan Swift",
+      "isbn": "9781416500391",
+      "genre": [8, 2, 1, 10, 6]
+    }
+  },
+  {
+    "pk": 95,
+    "model": "products.book",
+    "fields": {
+      "name": "the_canterbury_tales",
+      "friendly_name": "The Canterbury Tales",
+      "slug": "the-canterbury-tales",
+      "description": "The procession that crosses Chaucer's pages is as full of life and as richly textured as a medieval tapestry. The Knight, the Miller, the Friar, the Squire, the Prioress, the Wife of Bath, and others who make up the cast of characters -- including Chaucer himself -- are real people, with human emotions and weaknesses. When it is remembered that Chaucer wrote in English at a time when Latin was the standard literary language across western Europe, the magnitude of his achievement is even more remarkable. But Chaucer's genius needs no historical introduction; it bursts forth from every page of The Canterbury Tales.If we trust the General Prologue, Chaucer intended that each pilgrim should tell two tales on the way to Canterbury and two tales on the way back. He never finished his enormous project and even the completed tales were not finally revised. Scholars are uncertain about the order of the tales. As the printing press had yet to be invented when Chaucer wrote his works, The Canterbury Tales has been passed down in several handwritten manuscripts.",
+      "price": 4.99,
+      "rating": 3.52,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1261208589i/2696.jpg",
+      "image": "2696.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Geoffrey Chaucer",
+      "isbn": "9780140424386",
+      "genre": [8, 2, 27, 33, 59]
+    }
+  },
+  {
+    "pk": 96,
+    "model": "products.book",
+    "fields": {
+      "name": "the_book_of_salt",
+      "friendly_name": "The Book of Salt",
+      "slug": "the-book-of-salt",
+      "description": "Binh, a Vietnamese cook, flees Saigon in 1929, disgracing his family to serve as a galley hand at sea. The taunts of his now-deceased father ringing in his ears, Binh answers an ad for a live-in cook at a Parisian household, and soon finds himself employed by Gertrude Stein and Alice B. Toklas.Toklas and Stein hold court in their literary salon, for which the devoted yet acerbic Binh serves as chef, and as a keen observer of his 'Mesdames' and their distinguished guests. But when the enigmatic literary ladies decide to journey back to America, Binh is faced with a monumental choice: will he, the self-imposed 'exile,' accompany them to yet another new country, return to his native Vietnam, or make Paris his home?",
+      "price": 4.99,
+      "rating": 3.53,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1441635660i/2719.jpg",
+      "image": "2719.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Monique Truong",
+      "isbn": "9780618446889",
+      "genre": [2, 59, 51, 52, 16, 43]
+    }
+  },
+  {
+    "pk": 97,
+    "model": "products.book",
+    "fields": {
+      "name": "the_lost_boy",
+      "friendly_name": "The Lost Boy",
+      "slug": "the-lost-boy",
+      "description": "Imagine a young boy who has never had a loving home. His only possesions are the old, torn clothes he carries in a paper bag. The only world he knows is one of isolation and fear. Although others had rescued this boy from his abusive alcoholic mother, his real hurt is just begining -- he has no place to call home.This is Dave Pelzer's long-awaited sequel to A Child Called 'It'. In The Lost Boy, he answers questions and reveals new adventures through the compelling story of his life as an adolescent. Now considered an F-Child (Foster Child), Dave is moved in and out of five different homes. He suffers shame and experiences resentment from those who feel that all foster kids are trouble and unworthy of being loved just because they are not part of a 'real' family. Tears, laughter, devastation and hope create the journey of this little lost boy who searches desperately for just one thing -- the love of a family.",
+      "price": 6.99,
+      "rating": 4.11,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1282635105i/2743.jpg",
+      "image": "2743.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Dave Pelzer",
+      "isbn": "9781558745155",
+      "genre": [12, 17, 18, 57]
+    }
+  },
+  {
+    "pk": 98,
+    "model": "products.book",
+    "fields": {
+      "name": "bridge_to_terabithia",
+      "friendly_name": "Bridge to Terabithia",
+      "slug": "bridge-to-terabithia",
+      "description": "Jess Aarons' greatest ambition is to be the fastest runner in his grade. He's been practicing all summer and can't wait to see his classmates' faces when he beats them all. But on the first day of school, a new girl boldly crosses over to the boys' side and outruns everyone.That's not a very promising beginning for a friendship, but Jess and Leslie Burke become inseparable. Together they create Terabithia, a magical kingdom in the woods where the two of them reign as king and queen, and their imaginations set the only limits.",
+      "price": 4.85,
+      "rating": 4.05,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1618159917i/2839.jpg",
+      "image": "2839.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Katherine Paterson",
+      "isbn": "9780690013597",
+      "genre": [2, 3, 8, 1, 5]
+    }
+  },
+  {
+    "pk": 99,
+    "model": "products.book",
+    "fields": {
+      "name": "girl_with_a_pearl_earring",
+      "friendly_name": "Girl with a Pearl Earring",
+      "slug": "girl-with-a-pearl-earring",
+      "description": "With precisely 35 canvases to his credit, the Dutch painter Johannes Vermeer represents one of the great enigmas of 17th-century art. The meager facts of his biography have been gleaned from a handful of legal documents. Yet Vermeer's extraordinary paintings of domestic life, with their subtle play of light and texture, have come to define the Dutch golden age. His portrait of the anonymous Girl with a Pearl Earring has exerted a particular fascination for centuriesâ€”and it is this magnetic painting that lies at the heart of Tracy Chevalier's second novel of the same title.Girl with a Pearl Earring centers on Vermeer's prosperous Delft household during the 1660s. When Griet, the novel's quietly perceptive heroine, is hired as a servant, turmoil follows. First, the 16-year-old narrator becomes increasingly intimate with her master. Then Vermeer employs her as his assistantâ€”and ultimately has Griet sit for him as a model.",
+      "price": 4.8,
+      "rating": 3.93,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327197580i/2865.jpg",
+      "image": "2865.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Tracy Chevalier",
+      "isbn": "9780452282155",
+      "genre": [59, 2, 16, 8, 26]
+    }
+  },
+  {
+    "pk": 100,
+    "model": "products.book",
+    "fields": {
+      "name": "robinson_crusoe",
+      "friendly_name": "Robinson Crusoe",
+      "slug": "robinson-crusoe",
+      "description": "Daniel Defoe relates the tale of an English sailor marooned on a desert island for nearly three decades. An ordinary man struggling to survive in extraordinary circumstances, Robinson Crusoe wrestles with fate and the nature of God. This edition features maps.",
+      "price": 5.5,
+      "rating": 3.68,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1682976488i/2932.jpg",
+      "image": "2932.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Daniel Defoe",
+      "isbn": "9781853260452",
+      "genre": [2, 8, 6, 59]
+    }
+  },
+  {
+    "pk": 101,
+    "model": "products.book",
+    "fields": {
+      "name": "the_adventures_of_huckleberry_finn",
+      "friendly_name": "The Adventures of Huckleberry Finn",
+      "slug": "the-adventures-of-huckleberry-finn",
+      "description": "A nineteenth-century boy from a Mississippi River town recounts his adventures as he travels down the river with a runaway slave, encountering a family involved in a feud, two scoundrels pretending to be royalty, and Tom Sawyer's aunt who mistakes him for Tom.",
+      "price": 5.5,
+      "rating": 3.83,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1546096879i/2956.jpg",
+      "image": "2956.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Mark Twain",
+      "isbn": "9780486280615",
+      "genre": [2, 8, 59, 3, 6]
+    }
+  },
+  {
+    "pk": 102,
+    "model": "products.book",
+    "fields": {
+      "name": "the_secret_garden",
+      "friendly_name": "The Secret Garden",
+      "slug": "the-secret-garden",
+      "description": "In a house full of sadness and secrets, can young, orphaned Mary find happiness?Mary Lennox, a spoiled, ill-tempered, and unhealthy child, comes to live with her reclusive uncle in Misselthwaite Manor on Englandâ€™s Yorkshire moors after the death of her parents. There she meets a hearty housekeeper and her spirited brother, a dour gardener, a cheerful robin, and her wilful, hysterical, and sickly cousin, Master Colin, whose wails she hears echoing through the house at night.With the help of the robin, Mary finds the door to a secret garden, neglected and hidden for years. When she decides to restore the garden in secret, the story becomes a charming journey into the places of the heart, where faith restores health, flowers refresh the spirit, and the magic of the garden, coming to life anew, brings health to Colin and happiness to Mary.",
+      "price": 4.5,
+      "rating": 4.16,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327873635i/2998.jpg",
+      "image": "2998.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Frances Hodgson Burnett",
+      "isbn": "9781840227543",
+      "genre": [8, 2, 5, 3, 59, 1]
+    }
+  },
+  {
+    "pk": 103,
+    "model": "products.book",
+    "fields": {
+      "name": "a_little_princess",
+      "friendly_name": "A Little Princess",
+      "slug": "a-little-princess",
+      "description": "Sara Crewe, an exceptionally intelligent and imaginative student at Miss Minchin's Select Seminary for Young Ladies, is devastated when her adored, indulgent father dies. Now penniless and banished to a room in the attic, Sara is demeaned, abused, and forced to work as a servant. How this resourceful girl's fortunes change again is at the center of A Little Princess , one of the best-loved stories in all of children's literature.This unique and fully annotated edition appends excerpts from Frances Hodgson Burnett 's original 1888 novella Sara Crewe and the stage play that preceded the novel, as well as an early story, 'Behind the White Brick,' allowing readers to see how A Little Princess evolved. In his delightful introduction, U. C. Knoepflmacher considers the fairy-tale allusions and literary touchstones that place the book among the major works of Victorian literature, and shows it to be an exceptionally rich and resonant novel.",
+      "price": 5.7,
+      "rating": 4.22,
+      "img_url": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327868556i/3008.jpg",
+      "image": "3008.jpg",
+      "created_at": "2025-02-27T23:42:00Z",
+      "updated_at": "2025-02-27T23:42:00Z",
+      "author": "Frances Hodgson Burnett",
+      "isbn": "9789388369084",
+      "genre": [8, 2, 5, 3, 59, 16]
+    }
+  }
+]
