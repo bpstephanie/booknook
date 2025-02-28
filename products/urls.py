@@ -4,9 +4,9 @@ from . import views
 urlpatterns = [
     path('', views.all_products, name='products'),
     path(
-        'books/', 
-        views.all_products, 
-        name='all_books', 
+        'books/',
+        views.all_products,
+        name='all_books',
         kwargs={'type': 'books'}
     ),
     path(

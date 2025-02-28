@@ -3,6 +3,7 @@ from .models import Product, Book, Accessory, Category, Genre
 from django.contrib import messages
 from django.core.paginator import Paginator
 from django.db.models import Q
+from django.db.models.functions import Lower
 
 
 # Create your views here.
@@ -10,10 +11,11 @@ def all_products(request, type=None):
     """ A view to show all products, including sorting and search queries """
     product_type = type if type else request.GET.get('type', 'all')
     query = request.GET.get('q') if 'q' in request.GET else None
-    categories = None
-    genres = None
+    current_category = None
+    # genres = None
     sort = None
     direction = None
+    current_genre = None
 
     # Initialize the products queryset based on type
     if product_type == 'books':
@@ -28,11 +30,11 @@ def all_products(request, type=None):
 
     if request.GET:
         if 'sort' in request.GET:
-            sortkey = request.GET['sort']
+            sortkey = request.GET('sort', 'friendly_name')
             sort = sortkey
-            if sortkey == 'name':
+            if sortkey == 'friendly_name':
                 sortkey = 'lower_name'
-                products = products.annotate(lower_name=Lower('name'))
+                products = products.annotate(lower_name=Lower('friendly_name'))
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
@@ -40,15 +42,16 @@ def all_products(request, type=None):
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
 
-        if 'category' in request.GET:  # and product_type == 'accessories':
+        if 'category' in request.GET:
             category_names = request.GET.get('category').split(',')
             if product_type == 'accessories':
-                products = products.filter(category__name__in=category_names)
-                categories = Category.objects.filter(name__in=category_names)
-        if 'genre' in request.GET:  # and product_type == 'books':
+                products = products.filter(category__friendly_name__in=category_names)
+                current_category = Category.objects.filter(friendly_name__in=category_names)
+        if 'genre' in request.GET:
             genre_names = request.GET.get('genre').split(',')
-            products = products.filter(genre__name__in=genre_names)
-            genres = Genre.objects.filter(name__in=genre_names)
+            if product_type == 'books':
+                products = products.filter(genre__friendly_name__in=genre_names)
+                current_genre = Genre.objects.filter(friendly_name__in=genre_names)
 
         if 'q' in request.GET:
             query = request.GET.get('q')
@@ -65,17 +68,20 @@ def all_products(request, type=None):
             return redirect(reverse('products'))
 
     paginator = Paginator(products, 16)
-    page_number = request.GET.get('page')
+    page_number = request.GET.get('page', 1)
     page_obj = paginator.get_page(page_number)
+
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'products': page_obj,
         'page_obj': page_obj,
         'page_title': page_title,
         'search_term': query,
-        'current_categories': categories,
-        'current_genres': genres,
+        'current_category': current_category,
+        'current_genre': current_genre,
         'is_paginated': page_obj.has_other_pages(),
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'products/products.html', context)
