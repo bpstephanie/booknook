@@ -4,79 +4,131 @@
 {% endblock %}
 
 {% block page_header %}
-<div class="header-container container">
-  <div class="row">
-    <div class="col"></div>
-  </div>
-</div>
+    <div class="header-container container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block content %}
-<div class="full-overlay">
-  <div class="container-bn">
-    <div class="row">
-        <div class="col text-center text-navy mt-3">
-            <h2 class="text-uppercase">{{ page_title }}</h2>
-            <hr class="w-25 mb-1">
+    <div class="full-overlay"></div>
+    <div class="container-bn">
+        <div class="row">
+            <div class="col text-center mt-3 text-navy">
+                <h2 class="text-uppercase">Products</h2>
+                <hr class="w-50 mb-1">
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="product-container col-10 offset-1">
-            <div class="row mt-1 mb-2"></div>
-            <div class="row">
-                {% for product in products %}
-                    <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
-                        <div class="card border-0">
-                            {% if product.image %}
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                            </a>
-                            {% else %}
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                            </a>
-                            {% endif %}
-                            <div class="card-body bg-cream">
-                                <p class="card-title text-navy text-uppercase">{{ product.name }}</p>
-                            </div>
-                            <div class="card-footer bg-cream border-0 d-flex justify-content-between align-items-center">
-                                <div>
-                                    <p class="lead mb-0 font-weight-bold text-navy">£{{ product.price }}</p>
+        <div class="row">
+            <div class="product-container col-10 offset-1">
+                <div class="row mt-1 mb-2"></div>
+                <div class="row">
+                    {% for product in products %}
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                            <div class="card h-100 border-0">
+                                {% if product.image %}
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.friendly_name }}">
+                                </a>
+                                {% else %}
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.friendly_name }}">
+                                </a>
+                                {% endif %}
+                                <div class="card-body bg-cream pb-0">
+                                    <p class="mb-0">{{ product.friendly_name }}</p>
                                 </div>
-                                    {% if product.rating %}
-                                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }}</small>
-                                    {% else %}
-                                        <small class="text-muted">No rating</small>
-                                    {% endif %}
+                                <div class="card-footer bg-cream pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                                            {% if product.rating %}
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                            {% else %}
+                                                <small class="text-muted">No Rating</small>
+                                            {% endif %}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    {% if forloop.counter|divisibleby:1 %}
-                        <div class="col-12 d-sm-none mb-5">
-                            <hr>
-                        </div>
-                    {% endif %}                        
-                    {% if forloop.counter|divisibleby:2 %}
-                        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                            <hr>
-                        </div>
-                    {% endif %}
-                    {% if forloop.counter|divisibleby:3 %}
-                        <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                            <hr>
-                        </div>
-                    {% endif %}
-                    {% if forloop.counter|divisibleby:4 %}
-                        <div class="col-12 d-none d-xl-block mb-5">
-                            <hr>
-                        </div>
-                    {% endif %}
-                {% endfor %}
+                        {% if forloop.counter|divisibleby:1 %}
+                            <div class="col-12 d-sm-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}                        
+                        {% if forloop.counter|divisibleby:2 %}
+                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                        {% if forloop.counter|divisibleby:3 %}
+                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                        {% if forloop.counter|divisibleby:4 %}
+                            <div class="col-12 d-none d-xl-block mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
+        <!--{% if is_paginated %}
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center my-3">
+                    {% if page_obj.has_previous %}
+                    <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a></li>
+                    {% endif %}
+                    {% if page_obj.has_next %}
+                    <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        {% endif %}-->
+        {% if is_paginated %}
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        {% if page_obj.has_previous %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page=1" aria-label="First">
+                                <span aria-hidden="true">&laquo;&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        {% endif %}
+                        {% for num in page_obj.paginator.page_range %}
+                        {% if page_obj.number == num %}
+                        <li class="page-item active"><a class="page-link">{{ num }}</a></li>
+                        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                        <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                        {% if page_obj.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Last">
+                                <span aria-hidden="true">&raquo;&raquo;</span>
+                            </a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        {% endif %}
     </div>
-  </div>
-</div>
 {% endblock %}

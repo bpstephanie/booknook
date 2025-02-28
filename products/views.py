@@ -55,10 +55,12 @@ def all_products(request, type=None):
 
     context = {
         'products': page_obj,
+        'page_obj': page_obj,
         'page_title': page_title,
         'search_term': query,
         'current_categories': categories,
         'current_genres': genres,
+        'is_paginated': page_obj.has_other_pages(),
     }
 
     return render(request, 'products/products.html', context)
