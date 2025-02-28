@@ -9,7 +9,7 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="">By Rating</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="">By Category</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category">By Category</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
             </div>
@@ -23,7 +23,7 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="">By Rating</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="">By Category</a>
+                <a class="dropdown-item" href="{% url 'products' %}?genre">By Genre</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'all_books' %}">All Books</a>
             </div>
@@ -40,9 +40,9 @@
                 <div class="dropdown-submenu">
                 <a class="dropdown-item dropdown-toggle" href="">By Category</a>
                 <ul class="dropdown-menu bg-cream border-0">
-                    <li><a class="dropdown-item" href="">Bookmarks</a></li>
-                    <li><a class="dropdown-item" href="">Tote Bags</a></li>
-                    <li><a class="dropdown-item" href="">Mugs</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=bookmarks">Bookmarks</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=totebags">Tote Bags</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=mugs">Mugs</a></li>
                     <li><a class="dropdown-item" href="{% url 'all_accessories' %}">All Categories</a></li>
                 </ul>
             </div>

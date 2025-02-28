@@ -66,8 +66,8 @@ class Genre(models.Model):
 class Book(Product):
     book_id = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     author = models.CharField(max_length=200)
-    genre = models.ForeignKey(
-        Genre, null=True, blank=True, on_delete=models.SET_NULL
+    genre = models.ManyToManyField(
+        Genre, blank=True
     )
     isbn = models.CharField(max_length=13)
 
