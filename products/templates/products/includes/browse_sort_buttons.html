@@ -1,0 +1,69 @@
+<div class="filter-container text-centre">
+    {% if type == "all" %}
+        <button class="btn btn-success" id="categoryButton">
+            <span class="mt-4">Browse by Accessory</span>
+        </button>
+        <div id="categoryButtonsContainer" class="hidden">
+            {% for category in all_categories %}
+                    <a class="btn btn-outline-success m-1" href="{% url 'all_accessories' %}?category={{ category.friendly_name }}">
+                        <span class="p-2 mt-2 badge badge-white text-navy rounded-0 border border-navy">{{ category.friendly_name }}</span>
+                    </a>
+            {% endfor %}
+        </div>
+        <button class="btn btn-success" id="genreButton">
+            <span class="mt-4">Browse by Genre</span>
+        </button>
+        <div id="genreButtonsContainer" class="hidden">
+            {% for genre in all_genres %}
+                    <a class="btn btn-outline-success m-1" href="{% url 'all_books' %}?genre={{ genre.friendly_name }}">
+                        <span class="p-2 mt-2 badge badge-white text-navy rounded-0 border border-navy">{{ genre.friendly_name }}</span>
+                    </a>
+            {% endfor %}
+        </div>
+    {% elif type == 'books' %}
+        <button class="btn btn-success" id="genreButton">
+            <span class="mt-4">Browse by Genre</span>
+        </button>
+        <div id="genreButtonsContainer" class="hidden">
+            {% for genre in all_genres %}
+                    <a class="btn btn-outline-success m-1" href="{% url 'all_books' %}?genre={{ genre.friendly_name }}">
+                        <span class="p-2 mt-2 badge badge-white text-navy rounded-0 border border-navy">{{ genre.friendly_name }}</span>
+                    </a>
+            {% endfor %}
+        </div>
+    {% elif type == 'accessories' %}
+        <button class="btn btn-success" id="categoryButton">
+            <span class="mt-4">Browse by Accessory</span>
+        </button>
+        <div id="categoryButtonsContainer" class="hidden">
+            {% for category in all_categories %}
+                    <a class="btn btn-outline-success m-1" href="{% url 'all_accessories' %}?category={{ category.friendly_name }}">
+                        <span class="p-2 mt-2 badge badge-white text-navy rounded-0 border border-navy">{{ category.friendly_name }}</span>
+                    </a>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
+<div class="row mt-1 mb-2">
+    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+        <div class="sort-select-wrapper w-50">
+            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 order-md-first">
+        <p class="text-muted mt-3 text-center text-md-left">
+            {% if search_term or current_category or current_genre or current_sorting != 'None_None' %}
+                <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
+            {% endif %}
+            {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+        </p>
+    </div>
+</div>
