@@ -30,7 +30,7 @@ def all_products(request, type=None):
 
     if request.GET:
         if 'sort' in request.GET:
-            sortkey = request.GET('sort', 'friendly_name')
+            sortkey = request.GET['sort']
             sort = sortkey
             if sortkey == 'friendly_name':
                 sortkey = 'lower_name'
@@ -45,13 +45,17 @@ def all_products(request, type=None):
         if 'category' in request.GET:
             category_names = request.GET.get('category').split(',')
             if product_type == 'accessories':
-                products = products.filter(category__friendly_name__in=category_names)
-                current_category = Category.objects.filter(friendly_name__in=category_names)
+                products = products.filter(
+                    category__friendly_name__in=category_names)
+                current_category = Category.objects.filter(
+                    friendly_name__in=category_names)
         if 'genre' in request.GET:
             genre_names = request.GET.get('genre').split(',')
             if product_type == 'books':
-                products = products.filter(genre__friendly_name__in=genre_names)
-                current_genre = Genre.objects.filter(friendly_name__in=genre_names)
+                products = products.filter(
+                    genre__friendly_name__in=genre_names)
+                current_genre = Genre.objects.filter(
+                    friendly_name__in=genre_names)
 
         if 'q' in request.GET:
             query = request.GET.get('q')
@@ -73,15 +77,23 @@ def all_products(request, type=None):
 
     current_sorting = f'{sort}_{direction}'
 
+    categories = Category.objects.all()  # All categories
+    genres = Genre.objects.all()  # All genres
+
     context = {
         'products': page_obj,
         'page_obj': page_obj,
         'page_title': page_title,
+        'type': product_type,
         'search_term': query,
         'current_category': current_category,
         'current_genre': current_genre,
+        'all_categories': categories,
+        'all_genres': genres,
         'is_paginated': page_obj.has_other_pages(),
         'current_sorting': current_sorting,
+        'sort': sort,
+        'direction': direction,
     }
 
     return render(request, 'products/products.html', context)

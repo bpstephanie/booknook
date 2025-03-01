@@ -197,6 +197,16 @@ a {
 .lead {
     margin-bottom: 0;
 }
+/* ---------------------------------------- Genre and Category Buttons */
+.hidden {
+    display: none;
+}
+
+#genreButtonsContainer,
+#categoryButtonsContainer {
+    margin-top: 10px;
+    text-align: center;
+}
 
 /* ---------------------------------------- Media Queries */
 @media (min-width: 1200px) {
