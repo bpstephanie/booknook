@@ -133,18 +133,52 @@
         </div>
         {% endif %}
     </div>
+    <div class="st-button shadow-sm rounded-0 border border-navy">
+        <a class="st-link d-flex h-100">
+            <i class="fas fa-arrow-up text-navy mx-auto my-auto"></i>
+        </a>	
+    </div>
 {% endblock %}
 {% block postloadjs %}
-<script>
-    $(document).ready(function () {
-        $('#genreButton').click(function () {
-            $('#genreButtonsContainer').toggleClass('hidden');
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#genreButton').click(function () {
+                $('#genreButtonsContainer').toggleClass('hidden');
+            });
         });
-    });
-    $(document).ready(function () {
-        $('#categoryButton').click(function () {
-            $('#categoryButtonsContainer').toggleClass('hidden');
+        $(document).ready(function () {
+            $('#categoryButton').click(function () {
+                $('#categoryButtonsContainer').toggleClass('hidden');
+            });
         });
-    });
-</script>
+    </script>
+    {{ block.super }}
+    <script type="text/javascript">
+        $('.st-link').click(function(e) {
+            window.scrollTo(0,0)
+        })
+    </script>
+
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
 {% endblock %}

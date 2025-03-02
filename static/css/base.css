@@ -203,6 +203,19 @@ a {
 .lead {
     margin-bottom: 0;
 }
+.st-button {
+    height: 46px;
+    width: 46px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.st-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
 /* ---------------------------------------- Genre and Category Buttons */
 .hidden {
     display: none;
