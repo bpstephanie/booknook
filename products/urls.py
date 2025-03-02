@@ -16,4 +16,5 @@ urlpatterns = [
         kwargs={'type': 'accessories'}
     ),
     path('<int:product_id>/', views.product_detail, name='product_detail'),
+    path('books/all-genres', views.all_genres, name='all_genres'),
 ]

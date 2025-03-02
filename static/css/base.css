@@ -185,7 +185,18 @@ a {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     width: 200px;
+    flex: 1 1 20%;
+    background-color: #faf2f2;
+}
+
+.card-img-top {
+    height: 200px;
+    max-width: 150px;
 }
 
 .card-footer {
@@ -206,6 +217,86 @@ a {
 #categoryButtonsContainer {
     margin-top: 10px;
     text-align: center;
+}
+/* ---------------------------------------- Genre View */
+.genre-section {
+    width: 100%;
+}
+
+.genre-title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #0b254b;
+    margin-bottom: 1rem;
+    text-align: left;
+    padding-left: 10px;
+    white-space: normal;
+    z-index: 1;
+}
+.genre-books-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    position: relative;
+    overflow-x: auto;
+    overflow: hidden;
+}
+
+.books-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    max-width: 100%;
+    padding: 1rem;
+    justify-content: flex-start;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+
+.small-genre .books-carousel {
+    gap: 100px;
+}
+
+.book-item {
+    flex: 0 0 auto;
+    margin: 0 10px;
+    text-align: center;
+    min-width: 150px;
+    max-width: 200px;
+}
+
+.book-title {
+    display: block;
+    white-space: normal;
+    word-wrap: break-word;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(11, 37, 75, 0.5);
+    color: #faf2f2;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
 }
 
 /* ---------------------------------------- Media Queries */
