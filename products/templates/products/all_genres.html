@@ -16,18 +16,19 @@
 <div class="container-bn">
     <div class="col text-center mt-3 text-navy">
         <h2 class="text-uppercase">Book Genres</h2>
+        {% include 'products/includes/browse_sort_buttons.html' with show_filters=False product_count=False %}
     </div>
     {% for genre in all_genres %}
-        {% with books=genre.book_set.all %}
+        {% with books=genre.sorted_books %}
         {% if books %}
             <div class="genre-section">
-                <h3 class="genre-title text-navy">{{ genre.friendly_name}}</h3>
+                <h3 class="genre-title text-navy">{{ genre.friendly_name}} ({{ genre.book_count }})</h3>
                 <div class="genre-books-wrapper row">
                     <button class="arrow left-arrow">&lt;</button>
                     <div class="books-carousel d-flex flex-nowrap row">
                         {% for book in books %}
                         <div class="col-sm-6 col-md-6 col-lg-2 col-xl-2">
-                            <div class="card h-100 border-0">
+                            <div class="card card-glow h-100 border-0">
                                 <a href="{% url 'product_detail' book.id %}">
                                     {% if book.image %}
                                         <img class="card-img-top img-fluid" src="{{ book.image.url }}" alt="{{ book.friendly_name }}">
@@ -61,8 +62,13 @@
         {% endwith %}
     {% endfor %}
 </div>
-
+<div class="st-button shadow-sm rounded-0 border border-navy">
+    <a class="st-link d-flex h-100">
+        <i class="fas fa-arrow-up text-navy mx-auto my-auto"></i>
+    </a>	
+</div>
 {% endblock %}
+
 {% block postloadjs %}
 <script type="text/javascript">
     $(document).ready(function () {
@@ -118,4 +124,32 @@
         }
     });
 </script>
+{{ block.super }}
+    <script type="text/javascript">
+        $('.st-link').click(function(e) {
+            window.scrollTo(0,0)
+        })
+    </script>
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
 {% endblock %}

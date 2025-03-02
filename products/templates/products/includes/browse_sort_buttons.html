@@ -1,3 +1,4 @@
+{% if show_filters %}
 <div class="filter-container text-centre">
     {% if type == "all" %}
         <button class="btn btn-success" id="categoryButton" aria-expanded="false" aria-controls="categoryButtonsContainer">
@@ -44,6 +45,7 @@
         </div>
     {% endif %}
 </div>
+{% endif %}
 <div class="row mt-1 mb-2">
     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
         <div class="sort-select-wrapper w-50">
@@ -58,6 +60,7 @@
             </select>
         </div>
     </div>
+    {% if product_count %}
     <div class="col-12 col-md-6 order-md-first">
         <p class="text-muted mt-3 text-center text-md-left">
             {% if search_term or current_category or current_genre or current_sorting != 'None_None' %}
@@ -66,4 +69,5 @@
             {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
         </p>
     </div>
+    {% endif %}
 </div>

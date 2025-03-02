@@ -16,18 +16,19 @@
 <div class="container-bn">
     <div class="col text-center mt-3 text-navy">
         <h2 class="text-uppercase">Accessory Categories</h2>
+        {% include 'products/includes/browse_sort_buttons.html' with show_filters=False product_count=False%}
     </div>
     {% for category in all_categories %}
-        {% with accessories=category.accessory_set.all %}
+        {% with accessories=category.sorted_accessories %}
         {% if accessories %}
             <div class="category-section">
-                <h3 class="category-title text-navy">{{ category.friendly_name}}</h3>
+                <h3 class="category-title text-navy">{{ category.friendly_name}} ({{ category.book_count}})</h3>
                 <div class="category-accessories-wrapper row">
-                    <button class="arrow left-arrow">&lt;</button>
+                    <button class="arrow left-arrow" aria-label="Scroll left">&lt;</button>
                     <div class="accessories-carousel d-flex flex-nowrap row">
                         {% for accessory in accessories %}
                         <div class="col-sm-6 col-md-6 col-lg-2 col-xl-2">
-                            <div class="card h-100 border-0">
+                            <div class="card card-glow h-100 border-0">
                                 <a href="{% url 'product_detail' accessory.id %}">
                                     {% if accessory.image %}
                                         <img class="card-img-top img-fluid" src="{{ accessory.image.url }}" alt="{{ accessory.friendly_name }}">
@@ -45,7 +46,7 @@
                                             {% if accessory.rating %}
                                                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ accessory.rating }} / 5</small>
                                             {% else %}
-                                                <small class="text-muted">No Rating</small>
+                                                <small class="text-muted">Not Yet Rated</small>
                                             {% endif %}
                                         </div>
                                     </div>
@@ -54,15 +55,22 @@
                         </div>
                         {% endfor %}
                     </div>
-                    <button class="arrow right-arrow">&gt;</button> 
+                    <button class="arrow right-arrow" aria-label="Scroll right">&gt;</button> 
                 </div>
             </div>
+        {% else %}
+            <p>No categories available at the moment. New products coming soon!</p>
         {% endif %}
         {% endwith %}
     {% endfor %}
 </div>
-
+<div class="st-button shadow-sm rounded-0 border border-navy">
+    <a class="st-link d-flex h-100">
+        <i class="fas fa-arrow-up text-navy mx-auto my-auto"></i>
+    </a>	
+</div>
 {% endblock %}
+
 {% block postloadjs %}
 <script type="text/javascript">
     $(document).ready(function () {
@@ -118,4 +126,10 @@
         }
     });
 </script>
+{{ block.super }}
+    <script type="text/javascript">
+        $('.st-link').click(function(e) {
+            window.scrollTo(0,0)
+        })
+    </script>
 {% endblock %}

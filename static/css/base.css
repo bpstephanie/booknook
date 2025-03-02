@@ -65,7 +65,7 @@ a {
 }
 
 .bg-cream {
-    background-color: #faf2f2;
+    background-color: #fefefe;
 }
 
 .bg-navy {
@@ -73,7 +73,7 @@ a {
 }
 
 .text-cream {
-    color: #faf2f2;
+    color: #fefefe;
 }
 
 .text-navy {
@@ -81,7 +81,7 @@ a {
 }
 
 .border-cream {
-    border-color: #faf2f2;
+    border-color: #fefefe;
 }
 
 .border-navy {
@@ -90,11 +90,11 @@ a {
 
 .btn-navy {
     background-color: #0b254b;
-    color: #faf2f2;
+    color: #fefefe;
 }
 
 .ns-button {
-    background-color: #faf2f2;
+    background-color: #fefefe;
     border: none;
 }
 
@@ -103,7 +103,7 @@ a {
     padding: 10px;
     border-radius: 20px;
     border: 2px solid #0b254b;
-    background-color: #faf2f2;
+    background-color: #fefefe;
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -131,14 +131,14 @@ a {
 }
 
 .overlay {
-    background-color: #faf2f2;
+    background-color: #fefefe;
     opacity: 0.8;
     border-radius: 5px;
 
 }
 
 .full-overlay {
-    background-color: #faf2f2;
+    background-color: #fefefe;
     width: 100%;
     height: 100%;
     top: 0;
@@ -166,7 +166,7 @@ a {
     text-align: center;
     padding: 5px;
     font-size: 0.8em;
-    color: #faf2f2;
+    color: #fefefe;
     justify-content: end;
 }
 
@@ -186,7 +186,7 @@ a {
     height: 100%;
     width: 200px;
     flex: 1 1 20%;
-    background-color: #faf2f2;
+    background-color: #fefefe;
 }
 
 .card-img-top {
@@ -203,6 +203,8 @@ a {
 .lead {
     margin-bottom: 0;
 }
+
+/* ---------------------------------------- Back to Top Category Button */
 .st-button {
     height: 46px;
     width: 46px;
@@ -216,7 +218,13 @@ a {
 .remove-item {
     cursor: pointer;
 }
-/* ---------------------------------------- Genre and Category Buttons */
+
+/* ---------------------------------------- Genre and Category Pages */
+.card-glow:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
 .hidden {
     display: none;
 }
@@ -295,7 +303,7 @@ a {
     top: 50%;
     transform: translateY(-50%);
     background-color: rgb(11, 37, 75, 0.5);
-    color: #faf2f2;
+    color: #fefefe;
     font-size: 2rem;
     border: none;
     cursor: pointer;

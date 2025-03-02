@@ -19,13 +19,13 @@ def all_products(request, type=None):
 
     # Initialize the products queryset based on type
     if product_type == 'books':
-        products = Book.objects.all()
+        products = Book.objects.all().order_by('name')
         page_title = 'All Books'
     elif product_type == 'accessories':
-        products = Accessory.objects.all()
+        products = Accessory.objects.all().order_by('name')
         page_title = 'All Accessories'
     else:
-        products = Product.objects.all()
+        products = Product.objects.all().order_by('name')
         page_title = 'All Products'
 
     if request.GET:
@@ -112,11 +112,39 @@ def product_detail(request, product_id):
 
 def all_genres(request):
     """ A view to show all genres on one page """
-    all_genres = Genre.objects.prefetch_related('book_set').all()
+    sort = None
+    direction = None
+
+    all_genres = Genre.objects.prefetch_related('book_set').order_by('name')
+
+    for genre in all_genres:
+        genre.sorted_books = genre.book_set.all()
+        genre.book_count = genre.sorted_books.count()
+
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'friendly_name':
+                sortkey = 'lower_name'
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+
+            for genre in all_genres:
+                books = genre.book_set.all()
+                if sortkey == 'lower_name':
+                    books = books.annotate(lower_name=Lower('friendly_name'))
+                genre.sorted_books = books.order_by(sortkey)
 
     context = {
         'all_genres': all_genres,
-        'page_title': 'All Book Genres'
+        'page_title': 'All Book Genres',
+        'sort': sort,
+        'direction': direction,
+        'current_sorting': f'{sort}_{direction}' if sort and direction else None,
     }
 
     return render(request, 'products/all_genres.html', context)
@@ -124,11 +152,40 @@ def all_genres(request):
 
 def all_categories(request):
     """ A view to show all accessory categories on one page """
-    all_categories = Category.objects.prefetch_related('accessory_set').all()
+    sort = None
+    direction = None
+
+    all_categories = Category.objects.prefetch_related(
+        'accessory_set').order_by('name')
+
+    for category in all_categories:
+        category.sorted_accessories = category.accessory_set.all()
+        category.accessory_count = category.sorted_accessories.count()
+
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'friendly_name':
+                sortkey = 'lower_name'
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+
+            for category in all_categories:
+                accessories = category.accessory_set.all()
+                if sortkey == 'lower_name':
+                    accessories = accessories.annotate(lower_name=Lower('friendly_name'))
+                category.sorted_accessories = accessories.order_by(sortkey)
 
     context = {
         'all_categories': all_categories,
-        'page_title': 'All Accessory Categories'
+        'page_title': 'All Accessory Categories',
+        'sort': sort,
+        'direction': direction,
+        'current_sorting': f'{sort}_{direction}' if sort and direction else None,
     }
 
     return render(request, 'products/all_categories.html', context)
