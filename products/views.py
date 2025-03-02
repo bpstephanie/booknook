@@ -120,3 +120,15 @@ def all_genres(request):
     }
 
     return render(request, 'products/all_genres.html', context)
+
+
+def all_categories(request):
+    """ A view to show all accessory categories on one page """
+    all_categories = Category.objects.prefetch_related('accessory_set').all()
+
+    context = {
+        'all_categories': all_categories,
+        'page_title': 'All Accessory Categories'
+    }
+
+    return render(request, 'products/all_categories.html', context)

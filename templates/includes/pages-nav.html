@@ -36,15 +36,15 @@
                 <a class="dropdown-item" href="{% url 'all_accessories' %}?sort=rating&direction=desc">By Rating</a>
                 <div class="dropdown-divider"></div>
                 <div class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="">By Category</a>
+                    <a class="dropdown-item dropright" href="">By Category</a>
                     <ul class="dropdown-menu bg-cream">
-                        <li><a class="dropdown-item" href="{% url 'products' %}?category=bookmarks">Bookmarks</a></li>
+                        <li><a class="dropdown-item" href="{% url 'all_accessories' %}?category=bookmarks">Bookmarks</a></li>
                         <div class="dropdown-divider"></div>
-                        <li><a class="dropdown-item" href="{% url 'products' %}?category=totebags">Tote Bags</a></li>
+                        <li><a class="dropdown-item" href="{% url 'all_accessories' %}?category=totebags">Tote Bags</a></li>
                         <div class="dropdown-divider"></div>
-                        <li><a class="dropdown-item" href="{% url 'products' %}?category=mugs">Mugs</a></li>
+                        <li><a class="dropdown-item" href="{% url 'all_categories' %}?category=mugs">Mugs</a></li>
                         <div class="dropdown-divider"></div>
-                        <li><a class="dropdown-item" href="{% url 'all_accessories' %}">All Categories</a></li>
+                        <li><a class="dropdown-item" href="{% url 'all_categories' %}">All Categories</a></li>
                     </ul>
                 </div>
             <div class="dropdown-divider"></div>

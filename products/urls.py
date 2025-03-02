@@ -17,4 +17,9 @@ urlpatterns = [
     ),
     path('<int:product_id>/', views.product_detail, name='product_detail'),
     path('books/all-genres', views.all_genres, name='all_genres'),
+    path(
+        'accessories/all-categories',
+        views.all_categories,
+        name='all_categories'
+    ),
 ]
