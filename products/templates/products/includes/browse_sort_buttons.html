@@ -1,6 +1,6 @@
 <div class="filter-container text-centre">
     {% if type == "all" %}
-        <button class="btn btn-success" id="categoryButton">
+        <button class="btn btn-success" id="categoryButton" aria-expanded="false" aria-controls="categoryButtonsContainer">
             <span class="mt-4">Browse by Accessory</span>
         </button>
         <div id="categoryButtonsContainer" class="hidden">
@@ -10,7 +10,7 @@
                     </a>
             {% endfor %}
         </div>
-        <button class="btn btn-success" id="genreButton">
+        <button class="btn btn-success" id="genreButton"  aria-expanded="false" aria-controls="genreButtonsContainer">
             <span class="mt-4">Browse by Genre</span>
         </button>
         <div id="genreButtonsContainer" class="hidden">
@@ -21,7 +21,7 @@
             {% endfor %}
         </div>
     {% elif type == 'books' %}
-        <button class="btn btn-success" id="genreButton">
+        <button class="btn btn-success" id="genreButton" aria-expanded="false" aria-controls="genreButtonsContainer">
             <span class="mt-4">Browse by Genre</span>
         </button>
         <div id="genreButtonsContainer" class="hidden">
@@ -32,7 +32,7 @@
             {% endfor %}
         </div>
     {% elif type == 'accessories' %}
-        <button class="btn btn-success" id="categoryButton">
+        <button class="btn btn-success" id="categoryButton" aria-expanded="false" aria-controls="categoryButtonsContainer">
             <span class="mt-4">Browse by Accessory</span>
         </button>
         <div id="categoryButtonsContainer" class="hidden">
