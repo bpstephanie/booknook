@@ -21,16 +21,7 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'all_books' %}?sort=rating&direction=desc">By Rating</a>
                 <div class="dropdown-divider"></div>
-                <div class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="{% url 'all_books' %}">By Genre</a>
-                    <ul class="dropdown-menu bg-cream">
-                        <li><a class="dropdown-item" href="{% url 'all_books' %}?genre={{ 'Science Fiction'|urlencode }}">Science Fiction</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li><a class="dropdown-item" href="{% url 'products' %}?genre=romance">Romance</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li><a class="dropdown-item" href="{% url 'products' %}?genre=Horror">Horror</a></li>
-                    </ul>
-                </div>
+                <a class="dropdown-item" href="{% url 'all_genres' %}">By Genre</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'all_books' %}">All Books</a>
             </div>

@@ -108,3 +108,15 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def all_genres(request):
+    """ A view to show all genres on one page """
+    all_genres = Genre.objects.prefetch_related('book_set').all()
+
+    context = {
+        'all_genres': all_genres,
+        'page_title': 'All Book Genres'
+    }
+
+    return render(request, 'products/all_genres.html', context)
