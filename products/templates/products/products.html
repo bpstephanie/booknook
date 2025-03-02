@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col text-center mt-3 text-navy">
                 <h2 class="text-uppercase">Products</h2>
-                {% include 'products/includes/browse_sort_buttons.html' %}
+                {% include 'products/includes/browse_sort_buttons.html' with show_filters=True product_count=True %}
             </div>
         </div>
         <div class="row">
