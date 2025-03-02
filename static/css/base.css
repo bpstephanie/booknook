@@ -124,12 +124,7 @@ a {
     display: block;
 }
 
-.dropdown-item.dropdown-toggle:after {
-    content: "\f054";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    float: right;
-}
+
 
 .icon-list li {
     padding: 0 5% 0 5%;
@@ -218,12 +213,14 @@ a {
     margin-top: 10px;
     text-align: center;
 }
-/* ---------------------------------------- Genre View */
-.genre-section {
+/* ---------------------------------------- Genre and Category View */
+.genre-section,
+.category-section {
     width: 100%;
 }
 
-.genre-title {
+.genre-title,
+.category-title {
     font-size: 1.5rem;
     font-weight: 300;
     color: #0b254b;
@@ -233,7 +230,8 @@ a {
     white-space: normal;
     z-index: 1;
 }
-.genre-books-wrapper {
+.genre-books-wrapper,
+.category-books-wrapper {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -243,7 +241,8 @@ a {
     overflow: hidden;
 }
 
-.books-carousel {
+.books-carousel,
+.accessories-carousel {
     display: flex;
     gap: 20px;
     overflow-x: auto;
@@ -255,11 +254,13 @@ a {
     scrollbar-width: none;
 }
 
-.small-genre .books-carousel {
+.small-group .books-carousel,
+.small-group .accessories-carousel {
     gap: 100px;
 }
 
-.book-item {
+.book-item,
+.accessory-item {
     flex: 0 0 auto;
     margin: 0 10px;
     text-align: center;
@@ -267,7 +268,8 @@ a {
     max-width: 200px;
 }
 
-.book-title {
+.book-title,
+.accessory-title {
     display: block;
     white-space: normal;
     word-wrap: break-word;

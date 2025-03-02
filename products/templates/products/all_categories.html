@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}- {{ page_title }}
+{% endblock %}
+
+{% block page_header %}
+    <div class="header-container container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="full-overlay"></div>
+<div class="container-bn">
+    <div class="col text-center mt-3 text-navy">
+        <h2 class="text-uppercase">Accessory Categories</h2>
+    </div>
+    {% for category in all_categories %}
+        {% with accessories=category.accessory_set.all %}
+        {% if accessories %}
+            <div class="category-section">
+                <h3 class="category-title text-navy">{{ category.friendly_name}}</h3>
+                <div class="category-accessories-wrapper row">
+                    <button class="arrow left-arrow">&lt;</button>
+                    <div class="accessories-carousel d-flex flex-nowrap row">
+                        {% for accessory in accessories %}
+                        <div class="col-sm-6 col-md-6 col-lg-2 col-xl-2">
+                            <div class="card h-100 border-0">
+                                <a href="{% url 'product_detail' accessory.id %}">
+                                    {% if accessory.image %}
+                                        <img class="card-img-top img-fluid" src="{{ accessory.image.url }}" alt="{{ accessory.friendly_name }}">
+                                    {% else %}
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ accessory.friendly_name }}">
+                                    {% endif %}
+                                </a>
+                                <div class="card-body bg-cream pb-0">
+                                    <p class="mb-0 accessory-title">{{ accessory.friendly_name }}</p>
+                                </div>
+                                <div class="card-footer bg-cream pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="lead mb-0 text-left font-weight-bold">£{{ accessory.price }}</p>
+                                            {% if accessory.rating %}
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ accessory.rating }} / 5</small>
+                                            {% else %}
+                                                <small class="text-muted">No Rating</small>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <button class="arrow right-arrow">&gt;</button> 
+                </div>
+            </div>
+        {% endif %}
+        {% endwith %}
+    {% endfor %}
+</div>
+
+{% endblock %}
+{% block postloadjs %}
+<script>
+    $(document).ready(function () {
+        $('.category-section').each(function () {
+            const $carousel = $(this).find('.accessories-carousel');
+            const $leftArrow = $(this).find('.left-arrow');
+            const $rightArrow = $(this).find('.right-arrow');
+            const $accessories = $(this).find('.accessories-carousel .card');
+
+            // Check arrow visibility
+            updateArrowVisibility($carousel, $leftArrow, $rightArrow);
+
+            // Check arrow visibility on scroll
+            $carousel.on('scroll', function () {
+                updateArrowVisibility($carousel, $leftArrow, $rightArrow);
+            });
+
+            // Arrow click functionality
+            $leftArrow.click(function () {
+                $carousel.animate({ scrollLeft: '-=200' }, 'smooth', function () {
+                    updateArrowVisibility($carousel, $leftArrow, $rightArrow);
+                });
+                });
+
+            $rightArrow.click(function () {
+                $carousel.animate({ scrollLeft: '+=200' }, 'smooth', function () {
+                    updateArrowVisibility($carousel, $leftArrow, $rightArrow);
+                });
+            });
+
+            // Small-group class for 3 accessories or less
+            if ($accessories.length < 3) {
+                $(this).addClass('small-group');
+            }
+        });
+
+        // Function to update arrow visibility
+        function updateArrowVisibility($carousel, $leftArrow, $rightArrow) {
+            const scrollLeft = $carousel.scrollLeft();
+            const maxScrollLeft = $carousel[0].scrollWidth - $carousel.outerWidth();
+        
+            if (scrollLeft <= 0) {
+                $leftArrow.hide();
+            } else {
+                $leftArrow.show();
+            }
+
+            if (scrollLeft >= maxScrollLeft) {
+                $rightArrow.hide();
+            } else {
+                $rightArrow.show();
+            }
+        }
+    });
+</script>
+{% endblock %}
