@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes.fields import GenericForeignKey
 from django.utils.text import slugify
@@ -15,7 +16,8 @@ class Product(models.Model):
     price = models.DecimalField(
         max_digits=6,
         decimal_places=2,
-        validators=[MinValueValidator(0)]
+        validators=[MinValueValidator(0), MaxValueValidator(999)],
+        help_text="Price should be between £0.00 and £999.99"
     )
     rating = models.DecimalField(
         max_digits=6,
@@ -135,3 +137,45 @@ class Accessory(Product):
     class Meta:
         verbose_name_plural = 'Accessories'
         ordering = ['name']
+
+
+class Review(models.Model):
+    title = models.CharField(max_length=200)
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="reviews"
+    )
+    product = models.ForeignKey(
+        'Product', on_delete=models.CASCADE, related_name="reviews"
+    )
+    body = models.TextField()
+    rating = models.PositiveIntegerField(
+        validators=[MinValueValidator(1), MaxValueValidator(5)],
+        help_text="Rating should be between 1 and 5"
+    )
+    approved = models.BooleanField(default=False)
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.title} by {self.author.username} - Rating: {self.rating}"
+
+    class Meta:
+        ordering = ['-created_on']
+
+
+class ReviewComment(models.Model):
+    review = models.ForeignKey(
+        'Review', on_delete=models.CASCADE, related_name="comments"
+    )
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="review_comments"
+    )
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"Comment by {self.user.username}"
+
+    class Meta:
+        ordering = ['created_on']

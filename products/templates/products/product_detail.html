@@ -13,51 +13,93 @@
 
 {% block content %}
 <div class="full-overlay">
-  <div class="container-bn">
-    <div class="row">
-        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-            <div class="image-container">
-                {% if product.image %}
-                    <a href="{{ product.image.url }}" target="_blank">
-                        <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                    </a>                
-                {% else %}
-                    <a href="">
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                    </a>
-                {% endif %}
+    <div class="container-bn">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                <div class="image-container">
+                    {% if product.image %}
+                        <a href="{{ product.image.url }}" target="_blank">
+                            <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>                
+                    {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        </a>
+                    {% endif %}
+                </div>
             </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="product-details-container mb-5 mt-md-5">
-                <p class="mb-0">{{ product.friendly_name }}</p>
-                {% if product.book %}
-                    <p class="mt-3"><em>{{ product.book.author }}</em></p>
-                {% endif %}
-                <hr>
-                <p class="lead mb-0 text-left font-weight-bold">£{{ product.price}}</p>
-                {% if product.rating %}
-                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }}</small>
-                {% else %}
-                    <small class="text-muted">No Rating</small>
-                {% endif %}
-                <p class="mt-3">{{ product.description }}</p>
-                {% if product.book.genre %}
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="product-details-container mb-5 mt-md-5">
+                    <p class="mb-0">{{ product.friendly_name }}</p>
+                    {% if product.book %}
+                        <p class="mt-3"><em>{{ product.book.author }}</em></p>
+                    {% endif %}
+                    <hr>
+                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price}}</p>
+                    {% if product.rating %}
+                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }}</small>
+                    {% else %}
+                        <small class="text-muted">No Rating</small>
+                    {% endif %}
+                    <p class="mt-3">{{ product.description }}</p>
+                    {% if product.book.genre %}
+                        <p class="small mt-1 mb-0">
+                            <a class="text-muted" href="{% url 'all_books' %}?genre={{ product.book.genre }}">
+                                <i class="fas fa-tag mr-1">{{ product.book.genre }}</i>
+                            </a>
+                        </p>
+                    {% elif product.accessory.category %}
                     <p class="small mt-1 mb-0">
-                        <a class="text-muted" href="{% url 'all_books' %}?genre={{ product.book.genre }}">
-                            <i class="fas fa-tag mr-1">{{ product.book.genre }}</i>
+                        <a class="text-muted" href="{% url 'all_accessories' %}?category={{ product.accessory.category }}">
+                            <i class="fas fa-tag mr-1">{{ product.accessory.category }}</i>
                         </a>
                     </p>
-                {% elif product.accessory.category %}
-                <p class="small mt-1 mb-0">
-                    <a class="text-muted" href="{% url 'all_accessories' %}?category={{ product.accessory.category }}">
-                        <i class="fas fa-tag mr-1">{{ product.accessory.category }}</i>
-                    </a>
-                </p>
-                {% endif %}
-                {% if product.book %}
-                    <p class="text-muted">{{ product.book.isbn }}</p>
-                {% endif %} 
+                    {% endif %}
+                    {% if product.book %}
+                        <p class="text-muted">{{ product.book.isbn }}</p>
+                    {% endif %} 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container px-2">
+        <div class="row">
+            <div class="col-md-8 mb-4 mt-3 border-0">
+                <h2>Reviews ({{ review_count }})</h2>
+                {% for review in reviews %}
+                    <div class="p-2 reviews {% if not review.approved and review.author == user %} faded{% elif not review.approved %} d-none{% endif %}">
+                        <h3 class="font-weight-bold">{{ review.title }}</h3>
+                        <p>By {{ review.author.username }} - {{ review.created_on|date:"F j, Y"}}</p>
+                        <p>Rating: {{ review.rating }}/5</p>
+                        <div id="review{{ review.id }}">
+                            <div class="review-body">{{ review.body }}</div>
+                        </div>
+                        {% if not review.approved and review.author == user %}
+                            <p class="approved">
+                                This review is awaiting approval
+                            </p>
+                        {% endif %}
+                        {% if user.is_authenticated and review.author == user %}
+                            <button class="btn btn-delete" review_id="{{ review.id }}">Delete</button>
+                            <button class="btn btn-edit" review_id="{{ review.id }}">Edit</button>
+                        {% endif %}
+                        <h4>Comments:</h4>
+                        {% for comment in review.comments.all %}
+                            <div class="comment-container">
+                                <p>{{ comment.body }}</p>
+                                <p>{{ comment.user.username }} - {{ comment.created_on|date:"F j, Y H:i" }}</p>
+                                {% if user.is_authenticated and comment.user == user %}
+                                    <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
+                                    <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+                                {% endif %}
+                            </div>
+                        {% empty %}
+                            <p>No comments yet. Be the first!</p>
+                        {% endfor %}
+                    </div>
+                {% empty %}
+                    <p>No reviews yet. Be the first!</p>
+                {% endfor %}
             </div>
         </div>
     </div>
