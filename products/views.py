@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from .models import (
     Product, Book, Accessory, Category, Genre, Review, ReviewComment
 )
+from wishlist.models import Wishlist
 from .forms import ReviewForm, ReviewCommentForm
 from django.contrib import messages
 from django.http import HttpResponseRedirect
@@ -122,6 +123,8 @@ def product_detail(request, product_id):
     review_form = ReviewForm()
     comment_form = ReviewCommentForm()
 
+    user_wishlists = Wishlist.objects.filter(user=request.user)
+
     if request.method == "POST":
         if 'review_submit' in request.POST:
             review_form = ReviewForm(request.POST)
@@ -149,9 +152,11 @@ def product_detail(request, product_id):
     context = {
         'product': product,
         'reviews': reviews,
+        'review_count': review_count,
         'user_unapproved_reviews': user_unnapproved_reviews,
         'review_form': review_form,
         'comment_form': comment_form,
+        'user_wishlists': user_wishlists,
     }
 
     return render(request, 'products/product_detail.html', context)
