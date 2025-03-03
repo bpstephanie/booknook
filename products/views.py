@@ -1,6 +1,13 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
-from .models import Product, Book, Accessory, Category, Genre
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404
+)
+from django.contrib.auth.decorators import login_required
+from .models import (
+    Product, Book, Accessory, Category, Genre, Review, ReviewComment
+)
+from .forms import ReviewForm, ReviewCommentForm
 from django.contrib import messages
+from django.http import HttpResponseRedirect
 from django.core.paginator import Paginator
 from django.db.models import Q
 from django.db.models.functions import Lower
@@ -34,7 +41,9 @@ def all_products(request, type=None):
             sort = sortkey
             if sortkey == 'friendly_name':
                 sortkey = 'lower_name'
-                products = products.annotate(lower_name=Lower('friendly_name'))
+                products = products.annotate(
+                    lower_name=Lower('friendly_name')
+                ).order_by(sortkey, 'name')
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
@@ -102,9 +111,47 @@ def all_products(request, type=None):
 def product_detail(request, product_id):
     """ A view to show individual product details """
     product = get_object_or_404(Product, pk=product_id)
+    reviews = product.reviews.filter(approved=True)
+    user_unnapproved_reviews = (
+        product.reviews.filter(approved=False, author=request.user)
+        if request.user.is_authenticated else None
+    )
+
+    review_count = reviews.count()
+
+    review_form = ReviewForm()
+    comment_form = ReviewCommentForm()
+
+    if request.method == "POST":
+        if 'review_submit' in request.POST:
+            review_form = ReviewForm(request.POST)
+            if review_form.is_valid():
+                review = review_form.save(commit=False)
+                review.author = request.user
+                review.product = product
+                review.save()
+                return redirect('product_detail', product_id=product.id)
+        elif 'comment_submit' in request.POST:
+            comment_form = ReviewCommentForm(request.POST)
+            if comment_form.is_valid():
+                review_id = request.POST.get('review_id')
+                review = get_object_or_404(Review, id=review_id)
+                comment = comment_form.save(commit=False)
+                comment.author = request.user
+                comment.review = review
+                comment.save()
+                return redirect('product_detail', product_id=product.id)
+
+        paginator = Paginator(reviews, 10)
+        page_number = request.GET.get('page', 1)
+        reviews = paginator.get_page(page_number)
 
     context = {
         'product': product,
+        'reviews': reviews,
+        'user_unapproved_reviews': user_unnapproved_reviews,
+        'review_form': review_form,
+        'comment_form': comment_form,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -189,3 +236,82 @@ def all_categories(request):
     }
 
     return render(request, 'products/all_categories.html', context)
+
+
+@login_required
+def edit_review(request, review_id):
+    review = get_object_or_404(Review, id=review_id, author=request.user)
+    if request.method == "POST":
+        form = ReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.approved = False
+            review.save()
+            messages.success(request, 'Review Updated!')
+            return redirect('product_detail', product_id=review.product.id)       
+        else:
+            messages.error(
+                request, 'Error updating review!'
+            )
+    else:
+        form = ReviewForm(instace=review)
+    return render(request, 'edit_review.html', {'form': form})
+
+
+@login_required
+def delete_review(request, review_id):
+    review = get_object_or_404(
+        Review, id=review_id, author=request.user
+    )
+    if request.method == "POST":
+        review.delete()
+        messages.success(request, 'Review deleted!')
+        return redirect('product_detail', product_id=review.product.id)
+    else:
+        messages.error(
+            request, 'You can only delete your own reviews!'
+        )
+        return HttpResponseRedirect(
+            reverse('product_detail', args=[review.product.id])
+        )
+
+
+@login_required
+def edit_comment(request, comment_id):
+    comment = get_object_or_404(
+        ReviewComment, id=comment_id, user=request.user
+    )
+    if request.method == "POST":
+        form = ReviewCommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.approved = False
+            comment.save()
+            messages.success(request, 'Comment Updated!')
+            return redirect(
+                'product_detail', product_id=comment.review.product.id
+            )      
+        else:
+            form = ReviewCommentForm(instance=comment)
+            messages.error(
+                request, 'Error updating comment!'
+            )
+        return render(request, 'edit_comment.html', {'form': form})
+
+
+@login_required
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(
+        ReviewComment, id=comment_id, author=request.user
+    )
+    if request.method == "POST":
+        comment.delete()
+        messages.success(request, 'Comment deleted!')
+        return redirect('product_detail', product_id=comment.review.product.id)
+    else:
+        messages.error(
+            request, 'You can only delete your own comments!'
+        )
+    return HttpResponseRedirect(
+        reverse('product_detail', args=[comment.review.product.id])
+    )
