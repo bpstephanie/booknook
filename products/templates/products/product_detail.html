@@ -12,64 +12,65 @@
 {% endblock %}
 
 {% block content %}
-<div class="full-overlay">
-    <div class="container-bn">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                <div class="image-container">
-                    {% if product.image %}
-                        <a href="{{ product.image.url }}" target="_blank">
-                            <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                        </a>                
-                    {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                        </a>
-                    {% endif %}
-                </div>
+<div class="full-overlay"></div>
+<div class="container-bn">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="image-container">
+                {% if product.image %}
+                    <a href="{{ product.image.url }}" target="_blank">
+                        <img class="card-img-top-full img-fluid" src="{{ product.image.url }}" alt="Image of {{ product.name }}">
+                    </a>                
+                {% else %}
+                    <a href="">
+                        <img class="card-img-top-full img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="No image">
+                    </a>
+                {% endif %}
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="product-details-container mb-5 mt-md-5">
-                    <p class="mb-0">{{ product.friendly_name }}</p>
-                    {% if product.book %}
-                        <p class="mt-3"><em>{{ product.book.author }}</em></p>
-                    {% endif %}
-                    <hr>
-                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price}}</p>
-                    {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }}</small>
-                    {% else %}
-                        <small class="text-muted">No Rating</small>
-                    {% endif %}
-                    <p class="mt-3">{{ product.description }}</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#wishlistModal">
-                        <i class="fa-regular fa-heart"></i>
-                        Add to Wishlist
-                    </button>
-                    {% if product.book.genre %}
-                        <p class="small mt-1 mb-0">
-                            <a class="text-muted" href="{% url 'all_books' %}?genre={{ product.book.genre }}">
-                                <i class="fas fa-tag mr-1">{{ product.book.genre }}</i>
-                            </a>
-                        </p>
-                    {% elif product.accessory.category %}
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-details-container mb-5 mt-md-5">
+                <h1 class="mb-0">{{ product.friendly_name }}</h1>
+                {% if product.book %}
+                    <p class="mt-3"><em>{{ product.book.author }}</em></p>
+                {% endif %}
+                <hr>
+                <p class="lead mb-0 text-left font-weight-bold">£{{ product.price}}</p>
+                {% if product.rating %}
+                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }}</small>
+                {% else %}
+                    <small class="text-muted">No Rating</small>
+                {% endif %}
+                <p class="mt-3 description">{{ product.description }}</p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#wishlistModal">
+                    <i class="fa-regular fa-heart"></i>
+                    Add to Wishlist
+                </button>
+                {% if product.book.genre %}
                     <p class="small mt-1 mb-0">
-                        <a class="text-muted" href="{% url 'all_accessories' %}?category={{ product.accessory.category }}">
-                            <i class="fas fa-tag mr-1">{{ product.accessory.category }}</i>
+                        <a class="text-muted" href="{% url 'all_books' %}?genre={{ product.book.genre }}">
+                            <i class="fas fa-tag mr-1">{{ product.book.genre }}</i>
                         </a>
                     </p>
-                    {% endif %}
-                    {% if product.book %}
-                        <p class="text-muted">{{ product.book.isbn }}</p>
-                    {% endif %} 
-                </div>
+                {% elif product.accessory.category %}
+                <p class="small mt-1 mb-0">
+                    <a class="text-muted" href="{% url 'all_accessories' %}?category={{ product.accessory.category }}">
+                        <i class="fas fa-tag mr-1">{{ product.accessory.category }}</i>
+                    </a>
+                </p>
+                {% endif %}
+                {% if product.book %}
+                    <p class="text-muted">{{ product.book.isbn }}</p>
+                {% endif %} 
             </div>
         </div>
     </div>
     <div class="container px-2">
         <div class="row">
             <div class="col-md-8 mb-4 mt-3 border-0">
-                <h2>Reviews ({{ review_count }})</h2>
+                <h2>Reviews 
+                    <span class="text-muted">{% if review_count > 0 %}({{ review_count }}){% else %}0{% endif %}</span>
+                </h2>
                 {% for review in reviews %}
                     <div class="p-2 reviews {% if not review.approved and review.author == user %} faded{% elif not review.approved %} d-none{% endif %}">
                         <h3 class="font-weight-bold">{{ review.title }}</h3>
@@ -109,33 +110,54 @@
     </div>
 </div>
 <!-- Wishlist Modal -->
- <div class="modal fade" id="wishlistModal" tabindex="-1" aria-labelledby="wishlistModalLabel" aria-hidden="true">
+<div class="modal fade" id="wishlistModal" tabindex="-1" aria-labelledby="wishlistModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="wishlistModalLabel">Add to Wishlist</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <div class="modal-body">
                 <form method="POST" action="{% url 'add_to_wishlist' product.id %}">
                     {% csrf_token %}
                     <label for="wishlist">Choose an existing wishlist:</label>
-                    <select name="wishlist_id" id="wishlist" class="form-select">
+                    <select name="wishlist_id" id="wishlist" class="form-control">
                         <option value="" selected>-- Select a Wishlist --</option>
-                        {% for wishlist in user_wishlists %}
-                            <option value="{{ wishlist.id }}">{{ wishlist.name }}</option>
-                        {% endfor %}
+                        {% if user_wishlists %}
+                            {% for wishlist in user_wishlists %}
+                                <option value="{{ wishlist.id }}">{{ wishlist.name }}</option>
+                            {% endfor %}
+                        {% else %}
+                            <option value="" disabled>No wishlists available</option>
+                        {% endif %}
                     </select>
                     <p class="mt-3">Or create a new wishlist:</p>
                     <input type="text" name="new_wishlist_name" class="form-control" placeholder="Enter wishlist name" />
-                    <div class="modal-footer mt-3">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success">Add to Wishlist</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success">Add to Wishlist</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
- </div>
+</div>
 {% endblock %}
+{% block postloadjs %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#wishlistModal').on('shown.bs.modal', function(event) {
+            let wishlistId = $('#wishlist').val()
+            let new_wishlist_name = $('input[name="new_wishlist_name"]').val();
+            var button = $(event.relatedTarget);
+            var productId = button.data('product-id');
+            var modal = $(this);
 
+            modal.find('.modal-title').text('Add to Wishlist for Product ID:' + productId);
+        });
+
+    });
+</script>
+{% endblock %}

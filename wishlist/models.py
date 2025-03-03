@@ -13,6 +13,9 @@ class Wishlist(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     is_public = models.BooleanField(default=False)
 
+    class Meta:
+        unique_together = ('user', 'name')
+
     def __str__(self):
         return f"{self.name} ({self.user.username})"
 

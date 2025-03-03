@@ -8,37 +8,43 @@ from products.models import Product
 # Create your views here.
 @login_required
 def wishlists(request):
-    wishlists = Wishlist.objects.filter(user=request.user)
+    wishlists = Wishlist.objects.filter(user=request.user).prefetch_related(
+        'wishlistitem_set'
+    )
 
     context = {
         'wishlists': wishlists,
     }
-    return render(request, "wishlists/wishlists.html", context)
+    return render(request, "wishlists/wishlist.html", context)
 
 
 @login_required
 def add_to_wishlist(request, product_id):
     product = get_object_or_404(Product, id=product_id)
+    user_wishlists = Wishlist.objects.filter(user=request.user)
 
     if request.method == "POST":
         wishlist_id = request.POST.get("wishlist_id")
         new_wishlist_name = request.POST.get("new_wishlist_name")
 
-        # If user selects an existing wishlist
+        # Handle existing or new wishlist
         if wishlist_id:
             wishlist = get_object_or_404(
                 Wishlist, id=wishlist_id, user=request.user
             )
-        # If user creates a new wishlist
-        elif new_wishlist_name:
-            wishlist = Wishlist.objects.create(
-                user=request.user, name=new_wishlist_name
+        elif new_wishlist_name and new_wishlist_name.strip():
+            wishlist, created = Wishlist.objects.get_or_create(
+                user=request.user,
+                name=new_wishlist_name.strip()
             )
         else:
-            messages.error(request, "No valid wishlist selected or created.")
-            return redirect("product_detail", product_id=product.id)
+            messages.error(request, "Please provide a valid wishlist name or select an existing one.")
+            return render(request, "products/product_detail.html", {
+                "product": product,
+                "user_wishlists": user_wishlists,
+            })
 
-        # If item isn't already in wishlist
+        # Add product to wishlist
         if not WishlistItem.objects.filter(
             wishlist=wishlist, product=product
         ).exists():
@@ -50,11 +56,12 @@ def add_to_wishlist(request, product_id):
             messages.warning(
                 request, f"'{product.name}' already exists in {wishlist.name}"
             )
-            return redirect("product_detail", product_id=product.id)
 
-    user_wishlists = Wishlist.objects.filter(user=request.user)
+        return redirect("product_detail", product_id=product.id)
 
-    return render(request, "wishlist/add_to_wishlist.html", {
+    print("User Wishlists:", user_wishlists)  # Debug: Check if wishlists are populated
+
+    return render(request, "products/product_detail.html", {
         "product": product,
         "user_wishlists": user_wishlists,
     })
