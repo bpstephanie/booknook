@@ -428,6 +428,10 @@ a {
     .search-bar-wrapper {
        display: none;
     }
+
+    .base-icons {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {

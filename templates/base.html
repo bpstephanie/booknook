@@ -50,7 +50,7 @@
         </div>
       </div>
       <div>
-        <div class="row pt-3 bg-cream align-items-center">
+        <div class="row pt-3 bg-cream align-items-center order-1">
           <div class="col-6 col-lg-2 text-center text-lg-start d-flex justify-content-between jalign-items-center">
             <div class="d-flex align-items-center my-3 my-sm-0">
               <a href="{% url 'home' %}">
@@ -64,7 +64,7 @@
                 </div>
               </div>
               {% include 'includes/left-menu.html' %}
-          <div class="col-lg-6 order-lg-2 text-center search-bar-wrapper">
+          <div class="col-lg-6 order-2 text-center search-bar-wrapper">
             <form method="GET" action="{% url 'products' %}">
               <div class="input-group w-100">
                 <input class="form-control border-navy rounded-0" type="search" placeholder="Search" aria-label="Search the products in the store" name="q">
@@ -79,9 +79,9 @@
             </form>
           </div>
 
-          <div class="col-lg-4 d-flex gap-5 align-items-center justify-content-center justify-content-sm-end">
+          <div class="col-6 col-lg-4 d-flex gap-5 align-items-center justify-content-center justify-content-sm-end order-3">
             <ul class="d-flex justify-content-end list-unstyled m-0 icon-list">
-              <li class="list-inline-item dropdown">
+              <li class="list-inline-item dropdown base-icons">
                 <a class="text-navy nav-link" href="" id="account-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <div class="text-center">
                     <div>
@@ -105,7 +105,7 @@
                   {% endif %}
                 </div>
               </li>
-              <li class="list-inline-item dropdown">
+              <li class="list-inline-item dropdown base-icons">
                 <a class="text-navy nav-link" href="#" id="wishlist-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <div class="text-center">
                     <div>
