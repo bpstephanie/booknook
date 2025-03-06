@@ -4,8 +4,6 @@ html {
     z-index: auto;
 }
 
-
-
 body {
     background: url('/media/hero-image.png') no-repeat center center fixed;
     background-size: cover;
@@ -32,6 +30,17 @@ h1, h2, h3, h4, h5, h6, .lora {
 .lora-bold {
     font-family: 'Lora', serif;
     font-weight: 700;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+}
+
+/* ---------------------------------------- Colours and general styles */
+.wishlist {
+    width: 100px;
+    font-size: small;
 }
 
 .container-bn {
@@ -78,6 +87,7 @@ h1, h2, h3, h4, h5, h6, .lora {
     width: 1.5rem;
 }
 
+/* ---------------------------------------- Colours and general styles */
 a {
     color: #0b254b;
 }
@@ -238,39 +248,6 @@ a {
     background-color: rgba(0, 0, 0, 0.1);
     pointer-events: none;
 }
-
-.banner-container {
-    width: 100%;
-    overflow: hidden;
-    background-color: #0b254b;
-    padding: 5px 0;
-}
-
-.banner {
-    width: max-content;
-    display: flex;
-    position: relative;
-}
-
-.banner-item {
-    flex-shrink: 0;
-    width: 100%;
-    text-align: center;
-    padding: 5px;
-    font-size: 0.8em;
-    color: #fefefe;
-    justify-content: end;
-}
-
-@keyframes moveBanner {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
 .card {
     display: flex;
     flex-direction: column;
@@ -448,20 +425,14 @@ a {
 }
 
 @media (max-width: 992px) {
-    .search-bar {
-        width: 90%;
+    .search-bar-wrapper {
+       display: none;
     }
 }
 
 @media (max-width: 768px) {
-    .search-bar {
-        width: 80%;
-        max-width: none;
-    }
-}
-
-@media (max-width: 576px) {
-    .search-bar {
-        width: 100%;
+    .logo {
+        height: 70px;
+        width: 70px;
     }
 }

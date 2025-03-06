@@ -1,0 +1,96 @@
+<div id="canvas" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" data-width="100%">
+    <div class="bs-canvas-header p-3 bg-navy">
+        <h4 class="d-inline-block text-cream mb-0">BookNook</h4>
+          <button type="button" class="bs-canvas-close close" aria-label="Close"><span aria-hidden="true" class="text-cream">&times;</span></button>
+    </div>
+    <div class="bs-canvas-content">
+      <div class="card-navy mb-5 bg-navy w-80 justify-content-center">
+        <div class="card-header lora-bold text-cream">
+            Become a member today!
+        </div>
+        <div class="card-body">
+            <p class="card-text">Our members receive rewards and exciting perks!</p>
+            <a href="{% url 'account_signup' %}" class="btn btn-cream">Register</a>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 order-md-2 text-center">
+        <form method="GET" action="{% url 'products' %}">
+          <div class="input-group w-100">
+            <input class="form-control border-navy rounded-0" type="search" placeholder="Search" aria-label="Search the products in the store" name="q">
+            <div class="input-group-append">
+              <button class="form-control btn btn-navy border-navy rounded-0" type="submit">
+                <span class="icon">
+                  <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-6">
+        <ul class="navbar-nav justify-content-end list-unstyles d-flex gap-md-3 mb-0">
+          <li class="list-inline-item dropdown">
+            <a class="text-navy nav-link" href="" id="account-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="text-center">
+                <div>
+                  <i class="fa-solid fa-user fa-lg" aria-label="My account"></i>
+                  <p class="lora">Account</p>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-menu border-navy" aria-labelledby="account-options">
+              {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                  <a class="dropdown-item" href="">Product Management</a>
+                {% endif %}
+                <a class="dropdown-item" href="">My Profile</a>
+                <a class="dropdown-item" href="">My Events</a>
+                <a class="dropdown-item" href="">Forum</a>
+                <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+              {% else %}
+                <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
+                <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
+              {% endif %}
+            </div>
+          </li>
+          <li class="list-inline-item dropdown">
+            <a class="text-navy nav-link" href="#" id="wishlist-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="text-center">
+                <div>
+                  <i class="fa-solid fa-heart fa-lg" aria-label="Wishlist"></i>
+                  <p class="lora">Wishlists</p>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-menu border-navy wishlist" aria-labelledby="wishlist-dropdown">
+              {% if request.user.is_authenticated %}
+                {% for wishlist in request.user.wishlists.all %}
+                  <div class="dropdown-submenu">
+                    <a class="dropdown-item dropdown-toggle" href="#">{{ wishlist.name }}</a>
+                    <ul class="dropdown-menu">
+                      {% for product in wishlist.products.all %}
+                        <li><a class="dropdown-item" href="{% url 'product_detail' product.id %}">{{ product.name }}</a></li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                {% endfor %}
+              {% else %}
+                <a class="dropdown-item" href="{% url 'account_login' %}">Login to view your wishlists</a>
+              {% endif %}
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="{% url 'products' %}" class="nav-link text-navy d-flex">All Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="{% url 'all_genres' %}" class="nav-link text-navy d-flex">All Genres</a>
+          </li>
+          <li class="nav-item">
+            <a href="{% url 'all_genres' %}" class="nav-link text-navy d-flex">Accessory Categories</a>
+          </li>
+        </ul>
+      </div>         
+    </div>   
+  </div>
+</div>
+</div>

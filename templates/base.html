@@ -44,56 +44,27 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-      <div class="banner-container">
-        <div class="banner bg-navy text-cream">
+      <div class="">
+        <div class="text-center bg-navy text-cream">
             <div class="banner-item text-uppercase">FREE DELIVERY ON ORDERS OVER £{{ free_shipping_threshold }}</div>
         </div>
       </div>
       <div>
-        <div class="row pt-3 bg-cream">
-          <div class="col-6 col-sm-4 col-md-4 order-1 order-md-1 text-center text-sm-start d-flex gap-3 justify-content-center justify-content-md-start">
+        <div class="row pt-3 bg-cream align-items-center">
+          <div class="col-6 col-lg-2 text-center text-lg-start d-flex justify-content-between jalign-items-center">
             <div class="d-flex align-items-center my-3 my-sm-0">
               <a href="{% url 'home' %}">
-                <img src="{{ '/media/booknook-logo-no-bg.webp' }}" width="100" height="100" class="d-inline-block align-top" alt="BookNook logo">
+                <img src="{{ '/media/booknook-logo-no-bg.webp' }}" class="d-inline-block align-top logo" alt="BookNook logo">
               </a>
-            </div>
-          </div>
-          <div class="d-flex my-5 order-sm-1 d-block d-md-none">
-            <div class="text-center border p-2 mx-5">
-                <a class="pull-bs-canvas-left text-navy text-decoration-none d-block" href="#">
-                  <span>&#9776;</span>
-                </a>
-            </div>
-          </div>
-          <div id="canvas" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" data-width="100%">
-            <div class="bs-canvas-header p-3 bg-navy">
-                <h4 class="d-inline-block text-cream mb-0">BookNook</h4>
-                  <button type="button" class="bs-canvas-close close" aria-label="Close"><span aria-hidden="true" class="text-cream">&times;</span></button>
-            </div>
-            <div class="bs-canvas-content">
-              <div class="card-navy mb-5 bg-navy w-80 justify-content-center">
-                <div class="card-header lora-bold text-cream">
-                    Become a member today!
-                </div>
-                <div class="card-body">
-                    <p class="card-text">Our members receive rewards and exciting perks!</p>
-                    <a href="{% url 'account_signup' %}" class="btn btn-cream">Register</a>
+              <div class="d-flex my-5 col-sm-1 d-block d-lg-none">
+                <div class="text-center border p-2 mx-5">
+                    <a class="pull-bs-canvas-left text-navy text-decoration-none d-block" href="#">
+                      <span>&#9776;</span>
+                    </a>
                 </div>
               </div>
-              <ul class="navbar-nav justify-content-end list-unstyles d-flex gap-md-3 mb-0">
-                <li class="nav-item">
-                  <a href="{% url 'products' %}" class="nav-link text-navy d-flex">All Products</a>
-                </li>
-                <li class="nav-item">
-                  <a href="{% url 'all_genres' %}" class="nav-link text-navy d-flex">All Genres</a>
-                </li>
-                <li class="nav-item">
-                  <a href="{% url 'all_genres' %}" class="nav-link text-navy d-flex">Accessory Categories</a>
-                </li>
-              </ul>            
-            </div>   
-          </div>
-          <div class="col-12 col-md-4 order-md-2 text-center">
+              {% include 'includes/left-menu.html' %}
+          <div class="col-lg-6 order-lg-2 text-center search-bar-wrapper">
             <form method="GET" action="{% url 'products' %}">
               <div class="input-group w-100">
                 <input class="form-control border-navy rounded-0" type="search" placeholder="Search" aria-label="Search the products in the store" name="q">
@@ -107,7 +78,8 @@
               </div>
             </form>
           </div>
-          <div class="col-6 col-sm-8 col-md-4 order-2 order-md-3 d-flex gap-5 align-items-center justify-content-center justify-content-sm-end">
+
+          <div class="col-lg-4 d-flex gap-5 align-items-center justify-content-center justify-content-sm-end">
             <ul class="d-flex justify-content-end list-unstyled m-0 icon-list">
               <li class="list-inline-item dropdown">
                 <a class="text-navy nav-link" href="" id="account-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -133,15 +105,31 @@
                   {% endif %}
                 </div>
               </li>
-              <li class="list-inline-item">
-                <a class="text-navy nav-link" href="">
+              <li class="list-inline-item dropdown">
+                <a class="text-navy nav-link" href="#" id="wishlist-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <div class="text-center">
                     <div>
                       <i class="fa-solid fa-heart fa-lg" aria-label="Wishlist"></i>
-                      <p class="lora">Wishlist</p>
+                      <p class="lora">Wishlists</p>
                     </div>
                   </div>
                 </a>
+                <div class="dropdown-menu border-navy wishlist" aria-labelledby="wishlist-dropdown">
+                  {% if request.user.is_authenticated %}
+                    {% for wishlist in request.user.wishlists.all %}
+                      <div class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#">{{ wishlist.name }}</a>
+                        <ul class="dropdown-menu">
+                          {% for product in wishlist.products.all %}
+                            <li><a class="dropdown-item" href="{% url 'product_detail' product.id %}">{{ product.name }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    {% endfor %}
+                  {% else %}
+                    <a class="dropdown-item" href="{% url 'account_login' %}">Login to view your wishlists</a>
+                  {% endif %}
+                </div>
               </li>
               <li class="list-inline-item">
                 <a class="text-navy nav-link" href="">
@@ -149,7 +137,7 @@
                     <div>
                       <i class="fa-solid fa-shopping-cart fa-lg" aria-label="Shopping cart"></i>
                     </div>
-                    <p class="my-0">
+                    <p class="my-0 lora">
                       {% if grand_total %}
                         £{{ grand_total }}
                       {% else %}
@@ -164,9 +152,9 @@
         </div>
         <div class="row bg-cream">
           <nav class="col-navbar navbar-expand-lg w-100">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#pages-nav" aria-controls="pages-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#pages-nav" aria-controls="pages-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fa-solid fa-bars" ></i></span>
-            </button>
+            </button>-->
             <!--{% include 'includes/mobile-top-header.html' %}-->
             {% include 'includes/pages-nav.html' %}
           </nav>
@@ -185,7 +173,7 @@
     {% endblock %}
 
     {% block postloadjs %}
-      <script type="text/javascript">
+      <!--<script type="text/javascript">
         $(document).ready(function(){
           const banner = $('.banner');
           const bannerItems = $('.banner-item');
@@ -204,7 +192,7 @@
     
           moveBanner();
         });
-      </script>
+      </script>-->
       <script type="text/javascript">
         $(document).on('click', '.pull-bs-canvas-left', function() {
           const canvas = $('.bs-canvas-left');

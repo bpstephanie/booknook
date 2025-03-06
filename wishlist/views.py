@@ -9,7 +9,7 @@ from products.models import Product
 @login_required
 def wishlists(request):
     wishlists = Wishlist.objects.filter(user=request.user).prefetch_related(
-        'wishlistitem_set'
+        'wishlistitem_set__product'
     )
 
     context = {
