@@ -1,5 +1,7 @@
 html {
     height: 100%;
+    position: relative;
+    z-index: auto;
 }
 
 
@@ -10,6 +12,8 @@ body {
     margin: 0;
     padding: 0;
     overflow-y: auto;
+    position: relative;
+    z-index: 0;
 }
 
 header {
@@ -21,8 +25,13 @@ header {
     box-shadow: 0 8px 6px -6px #0b254b;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .lora {
     font-family: 'Lora', serif;
+}
+
+.lora-bold {
+    font-family: 'Lora', serif;
+    font-weight: 700;
 }
 
 .container-bn {
@@ -102,19 +111,35 @@ a {
     color: #fefefe;
 }
 
+.btn-cream {
+    color: #0b254b;
+    background-color: #fefefe;
+}
+
 .ns-button {
     background-color: #fefefe;
     border: none;
 }
 
-.search-bar {
+/*.search-bar {
     width: 100%;
     padding: 10px;
-    border-radius: 20px;
     border: 2px solid #0b254b;
     background-color: #fefefe;
     margin: 0 auto;
     box-sizing: border-box;
+}*/
+
+.search-container {
+    display: none;
+}
+
+.search-container.active .search-form {
+    display: block;
+}
+
+.search-container.active #toggle-search {
+    display: none;
 }
 
 .dropdown-submenu {
@@ -139,6 +164,7 @@ a {
     padding: 0 5% 0 5%;
 }
 
+/* ---------------------------------------- Overlays */
 .overlay {
     background-color: #fefefe;
     opacity: 0.8;
@@ -154,6 +180,63 @@ a {
     left: 0;
     position: fixed;
     z-index: -1;
+}
+
+.bs-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1110;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 100vh;
+    color:#fefefe;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-out;
+    background-color: #0b254b;
+    visibility: visible;
+}
+
+.bs-canvas.active {
+    transform: translateX(0);
+}
+
+.bs-canvas-content a {
+    color: #0b254b; /* Adjust as needed */
+    text-decoration: none; /* Optional styling */
+    pointer-events: auto; /* Ensure the link has a clickable pointer */
+    z-index: 1120; /* Ensure above the overlay */
+    position: relative;
+    border: 2px solid red;
+}
+
+.bs-canvas-content:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bs-canvas.ml-0 {
+    transform: translateX(0); /* Slide into view */
+  }
+
+.bs-canvas-content {
+    color: #fefefe; /* Visible text */
+    padding: 20px;
+    visibility: visible; /* Ensure content is visible */
+}
+  
+
+.bs-canvas-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1100;
+    background-color: rgba(0, 0, 0, 0.1);
+    pointer-events: none;
 }
 
 .banner-container {
@@ -196,6 +279,17 @@ a {
     width: 200px;
     flex: 1 1 20%;
     background-color: #fefefe;
+}
+
+.card-navy {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 80%;
+    background-color: #0b254b;
+    color: #fefefe;
+    border: 1px solid #fefefe;
 }
 
 .card-img-top {
@@ -250,7 +344,7 @@ a {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 #genreButtonsContainer,
