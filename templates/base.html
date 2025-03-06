@@ -46,8 +46,6 @@
     <header class="container-fluid fixed-top">
       <div class="banner-container">
         <div class="banner bg-navy text-cream">
-            <div class="banner-item text-uppercase">50% off on all books!</div>
-            <div class="banner-item text-uppercase">Buy 1 Get 1 Free on accessories!</div>
             <div class="banner-item text-uppercase">FREE DELIVERY ON ORDERS OVER £{{ free_shipping_threshold }}</div>
         </div>
       </div>
@@ -60,7 +58,42 @@
               </a>
             </div>
           </div>
-          <div class="col-12 col-md-4 order-3 order-md-2 text-center">
+          <div class="d-flex my-5 order-sm-1 d-block d-md-none">
+            <div class="text-center border p-2 mx-5">
+                <a class="pull-bs-canvas-left text-navy text-decoration-none d-block" href="#">
+                  <span>&#9776;</span>
+                </a>
+            </div>
+          </div>
+          <div id="canvas" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" data-width="100%">
+            <div class="bs-canvas-header p-3 bg-navy">
+                <h4 class="d-inline-block text-cream mb-0">BookNook</h4>
+                  <button type="button" class="bs-canvas-close close" aria-label="Close"><span aria-hidden="true" class="text-cream">&times;</span></button>
+            </div>
+            <div class="bs-canvas-content">
+              <div class="card-navy mb-5 bg-navy w-80 justify-content-center">
+                <div class="card-header lora-bold text-cream">
+                    Become a member today!
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Our members receive rewards and exciting perks!</p>
+                    <a href="{% url 'account_signup' %}" class="btn btn-cream">Register</a>
+                </div>
+              </div>
+              <ul class="navbar-nav justify-content-end list-unstyles d-flex gap-md-3 mb-0">
+                <li class="nav-item">
+                  <a href="{% url 'products' %}" class="nav-link text-navy d-flex">All Products</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'all_genres' %}" class="nav-link text-navy d-flex">All Genres</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'all_genres' %}" class="nav-link text-navy d-flex">Accessory Categories</a>
+                </li>
+              </ul>            
+            </div>   
+          </div>
+          <div class="col-12 col-md-4 order-md-2 text-center">
             <form method="GET" action="{% url 'products' %}">
               <div class="input-group w-100">
                 <input class="form-control border-navy rounded-0" type="search" placeholder="Search" aria-label="Search the products in the store" name="q">
@@ -81,6 +114,7 @@
                   <div class="text-center">
                     <div>
                       <i class="fa-solid fa-user fa-lg" aria-label="My account"></i>
+                      <p class="lora">Account</p>
                     </div>
                   </div>
                 </a>
@@ -104,6 +138,7 @@
                   <div class="text-center">
                     <div>
                       <i class="fa-solid fa-heart fa-lg" aria-label="Wishlist"></i>
+                      <p class="lora">Wishlist</p>
                     </div>
                   </div>
                 </a>
@@ -132,21 +167,22 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#pages-nav" aria-controls="pages-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fa-solid fa-bars" ></i></span>
             </button>
-            {% include 'includes/mobile-top-header.html' %}
+            <!--{% include 'includes/mobile-top-header.html' %}-->
             {% include 'includes/pages-nav.html' %}
           </nav>
         </div>
       </div>
     </header>
-      {% if messages %}
-          <div class="message-container"></div>
-      {% endif %}
+    
+    {% if messages %}
+        <div class="message-container"></div>
+    {% endif %}
 
-      {% block page_header %}
-      {% endblock %}
+    {% block page_header %}
+    {% endblock %}
 
-      {% block content %}
-      {% endblock %}
+    {% block content %}
+    {% endblock %}
 
     {% block postloadjs %}
       <script type="text/javascript">
@@ -169,6 +205,30 @@
           moveBanner();
         });
       </script>
+      <script type="text/javascript">
+        $(document).on('click', '.pull-bs-canvas-left', function() {
+          const canvas = $('.bs-canvas-left');
+          canvas.toggleClass('active'); // Toggles visibility
+          
+          if (canvas.hasClass('active')) {
+              if (!$('.bs-canvas-overlay').length) {
+                $('body').prepend('<div class="bs-canvas-overlay bg-navy position-fixed w-100 h-100"></div>');
+              }
+            } else {
+                $('.bs-canvas-overlay').remove();
+            }
+
+            return false; // Prevent default behavior
+        });
+
+        // Close the canvas
+        $(document).on('click', '.bs-canvas-close, .bs-canvas-overlay', function() {
+            $('.bs-canvas-left').removeClass('active'); // Hide the canvas
+            $('.bs-canvas-overlay').remove(); // Remove the overlay
+            return false; // Prevent default behavior
+        });
+
+    </script>
     {% endblock %}
   </body>
 </html>
