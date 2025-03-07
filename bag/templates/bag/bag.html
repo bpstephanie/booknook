@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %} 
+{% block extra_title %}- Home
+{% endblock %}
+{% block page_header %}
+<div class="header-container container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %}
+{% block content %}
+    <div class="full-overlay"></div>
+        <div class="container-bn">
+            <div class="row">
+                <div class="col text-center mt-3 text-navy">
+                    <h2 class="text-uppercase">Shopping Bag</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="bag-container col-10 offset-1">
+                    <div class="col">
+                        {% if bag_items %}
+                        <div class="table-responsive">
+                            <table class="table table-sm table-borderless">
+                                <thead class="text-navy">
+                                    <tr>
+                                        <th scope="col">Product Info</th>
+                                        <th scope="col"></th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Qty</th>
+                                        <th scope="col">Subtotal</th>
+                                    </tr>
+                                </thead>
+                                {% for item in bag_items %}
+                                    <tr>
+                                        <td class="p-3 w-25">
+                                            {% if item.product.image %}
+                                                <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name}}">
+                                            {% else %}
+                                            <img class="img-fluid rounded" src="{{ MEDIA_URL }noimage.png" alt="{{ item.product.name}}">
+                                        </td>
+                                        <td class="p-y">
+                                            <p class="my-0 lora-bold">{{ item.product.name }}</p>
+                                            {% if item.product.book %}
+                                                <p class="my-0 text-muted">ISBN: {{ item.isbn }}</p>
+                                            {% elif item.product.accessory %}
+                                                <p class="my-0 text-muted">SKU: {{ item.product.sku }}</p>
+                                            {% endif %}
+                                        </td>
+                                        <td class="py-0">
+                                            <p class="my-0">£{{ item.product.price }}</p>
+                                        </td>
+                                    </tr>
+                            </table>
+                        </div>
+                        {% else %}
+                            <p class="lead mb-5">Your bag is empty.</p>
+                            <a href="{% url 'products' %}" class="btn btn-navy text-cream rounded-0 btn-lg">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Keep Shopping</span>
+                            </a>
+                        {% endif %}
+                    
+                    </div>
+                </div>
+{% endblock %}
