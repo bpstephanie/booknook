@@ -38,7 +38,8 @@
                                             {% if item.product.image %}
                                                 <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name}}">
                                             {% else %}
-                                            <img class="img-fluid rounded" src="{{ MEDIA_URL }noimage.png" alt="{{ item.product.name}}">
+                                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name}}">
+                                            {% endif %}
                                         </td>
                                         <td class="p-y">
                                             <p class="my-0 lora-bold">{{ item.product.name }}</p>
@@ -52,6 +53,7 @@
                                             <p class="my-0">£{{ item.product.price }}</p>
                                         </td>
                                     </tr>
+                                {% endfor %}
                             </table>
                         </div>
                         {% else %}
