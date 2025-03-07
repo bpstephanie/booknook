@@ -38,7 +38,11 @@ def add_to_wishlist(request, product_id):
                 name=new_wishlist_name.strip()
             )
         else:
-            messages.error(request, "Please provide a valid wishlist name or select an existing one.")
+            messages.error(
+                request,
+                "Please provide a valid wishlist name or select an "
+                "existing one."
+            )
             return render(request, "products/product_detail.html", {
                 "product": product,
                 "user_wishlists": user_wishlists,
@@ -58,8 +62,6 @@ def add_to_wishlist(request, product_id):
             )
 
         return redirect("product_detail", product_id=product.id)
-
-    print("User Wishlists:", user_wishlists)  # Debug: Check if wishlists are populated
 
     return render(request, "products/product_detail.html", {
         "product": product,

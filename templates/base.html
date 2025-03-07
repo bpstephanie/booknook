@@ -132,7 +132,7 @@
                 </div>
               </li>
               <li class="list-inline-item">
-                <a class="text-navy nav-link" href="">
+                <a class="{% if grand_total %}text-info lora-bold{% else%}text-navy{% endif %} nav-link" href="{% url 'view_bag' %}">
                   <div class="text-center">
                     <div>
                       <i class="fa-solid fa-shopping-cart fa-lg" aria-label="Shopping cart"></i>
