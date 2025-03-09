@@ -121,9 +121,43 @@ a {
     color: #fefefe;
 }
 
+.btn-navy:hover,
+.btn-navy:active,
+.btn-navy:focus {
+    background: #fefefe;
+    color: #0b254b !important;
+    border: 1px solid #0b254b;
+}
+
+.btn-outline-navy {
+    color: #0b254b;
+    border: 1px solid #0b254b;
+    background-color: #fefefe;
+}
+
+.btn-outline-navy:hover,
+.btn-outline-navy:active,
+.btn-outline-navy:focus {
+    background: #0b254b;
+    color: #fefefe !important;
+}
+
 .btn-cream {
     color: #0b254b;
     background-color: #fefefe;
+}
+
+.btn-pink {
+    color: #f34dcf;
+    border: 1px solid #f34dcf;
+    background-color: #fefefe;
+}
+
+.btn-pink:hover,
+.btn-pink:active,
+.btn-pink:focus {
+    background: #f34dcf;
+    color: #fefefe !important;
 }
 
 .ns-button {
