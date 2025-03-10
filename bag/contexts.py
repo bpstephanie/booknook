@@ -2,6 +2,7 @@ from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
+from bag.models import SavedItem
 
 
 def bag_contents(request):
@@ -29,6 +30,8 @@ def bag_contents(request):
 
     grand_total = delivery + total
 
+    saved_items = SavedItem.objects.filter(user=request.user)
+
     context = {
         'bag_items': bag_items,
         'total': total,
@@ -37,7 +40,7 @@ def bag_contents(request):
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
-
+        'saved_items': saved_items,
     }
 
     return context
