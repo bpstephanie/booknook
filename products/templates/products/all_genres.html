@@ -22,7 +22,9 @@
         {% with books=genre.sorted_books %}
         {% if books %}
             <div class="genre-section">
-                <h3 class="genre-title text-navy">{{ genre.friendly_name}} ({{ genre.book_count }})</h3>
+                <a class="" href="{% url 'all_books' %}?genre={{ genre.friendly_name }}">
+                    <h3 class="genre-title text-navy">{{ genre.friendly_name}} ({{ genre.book_count }})</h3>
+                </a>
                 <div class="genre-books-wrapper row">
                     <button class="arrow left-arrow">&lt;</button>
                     <div class="books-carousel d-flex flex-nowrap row">

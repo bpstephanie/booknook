@@ -3,7 +3,11 @@ from django.contrib.auth.models import User
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes.fields import GenericForeignKey
 from django.utils.text import slugify
-from django.core.validators import MinValueValidator, MaxValueValidator, RegexValidator
+from django.core.validators import (
+    MinValueValidator,
+    MaxValueValidator,
+    RegexValidator,
+)
 import uuid
 
 
@@ -57,7 +61,9 @@ class Product(models.Model):
             self.meta_title = f'{self.friendly_name} - Buy Now at BookNook'
         if not self.meta_description:
             self.meta_description = (
-                f'{self.description[:147]}...' if len(self.description) > 150 else (
+                f'{self.description[:147]}...'
+                if len(self.description) > 150
+                else (
                     self.description
                 )
             )
@@ -78,7 +84,10 @@ class Genre(models.Model):
     genre_id = models.AutoField(primary_key=True)  # Explicit id field
     name = models.CharField(max_length=100)
     friendly_name = models.CharField(max_length=255, null=True, blank=True)
-    parent_genre = models.ForeignKey('self', null=True, blank=True, on_delete=models.SET_NULL, related_name='subgenres')
+    parent_genre = models.ForeignKey(
+        'self', null=True, blank=True, on_delete=models.SET_NULL,
+        related_name='subgenres'
+    )
 
     def __str__(self):
         return self.friendly_name if self.friendly_name else self.name
@@ -114,7 +123,10 @@ class Category(models.Model):
     category_id = models.AutoField(primary_key=True)  # Explicit id field
     name = models.CharField(max_length=100)
     friendly_name = models.CharField(max_length=255, null=True, blank=True)
-    parent_category = models.ForeignKey('self', null=True, blank=True, on_delete=models.SET_NULL, related_name='subcategories')
+    parent_category = models.ForeignKey(
+        'self', null=True, blank=True, on_delete=models.SET_NULL,
+        related_name='subcategories'
+    )
 
     def __str__(self):
         return self.friendly_name if self.friendly_name else self.name
@@ -125,7 +137,9 @@ class Category(models.Model):
 
 
 class Accessory(Product):
-    accessories_id = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
+    accessories_id = models.UUIDField(
+        default=uuid.uuid4, editable=False, unique=True
+    )
     category = models.ForeignKey(
         Category, null=True, blank=True, on_delete=models.SET_NULL
     )
@@ -157,7 +171,10 @@ class Review(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"{self.title} by {self.author.username} - Rating: {self.rating}"
+        return (
+            f"{self.title} by {self.author.username} - "
+            f"Rating: {self.rating}"
+        )
 
     class Meta:
         ordering = ['-created_on']

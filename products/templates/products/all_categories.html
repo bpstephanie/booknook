@@ -22,7 +22,9 @@
         {% with accessories=category.sorted_accessories %}
         {% if accessories %}
             <div class="category-section">
-                <h3 class="category-title text-navy">{{ category.friendly_name}} ({{ category.book_count}})</h3>
+                <a class="" href="{% url 'all_accessories' %}?category={{ category.friendly_name }}">
+                    <h3 class="category-title text-navy">{{ category.friendly_name}} ({{ category.book_count}})</h3>
+                </a>
                 <div class="category-accessories-wrapper row">
                     <button class="arrow left-arrow" aria-label="Scroll left">&lt;</button>
                     <div class="accessories-carousel d-flex flex-nowrap row">
