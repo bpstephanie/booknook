@@ -1,0 +1,14 @@
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#wishlistModal').on('shown.bs.modal', function(event) {
+            let wishlistId = $('#wishlist').val()
+            let new_wishlist_name = $('input[name="new_wishlist_name"]').val();
+            var button = $(event.relatedTarget);
+            var productId = button.data('product-id');
+            var modal = $(this);
+
+            modal.find('.modal-title').text('Add to Wishlist for Product ID:' + productId);
+        });
+
+    });
+</script>
