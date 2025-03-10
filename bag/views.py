@@ -2,12 +2,18 @@ from django.shortcuts import (
     render, redirect, reverse, HttpResponse, get_object_or_404
 )
 from django.contrib import messages
+from .models import SavedItem
 from products.models import Product
 
 
 # Create your views here.
 def view_bag(request):
     """ A view that renders the bag contents page """
+    saved_items = SavedItem.objects.filter(user=request.user)
+
+    context = {
+        'saved_items': saved_items,
+    }
     return render(request, 'bag/bag.html')
 
 
@@ -68,3 +74,54 @@ def remove_from_bag(request, item_id):
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
+
+
+def save_for_later(request, item_id):
+    """ Save an item for later """
+
+    product = get_object_or_404(Product, pk=item_id)
+    bag = request.session.get('bag', {})
+
+    if item_id in bag:
+        quantity = bag.pop(item_id)
+        SavedItem.objects.create(
+            user=request.user,
+            product=product,
+            quantity=quantity
+        )
+        request.session['bag'] = bag
+        messages.success(request, f'Saved {product.friendly_name} for later')
+        return redirect(reverse('view_bag'))
+
+
+def move_to_bag(request, item_id):
+    """ Move a saved item back to the bag """
+
+    saved_item = get_object_or_404(SavedItem, pk=item_id, user=request.user)
+    product_id = saved_item.product.id
+    bag = request.session.get('bag', {})
+
+    if product_id in bag:
+        bag[product_id] += 1
+    else:
+        bag[product_id] = 1
+
+    saved_item.delete()
+    request.session['bag'] = bag
+    messages.success(
+        request,
+        f'Moved {saved_item.product.friendly_name} back to you bag'
+    )
+    return redirect(reverse('view_bag'))
+
+
+def remove_saved_item(request, item_id):
+    """ Remove a saved item from the saved items list """
+
+    saved_item = get_object_or_404(SavedItem, pk=item_id, user=request.user)
+    saved_item.delete()
+    messages.success(
+        request,
+        f'Removed {saved_item.product.friendly_name} from your saved items'
+    )
+    return redirect(reverse('view_bag'))
