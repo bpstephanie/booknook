@@ -165,6 +165,19 @@ a {
     color: #fefefe !important;
 }
 
+.btn-green {
+    color: #057d23;
+    border: 1px solid #057d23;
+    background-color: #fefefe;
+}
+
+.btn-green:hover,
+.btn-green:active,
+.btn-green:focus {
+    background-color: #057d23;
+    color: #fefefe !important;
+}
+
 .ns-button {
     background-color: #fefefe;
     border: none;

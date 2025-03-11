@@ -91,7 +91,14 @@ def save_for_later(request, item_id):
         )
         request.session['bag'] = bag
         messages.success(request, f'Saved {product.friendly_name} for later')
-        return redirect(reverse('view_bag'))
+    else:
+        SavedItem.objects.create(
+            user=request.user,
+            product=product,
+            quantity=1
+        )
+        messages.success(request, f'Saved {product.friendly_name} for later')
+    return redirect(reverse('view_bag'))
 
 
 def move_to_bag(request, item_id):
