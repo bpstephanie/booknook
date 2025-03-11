@@ -74,6 +74,7 @@
 {% endblock %}
 
 {% block postloadjs %}
+{{ block.super}}
 <script type="text/javascript">
     $(document).ready(function () {
         $('.category-section').each(function () {

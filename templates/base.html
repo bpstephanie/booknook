@@ -163,7 +163,21 @@
     </header>
     
     {% if messages %}
-        <div class="message-container"></div>
+      <div class="message-container">
+        {% for message in messages %}
+          {% with message.level as level %}
+            {% if level == 40 %}
+                {% include 'includes/toasts/toast_error.html' %}
+            {% elif level == 30 %}
+                {% include 'includes/toasts/toast_warning.html' %}
+            {% elif level == 25 %}
+                {% include 'includes/toasts/toast_success.html' %}
+            {% else %}
+                {% include 'includes/toasts/toast_info.html' %}
+            {% endif %}
+          {% endwith %}
+        {% endfor %}
+      </div>
     {% endif %}
 
     {% block page_header %}
@@ -173,26 +187,6 @@
     {% endblock %}
 
     {% block postloadjs %}
-      <!--<script type="text/javascript">
-        $(document).ready(function(){
-          const banner = $('.banner');
-          const bannerItems = $('.banner-item');
-          const bannerWidth = bannerItems.length * bannerItems.outerWidth(true);
-    
-          banner.append(bannerItems.clone());
-    
-          function moveBanner() {
-            banner.animate({
-              transform: `translateX(-${bannerWidth}px)`
-            }, 10000, 'linear', function() {
-              banner.css('transform', 'translateX(0)');
-              moveBanner();
-            });
-          }
-    
-          moveBanner();
-        });
-      </script>-->
       <script type="text/javascript">
         $(document).on('click', '.pull-bs-canvas-left', function() {
           const canvas = $('.bs-canvas-left');
@@ -216,6 +210,11 @@
             return false; // Prevent default behavior
         });
 
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.toast').toast('show');
+      })
     </script>
     {% endblock %}
   </body>

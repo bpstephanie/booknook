@@ -140,6 +140,7 @@
     </div>
 {% endblock %}
 {% block postloadjs %}
+    {{ block.super}}
     <script type="text/javascript">
         $(document).ready(function () {
             $('#genreButton').click(function () {
