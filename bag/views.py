@@ -98,15 +98,36 @@ def save_for_later(request, item_id):
             product=product,
             quantity=quantity
         )
+        if created:
+            saved_item.quantity = 1
+            saved_item.save()
+            messages.success(
+                request,
+                f'Saved {product.friendly_name} for later'
+            )
+        else:
+            messages.info(
+                request,
+                f'{product.friendly_name} is already in your Saved for Later'
+            )
         request.session['bag'] = bag
-        messages.success(request, f'Saved {product.friendly_name} for later')
     else:
-        SavedItem.objects.create(
+        saved_item, created = SavedItem.objects.get_or_create(
             user=request.user,
             product=product,
-            quantity=1
         )
-        messages.success(request, f'Saved {product.friendly_name} for later')
+        if created:
+            saved_item.quantity = 1
+            saved_item.save()
+            messages.success(
+                request,
+                f'Saved {product.friendly_name} for later'
+            )
+        else:
+            messages.info(
+                request,
+                f'{product.friendly_name} is already in your Saved for Later'
+            )
     return redirect(reverse('view_bag'))
 
 
