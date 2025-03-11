@@ -30,7 +30,9 @@ def bag_contents(request):
 
     grand_total = delivery + total
 
-    saved_items = SavedItem.objects.filter(user=request.user)
+    saved_items = []
+    if request.user.is_authenticated:
+        saved_items = SavedItem.objects.filter(user=request.user)
 
     context = {
         'bag_items': bag_items,

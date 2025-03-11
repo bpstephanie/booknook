@@ -57,30 +57,33 @@
             </div>
         {% endif %}
         <!-- Saved Items Section -->
-        <h5 class="bg-cream text-navy py-1 lora-bold">Saved Items</h5>
-        <div class="saved-items-wrapper mt-3">   
-            {% if saved_items %}
-                {% for item in saved_items %}
-                    <div class="row">
-                        <div class="col-3 my-1">
-                            {% if item.product.image %}
-                            <img class="w-50" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
-                            {% else %}
-                            <img class="w-50" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
-                            {% endif %}
+        {% if user.is_authenticated %}
+            <h5 class="bg-cream text-navy py-1 lora-bold">Saved Items</h5>
+            <div class="saved-items-wrapper mt-3">   
+                {% if saved_items %}
+                    {% for item in saved_items %}
+                        <div class="row">
+                            <div class="col-3 my-1">
+                                {% if item.product.image %}
+                                <img class="w-50" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                {% else %}
+                                <img class="w-50" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                                {% endif %}
+                            </div>
+                            <div class="col-9">
+                                <p class="my-0 lora-bold text-small"><strong>{{ item.product.friendly_name }}</strong></p>
+                                {% if item.product.book %}
+                                    <p class="my-0 small lora">by: {{ item.product.book.author }}</p>
+                                {% endif %}
+                                <p class="my-0 small">£{{ item.product.price }}</p>
+                            </div>
                         </div>
-                        <div class="col-9">
-                            <p class="my-0 lora-bold text-small"><strong>{{ item.product.friendly_name }}</strong></p>
-                            {% if item.product.book %}
-                                <p class="my-0 small lora">by: {{ item.product.book.author }}</p>
-                            {% endif %}
-                        </div>
-                    </div>
-                {% endfor %}
-            {% else %}
-                    <p class="text-muted">You have no saved items</p>
-            {% endif %}
-        </div>
+                    {% endfor %}
+                {% else %}
+                        <p class="text-muted">You have no saved items</p>
+                {% endif %}
+            </div>
+        {% endif %}
 
     </div>
 </div>

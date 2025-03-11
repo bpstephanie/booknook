@@ -84,13 +84,17 @@
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>
-                <button type="button" class="btn-sm btn-pink mt-2 rounded-0" data-toggle="modal" data-target="#wishlistModal">
-                    <i class="fa-regular fa-heart"></i>
-                    Add to Wishlist
-                </button>
-                <a class="btn btn-green btn-sm rounded-0" href="{% url 'save_for_later' product.id %}">
-                    <i class="fa-regular fa-bookmark"></i> Save for Later
-                </a>
+                {% if user.is_authenticated %}
+                    <button type="button" class="btn-sm btn-pink mt-2 rounded-0" data-toggle="modal" data-target="#wishlistModal">
+                        <i class="fa-regular fa-heart"></i>
+                        Add to Wishlist
+                    </button>
+                    <a class="btn btn-green btn-sm rounded-0" href="{% url 'save_for_later' product.id %}">
+                        <i class="fa-regular fa-bookmark"></i> Save for Later
+                    </a>
+                {% else %}
+                    <p class="mt-2">Please <a href="{% url 'account_login' %}">log in</a> to add to your wishlist or save for later</p>
+                {% endif %}
                 {% if product.book.genre %}
                     <p class="small mt-1 mb-0">
                         <a class="text-muted " href="{% url 'all_books' %}?genre={{ product.book.genre.id }}">

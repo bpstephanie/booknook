@@ -2,6 +2,8 @@ from django.shortcuts import (
     render, redirect, reverse, HttpResponse, get_object_or_404
 )
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from .models import SavedItem
 from products.models import Product
 
@@ -9,7 +11,9 @@ from products.models import Product
 # Create your views here.
 def view_bag(request):
     """ A view that renders the bag contents page """
-    saved_items = SavedItem.objects.filter(user=request.user)
+    saved_items = []
+    if request.user.is_authenticated:
+        saved_items = SavedItem.objects.filter(user=request.user)
 
     context = {
         'saved_items': saved_items,
@@ -85,8 +89,15 @@ def remove_from_bag(request, item_id):
         return HttpResponse(status=500)
 
 
+@login_required
 def save_for_later(request, item_id):
     """ Save an item for later """
+    if not request.user.is_authenticated:
+        messages.info(
+            request,
+            'Please log in to save items for later'
+        )
+        return redirect(reverse('account_login'))
 
     product = get_object_or_404(Product, pk=item_id)
     bag = request.session.get('bag', {})
@@ -131,6 +142,7 @@ def save_for_later(request, item_id):
     return redirect(reverse('view_bag'))
 
 
+@login_required
 def move_to_bag(request, item_id):
     """ Move a saved item back to the bag """
 
@@ -152,6 +164,7 @@ def move_to_bag(request, item_id):
     return redirect(reverse('view_bag'))
 
 
+@login_required
 def remove_saved_item(request, item_id):
     """ Remove a saved item from the saved items list """
 

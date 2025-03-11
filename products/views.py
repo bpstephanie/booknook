@@ -123,7 +123,9 @@ def product_detail(request, product_id):
     review_form = ReviewForm()
     comment_form = ReviewCommentForm()
 
-    user_wishlists = Wishlist.objects.filter(user=request.user)
+    user_wishlists = []
+    if request.user.is_authenticated:
+        user_wishlists = Wishlist.objects.filter(user=request.user)
 
     if request.method == "POST":
         if 'review_submit' in request.POST:
