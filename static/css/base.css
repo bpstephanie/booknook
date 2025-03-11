@@ -345,7 +345,8 @@ a {
     border-bottom-color: #343a40 !important;
 }
 
-.bag-notification-wrapper {
+.bag-notification-wrapper,
+.saved-items-wrapper {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
