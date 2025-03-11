@@ -196,7 +196,9 @@ def all_genres(request):
         'page_title': 'All Book Genres',
         'sort': sort,
         'direction': direction,
-        'current_sorting': f'{sort}_{direction}' if sort and direction else None,
+        'current_sorting': (
+            f'{sort}_{direction}' if sort and direction else None
+        ),
     }
 
     return render(request, 'products/all_genres.html', context)
@@ -229,7 +231,9 @@ def all_categories(request):
             for category in all_categories:
                 accessories = category.accessory_set.all()
                 if sortkey == 'lower_name':
-                    accessories = accessories.annotate(lower_name=Lower('friendly_name'))
+                    accessories = accessories.annotate(
+                        lower_name=Lower('friendly_name')
+                    )
                 category.sorted_accessories = accessories.order_by(sortkey)
 
     context = {
@@ -237,7 +241,9 @@ def all_categories(request):
         'page_title': 'All Accessory Categories',
         'sort': sort,
         'direction': direction,
-        'current_sorting': f'{sort}_{direction}' if sort and direction else None,
+        'current_sorting': (
+            f'{sort}_{direction}' if sort and direction else None
+        ),
     }
 
     return render(request, 'products/all_categories.html', context)
@@ -253,7 +259,7 @@ def edit_review(request, review_id):
             review.approved = False
             review.save()
             messages.success(request, 'Review Updated!')
-            return redirect('product_detail', product_id=review.product.id)       
+            return redirect('product_detail', product_id=review.product.id)
         else:
             messages.error(
                 request, 'Error updating review!'
@@ -295,7 +301,7 @@ def edit_comment(request, comment_id):
             messages.success(request, 'Comment Updated!')
             return redirect(
                 'product_detail', product_id=comment.review.product.id
-            )      
+            )
         else:
             form = ReviewCommentForm(instance=comment)
             messages.error(

@@ -54,12 +54,13 @@ def add_to_wishlist(request, product_id):
         ).exists():
             WishlistItem.objects.create(wishlist=wishlist, product=product)
             messages.success(
-                request, 
+                request,
                 f"'{product.friendly_name}' has been added to {wishlist.name}"
             )
         else:
             messages.warning(
-                request, f"'{product.friendly_name}' already exists in {wishlist.name}"
+                request,
+                f"'{product.friendly_name}' already exists in {wishlist.name}"
             )
 
         return redirect("product_detail", product_id=product.id)

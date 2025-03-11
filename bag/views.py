@@ -14,7 +14,7 @@ def view_bag(request):
     context = {
         'saved_items': saved_items,
     }
-    return render(request, 'bag/bag.html')
+    return render(request, 'bag/bag.html', context)
 
 
 def add_to_bag(request, item_id):
@@ -93,7 +93,7 @@ def save_for_later(request, item_id):
 
     if item_id in bag:
         quantity = bag.pop(item_id)
-        SavedItem.objects.create(
+        saved_item, created = SavedItem.objects.get_or_create(
             user=request.user,
             product=product,
             quantity=quantity
