@@ -74,8 +74,7 @@ class Order(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        print(f"Generating string for Order {self.id}")
-        return self.order_number
+        return f"Order {self.order_number}"
 
 
 class OrderLineItem(models.Model):
@@ -115,6 +114,6 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         return (
-            f'{self.get_product_identifier} on order '
+            f'{self.get_product_identifier()} on order '
             f'{self.order.order_number}'
         )
