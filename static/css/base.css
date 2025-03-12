@@ -178,6 +178,19 @@ a {
     color: #fefefe !important;
 }
 
+.btn-orange {
+    color: #dc8a3f;
+    border: 1px solid #dc8a3f;
+    background-color: #fefefe;
+}
+
+.btn-orange:hover,
+.btn-orange:active,
+.btn-orange:focus {
+    background-color: #dc8a3f;
+    color: #fefefe !important;
+}
+
 .ns-button {
     background-color: #fefefe;
     border: none;

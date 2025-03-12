@@ -74,6 +74,7 @@ class Order(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
+        print(f"Generating string for Order {self.id}")
         return self.order_number
 
 
