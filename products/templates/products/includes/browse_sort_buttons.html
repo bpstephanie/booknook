@@ -1,45 +1,51 @@
 {% if show_filters %}
 <div class="filter-container text-centre">
     {% if type == "all" %}
-        <button class="btn btn-success" id="categoryButton" aria-expanded="false" aria-controls="categoryButtonsContainer">
-            <span class="mt-4">Browse by Accessory</span>
-        </button>
-        <div id="categoryButtonsContainer" class="hidden">
-            {% for category in all_categories %}
-                    <a class="btn btn-outline-success m-1" href="{% url 'all_accessories' %}?category={{ category.friendly_name }}">
-                        <span class="p-2 mt-2 badge badge-white text-navy rounded-0 border border-navy">{{ category.friendly_name }}</span>
-                    </a>
-            {% endfor %}
-        </div>
-        <button class="btn btn-success" id="genreButton"  aria-expanded="false" aria-controls="genreButtonsContainer">
-            <span class="mt-4">Browse by Genre</span>
-        </button>
-        <div id="genreButtonsContainer" class="hidden">
-            {% for genre in all_genres %}
-                    <a class="btn btn-outline-success m-1" href="{% url 'all_books' %}?genre={{ genre.friendly_name }}">
-                        <span class="p-2 mt-2 badge badge-white text-navy rounded-0 border border-navy">{{ genre.friendly_name }}</span>
-                    </a>
-            {% endfor %}
+        <div class="button-container">
+            <div class="main-buttons">
+                <button class="btn btn-blue rounded-0" id="categoryButton" aria-expanded="false" aria-controls="categoryButtonsContainer">
+                    <span class="mt-4">Browse by Accessory Category</span>
+                </button>
+                <button class="btn btn-green rounded-0" id="genreButton"  aria-expanded="false" aria-controls="genreButtonsContainer">
+                    <span class="mt-4">Browse by Book Genre</span>
+                </button>
+            </div>
+            <div class="sub-buttons">
+                <div id="categoryButtonsContainer" class="hidden">
+                    {% for category in all_categories %}
+                        <a class="btn btn-blue btn-sm rounded-0 m-1" href="{% url 'all_accessories' %}?category={{ category.friendly_name }}">
+                            <span class="m-2 p-2">{{ category.friendly_name }}</span>
+                        </a>
+                    {% endfor %}
+                </div>
+                <div id="genreButtonsContainer" class="hidden">
+                    {% for genre in all_genres %}
+                        <a class="btn btn-green btn-sm rounded-0 m-1" href="{% url 'all_books' %}?genre={{ genre.friendly_name }}">
+                            <span class="m-2 p-2">{{ genre.friendly_name }}</span>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>   
         </div>
     {% elif type == 'books' %}
-        <button class="btn btn-success" id="genreButton" aria-expanded="false" aria-controls="genreButtonsContainer">
+        <button class="btn btn-green btn-sm rounded-0" id="genreButton" aria-expanded="false" aria-controls="genreButtonsContainer">
             <span class="mt-4">Browse by Genre</span>
         </button>
         <div id="genreButtonsContainer" class="hidden">
             {% for genre in all_genres %}
-                    <a class="btn btn-outline-success m-1" href="{% url 'all_books' %}?genre={{ genre.friendly_name }}">
+                    <a class="btn btn-green btn-sm rounded-0 m-1" href="{% url 'all_books' %}?genre={{ genre.friendly_name }}">
                         <span class="p-2 mt-2 badge badge-white text-navy rounded-0 border border-navy">{{ genre.friendly_name }}</span>
                     </a>
             {% endfor %}
         </div>
     {% elif type == 'accessories' %}
-        <button class="btn btn-success" id="categoryButton" aria-expanded="false" aria-controls="categoryButtonsContainer">
+        <button class="btn btn-blue btn-sm rounded-0" id="categoryButton" aria-expanded="false" aria-controls="categoryButtonsContainer">
             <span class="mt-4">Browse by Accessory</span>
         </button>
         <div id="categoryButtonsContainer" class="hidden">
             {% for category in all_categories %}
-                    <a class="btn btn-outline-success m-1" href="{% url 'all_accessories' %}?category={{ category.friendly_name }}">
-                        <span class="p-2 mt-2 badge badge-white text-navy rounded-0 border border-navy">{{ category.friendly_name }}</span>
+                    <a class="btn btn-blue btn-sm rounded-0 m-1" href="{% url 'all_accessories' %}?category={{ category.friendly_name }}">
+                        <span class="mt-2 rounded-0">{{ category.friendly_name }}</span>
                     </a>
             {% endfor %}
         </div>

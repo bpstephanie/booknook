@@ -37,50 +37,20 @@ h1, h2, h3, h4, h5, h6, .lora {
     width: 100px;
 }
 
+.text-small {
+    font-size: small;
+}
+
 /* ---------------------------------------- Colours and general styles */
 .wishlist {
     width: 100px;
     font-size: small;
 }
 
-.container-bn {
-    font-family: 'Roboto', sans-serif;
-    position: relative;
-    top: 224px;
-    width: 100%;
-    padding-top: 2%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    overflow: visible;
-    min-height: auto;
-}
-
-.container {
-    top: 224px !important;
-    position: relative;
-}
-
 .row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.product-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.product-details-container {
-    height: auto; /* Adjust the height as needed */
-    overflow-y: auto;
 }
 
 /* from Bulma */
@@ -178,6 +148,20 @@ a {
     color: #fefefe !important;
 }
 
+.btn-blue {
+    color: #007bff;
+    border: 1px solid #007bff;
+    background-color: #fefefe;
+}
+
+.btn-blue:hover,
+.btn-blue:active,
+.btn-blue:focus {
+    background-color: #007bff;
+    color: #fefefe !important;
+}
+
+
 .btn-orange {
     color: #dc8a3f;
     border: 1px solid #dc8a3f;
@@ -206,18 +190,6 @@ a {
 }*/
 
 /* ---------------------------------------- Navbar */
-
-.search-container {
-    display: none;
-}
-
-.search-container.active .search-form {
-    display: block;
-}
-
-.search-container.active #toggle-search {
-    display: none;
-}
 
 .dropdown-submenu {
     position: relative;
@@ -298,12 +270,6 @@ a {
 }
 
 /* ---------------------------------------- Toasts */
-.message-container {
-    position: fixed;
-    top: 120px;
-    right: 15px;
-    z-index: 99999999999;
-}
 /*
 .toast {
     visibility: hidden;
@@ -389,7 +355,7 @@ a {
 }
 
 .full-overlay {
-    background-color: #fefefe;
+    background-color: #d7e5d8;
     width: 100%;
     height: 100%;
     top: 0;
@@ -400,6 +366,7 @@ a {
 
 /* ---------------------------------------- Cards */
 .card {
+    border: 1px solid #0b254b;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -407,6 +374,8 @@ a {
     width: 200px;
     flex: 1 1 20%;
     background-color: #fefefe;
+    padding: 4%;
+    border-radius: 0 !important;
 }
 
 .card-navy {
@@ -423,11 +392,20 @@ a {
 .card-img-top {
     height: 200px;
     max-width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card-img-top-full {
     height: 400px;
     max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-title {
+    font-size: 1.25rem;
 }
 
 .description {
@@ -446,12 +424,23 @@ a {
     margin-bottom: 0;
 }
 
+.glow-border {
+    border: 1px solid #384c6a;
+    box-shadow: 0 0 2px #384c6a, 0 0 2px #384c6a;
+}
+
 /* ---------------------------------------- Modals */
 .modal {
     z-index: 1050;
 }
 
 /* ---------------------------------------- Back to Top Category Button */
+.btn-xs {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
 .st-button {
     height: 46px;
     width: 46px;
@@ -465,6 +454,110 @@ a {
 .remove-item {
     cursor: pointer;
 }
+/* ---------------------------------------- Containers */
+.container-bn {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    top: 224px;
+    width: 100%;
+    padding-top: 2%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: visible;
+    min-height: auto;
+}
+
+.bag-container,
+.saved-container,
+.products-container,
+.reviews-container {
+    background-color: #fefefe;
+    padding: 5%;
+    margin: 20px;
+    width: 100%;
+}
+
+.container {
+    top: 224px !important;
+    position: relative;
+}
+
+.message-container {
+    position: fixed;
+    top: 120px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.image-container {
+    border: 2px solid #384c6a;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    display: block;
+    margin: auto;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-details-container {
+    height: auto;
+    overflow-y: auto;
+}
+
+.search-container {
+    display: none;
+}
+
+.search-container.active .search-form {
+    display: block;
+}
+
+.search-container.active #toggle-search {
+    display: none;
+}
+
+#genreButtonsContainer,
+#categoryButtonsContainer {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* ---------------------------------------- Browse and sort buttons */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.main-buttons button {
+    flex: 1;
+    margin: 0 5px;
+}
+
+.sub-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 /* ---------------------------------------- Genre and Category Pages */
 .card-glow:hover {
@@ -476,11 +569,6 @@ a {
     display: none !important;
 }
 
-#genreButtonsContainer,
-#categoryButtonsContainer {
-    margin-top: 10px;
-    text-align: center;
-}
 /* ---------------------------------------- Genre and Category View */
 .genre-section,
 .category-section {
