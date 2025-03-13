@@ -499,7 +499,8 @@ a {
 .bag-container,
 .saved-container,
 .products-container,
-.reviews-container {
+.reviews-container,
+.checkout-container {
     background-color: #fefefe;
     padding: 5%;
     margin: 20px;
