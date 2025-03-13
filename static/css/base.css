@@ -37,11 +37,16 @@ h1, h2, h3, h4, h5, h6, .lora {
     width: 100px;
 }
 
+.logo-lg {
+    height: 200px;
+    width: 200px;
+    margin: auto;
+}
+
 .text-small {
     font-size: small;
 }
 
-/* ---------------------------------------- Colours and general styles */
 .wishlist {
     width: 100px;
     font-size: small;
@@ -60,6 +65,18 @@ h1, h2, h3, h4, h5, h6, .lora {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+}
+/* ---------------------------------------- Colours and general styles */
+.pink-link:hover {
+    color: #f34dcf;
+}
+
+.orange-link:hover {
+    color: #ffc107;
+}
+
+.green-link:hover {
+    color: #057d23;
 }
 
 /* ---------------------------------------- Colours and general styles */
@@ -81,6 +98,10 @@ a {
 
 .text-navy {
     color: #0b254b;
+}
+
+.text-pink {
+    color: #f34dcf;
 }
 
 .border-cream {
@@ -190,6 +211,15 @@ a {
 }*/
 
 /* ---------------------------------------- Navbar */
+.dropdown-menu {
+    position: relative;
+    width: auto;
+    display: none;
+}
+
+.dropdown-submenu:hover .dropdown-menu {
+    display: block;
+}
 
 .dropdown-submenu {
     position: relative;
@@ -198,13 +228,7 @@ a {
 .dropdown-submenu .dropdown-menu {
     top: 0;
     left: 100%;
-    margin-top: -1px;
-    margin-left: 0;
-    border-radius: 0.25rem;
-}
-
-.dropdown-submenu:hover .dropdown-menu {
-    display: block;
+    margin-top: 0;
 }
 
 .icon-list li {
@@ -232,13 +256,19 @@ a {
     transform: translateX(0);
 }
 
+.bs-canvas-content {
+    overflow-y: auto;
+    color: #fefefe; /* Visible text */
+    padding: 20px;
+    visibility: visible; /* Ensure content is visible */
+}
+
 .bs-canvas-content a {
     color: #0b254b; /* Adjust as needed */
     text-decoration: none; /* Optional styling */
     pointer-events: auto; /* Ensure the link has a clickable pointer */
     z-index: 1120; /* Ensure above the overlay */
     position: relative;
-    border: 2px solid red;
 }
 
 .bs-canvas-content:first-child {
@@ -249,14 +279,7 @@ a {
 
 .bs-canvas.ml-0 {
     transform: translateX(0); /* Slide into view */
-  }
-
-.bs-canvas-content {
-    color: #fefefe; /* Visible text */
-    padding: 20px;
-    visibility: visible; /* Ensure content is visible */
 }
-  
 
 .bs-canvas-overlay {
     position: fixed;
@@ -610,7 +633,7 @@ a {
     scrollbar-width: none;
 }
 
-.small-group .books-carousel,
+.small-genre .books-carousel,
 .small-group .accessories-carousel {
     gap: 100px;
 }
