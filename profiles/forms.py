@@ -68,5 +68,6 @@ class PersonalInfoForm(forms.ModelForm):
             else:
                 placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
-        self.fields[field].widget.attrs['class'] = 'border-navy rounded-0 profile-form'
+        self.fields[field].widget.attrs['class'] = (
+            'border-navy rounded-0 profile-form')
         self.fields[field].label = False
