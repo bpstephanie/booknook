@@ -24,6 +24,64 @@
                     <hr>
                 </div>
             </div>
+            <div class="container">
+                <h1>{{ profile.user.username }}'s Profile</h1>
+                <h2>Delivery Details</h2>
+                <p>Phone Number: {{ profile.default_phone_number }}</p>
+                <p>Postal Code: {{ profile.default_postcode }}</p>
+                <p>Town or City: {{ profile.default_town_or_city }}</p>
+                <p>Street Address 1: {{ profile.default_street_address1 }}</p>
+                <p>Street Address 2: {{ profile.default_street_address2 }}</p>
+                <p>County: {{ profile.default_county }}</p>
+                <p>Country: {{ profile.default_country }}</p>
+        
+                <h2>Personal Info</h2>
+                <p>Bio: {{ profile.bio }}</p>
+                <p>Favourite Books: {% for book in profile.favourite_books.all %}{{ book.title }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+        
+                <!-- Accordion for forms -->
+                <div class="accordion" id="profileAccordion">
+                    <div class="card">
+                        <div class="card-header" id="headingDelivery">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseDelivery" aria-expanded="true" aria-controls="collapseDelivery">
+                                    Update Delivery Details
+                                </button>
+                            </h2>
+                        </div>
+        
+                        <div id="collapseDelivery" class="collapse" aria-labelledby="headingDelivery" data-parent="#profileAccordion">
+                            <div class="card-body">
+                                <form method="post" action="{% url 'update_delivery_details' %}">
+                                    {% csrf_token %}
+                                    {{ delivery_form.as_p }}
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="card">
+                        <div class="card-header" id="headingPersonalInfo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsePersonalInfo" aria-expanded="false" aria-controls="collapsePersonalInfo">
+                                    Update Personal Info
+                                </button>
+                            </h2>
+                        </div>
+        
+                        <div id="collapsePersonalInfo" class="collapse" aria-labelledby="headingPersonalInfo" data-parent="#profileAccordion">
+                            <div class="card-body">
+                                <form method="post" action="{% url 'update_personal_info' %}">
+                                    {% csrf_token %}
+                                    {{ personal_info_form.as_p }}
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <div>
     </div>
 {% endblock %}
