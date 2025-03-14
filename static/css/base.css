@@ -47,15 +47,36 @@ h1, h2, h3, h4, h5, h6, .lora {
     font-size: small;
 }
 
-.wishlist {
-    width: 100px;
-    font-size: small;
-}
-
 .row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.hr-with-word {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hr-with-word::before,
+.hr-with-word::after {
+    content: '';
+    flex-grow: 1;
+    border-bottom: 1px solid rgba(159, 157, 157, 0.85);
+}
+
+.hr-with-word::before {
+    margin-right: 10px;
+}
+
+.hr-with-word::after {
+    margin-right: 10px;
+}
+
+.wishlist {
+    width: 100px;
+    font-size: small;
 }
 
 /* from Bulma */
@@ -387,6 +408,16 @@ a {
     z-index: -1;
 }
 
+.cream-overlay {
+    background-color: #fefefe;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -1;
+}
+
 /* ---------------------------------------- Cards */
 .card {
     border: 1px solid #0b254b;
@@ -554,6 +585,10 @@ a {
     display: none;
 }
 
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
 #genreButtonsContainer,
 #categoryButtonsContainer {
     margin-top: 10px;
@@ -679,6 +714,59 @@ a {
 
 .right-arrow {
     right: 10px;
+}
+
+/* ---------------------------------------- Allauth Form Formatting */
+allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    color: #6c757d;
+}
+
+.allauth-form-inner-content input {
+    border-color: #0b254b;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    color: #fefefe;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #0b254b;
+    border: 1px solid #0b254b;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.allauth-form-inner-content a {
+	color: #17a2b8;
 }
 
 /* ---------------------------------------- Media Queries */

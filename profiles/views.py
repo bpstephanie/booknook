@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
-# from .models import UserProfile
+from .models import UserProfile
 # from .forms import UserProfileForm
 
 
@@ -10,11 +10,11 @@ def profile(request):
     """
     Display user's profile
     """
-    # user_profile = get_object_or_404(UserProfile, user=request.user)
+    profile = get_object_or_404(UserProfile, user=request.user)
 
     template = 'profiles/profile.html'
     context = {
-        # 'user_profiles': user_profile,
+        'profile': profile,
     }
     return render(request, template, context)
 
