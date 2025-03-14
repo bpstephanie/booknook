@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import UserProfile
+from wishlist.models import Wishlist
+from bag.models import SavedItem
+from bag.contexts import bag_contents
 from .forms import DeliveryDetailsForm, PersonalInfoForm
 
 
@@ -16,12 +19,16 @@ def profile(request):
     delivery_form = DeliveryDetailsForm(instance=profile)
     personal_info_form = PersonalInfoForm(instance=profile)
     orders = profile.orders.all()
+    wishlists = Wishlist.objects.filter(user=request.user)
+    saved_items = bag_contents(request)['saved_items']
 
     template = 'profiles/profile.html'
     context = {
         'delivery_form': delivery_form,
         'personal_info_form': personal_info_form,
         'orders': orders,
+        'wishlists': wishlists,
+        'saved_items': saved_items,
         'on_profile_page': True,
     }
     return render(request, template, context)

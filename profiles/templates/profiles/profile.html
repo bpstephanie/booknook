@@ -25,6 +25,8 @@
                 <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('deliveryDetails')">Delivery Details</button>
                 <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('personalInfo')">Personal Info</button>
                 <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('orderHistory')">Order History</button>
+                <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('myWishlists')">My Wishlists</button>
+                <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('mySavedItems')">My Saved Items</button>
                 <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('rewardsBenefits')">Rewards and Benefits</button>
             </div>
             <div class="col-8">
@@ -59,6 +61,36 @@
                 </div>
                 <div id="orderHistory" class="content-section" style="display: none;">
                     <p>{{ orders }}</p>
+                </div>
+                <div id="myWishlists" class="content-section" style="display: none;">
+                    <h2>My Whishlists</h2>
+                    {% if wishlists %}
+                        {% for wishlist in wishlists %}
+                            <div class="profile-wishlist">
+                                <h3>{{ wishlist.name }}</h3>
+                                <ul>
+                                    {% for item in wishlist.wishlist_items.all %}
+                                        <li>{{ item.product.friendly_name }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                    <p>You currently don't have any wishlists</p>
+                    {% endif %}
+                </div>
+                <div id="mySavedItems" class="content-section" style="display: none;">
+                    <h2>Saved for Later</h2>
+                    {% if saved_items %}
+                        {% for saved_item in saved_items %}
+                            <div class="saved-item">
+                                <h3>{{ saved_item.product.friendly_name }}</h3>
+                                <h4>By: {{ saved_item.product.book.author }}</h4>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                    <p>You currently don't have any saved items</p>
+                    {% endif %}
                 </div>
                 <div id="rewardsBenefits" class="content-section" style="display: none;">
                     <p>Exclusive Offers: </p>
