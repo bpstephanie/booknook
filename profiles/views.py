@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .models import UserProfile
+from .models import UserProfile, PDF
 from wishlist.models import Wishlist
 from bag.models import SavedItem
 from bag.contexts import bag_contents
@@ -58,3 +58,11 @@ def update_personal_info(request):
             messages.success(request, 'Personal info updated successfully')
             return redirect('profile')
     return redirect('profile')
+
+
+@login_required
+def downloads(request):
+    pdfs = PDF.objects.all()
+    template = 'profiles/downloads.html'
+
+    return render(request, template, {'pdfs': pdfs})

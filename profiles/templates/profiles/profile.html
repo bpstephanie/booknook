@@ -15,7 +15,7 @@
 
 {% block content %}
     <div class="profile-overlay"></div>
-    <div class="container">
+    <div class="container mb-5">
         <h1>{{ user.username }}'s Profile</h1>
         <p class="text-navy">Member since: {{ profile.data_joined }}</p>
         <hr>
@@ -93,8 +93,16 @@
                     {% endif %}
                 </div>
                 <div id="rewardsBenefits" class="content-section" style="display: none;">
-                    <p>Exclusive Offers: </p>
-                    <p>Membership Benefits: </p>
+                    <h2>Member Benfits</h2>
+                    <p><strong>Dive into the world of books with our thrilling reading lists and challenges!</strong><br>
+                        Whether you're a seasoned bookworm or just starting your literary journey, our curated reading
+                        lists offer something for everyone. Explore new genres, discover hidden gems, and connect with
+                        fellow readers as you embark on exciting challenges designed to ignite your passion for reading.
+                        From monthly themes to year-long quests, each challenge is crafted to inspire and motivate you to
+                        turn every page. Join us and transform your reading experience into an adventure filled with discovery,
+                        growth, and endless enjoyment. Happy reading!
+                    </p>
+                    <a class="btn btn-navy rounded-0" href="{% url 'downloads' %}">Challenges</a>
                 </div>
             </div>
         </div>

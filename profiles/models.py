@@ -44,3 +44,19 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     if created:
         UserProfile.objects.create(user=instance)
     instance.userprofile.save()
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.name
+
+
+class PDF(models.Model):
+    title = models.CharField(max_length=255)
+    pdf = models.FileField(upload_to='pdfs/')
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.title
