@@ -12,6 +12,9 @@ body {
     overflow-y: auto;
     position: relative;
     z-index: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -21,6 +24,11 @@ header {
     background-color: #0b254b;
     z-index: 1000;
     box-shadow: 0 8px 6px -6px #0b254b;
+}
+
+main {
+    flex-grow: 1;
+    padding-top: 224px;
 }
 
 h1, h2, h3, h4, h5, h6, .lora {
@@ -512,7 +520,7 @@ a {
 .container-bn {
     font-family: 'Roboto', sans-serif;
     position: relative;
-    top: 224px;
+    /*top: 224px;*/
     width: 100%;
     padding-top: 2%;
     padding-right: 15px;
@@ -539,7 +547,7 @@ a {
 }
 
 .container {
-    top: 224px !important;
+    /*top: 224px !important;*/
     position: relative;
 }
 
@@ -616,6 +624,53 @@ input[name='q']::placeholder {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+/* ---------------------------------------- Footer */
+footer {
+    margin-top: auto;
+    width: 100%;
+    padding: 5px 5px 1px 5px;
+}
+
+.footer-text {
+    font-size: 15px;
+    font-weight: 400;
+    padding-left: 20%;
+    margin-left: 20%;
+}
+
+.footer-list a {
+    color: #fefefe;
+    font-size: 10px;
+    padding-left: 20%;
+    margin-left: 20%;
+}
+
+.footer-sm-icons i,
+.footer-sm-icons a {
+    background-color: #0b254b;
+    color: #fefefe;
+    font-size: 10px;
+}
+
+.sm-footer-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.small-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+footer hr {
+    background-color: #fefefe;
+    margin: 0 1% 5px 1%;
+
 }
 
 /* ---------------------------------------- Genre and Category Pages */
@@ -790,5 +845,23 @@ allauth-form-inner-content p {
     .logo {
         height: 70px;
         width: 70px;
+    }
+
+    footer {
+        padding: 0;
+    }
+
+    .footer-text {
+        padding-left: 1%;
+        margin-left: 1%;
+    }
+
+    .footer-list a {
+        padding-left: 1%;
+        margin-left: 1%;
+    }
+
+    .footer-sm-icons {
+        margin: 0 5px
     }
 }

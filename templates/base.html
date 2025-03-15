@@ -185,8 +185,99 @@
     {% block page_header %}
     {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+    <main class="flex-grow-1">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-cream text center" id="footer">
+      <div>
+        <div class="row">
+          <div class="col-4">
+            <p class="footer-text text-uppercase">Shopping with us</p>
+            <ul class="list-unstyled footer-list">
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">Contact Us</a>
+              </li>
+              <li>
+                <a href="#">Delivery Options</a>
+              </li>
+              <li>
+                <a href="#">Returns</a>
+              </li>
+              <li>
+                <a href="#">Frequently Asked Questions</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-4 d-none d-md-block">
+            <p class="footer-text text-uppercase">Follow Us</p>
+            <ul class="list-unstyled footer-list">
+              <li class="footer-sm-icons">
+                <a href="https://x.com/?lang=en"><i class="fa-brands fa-x-twitter"></i>
+                  <span class="pl-1">X</span></a>
+              </li>
+              <li class="footer-sm-icons">
+                <a href=""><i class="fa-brands fa-facebook-f"></i>
+                  <span class="pl-1">Facebook</span></a>
+              </li>
+              <li class="footer-sm-icons">
+                <a href=""><i class="fa-brands fa-instagram"></i>
+                  <span class="pl-1">Instagram</span></a>
+              </li>
+              <li class="footer-sm-icons">
+                <a href=""><i class="fa-brands fa-tiktok"></i>
+                  <span class="pl-1">TikTok</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <p class="footer-text text-uppercase">Legal</p>
+            <ul class="list-unstyled footer-list">
+              <li>
+                <a href="#">Privacy Notice</a>
+              </li>
+              <li>
+                <a href="#">Terms & Condtions</a>
+              </li>
+              <li>
+                <a href="#">Complaints Process</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row d-block d-md-none small-socials">
+          <p class="footer-text text-uppercase">Follow Us</p>
+          <div class="sm-footer-icons d-flex justify-content-center">
+            <ul class="list-unstyled footer-list  d-flex justify-content-center">
+              <li class="footer-sm-icons mx-2">
+                <a href="https://x.com/?lang=en"><i class="fa-brands fa-x-twitter"></i></a>
+              </li>
+              <li class="footer-sm-icons mx-2">
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li class="footer-sm-icons mx-2">
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li class="footer-sm-icons mx-2">
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr>  
+        <div class="row">
+          <div class="col">
+            <p class="text-center">&copy; BookNook, 2025. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
 
     {% block postloadjs %}
       <script type="text/javascript">
