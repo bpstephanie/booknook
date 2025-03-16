@@ -1,0 +1,27 @@
+Dear {{ order.full_name }},
+
+Thank you for shopping at BookNook! We're thrilled to confirm your order and can't wait for you to enjoy your new goodies!
+
+Order Summary:
+
+Order Number: {{ order.order_number }}
+
+Order Date: {{ order.date }}
+
+Order Total: £{{ order.grand_total }}
+
+Your items are being carefully packed by our team of book-loving elves and will be on their way to you shortly.
+
+Delivery Details:
+Adress: {{ order.street_address1}},{% if order.street_address2 %} {{ order.street_address2 }}{% endif %} in {{ order.town_or_city }}, {{ order.country }}.
+
+While you wait, why not check out our forum for some great reading tips and book recommendations?
+
+If you have any questions or need assistance, feel free to reach out to our friendly support team at {{ contact_email }}.
+
+Happy Reading!
+
+Warm regards,
+The BookNook Team
+
+P.S. Don't forget to share your reading adventures and book-related finds with us on social media using #BookNookReads!
