@@ -44,7 +44,8 @@ def update_delivery_details(request):
     profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':
-        form = DeliveryDetailsForm(request.POST, instance=profile)
+        form = DeliveryDetailsForm(
+            request.POST, request.FILES, instance=profile)
         if form.is_valid():
             form.save()
             messages.success(request, 'Delivery details updated successfully')

@@ -41,7 +41,9 @@ class DeliveryDetailsForm(forms.ModelForm):
 class PersonalInfoForm(forms.ModelForm):
     favourite_books = forms.ModelMultipleChoiceField(
         queryset=Book.objects.all(),
-        widget=forms.CheckboxSelectMultiple,
+        widget=forms.SelectMultiple(
+            attrs={'class': 'select2', 'multiple': 'multiple'}
+        ),
         required=False
     )
 
