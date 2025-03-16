@@ -27,6 +27,7 @@
                 <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('deliveryDetails')">Delivery Details</button>
                 <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('personalInfo')">Personal Info</button>
                 <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('orderHistory')">Order History</button>
+                <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('userReviews')">My Reviews</button>
                 <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('myWishlists')">My Wishlists</button>
                 <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('mySavedItems')">My Saved Items</button>
                 <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('rewardsBenefits')">Rewards and Benefits</button>
@@ -105,6 +106,12 @@
                             </tbody>
                         </table>
                     </div>
+                </div>
+                <div id="userReviews" class="content-section" style="display: none;">
+                    <h2>NEED TO ADD</h2>
+                    <p>FILL THIS IN
+                    </p>
+                    <a class="btn btn-navy rounded-0" href="{% url 'downloads' %}">Challenges</a>
                 </div>
                 <div id="myWishlists" class="content-section" style="display: none;">
                     {% if wishlists %}
