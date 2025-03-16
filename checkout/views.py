@@ -164,7 +164,8 @@ def checkout_success(request, order_number):
                 'default_county': order.county,
             }
 
-            delivery_details_form = DeliveryDetailsForm(profile_data, instance=profile)
+            delivery_details_form = DeliveryDetailsForm(
+                profile_data, instance=profile)
             if delivery_details_form.is_valid():
                 delivery_details_form.save()
 
