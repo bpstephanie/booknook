@@ -33,13 +33,13 @@
             </div>
             <div class="col-8">
                 <div id="deliveryDetails" class="content-section" style="display: none;">
-                    <p>Phone Number: {{ profile.default_phone_number }}</p>
-                    <p>Street Address 1: {{ profile.default_street_address1 }}</p>
-                    <p>Street Address 2: {{ profile.default_street_address2 }}</p>
-                    <p>Town or City: {{ profile.default_town_or_city }}</p>
-                    <p>County: {{ profile.default_county }}</p>
-                    <p>Country: {{ profile.default_country }}</p>
-                    <p>Postal Code: {{ profile.default_postcode }}</p>
+                    <p><span class="lora-bold">Phone Number:</span> {{ profile.default_phone_number }}</p>
+                    <p><span class="lora-bold">Street Address 1:</span> {{ profile.default_street_address1 }}</p>
+                    <p><span class="lora-bold">Street Address 2:</span> {{ profile.default_street_address2 }}</p>
+                    <p><span class="lora-bold">Town or City:</span> {{ profile.default_town_or_city }}</p>
+                    <p><span class="lora-bold">County:</span> {{ profile.default_county }}</p>
+                    <p><span class="lora-bold">Country:</span> {{ profile.default_country }}</p>
+                    <p><span class="lora-bold">Postal Code:</span> {{ profile.default_postcode }}</p>
                     <button type="button" class="btn btn-outline-navy rounded-0" onclick="toggleForm('formDelivery')">Update Delivery Details</button>
                     <div id="formDelivery" style="display: none;">
                         <form method="POST" action="{% url 'update_delivery_details' %}">
@@ -107,7 +107,6 @@
                     </div>
                 </div>
                 <div id="myWishlists" class="content-section" style="display: none;">
-                    <h2>My Whishlists</h2>
                     {% if wishlists %}
                         {% for wishlist in wishlists %}
                             <div class="profile-wishlist">

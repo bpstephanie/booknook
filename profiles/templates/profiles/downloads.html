@@ -18,13 +18,21 @@
     <div class="container mb-5">
         <h1 class="text-center">Reading Challenges</h1>
         <hr>
+        <p>The <strong>BookNook Reading Challenge</strong>  is like a literary adventure 
+            where you embark on quests to discover hidden gems and magical worlds. 
+            With <strong>BookNook Book Trackers</strong>, you become a reading detective, 
+            jotting down clues, memorable moments, and secret codes (aka quotes) from each book. 
+            And then there's the <strong>BookNook Bingo Challenge</strong>—imagine a game where 
+            each book you read unlocks a new square on your bingo card, leading you to exciting 
+            rewards and bragging rights among fellow book lovers. It's not just about reading; 
+            it's about turning each page into a thrilling escapade!
+        </p>
 
         <div class="row">
-            <ul>
                 {% for pdf in pdfs %}
-                <li>
-                    <a href="{{ pdf.pdf.url}}" download>{{ pdf.title }}</a>
-                </li>
+                <div class="col-sm-12 col-md-4 py-2">
+                    <a class="btn btn-orange rounded-0" href="{{ pdf.pdf.url}}" download>{{ pdf.title }}</a>
+                </div>
                 {% endfor %}
             </ul>
         </div>
