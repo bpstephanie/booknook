@@ -1,10 +1,14 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+
 from .models import UserProfile, PDF
+from checkout.models import Order
 from wishlist.models import Wishlist
 from bag.models import SavedItem
+
 from bag.contexts import bag_contents
+
 from .forms import DeliveryDetailsForm, PersonalInfoForm
 
 
@@ -24,6 +28,7 @@ def profile(request):
 
     template = 'profiles/profile.html'
     context = {
+        'profile': profile,
         'delivery_form': delivery_form,
         'personal_info_form': personal_info_form,
         'orders': orders,
@@ -58,6 +63,23 @@ def update_personal_info(request):
             messages.success(request, 'Personal info updated successfully')
             return redirect('profile')
     return redirect('profile')
+
+
+def order_history(request, order_number):
+    order = get_object_or_404(Order, order_number=order_number)
+
+    messages.info(request, (
+        f'This is a past confirmation for order number {order_number}. '
+        'A confirmation email was sent on the order date.'
+    ))
+
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
+        'from_profile': True,
+    }
+
+    return render(request, template, context)
 
 
 @login_required

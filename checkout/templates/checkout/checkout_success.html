@@ -193,13 +193,21 @@
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
                 {% if from_profile %}
-                    <a href="#" class="btn btn-navy rounded-0 my-2">
+                    <a href="{% url 'profile' %}" class="btn btn-navy rounded-0 my-2">
                         <span class="icon mr-2">
                             <i class="fas fa-angle-left"></i>
                         </span>
                         <span class="text-uppercase">Back to Profile</span>
                     </a>
                 {% else %}
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'profile' %}" class="btn btn-outline-navy rounded-0 my-2">
+                        <span class="icon mr-2">
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                        <span class="text-uppercase">Profile</span>
+                    </a>
+                    {% endif %}
                     <a href="{% url 'products' %}" class="btn btn-navy rounded-0 my-2">
                         <span class="icon mr-2">
                             <i class="fas fa-gifts"></i>

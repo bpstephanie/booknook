@@ -8,6 +8,20 @@
     z-index: -1;
 }
 
+.profile-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-wishlist {
+    width: auto;
+}
+
+.order-history {
+    max-height: 416px;
+    overflow-y: auto;
+}
+
 #formPersonalInfo input::placeholder,
 #formDelivery input::placeholder {
     color: #aab7c4;
@@ -25,13 +39,4 @@
 
 #id_default_country option:first-child {
     color: #aab7c4;
-}
-
-.profile-buttons {
-    display: flex;
-    flex-direction: column;
-}
-
-.profile-wishlist {
-    width: auto;
 }
