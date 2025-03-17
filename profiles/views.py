@@ -1,10 +1,10 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, resolve_url
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
 from .models import UserProfile, PDF
 from checkout.models import Order
-from wishlist.models import Wishlist
+from wishlist.models import Wishlist, WishlistItem
 from bag.models import SavedItem
 from forum.models import Category, Thread, Post
 
@@ -97,3 +97,16 @@ def downloads(request):
     template = 'profiles/downloads.html'
 
     return render(request, template, {'pdfs': pdfs})
+
+
+@login_required
+def remove_wishlist_item(request, item_id):
+    item = get_object_or_404(WishlistItem, id=item_id)
+
+    if item.wishlist.user == request.user:
+        item.delete()
+        messages.success(request, 'Wishlist item deleted!')
+    else:
+        messages.error(
+            request, 'Somwthing went wrong - your item was not deleted.')
+    return redirect(resolve_url('profile') + '?section=myWishlists')

@@ -142,6 +142,9 @@
                                                         <p class="wishlist-author">By: {{ item.product.book.author }}</p>
                                                     {% endif %}
                                                     £{{ item.product.price }}
+                                                    <div>
+                                                        <a href="#" class="text-danger mt-2" data-toggle="modal" data-target="#confirmDeleteModal" data-item-id="{{ item.id }}">Remove</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </li>
@@ -212,6 +215,7 @@
             </div>
         </div>
     </div>
+    {% include 'profiles/includes/remove_modal.html' %}
 {% endblock %}
 
 {% block postloadjs %}
@@ -250,5 +254,14 @@
                 allowClear: true
             });
         });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+        $('#confirmDeleteModal').on('show.bs.modal', function(event) {
+            var link = $(event.relatedTarget);
+            var itemId = link.data('item-id');
+            $('#confirmDeleteForm').attr('action', "{% url 'remove_wishlist_item' 0 %}".replace('0', itemId));
+        });
+    });
     </script>
 {% endblock %}

@@ -108,16 +108,18 @@
                   {% endif %}
                 </div>
               </li>
-              <li class="list-inline-item dropdown base-icons">
-                <a class="text-navy nav-link pink-link" href="{% url 'profile' %}?section=myWishlists" id="wishlist-link">
-                  <div class="text-center">
-                    <div>
-                      <i class="fa-solid fa-heart fa-lg" aria-label="Wishlist"></i>
-                      <p class="lora">Wishlists</p>
+              {% if user.is_authenticated %}
+                <li class="list-inline-item dropdown base-icons">
+                  <a class="text-navy nav-link pink-link" href="{% url 'profile' %}?section=myWishlists" id="wishlist-link">
+                    <div class="text-center">
+                      <div>
+                        <i class="fa-solid fa-heart fa-lg" aria-label="Wishlist"></i>
+                        <p class="lora">Wishlists</p>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </li>
+                  </a>
+                </li>
+              {% endif %}
               <li class="list-inline-item">
                 <a class="{% if grand_total %}text-info lora-bold{% else%}text-navy{% endif %} nav-link" href="{% url 'view_bag' %}">
                   <div class="text-center">
