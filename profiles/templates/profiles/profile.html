@@ -150,6 +150,7 @@
                                         </li>
                                     {% endfor %}
                                 </ul>
+                                <button class="btn btn-danger mt-2" data-toggle="modal" data-target="#confirmDeleteWishlistModal" data-wishlist-id="{{ wishlist.id }}">Delete Wishlist</button>
                             </div>
                         {% endfor %}
                         </div>
@@ -263,5 +264,16 @@
             $('#confirmDeleteForm').attr('action', "{% url 'remove_wishlist_item' 0 %}".replace('0', itemId));
         });
     });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#confirmDeleteWishlistModal').on('show.bs.modal', function(event) {
+                var button = $(event.relatedTarget); // This will be the button
+                var wishlistId = button.data('wishlist-id');
+                console.log('Wishlist ID:', wishlistId); // Debugging statement
+                $('#confirmDeleteWishlistForm').attr('action', "{% url 'remove_wishlist' 0 %}".replace('0', wishlistId));
+                console.log('Form Action:', $('#confirmDeleteWishlistForm').attr('action')); // Debugging statement
+            });
+        });
     </script>
 {% endblock %}

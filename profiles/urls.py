@@ -15,5 +15,6 @@ urlpatterns = [
      path(
          'remove_wishlist_item/<int:item_id>/',
          views.remove_wishlist_item, name='remove_wishlist_item'),
+     path('remove_wishlist/<int:wishlist_id>/', views.remove_wishlist, name='remove_wishlist'),
      path('downloads/', views.downloads, name='downloads'),
      ]

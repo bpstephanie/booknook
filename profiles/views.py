@@ -110,3 +110,16 @@ def remove_wishlist_item(request, item_id):
         messages.error(
             request, 'Somwthing went wrong - your item was not deleted.')
     return redirect(resolve_url('profile') + '?section=myWishlists')
+
+
+@login_required
+def remove_wishlist(request, wishlist_id):
+    wishlist = get_object_or_404(Wishlist, id=wishlist_id)
+
+    if wishlist.user == request.user:
+        wishlist.delete()
+        messages.success(request, 'Wishlist deleted!')
+    else:
+        messages.error(
+            request, 'Somwthing went wrong - your wishlist was not deleted.')
+    return redirect(resolve_url('profile') + '?section=myWishlists')
