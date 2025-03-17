@@ -121,16 +121,32 @@
                             {% for wishlist in wishlists %}
                             <div class="wishlist-card m-2">
                                 <h3 class="wishlist-title">{{ wishlist.name }}</h3>
-                                <ol class="wishlist-items">
+                                <ul class="wishlist-items list-unstyled">
                                     {% for item in wishlist.wishlist_items.all %}
                                         <li class="wishlist-item">
-                                            {{ item.product.friendly_name }}
-                                            {% if item.product.book %}
-                                                <p class="wishlist-author">By: {{ item.product.book.author }}</p>
-                                            {% endif %}
+                                            <div class="d-flex">
+                                                <div class="thumbnail-image-container">
+                                                    <a class="text-decoration-none" href="{% url 'product_detail' item.product.id %}">
+                                                        {% if item.product.image %}
+                                                            <img class="card-img-top img-fluid thumbnail-image" src="{{ item.product.image.url }}" alt="{{ wishlist.product.name}}">
+                                                        {% else %}
+                                                            <img class="card-img-top img-fluid thumbnail-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name}}">
+                                                        {% endif %}
+                                                    </a>
+                                                </div>
+                                                <div class="pt-2">
+                                                    <a class="text-decoration-none" href="{% url 'product_detail' item.product.id %}">
+                                                        {{ item.product.friendly_name }}
+                                                    </a>
+                                                    {% if item.product.book %}
+                                                        <p class="wishlist-author">By: {{ item.product.book.author }}</p>
+                                                    {% endif %}
+                                                    £{{ item.product.price }}
+                                                </div>
+                                            </div>
                                         </li>
                                     {% endfor %}
-                                </ol>
+                                </ul>
                             </div>
                         {% endfor %}
                         </div>
