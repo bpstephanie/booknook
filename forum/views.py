@@ -70,6 +70,7 @@ def post_list(request, category_id, thread_id):
 @login_required
 def create_post(request, category_id, thread_id):
     thread = get_object_or_404(Thread, pk=thread_id)
+
     if request.method == 'POST':
         form = PostForm(request.POST)
         if form.is_valid():
@@ -77,7 +78,9 @@ def create_post(request, category_id, thread_id):
             post.thread = thread
             post.created_by = request.user
             post.save()
-            return redirect('post_list', category_id=category_id, thread_id=thread_id)
+            return redirect(
+                'post_list', category_id=category_id, thread_id=thread_id)
     else:
         form = PostForm()
-    return render(request, 'forum/create_post.html', {'form': form, 'thread': thread})
+    return render(
+        request, 'forum/create_post.html', {'form': form, 'thread': thread})

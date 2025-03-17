@@ -6,15 +6,41 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container mb-5">
-        <h1>{{ thread.title }}</h1>
-        <hr>
-        {% for post in posts %}
-            <div class="post-item">
-                <p>{{ post.content }}</p>
-                <p>By {{ post.created_by.username }} on {{ post.created_at }}</p>
+    <div class="full-overlay"></div>
+    <div class="container-bn mb-5">
+        <div class="forum-container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="forum-font">{{ thread.title }}</h1>
+                    <p class="text-small">Started by: {{ thread.created_by.username }} on {{ thread.created_at }}</p>
+                    <p>{{ thread.content }}</p>
+                    <hr>
+                </div>
             </div>
-        {% endfor %}
-        <a href="{% url 'create_post' thread.category.id thread.id %}" class="btn btn-navy rounded-0">Reply</a>
+            <div class="row">
+                <div class="col">
+                    {% for post in posts %}
+                        <div class="post-item">
+                            <p>{{ post.content }}</p>
+                            <p>By {{ post.created_by.username }} on {{ post.created_at }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    {% if user.is_authenticated %}
+                        <button class="btn btn-navy rounded-0" type="button" data-toggle="modal" data-target="#replyModal">
+                            Reply
+                        </button>
+                    {% else %}
+                        <p class="text-navy">Please <a href="{% url 'account_login' %}">login</a> or <a href="{% url 'account_signup' %}">register</a> to interact with our forum.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
     </div>
+    {% include 'forum/includes/post_list_reply_modal.html' %}
 {% endblock %}

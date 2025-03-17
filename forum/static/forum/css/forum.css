@@ -1,3 +1,19 @@
+.forum-font {
+    font-family: 'Source Sans 4', sans-serif !important;
+}
+
+.forum-container {
+    background-color: #fefefe;
+    padding: 5%;
+    margin: 20px;
+    width: 100%;
+}
+
+.forum-container > a,
+.forum-container > p {
+    font-family: 'Source Sans 4', sans-serif !important;
+}
+
 .forum-buttons {
     display: flex;
     flex-direction: column;
@@ -20,4 +36,7 @@
 .thread-item p {
     margin: 5px 0;
     color: #555;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
 }

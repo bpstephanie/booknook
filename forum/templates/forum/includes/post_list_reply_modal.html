@@ -1,0 +1,20 @@
+<div class="modal fade" id="replyModal" tabindex="-1" aria-labelledby="replyModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="replyModalLabel">Reply to Thread</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="{% url 'create_post' thread.category.id thread.id %}" method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="postContent" class="form-label">Your Reply</label>
+                        <textarea class="form-control" id="postContent" name="content" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-navy">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

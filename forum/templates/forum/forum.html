@@ -36,15 +36,14 @@
             <div class="col-9">
                 {% for category in categories %}
                     <div id="{{ category.id }}" class="content-section" style="display: none;">
-                        <h2>{{ category.name }} Discussions</h2>
+                        <h2 class="forum-font">{{ category.name }} Discussions</h2>
                         <p>{{ category.description }}</p>
-                        <p>Number of threads: {{ threads|length }}</p>
                         <hr>
                         <div class="all-threads">
                             {% for thread in threads %}
                                 {% if thread.category.id == category.id %}
                                     <div class="thread-item">
-                                        <a href="{% url 'post_list' category_id=category.id thread_id=thread.id %}" class="lora-bold text-decoration-none text-navy">
+                                        <a href="{% url 'post_list' category_id=category.id thread_id=thread.id %}" class="fourm-font text-decoration-none text-navy">
                                             {{ thread.title }}
                                         </a>
                                         <p class="text-small">Started by: {{ thread.created_by.username }} on {{ thread.created_at }}</p>
