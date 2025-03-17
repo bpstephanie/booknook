@@ -30,6 +30,7 @@
                 <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('userReviews')">My Reviews</button>
                 <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('myWishlists')">My Wishlists</button>
                 <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('mySavedItems')">My Saved Items</button>
+                <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('forumInteraction')">Forum Interaction</button>
                 <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('rewardsBenefits')">Rewards and Benefits</button>
             </div>
             <div class="col-8">
@@ -141,6 +142,25 @@
                     {% else %}
                     <p>You currently don't have any saved items</p>
                     {% endif %}
+                </div>
+                <div id="forumInteraction" class="content-section" style="display: none;">
+                    <h2>Forum Interactions</h2>
+                    {% for category in categories %}
+                        <h2>{{ category.name }}</h2>
+                        {% if threads %}
+                            {% for thread in threads %}
+                                {% if thread.category.id == category.id %}
+                                    <div class="thread-item">
+                                        <p>{{ thread.title }}</p>
+                                        <p>{{ thread.content }}<p>
+                                        <hr>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% else %}
+                        <p>You currently don't have any saved items</p>
+                        {% endif %}
+                    {% endfor %}
                 </div>
                 <div id="rewardsBenefits" class="content-section" style="display: none;">
                     <h2>Member Benfits</h2>

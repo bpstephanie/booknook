@@ -6,6 +6,7 @@ from .models import UserProfile, PDF
 from checkout.models import Order
 from wishlist.models import Wishlist
 from bag.models import SavedItem
+from forum.models import Category, Thread, Post
 
 from bag.contexts import bag_contents
 
@@ -25,6 +26,8 @@ def profile(request):
     orders = profile.orders.all()
     wishlists = Wishlist.objects.filter(user=request.user)
     saved_items = bag_contents(request)['saved_items']
+    threads = Thread.objects.filter(created_by=request.user)
+    categories = Category.objects.all()
 
     template = 'profiles/profile.html'
     context = {
@@ -34,6 +37,8 @@ def profile(request):
         'orders': orders,
         'wishlists': wishlists,
         'saved_items': saved_items,
+        'threads': threads,
+        'categories': categories,
         'on_profile_page': True,
     }
     return render(request, template, context)
