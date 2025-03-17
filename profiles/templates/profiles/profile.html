@@ -146,20 +146,24 @@
                 <div id="forumInteraction" class="content-section" style="display: none;">
                     <h2>Forum Interactions</h2>
                     {% for category in categories %}
-                        <h2>{{ category.name }}</h2>
-                        {% if threads %}
-                            {% for thread in threads %}
-                                {% if thread.category.id == category.id %}
-                                    <div class="thread-item">
-                                        <p>{{ thread.title }}</p>
-                                        <p>{{ thread.content }}<p>
-                                        <hr>
-                                    </div>
-                                {% endif %}
-                            {% endfor %}
-                        {% else %}
-                        <p>You currently don't have any saved items</p>
-                        {% endif %}
+                        <div class="category-section">
+                            <h2 class="category-header">{{ category.name }}</h2>
+                            {% if threads %}
+                                <div class="threads-container">
+                                    {% for thread in threads %}
+                                    {% if thread.category.id == category.id %}
+                                        <div class="thread-card">
+                                            <h3 class="thread-title">{{ thread.title }}</h3>
+                                            <p class="thread-content">{{ thread.content|truncatewords:30 }}<p>
+                                            <p class="thread-meta">Started by: {{ thread.created_by.username }} on {{ thread.created_at }}</p>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                                </div>   
+                            {% else %}
+                            <p>No threads available in this category</p>
+                            {% endif %}
+                        </div>
                     {% endfor %}
                 </div>
                 <div id="rewardsBenefits" class="content-section" style="display: none;">

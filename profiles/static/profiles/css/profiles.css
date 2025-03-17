@@ -40,3 +40,53 @@
 #id_default_country option:first-child {
     color: #aab7c4;
 }
+
+.category-section {
+    margin-bottom: 20px;
+}
+
+.category-header {
+    font-size: 24px;
+    color: #0b254b;
+    margin-bottom: 10px;
+}
+
+.threads-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.thread-card {
+    background-color: #fefefe;
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.thread-card:hover {
+    transform: scale(1.05);
+}
+
+.thread-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #0b254b;
+    margin-bottom: 5px;
+}
+
+.thread-content {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.thread-meta {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #777;
+}
