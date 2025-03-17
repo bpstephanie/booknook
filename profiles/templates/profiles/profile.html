@@ -219,6 +219,12 @@
                 form.style.display = 'none';
             }
         }
+
+        // Show the section based on URL parameter
+        document.addEventListener('DOMContentLoaded', function() {
+            var section = "{{ section }}"
+            showContent(section);
+        });
     </script>
     <script type="text/javascript">
         // Initialize Select2

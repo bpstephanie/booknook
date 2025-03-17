@@ -29,6 +29,8 @@ def profile(request):
     threads = Thread.objects.filter(created_by=request.user)
     categories = Category.objects.all()
 
+    section = request.GET.get('section', 'deliveryDetails')
+
     template = 'profiles/profile.html'
     context = {
         'profile': profile,
@@ -39,6 +41,7 @@ def profile(request):
         'saved_items': saved_items,
         'threads': threads,
         'categories': categories,
+        'section': section,
         'on_profile_page': True,
     }
     return render(request, template, context)

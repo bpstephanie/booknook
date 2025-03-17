@@ -88,6 +88,9 @@
     font-size: 18px;
     color: #0b254b;
     margin-bottom: 5px;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
 }
 
 .thread-content,
