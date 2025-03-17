@@ -1,10 +1,12 @@
 <div id="canvas" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" data-width="100%">
   <div class="bs-canvas-header p-3 bg-navy">
       <h4 class="d-inline-block text-cream mb-0">BookNook</h4>
-        <button type="button" class="bs-canvas-close close" aria-label="Close"><span aria-hidden="true" class="text-cream">&times;</span></button>
+        <button type="button" class="bs-canvas-close close" aria-label="Close">
+          <span aria-hidden="true" class="text-cream">&times;</span>
+        </button>
   </div>
   <div class="bs-canvas-content">
-    <div class="card-navy mb-5 bg-navy w-80 justify-content-center">
+    <div class="card-navy mb-5 bg-navy mx-2 justify-content-center">
       <div class="card-header lora-bold text-cream">
           Become a member today!
       </div>
@@ -28,11 +30,11 @@
       </form>
     </div>
     <div class="col-sm-6">
-      <ul class="navbar-nav justify-content-end list-unstyles d-flex gap-md-3 mb-0">
+      <ul class="navbar-nav justify-content-end list-unstyled d-flex gap-md-3 mb-0">
         <li class="list-inline-item dropdown">
           <a class="text-navy nav-link" href="" id="account-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
-              <div class="d-flex flex-row">
+              <div class="d-flex flex-row align-items-center">
                 <i class="fa-solid fa-user fa-lg" aria-label="My account"></i>
                 <p class="lora">Account</p>
               </div>
@@ -53,32 +55,18 @@
           </div>
         </li>
         <div class="dropdown-divider"></div>
-        <li class="list-inline-item dropdown">
-          <a class="text-navy nav-link" href="#" id="wishlist-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <div class="text-center">
-              <div class="d-flex flex-row">
-                <i class="fa-solid fa-heart fa-lg" aria-label="Wishlist"></i>
-                <p class="lora">Wishlists</p>
-              </div>
-            </div>
-          </a>
-          <div class="dropdown-menu border-navy wishlist" aria-labelledby="wishlist-dropdown">
-            {% if request.user.is_authenticated %}
-              {% for wishlist in request.user.wishlists.all %}
-                <div class="dropdown-submenu">
-                  <a class="dropdown-item dropdown-toggle" href="#">{{ wishlist.name }}</a>
-                  <ul class="dropdown-menu">
-                    {% for product in wishlist.products.all %}
-                      <li><a class="dropdown-item" href="{% url 'product_detail' product.id %}">{{ product.name }}</a></li>
-                    {% endfor %}
-                  </ul>
+        {% if user.is_authenticated %}
+          <li class="list-inline-item dropdown">
+            <a class="text-navy nav-link" href="{% url 'profile' %}?section=myWishlists" id="wishlist-link">
+              <div class="text-center">
+                <div class="d-flex flex-row align-items-center">
+                  <i class="fa-solid fa-heart fa-lg" aria-label="Wishlist"></i>
+                  <p class="lora">Wishlists</p>
                 </div>
-              {% endfor %}
-            {% else %}
-              <a class="dropdown-item" href="{% url 'account_login' %}">Login to view your wishlists</a>
-            {% endif %}
-          </div>
-        </li>
+              </div>
+            </a>
+          </li>
+          {% endif %}
         <div class="dropdown-divider"></div>
         <li class="nav-item">
           <a href="{% url 'products' %}" class="nav-link text-navy d-flex">All Products</a>
