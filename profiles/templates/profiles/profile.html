@@ -115,30 +115,45 @@
                     <a class="btn btn-navy rounded-0" href="{% url 'downloads' %}">Challenges</a>
                 </div>
                 <div id="myWishlists" class="content-section" style="display: none;">
+                    <h2>My Wishlists</h2>
                     {% if wishlists %}
-                        {% for wishlist in wishlists %}
-                            <div class="profile-wishlist">
-                                <h3>{{ wishlist.name }}</h3>
-                                <ul>
+                        <div class="wishlist-container d-flex flex-wrap">
+                            {% for wishlist in wishlists %}
+                            <div class="wishlist-card m-2">
+                                <h3 class="wishlist-title">{{ wishlist.name }}</h3>
+                                <ol class="wishlist-items">
                                     {% for item in wishlist.wishlist_items.all %}
-                                        <li>{{ item.product.friendly_name }}</li>
+                                        <li class="wishlist-item">
+                                            {{ item.product.friendly_name }}
+                                            {% if item.product.book %}
+                                                <p class="wishlist-author">By: {{ item.product.book.author }}</p>
+                                            {% endif %}
+                                        </li>
                                     {% endfor %}
-                                </ul>
+                                </ol>
                             </div>
                         {% endfor %}
+                        </div>
                     {% else %}
-                    <p>You currently don't have any wishlists</p>
+                        <p>You currently don't have any wishlists</p>
                     {% endif %}
                 </div>
                 <div id="mySavedItems" class="content-section" style="display: none;">
                     <h2>Saved for Later</h2>
                     {% if saved_items %}
-                        {% for saved_item in saved_items %}
-                            <div class="saved-item">
-                                <h3>{{ saved_item.product.friendly_name }}</h3>
-                                <h4>By: {{ saved_item.product.book.author }}</h4>
-                            </div>
-                        {% endfor %}
+                        <div class="saved-items-container d-flex flex-wrap">
+                            {% for saved_item in saved_items %}
+                                <div class="saved-item-card m-2">
+                                    {% if saved_item.product.image %}
+                                        <img class="card-img-top img-fluid" src="{{ saved_item.product.image.url }}" alt="{{ saved_item.product.name}}">
+                                    {% else %}
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name}}">
+                                    {% endif %}
+                                    <h3 class="saved-item-title">{{ saved_item.product.friendly_name }}</h3>
+                                    <h4 class="saved-item-author">By: {{ saved_item.product.book.author }}</h4>
+                                </div>
+                            {% endfor %}
+                        </div>
                     {% else %}
                     <p>You currently don't have any saved items</p>
                     {% endif %}
@@ -149,10 +164,10 @@
                         <div class="category-section">
                             <h2 class="category-header">{{ category.name }}</h2>
                             {% if threads %}
-                                <div class="threads-container">
+                                <div class="threads-container d-flex flex-wrap">
                                     {% for thread in threads %}
                                     {% if thread.category.id == category.id %}
-                                        <div class="thread-card">
+                                        <div class="thread-card m-2">
                                             <h3 class="thread-title">{{ thread.title }}</h3>
                                             <p class="thread-content">{{ thread.content|truncatewords:30 }}<p>
                                             <p class="thread-meta">Started by: {{ thread.created_by.username }} on {{ thread.created_at }}</p>

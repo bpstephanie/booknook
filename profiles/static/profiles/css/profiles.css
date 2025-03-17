@@ -13,9 +13,9 @@
     flex-direction: column;
 }
 
-.profile-wishlist {
+/*.profile-wishlist {
     width: auto;
-}
+}*/
 
 .order-history {
     max-height: 416px;
@@ -45,21 +45,29 @@
     margin-bottom: 20px;
 }
 
-.category-header {
+.category-header,
+.wishlist-title,
+.saved-item-title {
     font-size: 24px;
     color: #0b254b;
     margin-bottom: 10px;
 }
 
-.threads-container {
+.threads-containerm
+.wishlists-container,
+.saved-items-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
+/*----------------------------------------------------- Card Styles */
 
-.thread-card {
+.thread-card,
+.wishlist-card,
+.saved-item-card {
     background-color: #fefefe;
-    border: 1px solid #ddd;
+    border: 1px solid #0b254b;
+    color: #0b254b;
     padding: 15px;
     width: 100%;
     max-width: 300px;
@@ -67,25 +75,35 @@
     transition: transform 0.3s ease;
 }
 
-.thread-card:hover {
+.thread-card:hover,
+.wishlist-card:hover,
+.saved-item-card:hover {
     transform: scale(1.05);
 }
 
-.thread-title {
+.thread-title,
+.wishlist-title,
+.saved-item-title {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: #0b254b;
     margin-bottom: 5px;
 }
 
-.thread-content {
+.thread-content,
+.wishlist-items,
+.saved-item-author {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     color: #555;
     margin-bottom: 10px;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
 }
 
-.thread-meta {
+.thread-meta,
+.wishlist-item {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     color: #777;
