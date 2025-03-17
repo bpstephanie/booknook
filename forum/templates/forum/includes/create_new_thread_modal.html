@@ -1,0 +1,27 @@
+<!-- Create Thread Modal -->
+<div class="modal fade" id="createThreadModal" tabindex="-1" role="dialog" aria-labelledby="createThreadModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createThreadModalLabel">Create New Thread</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="{% url 'create_thread' 0 %}" id="createThreadForm">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="threadTitle">Thread Title</label>
+                        <input type="text" class="form-control" id="threadTitle" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="threadContent">Content</label>
+                        <textarea class="form-control" id="threadContent" name="content" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-navy rounded-0">Create Thread</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -45,7 +45,6 @@
               {% endif %}
               <a class="dropdown-item" href="">My Profile</a>
               <a class="dropdown-item" href="">My Events</a>
-              <a class="dropdown-item" href="">Forum</a>
               <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
             {% else %}
               <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
@@ -92,6 +91,7 @@
         <li class="nav-item">
           <a href="{% url 'all_genres' %}" class="nav-link text-navy d-flex">Accessory Categories</a>
         </li>
+        <a class="dropdown-item" href="{% url 'forum' %}">Forum</a>
       </ul>
     </div>         
   </div>   

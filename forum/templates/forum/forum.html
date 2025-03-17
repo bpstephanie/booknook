@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'forum/css/forum.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="full-overlay"></div>
+    <div class="container mb-5">
+        <h1>BookNook Forum</h1>
+        <hr>
+
+        <div class="row">
+            <div class="col-3 forum-buttons">
+                {% for category in categories %}
+                    <button class="btn btn-outline-navy rounded-0 mb-2 category-button" 
+                    type="button" onclick="showContent('{{ category.id }}')" 
+                    {% if forloop.first %}id="default-category"{% endif %} >
+                   {{ category.name }}</button>
+                {% endfor %}
+                {% if user.is_authenticated %}
+                    <button class="btn btn-navy rounded-0 mb-2" type="button" data-toggle="modal" data-target="#addCategoryModal">
+                        <i class="fa-solid fa-plus"></i> Add Category
+                    </button>
+                {% endif %}
+            </div>
+            <div class="col-9">
+                {% for category in categories %}
+                    <div id="{{ category.id }}" class="content-section" style="display: none;">
+                        <h2>{{ category.name }} Discussions</h2>
+                        <p>{{ category.description }}</p>
+                        <p>Number of threads: {{ threads|length }}</p>
+                        <hr>
+                        <div class="all-threads">
+                            {% for thread in threads %}
+                                {% if thread.category.id == category.id %}
+                                    <div class="thread-item">
+                                        <a href="{% url 'post_list' category_id=category.id thread_id=thread.id %}" class="lora-bold text-decoration-none text-navy">
+                                            {{ thread.title }}
+                                        </a>
+                                        <p class="text-small">Started by: {{ thread.created_by.username }} on {{ thread.created_at }}</p>
+                                        <p>{{ thread.content }}</p>
+                                    </div>
+                                    <hr>
+                                {% endif %}
+                            {% endfor %}
+                            <div class="d-flex justify-content-center">
+                                {% if user.is_authenticated %}
+                                    <button class="btn btn-navy rounded-0" type="button" data-toggle="modal" data-target="#createThreadModal" data-category-id="{{ category.id }}">
+                                        Create New Thread
+                                    </button>
+                                {% else %}
+                                    <p class="text-navy">Please <a href="{% url 'account_login' %}">login</a> or <a href="{% url 'account_signup' %}">register</a> to interact with our forum.</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% include 'forum/includes/add_category_modal.html' %}
+    {% include 'forum/includes/create_new_thread_modal.html' %}
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show threads for first category by default
+            const defaultCategoryButton = document.getElementById('default-category');
+            
+            if (defaultCategoryButton) {
+                showContent(defaultCategoryButton.getAttribute('onclick').split("'")[1]);
+            }
+        });
+
+        function showContent(categoryId) {
+            // Hide all content sections
+            document.querySelectorAll('.content-section').forEach(function(section) {
+                section.style.display = 'none';
+            });
+            // Show the selected content section
+            document.getElementById(categoryId).style.display = 'block';
+        }
+    </script>
+    <script type="text/javascript">
+        $('#createThreadModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget); // Button that triggered the modal
+            var categoryId = button.data('category-id'); // Extract info from data-* attributes
+            var modal = $(this);
+            modal.find('form').attr('action', '{% url "create_thread" 0 %}'.replace('0', categoryId));
+        });
+    </script>
+{% endblock %}

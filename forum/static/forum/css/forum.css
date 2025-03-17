@@ -1,0 +1,23 @@
+.forum-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.all-threads {
+    background-color: #fff;
+    padding: 2%;
+}
+
+.thread-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.thread-item a {
+    font-size: 18px;
+}
+
+.thread-item p {
+    margin: 5px 0;
+    color: #555;
+}
