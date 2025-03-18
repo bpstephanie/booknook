@@ -191,6 +191,9 @@
                                             <h3 class="thread-title">{{ thread.title }}</h3>
                                             <p class="thread-content">{{ thread.content|truncatewords:30 }}<p>
                                             <p class="thread-meta">Started by: {{ thread.created_by.username }} on {{ thread.created_at }}</p>
+                                            <div class="d-flex justify-content-center">
+                                                <button type="button" class="btn btn-green rounded-0">Edit Thread</button>
+                                            </div>
                                         </div>
                                     {% endif %}
                                 {% endfor %}
@@ -216,7 +219,7 @@
             </div>
         </div>
     </div>
-    {% include 'profiles/includes/remove_modal.html' %}
+    {% include 'profiles/includes/profile_modals.html' %}
 {% endblock %}
 
 {% block postloadjs %}

@@ -14,6 +14,15 @@
                     <h1 class="forum-font">{{ thread.title }}</h1>
                     <p class="text-small">Started by: {{ thread.created_by.username }} on {{ thread.created_at }}</p>
                     <p>{{ thread.content }}</p>
+                    {% if thread.last_updated and thread.last_updated > thread.created_at %}
+                        <p class="text-small text-muted">Edited on: {{ thread.last_updated }}</p>
+                    {% endif %}
+                    {% if thread.created_by == request.user %}
+                        <div class="d-flex justify-content-between">
+                            <a href="{% url 'edit_thread' thread.id %}" class="text-success text-decoration-none text-small">Edit</a>
+                            <a class="text-danger text-decoration-none text-small">Delete</a>
+                        </div>                        
+                    {% endif %}
                     <hr>
                 </div>
             </div>
@@ -23,6 +32,12 @@
                         <div class="post-item">
                             <p>{{ post.content }}</p>
                             <p>By {{ post.created_by.username }} on {{ post.created_at }}</p>
+                            {% if post.created_by == request.user %}
+                                <div class="d-flec justify-content-end">
+                                    <a class="text-success text-decoration-none text-small">Edit</a>
+                                    <a class="text-danger text-decoration-none text-small">Delete</a>
+                                </div>                        
+                            {% endif %}
                         </div>
                     {% endfor %}
                 </div>

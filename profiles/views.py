@@ -11,6 +11,7 @@ from forum.models import Category, Thread, Post
 from bag.contexts import bag_contents
 
 from .forms import DeliveryDetailsForm, PersonalInfoForm
+from forum.forms import ThreadForm
 
 
 # Create your views here.
@@ -57,7 +58,8 @@ def update_delivery_details(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Delivery details updated successfully')
-            return redirect('profile')
+            return redirect(
+                resolve_url('profile') + '?section=deliveryDetails')
     return redirect('profile')
 
 
@@ -70,7 +72,7 @@ def update_personal_info(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Personal info updated successfully')
-            return redirect('profile')
+            return redirect(resolve_url('profile') + '?section=personalInfo')
     return redirect('profile')
 
 
@@ -123,3 +125,29 @@ def remove_wishlist(request, wishlist_id):
         messages.error(
             request, 'Somwthing went wrong - your wishlist was not deleted.')
     return redirect(resolve_url('profile') + '?section=myWishlists')
+
+
+@login_required
+def edit_thread(request, thread_id):
+    thread = get_object_or_404(Thread, id=thread_id)
+
+    if request.user != thread.created_by:
+        messages.error(request, 'You are not authorized to edit this thread.')
+        return redirect('profile')
+
+    if request.method == 'POST':
+        form = ThreadForm(request.POST, instance=thread)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Thread updated successfully!')
+            return redirect(
+                resolve_url('profile') + '?section=forumInteraction')
+    else:
+        form = ThreadForm(instance=thread)
+    
+    template = 'forum/edit_thread.html'
+    context = {
+        'form': form,
+        'thread': thread,
+    }
+    return render(request, template, context)

@@ -1,5 +1,6 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, resolve_url
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .models import Category, Thread, Post
 from .forms import ThreadForm, CategoryForm, PostForm
 
@@ -84,3 +85,30 @@ def create_post(request, category_id, thread_id):
         form = PostForm()
     return render(
         request, 'forum/create_post.html', {'form': form, 'thread': thread})
+
+
+@login_required
+def edit_thread(request, thread_id):
+    thread = get_object_or_404(Thread, id=thread_id)
+
+    if request.user != thread.created_by:
+        messages.error(request, 'You are not authorized to edit this thread.')
+        return redirect('profile')
+
+    if request.method == "POST":
+        form = ThreadForm(request.POST, instance=thread)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Thread updated successfully!')
+            return redirect(
+                'post_list',
+                category_id=thread.category.id, thread_id=thread.id)
+    else:
+        form = ThreadForm(instance=thread)
+
+    template = 'forum/edit_thread.html'
+    context = {
+        'form': form,
+        'thread': thread,
+    }
+    return render(request, template, context)
