@@ -187,7 +187,9 @@
                                 {% for thread in threads %}
                                     {% if thread.category.id == category.id %}
                                         <div class="thread-card m-2">
-                                            <h3 class="thread-title">{{ thread.title }}</h3>
+                                            <h3 class="thread-title">
+                                                <a href="{% url 'post_list' category.id thread.id %}" class="text-decoration-none">{{ thread.title }}</a>
+                                            </h3>
                                             <p class="thread-content">{{ thread.content|truncatewords:30 }}<p>
                                             <p class="thread-meta">Started by: {{ thread.created_by.username }} on {{ thread.created_at }}</p>
                                             <div class="d-flex justify-content-between">
