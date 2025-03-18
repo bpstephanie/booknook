@@ -771,6 +771,12 @@ footer hr {
     right: 10px;
 }
 
+/* ---------------------------------------- Product Managment */
+.management-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
 /* ---------------------------------------- Allauth Form Formatting */
 allauth-form-inner-content p {
     margin-top: 1.5rem;

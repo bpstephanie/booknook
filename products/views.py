@@ -6,7 +6,7 @@ from .models import (
     Product, Book, Accessory, Category, Genre, Review, ReviewComment
 )
 from wishlist.models import Wishlist
-from .forms import ReviewForm, ReviewCommentForm
+from .forms import ReviewForm, ReviewCommentForm, BookForm
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.core.paginator import Paginator
@@ -328,3 +328,14 @@ def delete_comment(request, comment_id):
     return HttpResponseRedirect(
         reverse('product_detail', args=[comment.review.product.id])
     )
+
+
+def add_product(request):
+    """ Add a product to the store """
+    book_form = BookForm()
+    template = 'products/add_product.html'
+    context = {
+        'book_form': book_form,
+    }
+
+    return render(request, template, context)

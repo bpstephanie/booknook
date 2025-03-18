@@ -13,6 +13,7 @@ class ProductAdmin(admin.ModelAdmin):
             'created_at',
             'updated_at'
         )
+    prepopulated_fields = {'slug': ('name',)}
 
 
 class GenreAdmin(admin.ModelAdmin):
@@ -44,6 +45,7 @@ class BookAdmin(admin.ModelAdmin):
         'rating',
         'image',
     )
+    prepopulated_fields = {'slug': ('name',)}
 
     ordering = ('name', 'author', 'genre', )
 
@@ -59,6 +61,7 @@ class AccessoryAdmin(admin.ModelAdmin):
     )
 
     ordering = ('name', 'category', 'sku',)
+    prepopulated_fields = {'slug': ('name',)}
 
 
 admin.site.register(Genre, GenreAdmin)

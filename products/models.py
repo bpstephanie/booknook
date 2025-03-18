@@ -14,7 +14,11 @@ import uuid
 # Create your models here.
 class Product(models.Model):
     name = models.CharField(max_length=255)
-    friendly_name = models.CharField(max_length=255, blank=True, null=True)
+    friendly_name = models.CharField(
+        max_length=255,
+        null=True,
+        blank=True,
+        )
     slug = models.SlugField(max_length=255, unique=True, blank=True)
     description = models.TextField()
     price = models.DecimalField(
@@ -56,6 +60,9 @@ class Product(models.Model):
             self.content_type = ContentType.objects.get_for_model(self)
         self.object_id = self.pk
 
+        if not self.friendly_name:
+            self.friendly_name = self.name.replace('_', ' ').title()
+
         # Set default meta_title and meta_description if not provided
         if not self.meta_title:
             self.meta_title = f'{self.friendly_name} - Buy Now at BookNook'
@@ -83,7 +90,7 @@ class Product(models.Model):
 class Genre(models.Model):
     genre_id = models.AutoField(primary_key=True)  # Explicit id field
     name = models.CharField(max_length=100)
-    friendly_name = models.CharField(max_length=255, null=True, blank=True)
+    friendly_name = models.CharField(max_length=255, null=True, blank=True,)
     parent_genre = models.ForeignKey(
         'self', null=True, blank=True, on_delete=models.SET_NULL,
         related_name='subgenres'
@@ -111,6 +118,12 @@ class Book(Product):
             )
         ]
     )
+
+    def save(self, *args, **kwargs):
+        if not self.friendly_name:
+            # Replace underscores with spaces and capitalize the first letter of each word
+            self.friendly_name = self.name.replace('_', ' ').title()
+        super(Genre, self).save(*args, **kwargs)
 
     def __str__(self):
         return f"{self.friendly_name or self.name} by {self.author}"
