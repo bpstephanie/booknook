@@ -65,6 +65,11 @@ def update_delivery_details(request):
             messages.success(request, 'Delivery details updated successfully')
             return redirect(
                 resolve_url('profile') + '?section=deliveryDetails')
+        else:
+            messages.error(
+                request, 'Update failed. Please ensure the form is valid.')
+    else:
+        form = DeliveryDetailsForm()
     return redirect('profile')
 
 
@@ -78,6 +83,11 @@ def update_personal_info(request):
             form.save()
             messages.success(request, 'Personal info updated successfully')
             return redirect(resolve_url('profile') + '?section=personalInfo')
+        else:
+            messages.error(
+                request, 'Update failed. Please ensure the form is valid.')
+    else:
+        form = PersonalInfoForm()
     return redirect('profile')
 
 
@@ -147,6 +157,9 @@ def edit_thread(request, thread_id):
             messages.success(request, 'Thread updated successfully!')
             return redirect(
                 resolve_url('profile') + '?section=forumInteraction')
+        else:
+            messages.error(
+                request, 'Updated failed. Please ensure the form is valid.')
     else:
         form = ThreadForm(instance=thread)
 

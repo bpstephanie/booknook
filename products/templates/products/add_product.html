@@ -26,8 +26,11 @@
                 <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('addAccessory')">Add Accessory</button>
             </div>
             <div class="col-8">
+                <div class="text-center">
+                    <h2>Add a Book</h2>
+                </div>
                 <div id="addBook" class="content-section" style="display: none;">
-                   <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                   <form method="POST" action="{% url 'add_book' %}" class="form mb-2" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ book_form|crispy }}
                         <div class="text-right">

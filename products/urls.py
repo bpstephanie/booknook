@@ -42,9 +42,10 @@ urlpatterns = [
         views.delete_comment,
         name='delete_comment'
     ),
+    path('add/', views.add_product, name='add_product'),
     path(
-        'add/',
-        views.add_product,
-        name='add_product'
+        'add/add-book/',
+        views.add_book,
+        name='add_book'
     ),
 ]

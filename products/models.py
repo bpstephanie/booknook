@@ -96,6 +96,13 @@ class Genre(models.Model):
         related_name='subgenres'
     )
 
+    def save(self, *args, **kwargs):
+        if not self.friendly_name:
+            # Replace underscores with spaces
+            # and capitalize the first letter of each word
+            self.friendly_name = self.name.replace('_', ' ').title()
+        super(Genre, self).save(*args, **kwargs)
+
     def __str__(self):
         return self.friendly_name if self.friendly_name else self.name
 
@@ -118,12 +125,6 @@ class Book(Product):
             )
         ]
     )
-
-    def save(self, *args, **kwargs):
-        if not self.friendly_name:
-            # Replace underscores with spaces and capitalize the first letter of each word
-            self.friendly_name = self.name.replace('_', ' ').title()
-        super(Genre, self).save(*args, **kwargs)
 
     def __str__(self):
         return f"{self.friendly_name or self.name} by {self.author}"

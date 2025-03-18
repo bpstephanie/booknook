@@ -1,5 +1,5 @@
 from django.shortcuts import (
-    render, redirect, reverse, get_object_or_404
+    render, redirect, reverse, get_object_or_404, resolve_url
 )
 from django.contrib.auth.decorators import login_required
 from .models import (
@@ -331,11 +331,33 @@ def delete_comment(request, comment_id):
 
 
 def add_product(request):
-    """ Add a product to the store """
+    """ Displays product management page """
     book_form = BookForm()
+
+    section = request.GET.get('section', '')
+
     template = 'products/add_product.html'
     context = {
         'book_form': book_form,
+        'section': section,
     }
-
     return render(request, template, context)
+
+
+def add_book(request):
+    """ Add a book to the store """
+    if request.method == 'POST':
+        form = BookForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added book!')
+            return redirect(
+                resolve_url('add_product') + '?section=addBook')
+        else:
+            messages.error(
+                request, (
+                    'Failed to add book. Please ensure the form is valid.'
+                ))
+    else:
+        form = BookForm()
+    return redirect('add_product')
