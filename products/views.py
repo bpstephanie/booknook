@@ -330,14 +330,13 @@ def delete_comment(request, comment_id):
     )
 
 
-def add_product(request):
+def product_management(request):
     """ Displays product management page """
     book_form = BookForm()
     accessory_form = AccessoryForm()
-
     section = request.GET.get('section', '')
 
-    template = 'products/add_product.html'
+    template = 'products/product_management.html'
     context = {
         'book_form': book_form,
         'accessory_form': accessory_form,
@@ -354,7 +353,7 @@ def add_book(request):
             form.save()
             messages.success(request, 'Successfully added book!')
             return redirect(
-                resolve_url('add_product') + '?section=addBook')
+                resolve_url('product_management') + '?section=addBook')
         else:
             messages.error(
                 request, (
@@ -362,7 +361,7 @@ def add_book(request):
                 ))
     else:
         form = BookForm()
-    return redirect('add_product')
+    return redirect('product_management')
 
 
 def add_accessory(request):
@@ -373,7 +372,7 @@ def add_accessory(request):
             form.save()
             messages.success(request, 'Successfully added accessory!')
             return redirect(
-                resolve_url('add_product') + '?section=addAccessory')
+                resolve_url('product_management') + '?section=addAccessory')
         else:
             messages.error(
                 request, (
@@ -381,4 +380,37 @@ def add_accessory(request):
                 ))
     else:
         form = AccessoryForm()
-    return redirect('add_product')
+    return redirect('product_management')
+
+
+def edit_book(request, book_id):
+    """ Edit a book in the store """
+    book = get_object_or_404(Book, pk=book_id)
+
+    if request.method == 'POST':
+        form = BookForm(request.POST, request.FILES, instance=book)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request, f'Successfully updated {book.friendly_name}!')
+            return redirect('product_detail', product_id=book.id)
+        else:
+            messages.error(
+                request,
+                (
+                    f'Failed to update {book.friendly_name}. '
+                    'Please ensure the form is valid.'
+                ))
+    else:
+        form = BookForm(instance=book)
+        messages.info(request, f'You are editing {book.friendly_name}')
+
+    book_form = form
+
+    template = 'products/edit_book.html'
+    context = {
+        'book_form': book_form,
+        'book': book,
+    }
+
+    return render(request, template, context)

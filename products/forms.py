@@ -8,7 +8,7 @@ class BookForm(forms.ModelForm):
         model = Book
         fields = [
             'name', 'friendly_name', 'author', 'description', 'price',
-            'rating', 'image', 'img_url', 'isbn'
+            'rating', 'image', 'img_url', 'isbn', 'genre'
         ]
 
     def __init__(self, *args, **kwargs):
@@ -28,12 +28,12 @@ class AccessoryForm(forms.ModelForm):
         model = Accessory
         fields = [
             'name', 'friendly_name', 'description', 'price',
-            'rating', 'image', 'img_url', 'sku'
+            'rating', 'image', 'img_url', 'sku', 'category'
         ]
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['categories'] = forms.ModelChoiceField(
+        self.fields['category'] = forms.ModelChoiceField(
             queryset=Category.objects.all(),
             empty_label="Select Category",
             widget=forms.Select(attrs={'class': 'border-navy rounded-0'})

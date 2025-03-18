@@ -51,10 +51,12 @@ class Product(models.Model):
         # Automatically set content_type and object_id
         if not self.slug:
             self.slug = original_slug = slugify(self.name)
-        for i in range(1, 1000):
-            if not Product.objects.filter(slug=self.slug).exists():
-                break
-            self.slug = f'{original_slug}-{i}'
+            for i in range(1, 1000):
+                if not Product.objects.filter(slug=self.slug).exists():
+                    break
+                self.slug = f'{original_slug}-{i}'
+        else:
+            original_slug = self.slug.split('-')[0]
 
         if not self.content_type:
             self.content_type = ContentType.objects.get_for_model(self)
