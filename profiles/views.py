@@ -5,7 +5,6 @@ from django.contrib import messages
 from .models import UserProfile, PDF
 from checkout.models import Order
 from wishlist.models import Wishlist, WishlistItem
-from bag.models import SavedItem
 from forum.models import Category, Thread, Post
 
 from bag.contexts import bag_contents
@@ -32,7 +31,7 @@ def profile(request):
 
     # Filter categories
     categories_with_threads = [
-        category for category in categories 
+        category for category in categories
         if threads.filter(category=category).exists()
     ]
 
@@ -164,7 +163,9 @@ def delete_thread(request, thread_id):
     thread = get_object_or_404(Thread, id=thread_id)
 
     if request.user != thread.created_by:
-        messages.error(request, 'You are not authorized to delete this thread.')
+        messages.error(
+            request,
+            'You are not authorized to delete this thread.')
         return redirect('profile')
 
     thread.is_deleted = True

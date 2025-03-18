@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404, resolve_url
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import Category, Thread, Post
@@ -122,7 +122,9 @@ def delete_thread(request, thread_id):
     thread = get_object_or_404(Thread, id=thread_id)
 
     if request.user != thread.created_by:
-        messages.error(request, 'You are not authorized to delete this thread.')
+        messages.error(
+            request,
+            'You are not authorized to delete this thread.')
         return redirect('forum')
 
     thread.is_deleted = True
