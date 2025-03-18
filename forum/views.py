@@ -93,7 +93,7 @@ def edit_thread(request, thread_id):
 
     if request.user != thread.created_by:
         messages.error(request, 'You are not authorized to edit this thread.')
-        return redirect('profile')
+        return redirect('forum')
 
     if request.method == "POST":
         form = ThreadForm(request.POST, instance=thread)
@@ -112,3 +112,17 @@ def edit_thread(request, thread_id):
         'thread': thread,
     }
     return render(request, template, context)
+
+
+@login_required
+def delete_thread(request, thread_id):
+    thread = get_object_or_404(Thread, id=thread_id)
+
+    if request.user != thread.created_by:
+        messages.error(request, 'You are not authorized to delete this thread.')
+        return redirect('forum')
+
+    thread.is_deleted = True
+    thread.save()
+    messages.success(request, 'Thread deleted successfully!')
+    return redirect('forum')

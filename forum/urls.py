@@ -16,5 +16,10 @@ urlpatterns = [
         views.create_post,
         name='create_post'
     ),
-    path('thread/<int:thread_id>/edit/', views.edit_thread, name='edit_thread')
+    path(
+        'thread/<int:thread_id>/edit/',
+        views.edit_thread, name='edit_thread'),
+    path(
+        'thread/<int:thread_id>/delete/',
+        views.delete_thread, name='delete_thread'),
 ]
