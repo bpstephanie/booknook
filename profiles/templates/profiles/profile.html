@@ -183,11 +183,9 @@
                     {% for category in categories %}
                         <div class="category-section">
                             <h2 class="category-header">{{ category.name }}</h2>
-                            {% if threads %}
-                                <div class="threads-container d-flex flex-wrap">
+                            <div class="threads-container d-flex flex-wrap">
                                 {% for thread in threads %}
-                                {% if thread.category.id == category.id %}
-                                    {% if thread.is_deleted == False %}
+                                    {% if thread.category.id == category.id %}
                                         <div class="thread-card m-2">
                                             <h3 class="thread-title">{{ thread.title }}</h3>
                                             <p class="thread-content">{{ thread.content|truncatewords:30 }}<p>
@@ -198,13 +196,9 @@
                                             </div>
                                         </div>
                                     {% endif %}
-                                {% endif %}
                                 {% endfor %}
-                                </div>   
-                            {% else %}
-                            <p>No threads available in this category</p>
-                            {% endif %}
-                        </div>
+                            </div>
+                        </div> 
                     {% endfor %}
                 </div>
                 <div id="rewardsBenefits" class="content-section" style="display: none;">

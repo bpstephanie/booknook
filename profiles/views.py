@@ -27,8 +27,14 @@ def profile(request):
     orders = profile.orders.all()
     wishlists = Wishlist.objects.filter(user=request.user)
     saved_items = bag_contents(request)['saved_items']
-    threads = Thread.objects.filter(created_by=request.user)
+    threads = Thread.objects.filter(created_by=request.user, is_deleted=False)
     categories = Category.objects.all()
+
+    # Filter categories
+    categories_with_threads = [
+        category for category in categories 
+        if threads.filter(category=category).exists()
+    ]
 
     section = request.GET.get('section', 'deliveryDetails')
 
@@ -41,7 +47,7 @@ def profile(request):
         'wishlists': wishlists,
         'saved_items': saved_items,
         'threads': threads,
-        'categories': categories,
+        'categories': categories_with_threads,
         'section': section,
         'on_profile_page': True,
     }
