@@ -8,7 +8,7 @@ from .forms import ThreadForm, CategoryForm, PostForm
 # Create your views here.
 def forum(request):
     categories = Category.objects.all()
-    threads = Thread.objects.all()
+    threads = Thread.objects.filter(is_deleted=False)
 
     template = 'forum/forum.html'
     context = {
@@ -100,6 +100,8 @@ def edit_thread(request, thread_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Thread updated successfully!')
+            if 'next' in request.POST:
+                return redirect(request.POST['next'])
             return redirect(
                 'post_list',
                 category_id=thread.category.id, thread_id=thread.id)
@@ -110,6 +112,7 @@ def edit_thread(request, thread_id):
     context = {
         'form': form,
         'thread': thread,
+        'next': request.GET.get('next', '')
     }
     return render(request, template, context)
 

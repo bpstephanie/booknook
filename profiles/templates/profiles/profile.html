@@ -185,16 +185,18 @@
                             <h2 class="category-header">{{ category.name }}</h2>
                             {% if threads %}
                                 <div class="threads-container d-flex flex-wrap">
-                                    {% for thread in threads %}
+                                {% for thread in threads %}
                                     {% if thread.category.id == category.id %}
-                                        <div class="thread-card m-2">
-                                            <h3 class="thread-title">{{ thread.title }}</h3>
-                                            <p class="thread-content">{{ thread.content|truncatewords:30 }}<p>
-                                            <p class="thread-meta">Started by: {{ thread.created_by.username }} on {{ thread.created_at }}</p>
-                                            <div class="d-flex justify-content-center">
-                                                <button type="button" class="btn btn-green rounded-0">Edit Thread</button>
+                                        {% if thread.is_deleted == False %}
+                                            <div class="thread-card m-2">
+                                                <h3 class="thread-title">{{ thread.title }}</h3>
+                                                <p class="thread-content">{{ thread.content|truncatewords:30 }}<p>
+                                                <p class="thread-meta">Started by: {{ thread.created_by.username }} on {{ thread.created_at }}</p>
+                                                <div class="d-flex justify-content-center">
+                                                    <a href="{% url 'edit_thread' thread.id %}?next={% url 'profile' %}" class="btn btn-green rounded-0">Edit Thread</a>
+                                                </div>
                                             </div>
-                                        </div>
+                                        {% endif %}
                                     {% endif %}
                                 {% endfor %}
                                 </div>   
