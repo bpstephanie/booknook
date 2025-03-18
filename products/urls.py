@@ -50,4 +50,7 @@ urlpatterns = [
     path(
         'management/edit/<int:product_id>/',
         views.edit_product, name='edit_product'),
+    path(
+        'management/delete/<int:product_id>/',
+        views.delete_product, name='delete_product'),
 ]

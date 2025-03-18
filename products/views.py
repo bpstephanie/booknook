@@ -1,5 +1,5 @@
 from django.shortcuts import (
-    render, redirect, reverse, get_object_or_404, resolve_url
+    render, redirect, reverse, get_object_or_404
 )
 from django.contrib.auth.decorators import login_required
 from .models import (
@@ -350,10 +350,10 @@ def add_book(request):
     if request.method == 'POST':
         form = BookForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully added book!')
-            return redirect(
-                resolve_url('product_management') + '?section=addBook')
+            book = form.save()
+            messages.success(
+                request, f'Successfully added {book.friendly_name}!')
+            return redirect(reverse('product_detail', args=[book.id]))
         else:
             messages.error(
                 request, (
@@ -369,10 +369,10 @@ def add_accessory(request):
     if request.method == 'POST':
         form = AccessoryForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully added accessory!')
-            return redirect(
-                resolve_url('product_management') + '?section=addAccessory')
+            accessory = form.save()
+            messages.success(
+                request, f'Successfully added {accessory.friendly_name}!')
+            return redirect(reverse('product_detail', args=[accessory.id]))
         else:
             messages.error(
                 request, (
@@ -421,3 +421,11 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+
+
+def delete_product(request, product_id):
+    """ Delete a product from the store """
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, f'{product.friendly_name} deleted!')
+    return redirect(reverse('products'))
