@@ -13,12 +13,29 @@ class BookForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        genres = Genre.objects.all()
-        friendly_names = [(g.genre_id, str(g)) for g in genres]
-
         self.fields['genre'] = forms.ModelChoiceField(
             queryset=Genre.objects.all(),
             empty_label="Select Genre",
+            widget=forms.Select(attrs={'class': 'border-navy rounded-0'})
+        )
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'border-navy rounded-0'
+
+
+class AccessoryForm(forms.ModelForm):
+
+    class Meta:
+        model = Accessory
+        fields = [
+            'name', 'friendly_name', 'description', 'price',
+            'rating', 'image', 'img_url', 'sku'
+        ]
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['categories'] = forms.ModelChoiceField(
+            queryset=Category.objects.all(),
+            empty_label="Select Category",
             widget=forms.Select(attrs={'class': 'border-navy rounded-0'})
         )
         for field_name, field in self.fields.items():

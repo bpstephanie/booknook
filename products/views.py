@@ -6,7 +6,7 @@ from .models import (
     Product, Book, Accessory, Category, Genre, Review, ReviewComment
 )
 from wishlist.models import Wishlist
-from .forms import ReviewForm, ReviewCommentForm, BookForm
+from .forms import ReviewForm, ReviewCommentForm, BookForm, AccessoryForm
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.core.paginator import Paginator
@@ -333,12 +333,14 @@ def delete_comment(request, comment_id):
 def add_product(request):
     """ Displays product management page """
     book_form = BookForm()
+    accessory_form = AccessoryForm()
 
     section = request.GET.get('section', '')
 
     template = 'products/add_product.html'
     context = {
         'book_form': book_form,
+        'accessory_form': accessory_form,
         'section': section,
     }
     return render(request, template, context)
@@ -360,4 +362,23 @@ def add_book(request):
                 ))
     else:
         form = BookForm()
+    return redirect('add_product')
+
+
+def add_accessory(request):
+    """ Add an accessory to the store """
+    if request.method == 'POST':
+        form = AccessoryForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added accessory!')
+            return redirect(
+                resolve_url('add_product') + '?section=addAccessory')
+        else:
+            messages.error(
+                request, (
+                    'Failed to add accessory. Please ensure the form is valid.'
+                ))
+    else:
+        form = AccessoryForm()
     return redirect('add_product')

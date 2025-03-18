@@ -26,21 +26,31 @@
                 <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('addAccessory')">Add Accessory</button>
             </div>
             <div class="col-8">
-                <div class="text-center">
-                    <h2>Add a Book</h2>
-                </div>
                 <div id="addBook" class="content-section" style="display: none;">
-                   <form method="POST" action="{% url 'add_book' %}" class="form mb-2" enctype="multipart/form-data">
+                    <div class="text-center">
+                        <h2>Add a Book</h2>
+                    </div>
+                    <form method="POST" action="{% url 'add_book' %}" class="form mb-2" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ book_form|crispy }}
                         <div class="text-right">
                             <a href="{% url 'products' %}" class="btn btn-outline-navy rounded-0">Cancel</a>
                             <button class="btn btn-navy rounded-0" type="submit">Add Product</button>
                         </div> 
-                   </form>
+                    </form>
                 </div>
                 <div id="addAccessory" class="content-section" style="display: none;">
-                    <h2>test2</h2>
+                    <div class="text-center">
+                        <h2>Add an Accessory</h2>
+                    </div>
+                    <form method="POST" action="{% url 'add_accessory' %}" class="form mb-2" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ accessory_form|crispy }}
+                        <div class="text-right">
+                            <a href="{% url 'products' %}" class="btn btn-outline-navy rounded-0">Cancel</a>
+                            <button class="btn btn-navy rounded-0" type="submit">Add Product</button>
+                        </div> 
+                    </form>
                     
                 </div>
                 
