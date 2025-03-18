@@ -144,10 +144,24 @@ def edit_thread(request, thread_id):
                 resolve_url('profile') + '?section=forumInteraction')
     else:
         form = ThreadForm(instance=thread)
-    
+
     template = 'forum/edit_thread.html'
     context = {
         'form': form,
         'thread': thread,
     }
     return render(request, template, context)
+
+
+@login_required
+def delete_thread(request, thread_id):
+    thread = get_object_or_404(Thread, id=thread_id)
+
+    if request.user != thread.created_by:
+        messages.error(request, 'You are not authorized to delete this thread.')
+        return redirect('profile')
+
+    thread.is_deleted = True
+    thread.save()
+    messages.success(request, 'Thread deleted successfully!')
+    return redirect(resolve_url('profile') + '?section=forumInteraction')

@@ -186,18 +186,19 @@
                             {% if threads %}
                                 <div class="threads-container d-flex flex-wrap">
                                 {% for thread in threads %}
-                                    {% if thread.category.id == category.id %}
-                                        {% if thread.is_deleted == False %}
-                                            <div class="thread-card m-2">
-                                                <h3 class="thread-title">{{ thread.title }}</h3>
-                                                <p class="thread-content">{{ thread.content|truncatewords:30 }}<p>
-                                                <p class="thread-meta">Started by: {{ thread.created_by.username }} on {{ thread.created_at }}</p>
-                                                <div class="d-flex justify-content-center">
-                                                    <a href="{% url 'edit_thread' thread.id %}?next={% url 'profile' %}" class="btn btn-green rounded-0">Edit Thread</a>
-                                                </div>
+                                {% if thread.category.id == category.id %}
+                                    {% if thread.is_deleted == False %}
+                                        <div class="thread-card m-2">
+                                            <h3 class="thread-title">{{ thread.title }}</h3>
+                                            <p class="thread-content">{{ thread.content|truncatewords:30 }}<p>
+                                            <p class="thread-meta">Started by: {{ thread.created_by.username }} on {{ thread.created_at }}</p>
+                                            <div class="d-flex justify-content-between">
+                                                <a href="{% url 'edit_thread' thread.id %}?next={% url 'profile' %}" class="btn btn-success btn-sm rounded-0">Edit Thread</a>
+                                                <a href="#" class="btn btn-danger btn-sm rounded-0" data-toggle="modal" data-target="#deleteModal" data-thread-id="{{ thread.id }}">Delete</a>
                                             </div>
-                                        {% endif %}
+                                        </div>
                                     {% endif %}
+                                {% endif %}
                                 {% endfor %}
                                 </div>   
                             {% else %}
@@ -248,8 +249,12 @@
 
         // Show the section based on URL parameter
         document.addEventListener('DOMContentLoaded', function() {
-            var section = "{{ section }}"
-            showContent(section);
+            var section = "{{ request.GET.section }}";
+            if (section) {
+                showContent(section);
+            } else {
+                showContent('deliveryDetails'); // Default section
+            }
         });
     </script>
     <script type="text/javascript">
@@ -261,6 +266,7 @@
             });
         });
     </script>
+    <!-- Confirm Wishlist Item Deletion -->
     <script type="text/javascript">
         $(document).ready(function() {
         $('#confirmDeleteModal').on('show.bs.modal', function(event) {
@@ -270,6 +276,7 @@
         });
     });
     </script>
+    <!-- Confirm Wishlist Deletion -->
     <script type="text/javascript">
         $(document).ready(function() {
             $('#confirmDeleteWishlistModal').on('show.bs.modal', function(event) {
@@ -279,6 +286,16 @@
                 $('#confirmDeleteWishlistForm').attr('action', "{% url 'remove_wishlist' 0 %}".replace('0', wishlistId));
                 console.log('Form Action:', $('#confirmDeleteWishlistForm').attr('action')); // Debugging statement
             });
+        });
+    </script>
+    <!-- Confirm Thread Deletion -->
+    <script type="text/javascript">
+        $('#deleteModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget); // Button that triggered the modal
+            var threadId = button.data('thread-id'); // Extract info from data-* attributes
+            var modal = $(this);
+            var deleteUrl = "{% url 'delete_thread' 0 %}".replace('0', threadId);
+            modal.find('#confirmDeleteButton').attr('href', deleteUrl);
         });
     </script>
 {% endblock %}

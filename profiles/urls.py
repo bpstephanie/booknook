@@ -18,5 +18,8 @@ urlpatterns = [
      path(
          'remove_wishlist/<int:wishlist_id>/',
          views.remove_wishlist, name='remove_wishlist'),
+     path(
+        'thread/<int:thread_id>/delete/',
+        views.delete_thread, name='delete_thread'),
      path('downloads/', views.downloads, name='downloads'),
      ]
