@@ -47,5 +47,7 @@ urlpatterns = [
     path(
         'management/add-accessory/',
         views.add_accessory, name='add_accessory'),
-    path('management/edit/<int:book_id>/', views.edit_book, name='edit_book'),
+    path(
+        'management/edit/<int:product_id>/',
+        views.edit_product, name='edit_product'),
 ]

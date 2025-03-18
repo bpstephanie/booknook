@@ -383,34 +383,41 @@ def add_accessory(request):
     return redirect('product_management')
 
 
-def edit_book(request, book_id):
-    """ Edit a book in the store """
-    book = get_object_or_404(Book, pk=book_id)
+def edit_product(request, product_id):
+    """ Edit a product in the store """
+    product = get_object_or_404(Product, pk=product_id)
+
+    if hasattr(product, 'book'):
+        form_class = BookForm
+        template = 'products/edit_book.html'
+        product_type = 'Book'
+    elif hasattr(product, 'accessory'):
+        form_class = AccessoryForm
+        template = 'products/edit_accessory.html'
+        product_type = 'Accessory'
+    else:
+        messages.error(request, 'Invalid product type.')
+        return redirect('product_management')
 
     if request.method == 'POST':
-        form = BookForm(request.POST, request.FILES, instance=book)
+        form = form_class(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
             messages.success(
-                request, f'Successfully updated {book.friendly_name}!')
-            return redirect('product_detail', product_id=book.id)
+                request, f'Successfully updated {product.friendly_name}!')
+            return redirect('product_detail', product_id=product.id)
         else:
             messages.error(
                 request,
-                (
-                    f'Failed to update {book.friendly_name}. '
-                    'Please ensure the form is valid.'
-                ))
+                'Failed to update product. Please ensure the form is valid.')
     else:
-        form = BookForm(instance=book)
-        messages.info(request, f'You are editing {book.friendly_name}')
+        form = form_class(instance=product)
+        messages.info(request, f'You are editing {product.friendly_name}')
 
-    book_form = form
-
-    template = 'products/edit_book.html'
     context = {
-        'book_form': book_form,
-        'book': book,
+        'form': form,
+        'product': product,
+        'product_type': product_type,
     }
 
     return render(request, template, context)
