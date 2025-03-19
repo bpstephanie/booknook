@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %} 
+{% block extra_title %}- Contact Us
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'info/css/info.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="header-container container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="info-overlay"></div>
+<div class="container mb-5">
+    <div class="text-center">
+        <h1 class="text-cream">Thank you for your enquiry! We will be in touch shortly.</h1>
+    </div>
+    <div class="row">
+        <div class="col-8 text-cream">
+            <h3>
+                Whilst you wait, why not checkout out our shop or forum?
+            </h3>
+            <div class="d-flex justify-content-center my-2">
+                <a href="{% url 'products' %}" class="btn btn-outline-navy m-2 rounded-0">Shop</a>
+                <a href="{% url 'forum' %}" class="btn btn-outline-navy m-2 rounded-0">Forum</a>  
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

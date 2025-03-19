@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %} 
+{% block extra_title %}- Contact Us
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'info/css/info.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="header-container container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="info-overlay"></div>
+    <div class="container mb-5">
+        <div class="text-center">
+            <h1 class="text-cream">Contact Us</h1>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-8 text-cream">
+                <h3>
+                    For any enquiries, please email us at <a href="mailto:info@booknook.com" class="text-decoration-none text-cream">info@booknook.com</a>. 
+                    Alternatively, you can fill in the enquiry form below.
+                </h3>
+                <div>
+                    <form method="POST" action="{% url 'contact' %}">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-outline-navy rounded-0 mb-2">Send</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

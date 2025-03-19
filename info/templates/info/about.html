@@ -3,6 +3,10 @@
 {% block extra_title %}- About Us
 {% endblock %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'info/css/info.css' %}">
+{% endblock %}
+
 {% block page_header %}
     <div class="header-container container">
         <div class="row">
@@ -12,17 +16,17 @@
 {% endblock %}
 
 {% block content %}
-<div class="full-overlay"></div>
+<div class="info-overlay"></div>
 <div class="container mb-5">
     <div class="text-center">
-        <h1>About BookNook</h1>
+        <h1 class="text-cream">About BookNook</h1>
         <hr>
     </div>
     <div class="row">
-        <div class="col-8">
-            <p class="display-5 lora-bold">
+        <div class="col-8 text-cream">
+            <h2 class="lora-bold">
                 Welcome to BookNook! We are so happy to have you here!
-            </p>
+            </h2>
             <p>
                 <span class="lora-bold">How did we start? </span>
                 Well, first of all, we are a book-loving bunch who realised during the 
@@ -57,8 +61,8 @@
                 discover, and celebrate the wonderful world of books together!
             </p>
             <div class="d-flex justify-content-center">
-                <a href="{% url 'products' %}" class="btn btn-navy rounded-0 m-1">Shop</a>
-                <a href="{% url 'account_login' %}" class="btn btn-navy rounded-0 m-1">Login</a>
+                <a href="{% url 'products' %}" class="btn btn-outline-navy rounded-0 m-1">Shop</a>
+                <a href="{% url 'account_login' %}" class="btn btn-outline-navy rounded-0 m-1">Login</a>
             </div>
 
         </div>
