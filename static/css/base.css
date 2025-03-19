@@ -199,15 +199,15 @@ a {
 }
 
 .btn-blue {
-    color: #007bff;
-    border: 1px solid #007bff;
+    color: #0f5aac;
+    border: 1px solid #0f5aac;
     background-color: #fefefe;
 }
 
 .btn-blue:hover,
 .btn-blue:active,
 .btn-blue:focus {
-    background-color: #007bff;
+    background-color: #0f5aac;
     color: #fefefe !important;
 }
 
@@ -573,7 +573,7 @@ a {
 .product-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .product-details-container {
@@ -624,6 +624,22 @@ input[name='q']::placeholder {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+/* ---------------------------------------- Genre and Category Pages */
+.page-link {
+    background-color: #0b254b;
+    color: #fefefe;
+    border: 1px solid #fefefe;
+    border-radius: 0 !important;
+}
+
+.page-link:hover,
+.page-item.active .page-link {
+    background-color: #fefefe;
+    color: #0b254b;
+    border: 1px solid #0b254b;
+    border-radius: 0;   
 }
 
 /* ---------------------------------------- Footer */
@@ -745,6 +761,7 @@ footer hr {
     word-wrap: break-word;
     font-size: 1rem;
     line-height: 1.2;
+    font-family: 'Lora', serif;
 }
 
 .arrow {

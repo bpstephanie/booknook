@@ -17,7 +17,7 @@
     <div class="products-container">
         <div class="col text-center mt-3 text-navy">
             <hr>
-            <h2 class="text-uppercase">Book Genres</h2>
+            <h2 class="text-uppercase display-4">Book Genres</h2>
             <hr>
             {% include 'products/includes/browse_sort_buttons.html' with show_filters=False product_count=False %}
         </div>
@@ -25,7 +25,7 @@
             {% with books=genre.sorted_books %}
             {% if books %}
                 <div class="genre-section">
-                    <a class="" href="{% url 'all_books' %}?genre={{ genre.friendly_name }}">
+                    <a class="text-decoration-none" href="{% url 'all_books' %}?genre={{ genre.friendly_name }}">
                         <h3 class="genre-title text-navy">{{ genre.friendly_name}} ({{ genre.book_count }})</h3>
                     </a>
                     <div class="genre-books-wrapper row">
@@ -42,7 +42,7 @@
                                         {% endif %}
                                     </a>
                                     <div class="card-body bg-cream pb-0">
-                                        <p class="mb-0 book-title">{{ book.friendly_name }}</p>
+                                        <p class="mb-0 book-title h6">{{ book.friendly_name }}</p>
                                     </div>
                                     <div class="card-footer bg-cream pt-0 border-0 text-left">
                                         <div class="row">

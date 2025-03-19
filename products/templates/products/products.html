@@ -18,15 +18,14 @@
             <div class="row">
                 <div class="col text-center mt-3 text-navy">
                     <hr>
-                    <h2 class="text-uppercase">Products</h2>
+                    <h2 class="text-uppercase display-4">Products</h2>
                     <hr>
                     {% include 'products/includes/browse_sort_buttons.html' with show_filters=True product_count=True %}
                 </div>
             </div>
             <div class="row">
-                <div class="product-container col-10 offset-1">
+                <div class="product-container col-10">
                     <div class="row mt-1 mb-2">
-                    <div class="row">
                         {% for product in products %}
                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                                 <div class="card h-100 border-0">
@@ -39,10 +38,10 @@
                                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.friendly_name }}">
                                     </a>
                                     {% endif %}
-                                    <div class="card-body pl-0 bg-cream pb-0">
-                                        <h5 class="mb-0 text-left">{{ product.friendly_name }}</h5>
+                                    <div class="card-body pl-2 ml-2 bg-cream pb-0">
+                                        <p class="mb-0 text-left lora h6">{{ product.friendly_name }}</hp>
                                     </div>
-                                    <div class="card-footer bg-cream pl-0 border-0 text-left">
+                                    <div class="card-footer bg-cream pl-2 ml-2 border-0 text-left">
                                         <div class="row">
                                             <div class="col">
                                                 <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
@@ -55,15 +54,21 @@
                                                 {% if product.book.genre %}
                                                     <p class="small mt-1 mb-0">
                                                         <a class="text-muted" href="{% url 'all_books' %}?genre={{ product.book.genre }}">
-                                                            <i class="fas fa-tag mr-1">{{ product.book.genre }}</i>
+                                                            <i class="fas fa-tag mr-1"><span class="lora ml-1">{{ product.book.genre }}</span></i>
                                                         </a>
                                                     </p>
                                                 {% elif product.accessory.category %}
                                                 <p class="small mt-1 mb-0">
                                                     <a class="text-muted" href="{% url 'all_accessories' %}?category={{ product.accessory.category }}">
-                                                        <i class="fas fa-tag mr-1">{{ product.accessory.category }}</i>
+                                                        <i class="fas fa-tag mr-1"><span class="lora ml-1">{{ product.accessory.category }}</span></i>
                                                     </a>
                                                 </p>
+                                                {% endif %}
+                                                {% if request.user.is_superuser %}
+                                                    <p class="ml-1 small">
+                                                        <a class="text-success" href="{% url 'edit_product' product.id %}">Edit</a>
+                                                        <a class="text-danger" href="#" data-toggle="modal" data-target="#deleteModal" data-url="{% url 'delete_product' product.id %}">Delete</a>
+                                                    </p>
                                                 {% endif %}
                                             </div>
                                         </div>
@@ -142,6 +147,7 @@
             <i class="fas fa-arrow-up text-navy mx-auto my-auto"></i>
         </a>	
     </div>
+    {% include 'products/includes/confirm_delete_modal.html' %}
 {% endblock %}
 {% block postloadjs %}
     {{ block.super}}
@@ -159,13 +165,11 @@
             });
         });
     </script>
-    {{ block.super }}
     <script type="text/javascript">
         $('.st-link').click(function(e) {
             window.scrollTo(0,0)
         })
     </script>
-
     <script type="text/javascript">
         $('#sort-selector').change(function() {
             var selector = $(this);
@@ -187,5 +191,13 @@
                 window.location.replace(currentUrl);
             }
         })
-    </script>    
+    </script>  
+    <script type="text/javascript">
+        $('#deleteModal').on('show.bs.modal', function (event) {
+            var link = $(event.relatedTarget);
+            var url = link.data('url');
+            var modal = $(this);
+            modal.find('#confirmDelete').attr('href', url);
+        });
+    </script>  
 {% endblock %}
