@@ -87,6 +87,7 @@ h1, h2, h3, h4, h5, h6, .lora {
     font-size: small;
 }
 
+/* ---------------------------------------- Icons */
 /* from Bulma */
 .icon {
     align-items: center;
@@ -95,6 +96,22 @@ h1, h2, h3, h4, h5, h6, .lora {
     height: 1.5rem;
     width: 1.5rem;
 }
+
+.heart-icon {
+    color: #f34dcf;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 1px solid #f34dcf;
+    border-bottom: 1px solid #f34dcf;
+    padding: 2%;
+}
+
+.heart-icon:hover {
+    color: #fefefe;
+    background-color: #f34dcf;
+}
+
 /* ---------------------------------------- Colours and general styles */
 .pink-link:hover {
     color: #f34dcf;
@@ -183,6 +200,19 @@ a {
 .btn-pink:focus {
     background: #f34dcf;
     color: #fefefe !important;
+}
+
+.btn-outline-pink {
+    color: #fefefe;
+    border: 1px solid #f34dcf;
+    background-color: #f34dcf;
+}
+
+.btn-outline-pink:hover,
+.btn-outline-pink:active,
+.btn-outline-pink:focus {
+    background: #fefefe;
+    color: #f34dcf !important;
 }
 
 .btn-green {
@@ -564,6 +594,7 @@ a {
     padding: 5%;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .image-container img {

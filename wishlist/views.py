@@ -69,3 +69,21 @@ def add_to_wishlist(request, product_id):
         "product": product,
         "user_wishlists": user_wishlists,
     })
+
+
+@login_required
+def remove_from_wishlist(request, product_id):
+    """ A view to remove a product from the wishlist """
+    product = get_object_or_404(Product, pk=product_id)
+    wishlist_item = WishlistItem.objects.filter(
+        wishlist__user=request.user, product=product).first()
+
+    if wishlist_item:
+        wishlist_name = wishlist_item.wishlist.name
+        wishlist_item.delete()
+        messages.success(
+            request,
+            f'{product.friendly_name} removed from your {wishlist_name}')
+    else:
+        messages.error(request, 'Product not found in your wishlist.')
+    return redirect('product_detail', product_id=product_id)

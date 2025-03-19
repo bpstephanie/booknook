@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from .models import (
     Product, Book, Accessory, Category, Genre, Review, ReviewComment
 )
-from wishlist.models import Wishlist
+from wishlist.models import Wishlist, WishlistItem
 from .forms import ReviewForm, ReviewCommentForm, BookForm, AccessoryForm
 from django.contrib import messages
 from django.http import HttpResponseRedirect
@@ -126,6 +126,8 @@ def product_detail(request, product_id):
     user_wishlists = []
     if request.user.is_authenticated:
         user_wishlists = Wishlist.objects.filter(user=request.user)
+        wishlist_item = WishlistItem.objects.filter(
+            wishlist__user=request.user, product=product).first()
 
     if request.method == "POST":
         if 'review_submit' in request.POST:
@@ -147,9 +149,9 @@ def product_detail(request, product_id):
                 comment.save()
                 return redirect('product_detail', product_id=product.id)
 
-        paginator = Paginator(reviews, 10)
-        page_number = request.GET.get('page', 1)
-        reviews = paginator.get_page(page_number)
+    paginator = Paginator(reviews, 10)
+    page_number = request.GET.get('page', 1)
+    reviews = paginator.get_page(page_number)
 
     context = {
         'product': product,
@@ -159,6 +161,7 @@ def product_detail(request, product_id):
         'review_form': review_form,
         'comment_form': comment_form,
         'user_wishlists': user_wishlists,
+        'wishlist_item': wishlist_item,
     }
 
     return render(request, 'products/product_detail.html', context)

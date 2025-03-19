@@ -27,6 +27,9 @@
                             <img class="card-img-top-full img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="No image">
                         </a>
                     {% endif %}
+                    {% if wishlist_item %}
+                        <a href="{% url 'remove_from_wishlist' product.id %}" class="heart-icon h1 text-decoration-none">&#10084;</a>
+                    {% endif %}
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-5">
@@ -92,32 +95,41 @@
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>
-                    {% if user.is_authenticated %}
-                        <button type="button" class="btn-sm btn-pink mt-2 rounded-0" data-toggle="modal" data-target="#wishlistModal">
-                            <i class="fa-regular fa-heart"></i>
-                            Add to Wishlist
-                        </button>
-                        <a class="btn btn-green btn-sm rounded-0" href="{% url 'save_for_later' product.id %}">
-                            <i class="fa-regular fa-bookmark"></i> Save for Later
-                        </a>
-                    {% else %}
-                        <p class="mt-2">Please <a href="{% url 'account_login' %}">log in</a> to add to your wishlist or save for later</p>
-                    {% endif %}
+                    <div class="mt-2 d-flex justify-content-start">
+                        {% if user.is_authenticated %}
+                            {% if wishlist_item %}
+                                <a href="{% url 'remove_from_wishlist' product.id %}" class="btn btn-sm btn-outline-pink rounded-0 mr-1 text-decoration-none">
+                                    <i class="fa-regular fa-heart"></i>
+                                    Remove
+                                </a>
+                            {% else %}
+                                <a  href="#" class="btn btn-sm btn-pink rounded-0 mr-1" data-toggle="modal" data-target="#wishlistModal">
+                                    <i class="fa-regular fa-heart"></i>
+                                    Add to Wishlist
+                                </a>
+                            {% endif %}
+                            <a class="btn btn-green btn-sm rounded-0 text-decoration-none" href="{% url 'save_for_later' product.id %}">
+                                <i class="fa-regular fa-bookmark"></i> Save for Later
+                            </a>
+                        {% else %}
+                            <p class="mt-2">Please <a href="{% url 'account_login' %}">log in</a> to add to your wishlist or save for later</p>
+                        {% endif %}
+                    </div>
                     {% if product.book.genre %}
                         <p class="small mt-1 mb-0">
-                            <a class="text-muted " href="{% url 'all_books' %}?genre={{ product.book.genre.id }}">
+                            <a class="text-muted " href="{% url 'all_books' %}?genre={{ product.book.genre }}">
                                 <i class="fas fa-tag mr-1"><span class="lora ml-1">{{ product.book.genre }}</span></i>
                             </a>
                         </p>
                     {% elif product.accessory.category %}
                     <p class="small mt-1 mb-0">
-                        <a class="text-muted" href="{% url 'all_accessories' %}?category={{ product.accessory.category.id }}">
+                        <a class="text-muted" href="{% url 'all_accessories' %}?category={{ product.accessory.category }}">
                             <i class="fas fa-tag mr-1"><span class="lora ml-1">{{ product.accessory.category }}</span></i>
                         </a>
                     </p>
                     {% endif %}
                     {% if product.book %}
-                        <p class="text-muted">{{ product.book.isbn }}</p>
+                        <p class="text-muted">ISBN: {{ product.book.isbn }}</p>
                     {% endif %} 
                 </div>
             </div>
