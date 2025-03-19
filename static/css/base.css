@@ -882,13 +882,6 @@ allauth-form-inner-content p {
     }
 }
 
-@media (min-width: 992px) {
-    .card {
-        
-
-    }
-}
-
 @media (max-width: 992px) {
     .search-bar-wrapper {
        display: none;
