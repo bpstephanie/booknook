@@ -98,18 +98,19 @@ h1, h2, h3, h4, h5, h6, .lora {
 }
 
 .heart-icon {
-    color: #f34dcf;
+    color: #fefefe;
+    background-color: #f34dcf;
     position: absolute;
     top: 0;
     left: 0;
-    border-right: 1px solid #f34dcf;
-    border-bottom: 1px solid #f34dcf;
     padding: 2%;
 }
 
-.heart-icon:hover {
-    color: #fefefe;
-    background-color: #f34dcf;
+.heart-icon:hover,
+.heart-icon:active {
+    color: #f34dcf;
+    background-color: #fefefe;
+
 }
 
 /* ---------------------------------------- Colours and general styles */

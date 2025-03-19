@@ -90,6 +90,13 @@ def all_products(request, type=None):
     categories = Category.objects.all()  # All categories
     genres = Genre.objects.all()  # All genres
 
+    user_wishlists = []
+    wishlist_items = []
+    if request.user.is_authenticated:
+        user_wishlists = Wishlist.objects.filter(user=request.user)
+        wishlist_items = WishlistItem.objects.filter(
+            wishlist__user=request.user).values_list('product_id', flat=True)
+
     context = {
         'products': page_obj,
         'page_obj': page_obj,
@@ -104,6 +111,8 @@ def all_products(request, type=None):
         'current_sorting': current_sorting,
         'sort': sort,
         'direction': direction,
+        'user_wishlists': user_wishlists,
+        'wishlist_items': wishlist_items,
     }
 
     return render(request, 'products/products.html', context)
