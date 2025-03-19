@@ -412,10 +412,12 @@ def edit_product(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
 
     if hasattr(product, 'book'):
+        product = get_object_or_404(Book, pk=product_id)
         form_class = BookForm
         template = 'products/edit_book.html'
         product_type = 'Book'
     elif hasattr(product, 'accessory'):
+        product = get_object_or_404(Accessory, pk=product_id)
         form_class = AccessoryForm
         template = 'products/edit_accessory.html'
         product_type = 'Accessory'
