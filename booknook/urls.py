@@ -14,9 +14,10 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
     path('forum/', include('forum.urls')),
+    path('info/', include('info.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 handler404 = 'booknook.views.handler404'
-handler403 = 'booknook.views.handler404'
-handler500 = 'booknook.views.handler404'
+handler403 = 'booknook.views.handler403'
+handler500 = 'booknook.views.handler500'

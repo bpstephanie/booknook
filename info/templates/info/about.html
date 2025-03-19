@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %} 
+{% block extra_title %}- About Us
+{% endblock %}
+
+{% block page_header %}
+    <div class="header-container container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="full-overlay"></div>
+<div class="container mb-5">
+    <div class="text-center">
+        <h1>About BookNook</h1>
+        <hr>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <p class="display-5 lora-bold">
+                Welcome to BookNook! We are so happy to have you here!
+            </p>
+            <p>
+                <span class="lora-bold">How did we start? </span>
+                Well, first of all, we are a book-loving bunch who realised during the 
+                lockdown that we lacked a community to share our passion with.
+            </p>
+            <h2>Our Mission</h2>
+            <p>At BookNook, our mission is to create a welcoming community for 
+                all book lovers, where everyone can discover, share, and 
+                celebrate the joy of reading.
+            </p>
+            <h2>Our Values</h2>
+                <ul class="list-unstyled">
+                    <li><span class="lora-bold">Inclusivity: </span>We welcome everyone, from avid readers to newbies.</li>
+                    <li><span class="lora-bold">Community: </span>We believe in the power of sharing and connecting through books.</li>
+                    <li><span class="lora-bold">Passion: </span>Our love for books drives everything we do.</li>
+                </ul>
+            <h2>Giving Back</h2>
+            <p>
+                We're proud to partner with local charities to promote literacy 
+                and make books accessible to everyone. Every purchase you make 
+                helps support these initiatives, so you can feel good about 
+                your love for books making a positive impact.
+            </p>
+            <h2>Press & Awards</h2>
+                <p>We're proud to have been featured in various media outlets 
+                    and to have received several awards for our contributions 
+                    to the reading community.
+                </p>
+            <p class="display-5 lora-bold">
+                So, whether you're a seasoned bookworm or just starting your 
+                reading journey, come join us at BookNook. Let's explore, 
+                discover, and celebrate the wonderful world of books together!
+            </p>
+            <div class="d-flex justify-content-center">
+                <a href="{% url 'products' %}" class="btn btn-navy rounded-0 m-1">Shop</a>
+                <a href="{% url 'account_login' %}" class="btn btn-navy rounded-0 m-1">Login</a>
+            </div>
+
+        </div>
+    </div>
+
+
+{% endblock %}
