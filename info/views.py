@@ -36,3 +36,7 @@ def faqs(request):
 
 def terms_and_conditions(request):
     return render(request, 'info/terms.html')
+
+
+def privacy_policy(request):
+    return render(request, 'info/privacy_policy.html')
