@@ -330,8 +330,14 @@ def delete_comment(request, comment_id):
     )
 
 
+@login_required
 def product_management(request):
     """ Displays product management page """
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'Sorry, only authorised personnel can do that.')
+        return redirect(reverse('home'))
+
     book_form = BookForm()
     accessory_form = AccessoryForm()
     section = request.GET.get('section', '')
@@ -345,8 +351,14 @@ def product_management(request):
     return render(request, template, context)
 
 
+@login_required
 def add_book(request):
     """ Add a book to the store """
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'Sorry, only authorised personnel can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = BookForm(request.POST, request.FILES)
         if form.is_valid():
@@ -364,8 +376,14 @@ def add_book(request):
     return redirect('product_management')
 
 
+@login_required
 def add_accessory(request):
     """ Add an accessory to the store """
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'Sorry, only authorised personnel can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = AccessoryForm(request.POST, request.FILES)
         if form.is_valid():
@@ -383,8 +401,14 @@ def add_accessory(request):
     return redirect('product_management')
 
 
+@login_required
 def edit_product(request, product_id):
     """ Edit a product in the store """
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'Sorry, only authorised personnel can do that.')
+        return redirect(reverse('home'))
+
     product = get_object_or_404(Product, pk=product_id)
 
     if hasattr(product, 'book'):
@@ -423,8 +447,14 @@ def edit_product(request, product_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_product(request, product_id):
     """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'Sorry, only authorised personnel can do that.')
+        return redirect(reverse('home'))
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, f'{product.friendly_name} deleted!')

@@ -67,6 +67,7 @@
                                                 {% if request.user.is_superuser %}
                                                     <p class="ml-1 small">
                                                         <a class="text-success" href="{% url 'edit_product' product.id %}">Edit</a>
+                                                        <span> | </span>
                                                         <a class="text-danger" href="#" data-toggle="modal" data-target="#deleteModal" data-url="{% url 'delete_product' product.id %}">Delete</a>
                                                     </p>
                                                 {% endif %}

@@ -31,8 +31,14 @@
                         <h2>Add a Book</h2>
                     </div>
                     <form method="POST" action="{% url 'add_book' %}" class="form mb-2" enctype="multipart/form-data">
-                        {% csrf_token %}
-                        {{ book_form|crispy }}
+                        {% csrf_token %}                        
+                        {% for field in book_form %}
+                            {% if field.name != 'image' %}
+                                {{ field | as_crispy_field }}
+                            {% else %}
+                                {{ field }}
+                            {% endif %}
+                        {% endfor %}
                         <div class="text-right">
                             <a href="{% url 'products' %}" class="btn btn-outline-navy rounded-0">Cancel</a>
                             <button class="btn btn-navy rounded-0" type="submit">Add Product</button>
@@ -45,7 +51,13 @@
                     </div>
                     <form method="POST" action="{% url 'add_accessory' %}" class="form mb-2" enctype="multipart/form-data">
                         {% csrf_token %}
-                        {{ accessory_form|crispy }}
+                        {% for field in accessory_form %}
+                            {% if field.name != 'image' %}
+                                {{ field | as_crispy_field }}
+                            {% else %}
+                                {{ field }}
+                            {% endif %}
+                        {% endfor %}
                         <div class="text-right">
                             <a href="{% url 'products' %}" class="btn btn-outline-navy rounded-0">Cancel</a>
                             <button class="btn btn-navy rounded-0" type="submit">Add Product</button>
@@ -86,6 +98,12 @@
             } else {
                 showContent('addBook'); // Default section
             }
+        });
+    </script>
+    <script type="text/javascript">
+        $('#new-image').change(function() {
+            var file = $('#new-image')[0].files[0];
+            $('#filename').text(`Image will be set to: ${file.name}`);
         });
     </script>
 {% endblock %}

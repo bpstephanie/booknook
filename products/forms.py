@@ -1,4 +1,5 @@
 from django import forms
+from .widgets import CustomClearableFileInput
 from .models import Book, Accessory, Genre, Category, Review, ReviewComment
 
 
@@ -10,6 +11,12 @@ class BookForm(forms.ModelForm):
             'name', 'friendly_name', 'author', 'description', 'price',
             'rating', 'image', 'img_url', 'isbn', 'genre'
         ]
+
+    image = forms.ImageField(
+        label='Image',
+        required=False,
+        widget=CustomClearableFileInput
+    )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -30,6 +37,12 @@ class AccessoryForm(forms.ModelForm):
             'name', 'friendly_name', 'description', 'price',
             'rating', 'image', 'img_url', 'sku', 'category'
         ]
+
+    image = forms.ImageField(
+        label='Image',
+        required=False,
+        widget=CustomClearableFileInput
+    )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
