@@ -17,62 +17,25 @@
       </div>
       <div class="my-5">
         <h4>
-          <a href="" class="btn btn-navy rounded-5 text-uppercase py-3">Shop now</a>
+          <a href="{% url 'products' %}" class="btn btn-navy rounded-5 text-uppercase py-3">Shop now</a>
         </h4>
       </div>
     </div>
-    <div class="col-12">
-      <h1 class="text-center">Bestsellers</h1>
-      <div class="row">
-        <div class="col-12">
-          <div class="d-flex flex-wrap justify-content-center">
-            <div class="card m-2">
-              <img
-                src=""
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">All The Light We Cannot See</h5>
-                <a href="#" class="btn btn-navy">Buy</a>
-              </div>
-            </div>
-            <div class="card m-2">
-              <img
-                src=""
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">A Court of Mist and Fury</h5>
-                <a href="#" class="btn btn-navy">Buy</a>
-              </div>
-            </div>
-            <div class="card m-2">
-              <img
-                src=""
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Eleanor Oliphant Is Completely Fine</h5>
-                <a href="#" class="btn btn-navy">Buy</a>
-              </div>
-            </div>
-            <div class="card m-2">
-              <img
-                src=""
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Ready Player One</h5>
-                <a href="#" class="btn btn-navy">Buy</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  </div>
+</div>
+<div id="newsletter-signup" class="sign-up-container container my-5 py-2">
+  <div class="row">
+    <div class=" col-6 bg-navy text-center">
+      <h2 class="text-cream">Sign Up for our Newsletter</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 bg-navy">
+      <form method="POST" action="{% url 'newsletter_signup' %}" class="text-cream">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-cream rounded-0 mb-4">Sign up</button>
+      </form>   
     </div>
   </div>
 </div>
