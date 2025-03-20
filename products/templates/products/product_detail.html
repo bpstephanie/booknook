@@ -156,7 +156,7 @@
                                     </p>
                                 {% endif %}
                                 {% if user.is_authenticated and review.author == user %}
-                                    <a href="#" class="text-danger text-decoration-none text-small" review_id="{{ review.id }}">Delete</a>
+                                    <a href="#" class="text-danger text-decoration-none text-small" data-toggle="modal" data-target="#deleteReviewModal" data-url="{% url 'delete_review' review.id %}">Delete</a>
                                     <a href="#" class="text-success edit-review text-decoration-none text-small" review_id="{{ review.id }}">Edit</a>
                                 {% endif %}
                                 <div class="text-right">
@@ -212,7 +212,8 @@
                 </div>
             </div>
         </div>
-    </div>               
+    </div>
+           
     {% include 'products/includes/wishlist_modal.html' %}
     {% include 'products/includes/confirm_delete_modal.html' %}
 {% endblock %}
@@ -265,12 +266,6 @@
                 var reviewTitle = $(this).closest('.reviews').find('.review-title').text().trim();
                 var reviewBody = $(this).closest('.reviews').find('.review-body').text().trim();
                 var reviewRating = $(this).closest('.reviews').find('.review-rating').text().trim();
-                
-                console.log('Review ID:', reviewId);
-                console.log('Review Title:', reviewTitle);
-                console.log('Review Body:', reviewBody);
-                console.log('Review Rating:', reviewRating);
-                console.log('Review Body:', reviewBody.length > 0 ? reviewBody : 'EMPTY BODY!');
 
                 $('#review-id').val(reviewId);
                 $('#id_title').val(reviewTitle);
@@ -278,6 +273,34 @@
                 $('#id_rating').val(reviewRating);
 
                 $('#review-submit-btn').text('Update Review');
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#deleteReviewModal').on('show.bs.modal', function(event) {
+                var link = $(event.relatedTarget); // Element that triggered the modal
+                var url = link.data('url'); // Extract info from data-* attributes
+                var modal = $(this);
+                modal.find('#confirmDeleteReview').attr('href', url);
+            });
+
+            $('#confirmDeleteReview').on('click', function(event) {
+                event.preventDefault(); // Prevent the default action
+                var url = $(this).attr('href'); // Get the URL from the href attribute
+                $.ajax({
+                    url: url,
+                    type: 'POST',
+                    data: {
+                        csrfmiddlewaretoken: '{{ csrf_token }}'
+                    },
+                    success: function(response) {
+                        window.location.href = "{% url 'product_detail' product.id %}";
+                    },
+                    error: function(response) {
+                        alert('Error deleting review.');
+                    }
+                });
             });
         });
     </script>

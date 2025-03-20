@@ -289,7 +289,8 @@ def submit_review(request, product_id):
     if request.method == "POST":
         review_id = request.POST.get('review_id')
         if review_id:
-            review = get_object_or_404(Review, id=review_id, author=request.user)
+            review = get_object_or_404(
+                Review, id=review_id, author=request.user)
             form = ReviewForm(request.POST, instance=review)
         else:
             form = ReviewForm(request.POST)
@@ -350,7 +351,7 @@ def edit_review(request, review_id):
                 request, 'Error updating review!'
             )
     else:
-        form = ReviewForm(instace=review)
+        form = ReviewForm(instance=review)
     return render(request, 'edit_review.html', {'form': form})
 
 
@@ -359,17 +360,9 @@ def delete_review(request, review_id):
     review = get_object_or_404(
         Review, id=review_id, author=request.user
     )
-    if request.method == "POST":
-        review.delete()
-        messages.success(request, 'Review deleted!')
-        return redirect('product_detail', product_id=review.product.id)
-    else:
-        messages.error(
-            request, 'You can only delete your own reviews!'
-        )
-        return HttpResponseRedirect(
-            reverse('product_detail', args=[review.product.id])
-        )
+    review.delete()
+    messages.success(request, 'Review deleted!')
+    return redirect('product_detail', product_id=review.product.id)
 
 
 @login_required
