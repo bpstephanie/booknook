@@ -37,25 +37,36 @@ def newsletter_signup(request):
             send_newsletter_signup_email(signup)
             messages.success(
                 request,
-                'Thank you for signing up to the BookNook Newsletter!')
+                ('Thank you for signing up to the BookNook Newsletter! '
+                 'An email has been sent you'))
         else:
             messages.error(
                 request,
                 'Oops! Looks that email has already been signed up.')
+        source = request.POST.get('source')
+        if source == 'profile':
+            return redirect('profile')
+        else:
+            return redirect('home')
     else:
         form = NewsletterSignupForm()
     return render(request, 'home/index.html', {'form': form})
 
 
-def unsubscribe_newsletter(request, id):
+def unsubscribe_newsletter(request):
     """ A view to unsubscribe for the newsletter """
-    try:
-        newsletter_signup = NewsletterSignup.objects.get(id=id)
-        newsletter_signup.unsubscribe()
-        messages.success(
-            request,
-            'You have successfully unsubscribed from the BookNook newsletter.')
-    except NewsletterSignup.DoesNotExist:
-        messages.error(request,
-                       'You are not subscribed to the BookNook newsletter.')
+    email = request.GET.get('email')
+    if email:
+        try:
+            newsletter_signup = NewsletterSignup.objects.get(email=email)
+            newsletter_signup.unsubscribe()
+            messages.success(
+                request,
+                'You have successfully unsubscribed from the BookNook newsletter.')
+        except NewsletterSignup.DoesNotExist:
+            messages.error(request,
+                           'You are not subscribed to the BookNook newsletter.')
+    else:
+        messages.error(request, 'Invalid email address.')
+
     return redirect('home')

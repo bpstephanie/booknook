@@ -1,9 +1,9 @@
-Dear {{ name }},
-
-Thank you for signing up for the BookNook Newsletter! We're excited to keep you updated with our latest news and offers.
-
-If you wish to unsubscribe, please click the link below:
-<a href="{% url 'unsubscribe_newsletter' signup.id %}">Unsubscribe from Newsletter</a>
-
-Best regards,
-The BookNook Team
+<p>Dear {{ name }},</p>
+<br>
+<p>Thank you for signing up for the BookNook Newsletter! We're excited to keep you updated with our latest news and offers.</p>
+<br>
+<p>If you wish to unsubscribe, please click the link below:</p>
+<a href="{% url 'unsubscribe_newsletter' %}?email={{ signup.email }}">Unsubscribe from Newsletter</a>
+<br>
+<p>Best regards,</p>
+<p>The BookNook Team</p>

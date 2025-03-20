@@ -30,8 +30,10 @@ def profile(request):
     saved_items = bag_contents(request)['saved_items']
     threads = Thread.objects.filter(created_by=request.user, is_deleted=False)
     categories = Category.objects.all()
-    newsletter_signup_form = NewsletterSignupForm(instance=profile)
-    newsletter_signup = NewsletterSignup.objects.filter(email=request.user.email).first()
+    newsletter_form = NewsletterSignupForm(instance=profile)
+    newsletter_signup = NewsletterSignup.objects.filter(
+        email=request.user.email
+    ).first()
 
     # Filter categories
     categories_with_threads = [
@@ -53,7 +55,7 @@ def profile(request):
         'categories': categories_with_threads,
         'section': section,
         'on_profile_page': True,
-        'newsletter_signup_form': newsletter_signup_form,
+        'newsletter_form': newsletter_form,
         'newsletter_signup': newsletter_signup
     }
     return render(request, template, context)

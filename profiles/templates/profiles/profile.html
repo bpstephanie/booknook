@@ -222,12 +222,13 @@
                     <h2>BookNook Newsletter</h2>
                     {% if newsletter_signup %}
                         <h3 >You are subscribed to the newsletter.</h3>
-                        <a class="btn btn-navy rounded-0" href="{% url 'unsubscribe_newsletter' newsletter_signup.id %}">Unsubscribe</a>
+                        <a class="btn btn-navy rounded-0" href="{% url 'unsubscribe_newsletter' %}?email={{ newsletter_signup.email}}">Unsubscribe</a>
                     {% else %}
                         <h3>Would you like to subscribe to our newsletter?</h3>
-                        <form method="POST" action="{% url 'newsletter_signup' %}" class="text-cream">
+                        <form method="POST" action="{% url 'newsletter_signup' %}" class="text-navy">
                             {% csrf_token %}
                             {{ newsletter_form|crispy }}
+                            <input type="hidden" name="source" value="profile">
                             <button type="submit" class="btn btn-cream rounded-0 mb-4">Sign up</button>
                         </form>
                     {% endif %}
