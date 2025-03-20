@@ -148,7 +148,7 @@
                                 <p class="text-small text-muted ">By {{ review.author.username }} - {{ review.created_on|date:"F j, Y"}}</p>
                                 <p class="m-0">Rating: <span class="review-rating">{{ review.rating }}</span>/5</p>
                                 <div id="review{{ review.id }}">
-                                    <div class="review-body">{{ review.body }}</div>
+                                    <p class="review-body">{{ review.body }}</p>
                                 </div>
                                 {% if not review.approved and review.author == user %}
                                     <p class="text-danger">
@@ -270,10 +270,11 @@
                 console.log('Review Title:', reviewTitle);
                 console.log('Review Body:', reviewBody);
                 console.log('Review Rating:', reviewRating);
+                console.log('Review Body:', reviewBody.length > 0 ? reviewBody : 'EMPTY BODY!');
 
                 $('#review-id').val(reviewId);
                 $('#id_title').val(reviewTitle);
-                $('#id_body').val(reviewBody);
+                $('#id_review_body').val(reviewBody);
                 $('#id_rating').val(reviewRating);
 
                 $('#review-submit-btn').text('Update Review');

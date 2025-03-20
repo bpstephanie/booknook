@@ -69,7 +69,7 @@ class ReviewForm(forms.ModelForm):
                 'class': 'form-control',
                 'placeholder': 'Write your review here',
                 'rows': 5,
-                'id': 'id_body',
+                'id': 'id_review_body',
             }),
             'rating': forms.NumberInput(attrs={
                 'class': 'form-control',
@@ -99,4 +99,5 @@ class ReviewCommentForm(forms.ModelForm):
         }
         labels = {
             'body': 'Comment ',
+            'id': 'id_comment_body',
         }
