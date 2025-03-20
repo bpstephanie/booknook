@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Genre, Category, Book, Accessory
+from .models import Product, Genre, Category, Book, Accessory, Review, ReviewComment
 
 
 # Register your models here.
@@ -64,7 +64,25 @@ class AccessoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
 
 
+class ReviewAdmin(admin.ModelAdmin):
+    list_display = (
+        'author',
+        'product',
+        'approved',
+    )
+
+    ordering = ('product', 'approved',)
+
+
+class ReviewCommentAdmin(admin.ModelAdmin):
+    list_display = (
+        'user',
+    )
+
+
 admin.site.register(Genre, GenreAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Book, BookAdmin)
 admin.site.register(Accessory, AccessoryAdmin)
+admin.site.register(Review, ReviewAdmin)
+admin.site.register(ReviewComment, ReviewCommentAdmin)

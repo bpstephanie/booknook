@@ -159,75 +159,60 @@
                                     <a href="#" class="text-danger text-decoration-none text-small" review_id="{{ review.id }}">Delete</a>
                                     <a href="#" class="text-success text-decoration-none text-small" review_id="{{ review.id }}">Edit</a>
                                 {% endif %}
-                                {% for comment in review.comments.all %}
-                                    <h4>Comments:</h4>
-                                    <div class="comment-container">
-                                        <p>{{ comment.body }}</p>
-                                        <p>{{ comment.user.username }} - {{ comment.created_on|date:"F j, Y H:i" }}</p>
-                                        {% if user.is_authenticated and comment.user == user %}
-                                            <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
-                                            <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
-                                        {% endif %}
-                                    </div>
-                                {% empty %}
-                                    <p>No comments yet. Be the first!</p>
-                                {% endfor %}
+                                <div class="text-right">
+                                    <a href="#" class="btn btn-sm btn-navy rounded-0" data-review-id="{{ review.id }}" id="commentFormContainerToggle">Add Comment</a>
+                                    <a href="#" class="btn btn-sm btn-outline-navy rounded-0" id="commentSectionToggle" data-review-id="{{ review.id }}">See Comments</a>
+                                </div>
+                                <div id="commentFormContainer" style="display:none">
+                                    <form method="POST" class="form" action="{% url 'submit_comment' review.id %}">
+                                        {% csrf_token %}
+                                        {{ comment_form|crispy }}
+                                        <input type="hidden" name="review_id" value="{{ review.id }}">
+                                        <div class="text-right">
+                                            <button type="submit" class="btn btn-navy rounded-0 mt-3">Submit Comment</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- Review Comment Section -->
+                                <div class="text-right" id="commentSection" style="display:none;">
+                                    {% for comment in review.comments.all %}
+                                        <div class="comment-container">
+                                            <p>{{ comment.body }}</p>
+                                            <p>{{ comment.user.username }} - {{ comment.created_on|date:"F j, Y H:i" }}</p>
+                                            {% if user.is_authenticated and comment.user == user %}
+                                                <a class="btn btn-delete" href="#" comment_id="{{ comment.id }}">Delete</a>
+                                                <a class="btn btn-edit" href="" comment_id="{{ comment.id }}">Edit</a>
+                                            {% endif %}
+                                        </div>
+                                    {% empty %}
+                                        <p>No comments yet. Be the first!</p>
+                                    {% endfor %}
+                                    
+                                </div>
                             </div>
                         {% empty %}
                             <p>No reviews yet. Be the first!</p>
                         {% endfor %}
                     </div>
                     <div class="col-md-6 mb-4 mt-3 border-0">
-                    {% if user.is_authenticated and has_purchased %}
-                        <h3>Leave a Review</h3>
-                        <form method="POST" class="form" action="{% url 'submit_review' product.id %}">
-                            {% csrf_token %}
-                            {{ review_form|crispy }}
-                            <button type="submit" class="btn btn-navy rounded-0 mt-3">Submit Review</button>
-                        </form>
-                    {% else %}
-                        <p>Only customers who have purchased this item can leave a review.</p>
-                    {% endif %}
+                        <div>
+                            {% if user.is_authenticated and has_purchased %}
+                                <h3>Leave a Review</h3>
+                                <form method="POST" class="form" action="{% url 'submit_review' product.id %}">
+                                    {% csrf_token %}
+                                    {{ review_form|crispy }}
+                                    <button type="submit" class="btn btn-navy rounded-0 mt-3">Submit Review</button>
+                                </form>
+                            {% else %}
+                                <p>Only customers who have purchased this item can leave a review.</p>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>               
-    <!-- Wishlist Modal -->
-    <div class="modal fade" id="wishlistModal" tabindex="-1" aria-labelledby="wishlistModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="wishlistModalLabel">Add to Wishlist</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form method="POST" action="{% url 'add_to_wishlist' product.id %}">
-                        {% csrf_token %}
-                        <label for="wishlist">Choose an existing wishlist:</label>
-                        <select name="wishlist_id" id="wishlist" class="form-control">
-                            <option value="" selected>-- Select a Wishlist --</option>
-                            {% if user_wishlists %}
-                                {% for wishlist in user_wishlists %}
-                                    <option value="{{ wishlist.id }}">{{ wishlist.name }}</option>
-                                {% endfor %}
-                            {% else %}
-                                <option value="" disabled>No wishlists available</option>
-                            {% endif %}
-                        </select>
-                        <p class="mt-3">Or create a new wishlist:</p>
-                        <input type="text" name="new_wishlist_name" class="form-control" placeholder="Enter wishlist name" />
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-success">Add to Wishlist</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include 'products/includes/wishlist_modal.html' %}
     {% include 'products/includes/confirm_delete_modal.html' %}
 {% endblock %}
 
@@ -243,4 +228,31 @@
             modal.find('#confirmDelete').attr('href', url);
         });
     </script> 
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#commentSectionToggle').on('click', function(e) {
+                e.preventDefault();
+                var commentSection = $('#commentSection');
+                if (commentSection.is(':visible')) {
+                    commentSection.hide();
+                    $(this).text('See Comments');
+                } else {
+                    commentSection.show();
+                    $(this).text('Hide Comments');
+                }
+            });
+
+            $('#commentFormContainerToggle').on('click', function(e) {
+                e.preventDefault();
+                var commentFormContainer = $('#commentFormContainer');
+                if (commentFormContainer.is(':visible')) {
+                    commentFormContainer.hide();
+                    $(this).text('Add Comment');
+                } else {
+                    commentFormContainer.show();
+                    $(this).text('Hide Comment Form');
+                }
+            });
+        });
+    </script>
 {% endblock %}

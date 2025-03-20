@@ -131,12 +131,3 @@ class OrderLineItem(models.Model):
             f'{self.get_product_identifier()} on order '
             f'{self.order.order_number}'
         )
-
-
-class Purchase(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    purchase_date = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f'{self.user.username} purchased {self.product.friendly_name} on {self.purchase_date}'

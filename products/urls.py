@@ -38,7 +38,7 @@ urlpatterns = [
         name='delete_review'
     ),
     path(
-        'submit-comment/',
+        'submit-comment/<int:review_id>/',
         views.submit_comment,
         name='submit_comment'
     ),
