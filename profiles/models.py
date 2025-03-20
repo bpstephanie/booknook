@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django_countries.fields import CountryField
+from django.apps import apps
 
 from wishlist.models import Wishlist
 from bag.models import SavedItem
@@ -35,6 +36,12 @@ class UserProfile(models.Model):
     default_phone_number = models.CharField(
         max_length=20, null=True, blank=True)
 
+    def has_purchased(self, product):
+        OrderLineItem = apps.get_model('checkout', 'OrderLineItem')
+        return OrderLineItem.objects.filter(
+            order__user_profile=self, product=product
+        ).exists()
+
     def __str__(self):
         return self.user.username
 
@@ -63,4 +70,3 @@ class PDF(models.Model):
 
     def __str__(self):
         return self.title
-

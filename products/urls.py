@@ -23,6 +23,11 @@ urlpatterns = [
         name='all_categories'
     ),
     path(
+        'submit-review/<int:product_id>/',
+        views.submit_review,
+        name='submit_review'
+    ),
+    path(
         'review/<int:review_id>/edit/',
         views.edit_review,
         name='edit_review'
@@ -31,6 +36,11 @@ urlpatterns = [
         'review/<int:review_id>/delete/',
         views.delete_review,
         name='delete_review'
+    ),
+    path(
+        'submit-comment/',
+        views.submit_comment,
+        name='submit_comment'
     ),
     path(
         'comment/<int:comment_id>/edit/',

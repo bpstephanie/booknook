@@ -8,7 +8,7 @@ from .models import (
 from wishlist.models import Wishlist, WishlistItem
 from .forms import ReviewForm, ReviewCommentForm, BookForm, AccessoryForm
 from django.contrib import messages
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponseForbidden
 from django.core.paginator import Paginator
 from django.db.models import Q
 from django.db.models.functions import Lower
@@ -121,11 +121,7 @@ def all_products(request, type=None):
 def product_detail(request, product_id):
     """ A view to show individual product details """
     product = get_object_or_404(Product, pk=product_id)
-    reviews = product.reviews.filter(approved=True)
-    user_unnapproved_reviews = (
-        product.reviews.filter(approved=False, author=request.user)
-        if request.user.is_authenticated else None
-    )
+    reviews = product.reviews.all()
 
     review_count = reviews.count()
 
@@ -137,6 +133,9 @@ def product_detail(request, product_id):
         user_wishlists = Wishlist.objects.filter(user=request.user)
         wishlist_item = WishlistItem.objects.filter(
             wishlist__user=request.user, product=product).first()
+        has_purchased = request.user.userprofile.has_purchased(product)
+    else:
+        has_purchased = False
 
     if request.method == "POST":
         if 'review_submit' in request.POST:
@@ -146,17 +145,33 @@ def product_detail(request, product_id):
                 review.author = request.user
                 review.product = product
                 review.save()
+                messages.success(request, 'Review submitted successfully!')
                 return redirect('product_detail', product_id=product.id)
+            else:
+                messages.error(
+                    request,
+                    (
+                        'There was an error submitting your review. '
+                        'Please check the form and try again.'
+                    ))
         elif 'comment_submit' in request.POST:
             comment_form = ReviewCommentForm(request.POST)
             if comment_form.is_valid():
                 review_id = request.POST.get('review_id')
                 review = get_object_or_404(Review, id=review_id)
                 comment = comment_form.save(commit=False)
-                comment.author = request.user
+                comment.user = request.user
                 comment.review = review
                 comment.save()
+                messages.success(request, 'Comment submitted successfully!')
                 return redirect('product_detail', product_id=product.id)
+            else:
+                messages.error(
+                    request,
+                    (
+                        'There was an error submitting your comment. '
+                        'Please check the form and try again.'
+                    ))
 
     paginator = Paginator(reviews, 10)
     page_number = request.GET.get('page', 1)
@@ -166,11 +181,11 @@ def product_detail(request, product_id):
         'product': product,
         'reviews': reviews,
         'review_count': review_count,
-        'user_unapproved_reviews': user_unnapproved_reviews,
         'review_form': review_form,
         'comment_form': comment_form,
         'user_wishlists': user_wishlists,
         'wishlist_item': wishlist_item,
+        'has_purchased': has_purchased,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -261,6 +276,57 @@ def all_categories(request):
     }
 
     return render(request, 'products/all_categories.html', context)
+
+
+@login_required
+def submit_review(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+
+    if not request.user.userprofile.has_purchased(product):
+        return HttpResponseForbidden(
+            'You can only review products you have purchased.'
+        )
+
+    if request.method == "POST":
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.author = request.user
+            review.product = product
+            review.save()
+            messages.success(request, "Review submitted successfully")
+            return redirect('product_detail', product_id=product.id)
+        else:
+            messages.error(
+                request,
+                ("There was an error submitting your review. Please check the "
+                 "form and try again."))
+    else:
+        form = ReviewForm()
+    return render(request, 'submit_review.html', {'form': form})
+
+
+@login_required
+def submit_comment(request, review_id):
+    review = get_object_or_404(Review, id=review_id)
+
+    if request.method == "POST":
+        form = ReviewCommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.user = request.user
+            comment.review = review
+            comment.save()
+            messages.success(request, 'Comment submitted successfully!')
+            return redirect('product_detail', product_id=review.product.id)
+        else:
+            messages.error(
+                request,
+                ('There was an error submitting your comment. Please check '
+                 'the form and try again.'))
+    else:
+        form = ReviewCommentForm
+    return render(request, 'submit_comment.html', {'form': form})
 
 
 @login_required
