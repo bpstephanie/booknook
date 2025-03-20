@@ -53,7 +53,7 @@ def unsubscribe_newsletter(request, id):
         messages.success(
             request,
             'You have successfully unsubscribed from the BookNook newsletter.')
-    except NewsletterSignup.DoesNoteExist:
+    except NewsletterSignup.DoesNotExist:
         messages.error(request,
                        'You are not subscribed to the BookNook newsletter.')
     return redirect('home')

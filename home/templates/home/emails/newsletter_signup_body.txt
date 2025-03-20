@@ -3,7 +3,7 @@ Dear {{ name }},
 Thank you for signing up for the BookNook Newsletter! We're excited to keep you updated with our latest news and offers.
 
 If you wish to unsubscribe, please click the link below:
-<a href="{% url 'unsubscribe_newsletter' id %}">Unsubscribe from Newsletter</a>
+<a href="{% url 'unsubscribe_newsletter' signup.id %}">Unsubscribe from Newsletter</a>
 
 Best regards,
 The BookNook Team
