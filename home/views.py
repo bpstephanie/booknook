@@ -15,13 +15,14 @@ def index(request):
     return render(request, 'home/index.html', {'form': form})
 
 
-def send_newsletter_signup_email(name, email):
+def send_newsletter_signup_email(signup):
     subject = render_to_string('home/emails/newsletter_signup_subject.txt')
     body = render_to_string(
-        'home/emails/newsletter_signup_body.txt', {'name': name})
+        'home/emails/newsletter_signup_body.txt',
+        {'name': signup.name, 'signup': signup})
     plain_body = strip_tags(body)
     from_email = settings.DEFAULT_FROM_EMAIL
-    recipient_list = [email]
+    recipient_list = [signup.email]
 
     send_mail(subject, plain_body, from_email, recipient_list)
 
@@ -32,7 +33,7 @@ def newsletter_signup(request):
         form = NewsletterSignupForm(request.POST)
         if form.is_valid():
             signup = form.save()
-            send_newsletter_signup_email(signup.name, signup.email)
+            send_newsletter_signup_email(signup)
             messages.success(
                 request,
                 'Thank you for signing up to the BookNook Newsletter!')
