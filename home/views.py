@@ -24,7 +24,8 @@ def send_newsletter_signup_email(signup):
     from_email = settings.DEFAULT_FROM_EMAIL
     recipient_list = [signup.email]
 
-    send_mail(subject, plain_body, from_email, recipient_list)
+    send_mail(
+        subject, plain_body, from_email, recipient_list, html_message=body)
 
 
 def newsletter_signup(request):
