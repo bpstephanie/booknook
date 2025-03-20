@@ -160,10 +160,10 @@
                                     <a href="#" class="text-success text-decoration-none text-small" review_id="{{ review.id }}">Edit</a>
                                 {% endif %}
                                 <div class="text-right">
-                                    <a href="#" class="btn btn-sm btn-navy rounded-0" data-review-id="{{ review.id }}" id="commentFormContainerToggle">Add Comment</a>
-                                    <a href="#" class="btn btn-sm btn-outline-navy rounded-0" id="commentSectionToggle" data-review-id="{{ review.id }}">See Comments</a>
+                                    <a href="#" class="btn btn-sm btn-navy rounded-0 add-comment-btn" data-review-id="{{ review.id }}">Add Comment</a>
+                                    <a href="#" class="btn btn-sm btn-outline-navy rounded-0 comment-section-toggle" data-review-id="{{ review.id }}">See Comments</a>
                                 </div>
-                                <div id="commentFormContainer" style="display:none">
+                                <div class="comment-form-container" data-review-id="{{ review.id }}" style="display:none">
                                     <form method="POST" class="form" action="{% url 'submit_comment' review.id %}">
                                         {% csrf_token %}
                                         {{ comment_form|crispy }}
@@ -174,7 +174,7 @@
                                     </form>
                                 </div>
                                 <!-- Review Comment Section -->
-                                <div class="text-right" id="commentSection" style="display:none;">
+                                <div class="text-right comment-section" data-review-id="{{ review.id }}" style="display:none;">
                                     {% for comment in review.comments.all %}
                                         <div class="comment-container">
                                             <p>{{ comment.body }}</p>
@@ -230,9 +230,10 @@
     </script> 
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#commentSectionToggle').on('click', function(e) {
+            $('.comment-section-toggle').on('click', function(e) {
                 e.preventDefault();
-                var commentSection = $('#commentSection');
+                var reviewId = $(this).data('review-id');
+                var commentSection = $('.comment-section[data-review-id="' + reviewId + '"]');
                 if (commentSection.is(':visible')) {
                     commentSection.hide();
                     $(this).text('See Comments');
@@ -242,9 +243,10 @@
                 }
             });
 
-            $('#commentFormContainerToggle').on('click', function(e) {
+            $('.add-comment-btn').on('click', function(e) {
                 e.preventDefault();
-                var commentFormContainer = $('#commentFormContainer');
+                var reviewId = $(this).data('review-id');
+                var commentFormContainer = $('.comment-form-container[data-review-id="' + reviewId + '"]');
                 if (commentFormContainer.is(':visible')) {
                     commentFormContainer.hide();
                     $(this).text('Add Comment');
