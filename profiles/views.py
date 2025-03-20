@@ -6,11 +6,13 @@ from .models import UserProfile, PDF
 from checkout.models import Order
 from wishlist.models import Wishlist, WishlistItem
 from forum.models import Category, Thread, Post
+from home.models import NewsletterSignup
 
 from bag.contexts import bag_contents
 
 from .forms import DeliveryDetailsForm, PersonalInfoForm
 from forum.forms import ThreadForm
+from home.forms import NewsletterSignupForm
 
 
 # Create your views here.
@@ -28,6 +30,8 @@ def profile(request):
     saved_items = bag_contents(request)['saved_items']
     threads = Thread.objects.filter(created_by=request.user, is_deleted=False)
     categories = Category.objects.all()
+    newsletter_signup_form = NewsletterSignupForm(instance=profile)
+    newsletter_signup = NewsletterSignup.objects.filter(email=request.user.email).first()
 
     # Filter categories
     categories_with_threads = [
@@ -49,6 +53,8 @@ def profile(request):
         'categories': categories_with_threads,
         'section': section,
         'on_profile_page': True,
+        'newsletter_signup_form': newsletter_signup_form,
+        'newsletter_signup': newsletter_signup
     }
     return render(request, template, context)
 

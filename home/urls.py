@@ -6,4 +6,7 @@ urlpatterns = [
     path(
         'newsletter-signup/',
         views.newsletter_signup, name='newsletter_signup'),
+    path(
+        'unsubscribe-newsletter/<int:id>/',
+        views.unsubscribe_newsletter, name='unsubscribe_newsletter'),
 ]

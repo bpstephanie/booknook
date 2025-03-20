@@ -34,6 +34,7 @@
                 <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('mySavedItems')">My Saved Items</button>
                 <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('forumInteraction')">Forum Interaction</button>
                 <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('rewardsBenefits')">Rewards and Benefits</button>
+                <button class="btn btn-navy rounded-0 mb-2" type="button" onclick="showContent('newsletter')">Newsletter</button>
             </div>
             <div class="col-8">
                 <div id="deliveryDetails" class="content-section" style="display: none;">
@@ -216,6 +217,20 @@
                         growth, and endless enjoyment. Happy reading!
                     </p>
                     <a class="btn btn-navy rounded-0" href="{% url 'downloads' %}">Challenges</a>
+                </div>
+                <div id="newsletter" class="content-section" style="display: none;">
+                    <h2>BookNook Newsletter</h2>
+                    {% if newsletter_signup %}
+                        <h3 >You are subscribed to the newsletter.</h3>
+                        <a class="btn btn-navy rounded-0" href="{% url 'unsubscribe_newsletter' newsletter_signup.id %}">Unsubscribe</a>
+                    {% else %}
+                        <h3>Would you like to subscribe to our newsletter?</h3>
+                        <form method="POST" action="{% url 'newsletter_signup' %}" class="text-cream">
+                            {% csrf_token %}
+                            {{ newsletter_form|crispy }}
+                            <button type="submit" class="btn btn-cream rounded-0 mb-4">Sign up</button>
+                        </form>
+                    {% endif %}
                 </div>
             </div>
         </div>
