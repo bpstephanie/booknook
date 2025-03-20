@@ -287,7 +287,13 @@ def submit_review(request, product_id):
         )
 
     if request.method == "POST":
-        form = ReviewForm(request.POST)
+        review_id = request.POST.get('review_id')
+        if review_id:
+            review = get_object_or_404(Review, id=review_id, author=request.user)
+            form = ReviewForm(request.POST, instance=review)
+        else:
+            form = ReviewForm(request.POST)
+
         if form.is_valid():
             review = form.save(commit=False)
             review.author = request.user

@@ -144,20 +144,20 @@
                         </h2>
                         {% for review in reviews %}
                             <div class="p-2 reviews {% if not review.approved and review.author == user %} text-muted {% elif not review.approved %} d-none{% endif %}">
-                                <h3 class="font-weight-bold">{{ review.title }}</h3>
-                                <p class="text-small">By {{ review.author.username }} - {{ review.created_on|date:"F j, Y"}}</p>
-                                <p class="m-0">Rating: {{ review.rating }}/5</p>
+                                <h3 class="font-weight-bold review-title">{{ review.title }}</h3>
+                                <p class="text-small text-muted ">By {{ review.author.username }} - {{ review.created_on|date:"F j, Y"}}</p>
+                                <p class="m-0">Rating: <span class="review-rating">{{ review.rating }}</span>/5</p>
                                 <div id="review{{ review.id }}">
                                     <div class="review-body">{{ review.body }}</div>
                                 </div>
                                 {% if not review.approved and review.author == user %}
-                                    <p class="text-navy">
+                                    <p class="text-danger">
                                         This review is awaiting approval
                                     </p>
                                 {% endif %}
                                 {% if user.is_authenticated and review.author == user %}
                                     <a href="#" class="text-danger text-decoration-none text-small" review_id="{{ review.id }}">Delete</a>
-                                    <a href="#" class="text-success text-decoration-none text-small" review_id="{{ review.id }}">Edit</a>
+                                    <a href="#" class="text-success edit-review text-decoration-none text-small" review_id="{{ review.id }}">Edit</a>
                                 {% endif %}
                                 <div class="text-right">
                                     <a href="#" class="btn btn-sm btn-navy rounded-0 add-comment-btn" data-review-id="{{ review.id }}">Add Comment</a>
@@ -198,10 +198,11 @@
                         <div>
                             {% if user.is_authenticated and has_purchased %}
                                 <h3>Leave a Review</h3>
-                                <form method="POST" class="form" action="{% url 'submit_review' product.id %}">
+                                <form method="POST" class="form" action="{% url 'submit_review' product.id %}" id="review-form">
                                     {% csrf_token %}
                                     {{ review_form|crispy }}
-                                    <button type="submit" class="btn btn-navy rounded-0 mt-3">Submit Review</button>
+                                    <input type="hidden" name="review_id" id="review-id">
+                                    <button type="submit" class="btn btn-navy rounded-0 mt-3" id="review-submit-btn">Submit Review</button>
                                 </form>
                             {% else %}
                                 <p>Only customers who have purchased this item can leave a review.</p>
@@ -220,6 +221,7 @@
     {{ block.super }}
     {% include 'products/includes/quantity_input_script.html' %}
     {% include 'products/includes/wishlist_modal_script.html' %}
+    <!-- Confirm delete jQuery -->
     <script type="text/javascript">
         $('#deleteModal').on('show.bs.modal', function (event) {
             var link = $(event.relatedTarget);
@@ -227,7 +229,8 @@
             var modal = $(this);
             modal.find('#confirmDelete').attr('href', url);
         });
-    </script> 
+    </script>
+    <!-- Add comment and Comment section toggles -->
     <script type="text/javascript">
         $(document).ready(function() {
             $('.comment-section-toggle').on('click', function(e) {
@@ -254,6 +257,26 @@
                     commentFormContainer.show();
                     $(this).text('Hide Comment Form');
                 }
+            });
+  
+            $('.edit-review').on('click', function(event) {
+                event.preventDefault();
+                var reviewId = $(this).attr('review_id');
+                var reviewTitle = $(this).closest('.reviews').find('.review-title').text().trim();
+                var reviewBody = $(this).closest('.reviews').find('.review-body').text().trim();
+                var reviewRating = $(this).closest('.reviews').find('.review-rating').text().trim();
+                
+                console.log('Review ID:', reviewId);
+                console.log('Review Title:', reviewTitle);
+                console.log('Review Body:', reviewBody);
+                console.log('Review Rating:', reviewRating);
+
+                $('#review-id').val(reviewId);
+                $('#id_title').val(reviewTitle);
+                $('#id_body').val(reviewBody);
+                $('#id_rating').val(reviewRating);
+
+                $('#review-submit-btn').text('Update Review');
             });
         });
     </script>

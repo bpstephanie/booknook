@@ -63,23 +63,26 @@ class ReviewForm(forms.ModelForm):
             'title': forms.TextInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Enter the review title',
+                'id': 'id_title',
             }),
             'body': forms.Textarea(attrs={
                 'class': 'form-control',
                 'placeholder': 'Write your review here',
                 'rows': 5,
+                'id': 'id_body',
             }),
             'rating': forms.NumberInput(attrs={
                 'class': 'form-control',
                 'min': 1,
                 'max': 5,
                 'placeholder': 'Rate from 1 to 5',
+                'id': 'id_rating',
             }),
         }
         labels = {
-            'title': 'Review Title',
-            'body': 'Your Review',
-            'rating': 'Rating (1-5)',
+            'title': 'Review Title ',
+            'body': 'Your Review ',
+            'rating': 'Rating (1-5) ',
         }
 
 
@@ -95,5 +98,5 @@ class ReviewCommentForm(forms.ModelForm):
             }),
         }
         labels = {
-            'body': 'Comment',
+            'body': 'Comment ',
         }
