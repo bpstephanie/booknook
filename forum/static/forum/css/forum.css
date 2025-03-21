@@ -40,3 +40,10 @@
     white-space: normal;
     overflow-wrap: break-word;
 }
+
+.disclaimer {
+    border: 3px solid red;
+    background-color: rgb(255, 165, 165);
+    padding: 2%;
+    margin: 2%;
+}
