@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% load static %} 
+{% block extra_title %}- FAQs
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'info/css/info.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="header-container container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="full-overlay"></div>
+    <div class="container mb-5">
+        <div class="text-center">
+            <h1 class="text-navy">Frequently Asked Questions</h1>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <div id="accordion">
+                    <div class="faq-card">
+                        <div class="card-header" id="headingOne">
+                            <h3 class="mb-0">
+                                <button class="btn lora-bold collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <h4 class="text-left">When do you take payment?</h4>
+                                </button>
+                            </h3>
+                        </div>
+                        <div id="collapseOne" class="collapsed" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                We take payment at checkout.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-card">
+                        <div class="card-header" id="headingTwo">
+                            <h3 class="mb-0">
+                                <button class="btn lora-bold collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <h4 class="text-left">Can I change or amend an order?</h4>
+                                </button>
+                            </h3>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                Once an order has been placed, we cannot accept any changes. We recommend you cancel your order, you can <a href="mailto:info@booknook.com" class="text-decoration-none text-cream">email</a> us. One of the team would be happy to help.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-card">
+                        <div class="card-header" id="headingThree">
+                            <h3 class="mb-0">
+                                <button class="btn lora-bold collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <h4 class="text-left">How can I cancel my order?</h4>
+                                </button>
+                            </h3>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                Please <a href="mailto:info@booknook.com" class="text-decoration-none text-cream">email</a> us at info@booknook.com. Please send your name and your order confirmation number.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-card">
+                        <div class="card-header" id="headingFour">
+                            <h3 class="mb-0">
+                                <button class="btn lora-bold collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <h4 class="text-left">What is your returns policy?</h4>
+                                </button>
+                            </h3>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                            <div class="card-body">
+                                We accept returns within 30 days of purchase. As long as items are undamaged and unused.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-card">
+                        <div class="card-header" id="headingFive">
+                            <h3 class="mb-0">
+                                <button class="btn lora-bold collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    <h4 class="text-left">You have taken my payment and I have received my order confirmation email but where is my order?</h3>
+                                </button>
+                            </h3>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                            <div class="card-body">
+                                We send all our purchases through Royal Mail, therefore as soon as you receive your order confirmation email, delivery times is over to them. 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-8">
+                <div class="text-center">
+                    <h2>Still cannot find your answer?</h2>
+                    <a class="btn btn-navy btn-lg rounded-0 my-auto" href="{% url 'contact' %}">Contact us</a>
+                </div>    
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -32,7 +32,7 @@
     <div class="col-sm-6">
       <ul class="navbar-nav justify-content-end list-unstyled d-flex gap-md-3 mb-0">
         <li class="list-inline-item dropdown">
-          <a class="text-navy nav-link" href="" id="account-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="text-navy nav-link" href="" id="account-options-small" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
               <div class="d-flex flex-row align-items-center">
                 <i class="fa-solid fa-user fa-lg" aria-label="My account"></i>
@@ -40,13 +40,12 @@
               </div>
             </div>
           </a>
-          <div class="dropdown-menu border-navy" aria-labelledby="account-options">
+          <div class="dropdown-menu border-navy" aria-labelledby="account-options-small">
             {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
                 <a class="dropdown-item" href="{% url 'product_management' %}">Product Management</a>
               {% endif %}
               <a class="dropdown-item" href="">My Profile</a>
-              <a class="dropdown-item" href="">My Events</a>
               <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
             {% else %}
               <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
@@ -57,7 +56,7 @@
         <div class="dropdown-divider"></div>
         {% if user.is_authenticated %}
           <li class="list-inline-item dropdown">
-            <a class="text-navy nav-link" href="{% url 'profile' %}?section=myWishlists" id="wishlist-link">
+            <a class="text-navy nav-link" href="{% url 'profile' %}?section=myWishlists">
               <div class="text-center">
                 <div class="d-flex flex-row align-items-center">
                   <i class="fa-solid fa-heart fa-lg" aria-label="Wishlist"></i>
@@ -83,6 +82,4 @@
       </ul>
     </div>         
   </div>   
-</div>
-</div>
 </div>
