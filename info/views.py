@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import ContactForm
+from profiles.models import UserProfile
 
 
 # Create your views here.
@@ -20,7 +21,17 @@ def contact(request):
             messages.error(
                 request, 'Please make sure all fields are filled out.')
     else:
-        form = ContactForm()
+        if request.user.is_authenticated:
+            try:
+                profile = UserProfile.objects.get(user=request.user)
+                form = ContactForm(initial={
+                    'full_name': profile.user.get_full_name(),
+                    'email': request.user.email
+                })
+            except UserProfile.DoesNotExist:
+                form = ContactForm()
+        else:
+            form = ContactForm()
 
     return render(request, 'info/contact.html', {'form': form})
 

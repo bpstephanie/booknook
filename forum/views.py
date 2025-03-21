@@ -174,4 +174,4 @@ def delete_post(request, post_id):
         next_url = request.POST.get('next', 'profile')
         return redirect(next_url)
     else:
-        return redirect('profile')  
+        return redirect('profile')
