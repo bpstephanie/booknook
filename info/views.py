@@ -40,3 +40,7 @@ def terms_and_conditions(request):
 
 def privacy_policy(request):
     return render(request, 'info/privacy_policy.html')
+
+
+def partners(request):
+    return render(request, 'info/partners.html')

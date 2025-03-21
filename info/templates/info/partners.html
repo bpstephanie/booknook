@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load static %} 
+{% block extra_title %}- Partners
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'info/css/info.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="header-container container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="cream-overlay"></div>
+    <div class="container mb-5">
+        <div class="text-center">
+            <a href="{% url 'home' %}">
+                <img src="{{ MEDIA_URL }}booknook-logo-no-bg.webp" class="d-inline-block align-top w-25 h-25" alt="BookNook logo">
+              </a>
+            <h1 class="text-navy text-uppercase">Our Partners</h1>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <p class="lora-bold text-center h3">At BookNook, we believe in the power of reading and education to transform lives. 
+                    We are proud to partner with various charities and local councils to promote literacy, support education, and 
+                    donate books to those in need. Learn more about our partners and the incredible work they do:</p>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-md-6">
+                <div class="partner-section">
+                    <h2 class="text-navy">National Literacy Trust</h2>
+                    <p>The National Literacy Trust is an independent charity that works with schools and communities to give children the literacy skills they need to succeed in life. They empower people with the literacy skills necessary to change their stories and improve their lives.</p>
+                    <a href="https://literacytrust.org.uk/" class="btn btn-orange btn-lg" target="_blank">Visit National Literacy Trust</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Empty column for alternating layout -->
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md-6 order-md-2">
+                <div class="partner-section">
+                    <h2 class="text-navy">Learn2Love2Read</h2>
+                    <p>Learn2Love2Read is a charity dedicated to helping children develop a love for reading. They provide early years 
+                        classes, training, and events to support parents and children in their reading journey. Their programs focus 
+                        on interactive reading sessions, where volunteers read with children, helping them improve their reading 
+                        skills and fostering a lifelong love for books. Learn2Love2Read believes that reading is essential for both 
+                        the heart and soul, and they strive to make reading accessible and enjoyable for all children.</p>
+                    <a href="https://www.learn2love2read.org.uk/" class="btn btn-orange btn-lg" target="_blank">Visit Learn2Love2Read</a>
+                </div>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <!-- Empty column for alternating layout -->
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <div class="partner-section">
+                    <h2 class="text-navy">Book Trade Entry Support</h2>
+                    <p>Book Trade Entry Support is a charity dedicated to helping young people start their careers in the 
+                        book trade. They offer financial assistance for interview costs, paid internships, and work 
+                        experience opportunities. Their support includes covering expenses such as travel, subsistence, 
+                        rent, and clothing, making it easier for individuals to pursue their passion for books and publishing. 
+                        Additionally, they provide subsidized housing for new entrants to the book trade, ensuring that financial 
+                        barriers do not hinder their career aspirations</p>
+                    <a href="https://booktradeentrysupport.org/" class="btn btn-orange btn-lg" target="_blank">Visit Book Trade Entry Support</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Empty column for alternating layout -->
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md-6 order-md-2">
+                <div class="partner-section">
+                    <h2 class="text-navy display-4">PARTNER WITH US</h2>
+                    <p>At BookNook, we believe in the transformative power of reading and education. By partnering with us, you can 
+                        help make a significant impact on communities and individuals who need it most. Whether you're a charity, 
+                        local council, or organization dedicated to literacy and education, we invite you to join us in our mission 
+                        to promote reading, support educational initiatives, and provide access to books for all. Together, we can 
+                        create a brighter future where everyone has the opportunity to learn, grow, and thrive. Let's collaborate 
+                        and make a difference—partner with us today!.</p>
+                    <a href="{% url 'contact' %}" class="btn btn-orange btn-lg">Contact Us</a>
+                </div>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <!-- Empty column for alternating layout -->
+            </div>
+        </div>
+    </div>
+{% endblock %}

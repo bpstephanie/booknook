@@ -11,4 +11,5 @@ urlpatterns = [
         'terms-and-conditions/',
         views.terms_and_conditions, name='terms_and_conditions'),
     path('privacy-policy/', views.privacy_policy, name='privacy_policy'),
+    path('partners/', views.partners, name='partners'),
 ]
