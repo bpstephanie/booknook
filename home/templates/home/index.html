@@ -11,13 +11,11 @@
 {% endblock %} {% block content %}
 <div class="container container-bn h-100">
   <div class="row h-100 align-items-center">
-    <div class="row h-100 overlay">
-      <div class="col-8 my-auto">
-        <h1 class="text-center display-5">Don't buy distractions, buy books!</h1>
-      </div>
-      <div class="my-5">
-        <div>
-          <a href="{% url 'products' %}" class="btn btn-navy rounded-5 text-uppercase py-3 h4">Shop now</a>
+    <div class="col-12">
+      <div class="overlay my-auto p-2">
+        <p class="h3 lora">Don't buy distractions, buy books!</p>
+        <div class="text-right">
+          <a href="{% url 'products' %}" class="btn btn-navy border-0 text-uppercase py-2 h3 lora">Shop now</a>
         </div>
       </div>
     </div>
@@ -25,12 +23,12 @@
 </div>
 <div id="newsletter-signup" class="sign-up-container container my-5 py-2">
   <div class="row">
-    <div class=" col-6 bg-navy text-center">
+    <div class="col-10 col-md-8 col-lg-6 bg-navy text-center">
       <h2 class="text-cream">Sign Up for our Newsletter</h2>
     </div>
   </div>
   <div class="row">
-    <div class="col-6 bg-navy">
+    <div class="col-10 col-md-8 col-lg-6 bg-navy">
       <form method="POST" action="{% url 'newsletter_signup' %}" class="text-cream">
         {% csrf_token %}
         {{ form|crispy }}

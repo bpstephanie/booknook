@@ -26,7 +26,7 @@
             {% if accessories %}
                 <div class="category-section">
                     <a class="text-decoration-none" href="{% url 'all_accessories' %}?category={{ category.friendly_name }}">
-                        <h3 class="category-title text-navy">{{ category.friendly_name}} ({{ category.book_count}})</h3>
+                        <h3 class="category-title text-navy">{{ category.friendly_name}} ({{ category.accessory_count}})</h3>
                     </a>
                     <div class="category-accessories-wrapper row">
                         <button class="arrow left-arrow" aria-label="Scroll left">&lt;</button>

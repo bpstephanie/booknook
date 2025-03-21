@@ -32,7 +32,7 @@
                         <button class="arrow left-arrow">&lt;</button>
                         <div class="books-carousel d-flex flex-nowrap">
                             {% for book in books %}
-                            <div class="col-sm-6 col-lg-2 col-xl-2"">
+                            <div class="col-sm-6 col-lg-2 col-xl-2">
                                 <div class="card card-glow h-100 border-0">
                                     <a href="{% url 'product_detail' book.id %}">
                                         {% if book.image %}

@@ -48,7 +48,7 @@
                     <p><span class="lora-bold">Country:</span> {{ profile.default_country }}</p>
                     <p><span class="lora-bold">Postal Code:</span> {{ profile.default_postcode }}</p>
                     <button type="button" class="btn btn-outline-navy rounded-0" onclick="toggleForm('formDelivery')">Update Delivery Details</button>
-                    <div id="formDelivery" style="display: none;">
+                    <div id="formDelivery" style="display: none;" class="mt-3">
                         <form method="POST" action="{% url 'update_delivery_details' %}">
                             {% csrf_token %}
                             {{ delivery_form|crispy }}
@@ -70,7 +70,7 @@
                             {% endfor %}
                         </ul>
                     <button type="button" class="btn btn-outline-navy rounded-0" onclick="toggleForm('formPersonalInfo')">Update Personal Info</button>
-                    <div id="formPersonalInfo" style="display: none;">
+                    <div id="formPersonalInfo" style="display: none;" class="mt-3">
                         <form method="POST" action="{% url 'update_personal_info' %}">
                             {% csrf_token %}
                             {{ personal_info_form|crispy }}

@@ -35,20 +35,9 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'all_accessories' %}?sort=rating&direction=desc">By Rating</a>
                 <div class="dropdown-divider"></div>
-                <div class="dropdown-submenu">
-                    <a class="dropdown-item dropright" href="">By Category</a>
-                    <ul class="dropdown-menu bg-cream">
-                        <li><a class="dropdown-item" href="{% url 'all_accessories' %}?category=bookmarks">Bookmarks</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li><a class="dropdown-item" href="{% url 'all_accessories' %}?category=totebags">Tote Bags</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li><a class="dropdown-item" href="{% url 'all_categories' %}?category=mugs">Mugs</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li><a class="dropdown-item" href="{% url 'all_categories' %}">All Categories</a></li>
-                    </ul>
-                </div>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="{% url 'all_accessories' %}">All Accessories</a>
+                <a class="dropdown-item" href="{% url 'all_categories' %}">By Category</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'all_accessories' %}">All Accessories</a>
         </li>
         <li class="nav-item dropdown">
             <a class="text-uppercase font-weight-bold nav-link orange-link text-navy mr-5" href="#" id="community-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

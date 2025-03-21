@@ -21,12 +21,12 @@
 
 .all-threads {
     background-color: #fff;
-    padding: 2%;
+    padding: 5%;
 }
 
 .thread-item {
     border-bottom: 1px solid #ddd;
-    padding: 10px 0;
+    padding: 10px;
 }
 
 .thread-item a {
@@ -45,5 +45,5 @@
     border: 3px solid red;
     background-color: rgb(255, 165, 165);
     padding: 2%;
-    margin: 2%;
+    margin: 3%;
 }

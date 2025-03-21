@@ -433,7 +433,6 @@ a {
 .overlay {
     background-color: #fefefe;
     opacity: 0.8;
-    border-radius: 5px;
 
 }
 
@@ -491,6 +490,11 @@ a {
     background-color: #0b254b;
     color: #fefefe;
     border: 1px solid #fefefe;
+}
+
+.card-navy a,
+.card-navy p {
+    color: #fefefe;
 }
 
 .card-img-top {
@@ -760,7 +764,7 @@ footer hr {
     z-index: 1;
 }
 .genre-books-wrapper,
-.category-books-wrapper {
+.category-accessories-wrapper {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;

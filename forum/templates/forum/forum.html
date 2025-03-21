@@ -19,7 +19,7 @@
         <h1>BookNook Forum</h1>
         <hr>
         <div class="row">
-            <div class="col-3 forum-buttons">
+            <div class="col-5 col-md-4 col-lg-3 forum-buttons">
                 {% for category in categories %}
                     <button class="btn btn-outline-navy rounded-0 mb-2 category-button" 
                     type="button" onclick="showContent('{{ category.id }}')" 
@@ -32,7 +32,7 @@
                     </button>
                 {% endif %}
             </div>
-            <div class="col-9">
+            <div class="col-7 col-md-8 col-lg-9">
                 {% for category in categories %}
                     <div id="{{ category.id }}" class="content-section" style="display: none;">
                         <h2 class="forum-font">{{ category.name }} Discussions</h2>
@@ -48,12 +48,11 @@
                                         <p class="text-small">Started by: {{ thread.created_by.username }} on {{ thread.created_at }}</p>
                                         <p>{{ thread.content }}</p>
                                     </div>
-                                    <hr>
                                 {% endif %}
                             {% endfor %}
                             <div class="d-flex justify-content-center">
                                 {% if user.is_authenticated %}
-                                    <button class="btn btn-navy rounded-0" type="button" data-toggle="modal" data-target="#createThreadModal" data-category-id="{{ category.id }}">
+                                    <button class="btn btn-navy rounded-0 my-2" type="button" data-toggle="modal" data-target="#createThreadModal" data-category-id="{{ category.id }}">
                                         Create New Thread
                                     </button>
                                 {% else %}
