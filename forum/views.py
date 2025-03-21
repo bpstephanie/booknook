@@ -88,34 +88,6 @@ def create_post(request, category_id, thread_id):
 
 
 @login_required
-def edit_post(request, post_id):
-    post = get_object_or_404(Post, id=post_id)
-
-    if request.user != post.created_by:
-        messages.error(request, 'You are not authorized to edit this post.')
-        return redirect('forum')
-
-    if request.method == "POST":
-        form = PostForm(request.POST, instance=post)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Post updated successfully!')
-            next_url = request.POST.get('next', 'profile')
-            return redirect(next_url)
-    else:
-        form = PostForm(instance=post)
-
-    template = 'forum/edit_post.html'
-    context = {
-        'form': form,
-        'post': post,
-        'next': request.GET.get('next', 'profile')
-    }
-    return render(request, template, context)
-
-
-
-@login_required
 def edit_thread(request, thread_id):
     thread = get_object_or_404(Thread, id=thread_id)
 
@@ -159,3 +131,47 @@ def delete_thread(request, thread_id):
     thread.save()
     messages.success(request, 'Thread deleted successfully!')
     return redirect('forum')
+
+
+@login_required
+def edit_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+
+    if request.user != post.created_by:
+        messages.error(request, 'You are not authorized to edit this post.')
+        return redirect('forum')
+
+    if request.method == "POST":
+        form = PostForm(request.POST, instance=post)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Post updated successfully!')
+            next_url = request.POST.get('next', 'profile')
+            return redirect(next_url)
+    else:
+        form = PostForm(instance=post)
+
+    template = 'forum/edit_post.html'
+    context = {
+        'form': form,
+        'post': post,
+        'next': request.GET.get('next', 'profile')
+    }
+    return render(request, template, context)
+
+
+@login_required
+def delete_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+
+    if request.user != post.created_by:
+        messages.error(request, 'You are not authorized to delete this post.')
+        return redirect('profile')
+
+    if request.method == "POST":
+        post.delete()
+        messages.success(request, 'Post deleted successfully!')
+        next_url = request.POST.get('next', 'profile')
+        return redirect(next_url)
+    else:
+        return redirect('profile')  

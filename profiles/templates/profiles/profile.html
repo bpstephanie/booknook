@@ -263,8 +263,8 @@
                                             <p class="post-content">{{ post.content|truncatewords:30 }}</p>
                                             <p class="post-meta">Thread started by: {{ post.thread.created_by.username }} on {{ post.thread.created_at }}</p>
                                             <div class="d-flex justify-content-between">
-                                                <a href="{% url 'edit_post' post.id %}?next={% url 'profile' %}?section=forumInteraction" class="text-success">Edit</a>
-                                                
+                                                <a href="{% url 'edit_post' post.id %}?next={% url 'profile' %}?section=forumInteraction" class="text-success text-decoration-none text-small">Edit</a>
+                                                <a href="#" class="text-danger text-decoration-none text-small" data-toggle="modal" data-target="#deletePostModal" data-url="{% url 'delete_post' post.id %}" data-next="{% url 'profile' %}?section=forumInteraction">Delete</a>
                                             </div>
                                         </div>
                                     {% endfor %}
@@ -430,6 +430,17 @@
                     }
                 });
             });
+        });
+    </script>
+    <!-- Confirm Post Deletion-->
+     <script type="text/javascript">
+        $('#deletePostModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget); // Button that triggered the modal
+            var url = button.data('url'); // Extract info from data-* attributes
+            var next = button.data('next'); // Extract next URL
+            var modal = $(this);
+            modal.find('#deletePostForm').attr('action', url);
+            modal.find('#deletePostNext').val(next);
         });
     </script>
 {% endblock %}
