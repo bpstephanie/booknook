@@ -25,28 +25,48 @@ def profile(request):
     """
     profile = get_object_or_404(UserProfile, user=request.user)
 
+    # Forms
     delivery_form = DeliveryDetailsForm(instance=profile)
     personal_info_form = PersonalInfoForm(instance=profile)
+    review_form = ReviewForm()
+    newsletter_form = NewsletterSignupForm(instance=profile)
+
+    # Querysets
     orders = profile.orders.all()
     wishlists = Wishlist.objects.filter(user=request.user)
     saved_items = bag_contents(request)['saved_items']
     threads = Thread.objects.filter(created_by=request.user, is_deleted=False)
+    raw_posts = Post.objects.filter(
+        created_by=request.user, thread__is_deleted=False, parent=None)
+    unique_posts = list({post.id: post for post in raw_posts}.values())
     categories = Category.objects.all()
     reviews = Review.objects.filter(author=request.user).select_related(
         'product'
     )
-    review_form = ReviewForm()
-    newsletter_form = NewsletterSignupForm(instance=profile)
     newsletter_signup = NewsletterSignup.objects.filter(
         email=request.user.email
     ).first()
 
-    # Filter categories
+    # Filter categories with threads and posts
     categories_with_threads = [
         category for category in categories
         if threads.filter(category=category).exists()
     ]
 
+    categories_with_posts = [
+        category for category in categories
+        if raw_posts.filter(thread__category=category).exists()
+    ]
+
+    # Group posts by category
+    posts_by_category = {
+        category: [
+            post for post in unique_posts if post.thread.category == category
+        ]
+        for category in categories_with_posts
+    }
+
+    # Get active section from URL parameter
     section = request.GET.get('section', 'deliveryDetails')
 
     template = 'profiles/profile.html'
@@ -58,7 +78,11 @@ def profile(request):
         'wishlists': wishlists,
         'saved_items': saved_items,
         'threads': threads,
+        'raw_posts': raw_posts,
+        'posts': unique_posts,
         'categories': categories_with_threads,
+        'categories_with_posts': categories_with_posts,
+        'posts_by_category': posts_by_category,
         'section': section,
         'on_profile_page': True,
         'newsletter_form': newsletter_form,

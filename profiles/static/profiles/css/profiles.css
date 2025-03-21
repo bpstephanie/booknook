@@ -1,3 +1,13 @@
+.forum-font {
+    font-family: 'Source Sans 4', sans-serif !important;
+    font-size: 18px;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
 .profile-overlay {
     background-color: #edeeed;
     width: 100%;
@@ -50,6 +60,7 @@
 .category-header,
 .wishlist-title,
 .saved-item-title {
+    font-family: 'Lora', serif;
     font-size: 24px;
     color: #0b254b;
     margin-bottom: 10px;
@@ -58,7 +69,8 @@
 .threads-container
 .wishlists-container,
 .saved-items-container,
-.p-reviews-container {
+.p-reviews-container,
+.posts-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -67,7 +79,8 @@
 .thread-card,
 .wishlist-card,
 .saved-item-card,
-.review-card {
+.review-card,
+.post-card {
     background-color: #fefefe;
     border: 1px solid #0b254b;
     color: #0b254b;
@@ -81,15 +94,13 @@
 .thread-card:hover,
 .wishlist-card:hover,
 .saved-item-card:hover,
-.review-card:hover {
+.review-card:hover,
+.post-card:hover {
     transform: scale(1.05);
 }
 
 .thread-title,
-.wishlist-title,
-.saved-item-title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+ {
     color: #0b254b;
     margin-bottom: 5px;
     word-wrap: break-word;
@@ -107,7 +118,8 @@
 
 .thread-content,
 .wishlist-items,
-.saved-item-author {
+.saved-item-author,
+.post-content {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     color: #555;
@@ -117,9 +129,14 @@
     overflow-wrap: break-word;
 }
 
+.post-content {
+    font-family: ;
+}
+
 .thread-meta,
 .wishlist-item,
-.review-meta {
+.review-meta,
+.post-meta {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     color: #777;

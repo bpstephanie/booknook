@@ -38,6 +38,8 @@
             </div>
             <div class="col-8">
                 <div id="deliveryDetails" class="content-section" style="display: none;">
+                    <h2>Saved Delivery Details</h2>
+                    <hr>
                     <p><span class="lora-bold">Phone Number:</span> {{ profile.default_phone_number }}</p>
                     <p><span class="lora-bold">Street Address 1:</span> {{ profile.default_street_address1 }}</p>
                     <p><span class="lora-bold">Street Address 2:</span> {{ profile.default_street_address2 }}</p>
@@ -55,6 +57,8 @@
                     </div>
                 </div>
                 <div id="personalInfo" class="content-section" style="display: none;">
+                    <h2>Saved Personal Details</h2>
+                    <hr>
                     <h3>Your Bio:</h3>
                         <p>{{ profile.bio }}</p>
                     <h3>Favourite Books:</h3>
@@ -75,6 +79,8 @@
                     </div>
                 </div>
                 <div id="orderHistory" class="content-section" style="display: none;">
+                    <h2>Past Orders</h2>
+                    <hr>
                     <div class="order-history table-responsive">
                         <table class="table table-sm table-borderless">
                             <thead>
@@ -154,7 +160,7 @@
                         <div class="wishlist-container d-flex flex-wrap">
                             {% for wishlist in wishlists %}
                             <div class="wishlist-card m-2">
-                                <h3 class="wishlist-title">{{ wishlist.name }}</h3>
+                                <h3 class="wishlist-title roboto">{{ wishlist.name }}</h3>
                                 <ul class="wishlist-items list-unstyled">
                                     {% for item in wishlist.wishlist_items.all %}
                                         <li class="wishlist-item">
@@ -204,7 +210,7 @@
                                     {% else %}
                                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name}}">
                                     {% endif %}
-                                    <h3 class="saved-item-title">{{ saved_item.product.friendly_name }}</h3>
+                                    <h3 class="saved-item-title roboto">{{ saved_item.product.friendly_name }}</h3>
                                     <h4 class="saved-item-author">By: {{ saved_item.product.book.author }}</h4>
                                 </div>
                             {% endfor %}
@@ -216,28 +222,55 @@
                 <div id="forumInteraction" class="content-section" style="display: none;">
                     <h2>Forum Interactions</h2>
                     <hr>
-                    {% for category in categories %}
-                        <div class="category-section">
-                            <h2 class="category-header">{{ category.name }}</h2>
-                            <div class="threads-container d-flex flex-wrap">
-                                {% for thread in threads %}
-                                    {% if thread.category.id == category.id %}
-                                        <div class="thread-card m-2">
-                                            <h3 class="thread-title">
-                                                <a href="{% url 'post_list' category.id thread.id %}" class="text-decoration-none">{{ thread.title }}</a>
-                                            </h3>
-                                            <p class="thread-content">{{ thread.content|truncatewords:30 }}<p>
-                                            <p class="thread-meta">Started by: {{ thread.created_by.username }} on {{ thread.created_at }}</p>
+                    <button class="btn btn-outline-navy btn-lg rounded-0 mb-2" type="button" onclick="showContent('threadsSection')">Threads</button>
+                    <button class="btn btn-outline-navy btn-lg rounded-0 mb-2" type="button" onclick="showContent('postsSection')">Posts</button>
+                    <a class="btn btn-navy btn-lg rounded-0 mb-2" href="{% url 'forum' %}">Go to Forum</a>
+                    <div id="threadsSection" class="content-section" style="display: none;">
+                        {% for category in categories %}
+                            <div class="category-section">
+                                <h2 class="category-header">{{ category.name }}</h2>
+                                <div class="threads-container d-flex flex-wrap">
+                                    {% for thread in threads %}
+                                        {% if thread.category.id == category.id %}
+                                            <div class="thread-card m-2">
+                                                <h3 class="thread-title roboto">
+                                                    <a href="{% url 'post_list' category.id thread.id %}" class="text-decoration-none">{{ thread.title }}</a>
+                                                </h3>
+                                                <p class="thread-content">{{ thread.content|truncatewords:30 }}<p>
+                                                <p class="thread-meta">Started by: {{ thread.created_by.username }} on {{ thread.created_at }}</p>
+                                                <div class="d-flex justify-content-between">
+                                                    <a href="{% url 'edit_thread' thread.id %}?next={% url 'profile' %}?section=forumInteraction" class="btn btn-success btn-sm rounded-0">Edit Thread</a>
+                                                    <a href="#" class="btn btn-danger btn-sm rounded-0" data-toggle="modal" data-target="#deleteModal" data-thread-id="{{ thread.id }}">Delete</a>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% endfor %} 
+                    </div>
+                    <div id="postsSection" class="content-section" style="display: none;">
+                        {% for category, posts in posts_by_category.items %}
+                            <div class="category-section">
+                                <h2 class="category-header">{{ category.name }}</h2>
+                                <div class="posts-container d-flex flex-wrap">
+                                    {% for post in posts %}
+                                        <div class="post-card m-2">
+                                            <small>THREAD TITLE:</small>
+                                            <p class="post-thread-title">
+                                                <a href="{% url 'post_list' post.thread.category.id post.thread.id %}" class="text-decoration-none">{{ post.thread.title }}</a>
+                                            </p>
+                                            <p class="post-content">{{ post.content|truncatewords:30 }}</p>
+                                            <p class="post-meta">Thread started by: {{ post.thread.created_by.username }} on {{ post.thread.created_at }}</p>
                                             <div class="d-flex justify-content-between">
-                                                <a href="{% url 'edit_thread' thread.id %}?next={% url 'profile' %}?section=forumInteraction" class="btn btn-success btn-sm rounded-0">Edit Thread</a>
-                                                <a href="#" class="btn btn-danger btn-sm rounded-0" data-toggle="modal" data-target="#deleteModal" data-thread-id="{{ thread.id }}">Delete</a>
+                                                
                                             </div>
                                         </div>
-                                    {% endif %}
-                                {% endfor %}
+                                    {% endfor %}
+                                </div>
                             </div>
-                        </div> 
-                    {% endfor %}
+                        {% endfor %} 
+                    </div>  
                 </div>
                 <div id="rewardsBenefits" class="content-section" style="display: none;">
                     <h2>Member Benfits</h2>
@@ -285,6 +318,10 @@
             });
             // Show the selected content section
             document.getElementById(sectionId).style.display = 'block';
+
+           if (sectionId === 'threadsSection' || sectionId === 'postsSection') {
+            document.getElementById('forumInteraction').style.display = 'block';
+           }
         }
 
         function toggleForm(formId) {
