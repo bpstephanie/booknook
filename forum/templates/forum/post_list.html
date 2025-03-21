@@ -36,8 +36,8 @@
                             <p>{{ post.content }}</p>
                             <p>By {{ post.created_by.username }} on {{ post.created_at }}</p>
                             {% if post.created_by == request.user %}
-                                <div class="d-flec justify-content-end">
-                                    <a class="text-success text-decoration-none text-small">Edit</a>
+                                <div class="d-flex justify-content-end">
+                                    <a href="{% url 'edit_post' post.id %}?next={% url 'post_list' category_id=post.thread.category.id thread_id=post.thread.id %}" class="text-success text-decoration-none text-small">Edit</a>
                                     <a class="text-danger text-decoration-none text-small">Delete</a>
                                 </div>                        
                             {% endif %}

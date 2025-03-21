@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'forum/css/forum.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="full-overlay"></div>
+    <div class="container mb-5">
+        <h1>Edit Post</h1>
+        <hr>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input type="hidden" name="next" value="{{ next }}">
+            <button type="submit" class="btn btn-navy rounded-0">Save Changes</button>
+        </form>
+    </div>
+{% endblock %}

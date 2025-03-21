@@ -27,7 +27,7 @@
                     {% if forloop.first %}id="default-category"{% endif %} >
                    {{ category.name }}</button>
                 {% endfor %}
-                {% if user.is_authenticated %}
+                {% if user.is_superuser %}
                     <button class="btn btn-navy rounded-0 mb-2" type="button" data-toggle="modal" data-target="#addCategoryModal">
                         <i class="fa-solid fa-plus"></i> Add Category
                     </button>

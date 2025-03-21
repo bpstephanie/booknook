@@ -22,4 +22,5 @@ urlpatterns = [
     path(
         'thread/<int:thread_id>/delete/',
         views.delete_thread, name='delete_thread'),
+    path('post/<int:post_id>/edit', views.edit_post, name='edit_post'),
 ]
