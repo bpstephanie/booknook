@@ -138,82 +138,11 @@
         <div class="container px-2">
             <div class="reviews-container">
                 <div class="row">
-                    <div class="col-md-6 mb-4 mt-3 border-0">
-                        <h2>Reviews 
-                            <span class="text-muted">{% if review_count > 0 %}({{ review_count }}){% else %}0{% endif %}</span>
-                        </h2>
-                        {% for review in reviews %}
-                            <div class="p-2 reviews {% if not review.approved and review.author == user %} text-muted {% elif not review.approved %} d-none{% endif %}">
-                                <h3 class="font-weight-bold review-title">{{ review.title }}</h3>
-                                <p class="text-small text-muted ">By {{ review.author.username }} - {{ review.created_on|date:"F j, Y"}}</p>
-                                <p class="m-0">Rating: <span class="review-rating">{{ review.rating }}</span>/5</p>
-                                <div id="review{{ review.id }}">
-                                    <p class="review-body">{{ review.body }}</p>
-                                </div>
-                                {% if not review.approved and review.author == user %}
-                                    <p class="text-danger">
-                                        This review is awaiting approval
-                                    </p>
-                                {% endif %}
-                                {% if user.is_authenticated and review.author == user %}
-                                    <a href="#" class="text-danger text-decoration-none text-small" data-toggle="modal" data-target="#deleteReviewModal" data-url="{% url 'delete_review' review.id %}">Delete</a>
-                                    <a href="#" class="text-success edit-review text-decoration-none text-small" review_id="{{ review.id }}">Edit</a>
-                                {% endif %}
-                                <div class="text-right">
-                                    <a href="#" class="btn btn-sm btn-navy rounded-0 add-comment-btn" data-review-id="{{ review.id }}">Add Comment</a>
-                                    <a href="#" class="btn btn-sm btn-outline-navy rounded-0 comment-section-toggle" data-review-id="{{ review.id }}">See Comments</a>
-                                </div>
-                                <div class="comment-form-container" data-review-id="{{ review.id }}" style="display:none">
-                                    <form method="POST" class="form" action="{% url 'submit_comment' review.id %}">
-                                        {% csrf_token %}
-                                        {{ comment_form|crispy }}
-                                        <input type="hidden" name="review_id" value="{{ review.id }}">
-                                        <div class="text-right">
-                                            <button type="submit" class="btn btn-navy rounded-0 mt-3">Submit Comment</button>
-                                        </div>
-                                    </form>
-                                </div>
-                                <!-- Review Comment Section -->
-                                <div class="text-right comment-section" data-review-id="{{ review.id }}" style="display:none;">
-                                    {% for comment in review.comments.all %}
-                                        <div class="comment-container">
-                                            <p>{{ comment.body }}</p>
-                                            <p>{{ comment.user.username }} - {{ comment.created_on|date:"F j, Y H:i" }}</p>
-                                            {% if user.is_authenticated and comment.user == user %}
-                                                <a class="btn btn-delete" href="#" comment_id="{{ comment.id }}">Delete</a>
-                                                <a class="btn btn-edit" href="" comment_id="{{ comment.id }}">Edit</a>
-                                            {% endif %}
-                                        </div>
-                                    {% empty %}
-                                        <p>No comments yet. Be the first!</p>
-                                    {% endfor %}
-                                    
-                                </div>
-                            </div>
-                        {% empty %}
-                            <p>No reviews yet. Be the first!</p>
-                        {% endfor %}
-                    </div>
-                    <div class="col-md-6 mb-4 mt-3 border-0">
-                        <div>
-                            {% if user.is_authenticated and has_purchased %}
-                                <h3>Leave a Review</h3>
-                                <form method="POST" class="form" action="{% url 'submit_review' product.id %}" id="review-form">
-                                    {% csrf_token %}
-                                    {{ review_form|crispy }}
-                                    <input type="hidden" name="review_id" id="review-id">
-                                    <button type="submit" class="btn btn-navy rounded-0 mt-3" id="review-submit-btn">Submit Review</button>
-                                </form>
-                            {% else %}
-                                <p>Only customers who have purchased this item can leave a review.</p>
-                            {% endif %}
-                        </div>
-                    </div>
+                    {% include 'products/includes/review_section.html' %} 
                 </div>
             </div>
         </div>
-    </div>
-           
+    </div>   
     {% include 'products/includes/wishlist_modal.html' %}
     {% include 'products/includes/confirm_delete_modal.html' %}
 {% endblock %}
@@ -222,7 +151,7 @@
     {{ block.super }}
     {% include 'products/includes/quantity_input_script.html' %}
     {% include 'products/includes/wishlist_modal_script.html' %}
-    <!-- Confirm delete jQuery -->
+    <!-- Confirm delete product jQuery -->
     <script type="text/javascript">
         $('#deleteModal').on('show.bs.modal', function (event) {
             var link = $(event.relatedTarget);
@@ -276,6 +205,7 @@
             });
         });
     </script>
+    <!-- Confirm delete review -->
     <script type="text/javascript">
         $(document).ready(function() {
             $('#deleteReviewModal').on('show.bs.modal', function(event) {

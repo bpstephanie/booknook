@@ -23,12 +23,14 @@
 }
 
 #formPersonalInfo input::placeholder,
-#formDelivery input::placeholder {
+#formDelivery input::placeholder,
+#formReview input::placeholder {
     color: #aab7c4;
 }
 
 #formPersonalInfo .form-control,
-#formDelivery .form-control {
+#formDelivery .form-control,
+#formReview .form-control {
     color: #000;
 }
 
@@ -53,9 +55,10 @@
     margin-bottom: 10px;
 }
 
-.threads-containerm
+.threads-container
 .wishlists-container,
-.saved-items-container {
+.saved-items-container,
+.p-reviews-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -63,7 +66,8 @@
 /*----------------------------------------------------- Card Styles */
 .thread-card,
 .wishlist-card,
-.saved-item-card {
+.saved-item-card,
+.review-card {
     background-color: #fefefe;
     border: 1px solid #0b254b;
     color: #0b254b;
@@ -76,7 +80,8 @@
 
 .thread-card:hover,
 .wishlist-card:hover,
-.saved-item-card:hover {
+.saved-item-card:hover,
+.review-card:hover {
     transform: scale(1.05);
 }
 
@@ -85,6 +90,14 @@
 .saved-item-title {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
+    color: #0b254b;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+.review-title {
     color: #0b254b;
     margin-bottom: 5px;
     word-wrap: break-word;
@@ -105,7 +118,8 @@
 }
 
 .thread-meta,
-.wishlist-item {
+.wishlist-item,
+.review-meta {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     color: #777;

@@ -7,12 +7,14 @@ from checkout.models import Order
 from wishlist.models import Wishlist, WishlistItem
 from forum.models import Category, Thread, Post
 from home.models import NewsletterSignup
+from products.models import Review
 
 from bag.contexts import bag_contents
 
 from .forms import DeliveryDetailsForm, PersonalInfoForm
 from forum.forms import ThreadForm
 from home.forms import NewsletterSignupForm
+from products.forms import ReviewForm
 
 
 # Create your views here.
@@ -30,6 +32,10 @@ def profile(request):
     saved_items = bag_contents(request)['saved_items']
     threads = Thread.objects.filter(created_by=request.user, is_deleted=False)
     categories = Category.objects.all()
+    reviews = Review.objects.filter(author=request.user).select_related(
+        'product'
+    )
+    review_form = ReviewForm()
     newsletter_form = NewsletterSignupForm(instance=profile)
     newsletter_signup = NewsletterSignup.objects.filter(
         email=request.user.email
@@ -56,7 +62,9 @@ def profile(request):
         'section': section,
         'on_profile_page': True,
         'newsletter_form': newsletter_form,
-        'newsletter_signup': newsletter_signup
+        'newsletter_signup': newsletter_signup,
+        'reviews': reviews,
+        'review_form': review_form,
     }
     return render(request, template, context)
 
@@ -133,7 +141,7 @@ def remove_wishlist_item(request, item_id):
         messages.success(request, 'Wishlist item deleted!')
     else:
         messages.error(
-            request, 'Somwthing went wrong - your item was not deleted.')
+            request, 'Something went wrong - your item was not deleted.')
     return redirect(resolve_url('profile') + '?section=myWishlists')
 
 
@@ -146,7 +154,7 @@ def remove_wishlist(request, wishlist_id):
         messages.success(request, 'Wishlist deleted!')
     else:
         messages.error(
-            request, 'Somwthing went wrong - your wishlist was not deleted.')
+            request, 'Something went wrong - your wishlist was not deleted.')
     return redirect(resolve_url('profile') + '?section=myWishlists')
 
 
@@ -193,3 +201,24 @@ def delete_thread(request, thread_id):
     thread.save()
     messages.success(request, 'Thread deleted successfully!')
     return redirect(resolve_url('profile') + '?section=forumInteraction')
+
+
+@login_required
+def update_review(request):
+    review_id = request.POST.get('review_id')
+    review = get_object_or_404(Review, id=review_id, author=request.user)
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.approved = False
+            review.save()
+            messages.success(request, 'Review updated successfully!')
+            return redirect(resolve_url('profile') + '?section=userReviews')
+        else:
+            messages.error(
+                request, 'Update failed. Please ensure the form is valid.')
+    else:
+        form = ReviewForm(instance=review)
+    return redirect('profile')

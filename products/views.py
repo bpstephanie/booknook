@@ -345,14 +345,25 @@ def edit_review(request, review_id):
             review.approved = False
             review.save()
             messages.success(request, 'Review Updated!')
-            return redirect('product_detail', product_id=review.product.id)
+            next_url = request.POST.get('next', 'product_detail')
+            if next_url == 'profile':
+                return redirect('profile', section='userReviews')
+            else:
+                return redirect('product_detail', product_id=review.product.id)
         else:
             messages.error(
                 request, 'Error updating review!'
             )
     else:
         form = ReviewForm(instance=review)
-    return render(request, 'edit_review.html', {'form': form})
+
+    next_url = request.GET.get('next', 'product_detail')
+    if next_url == 'profile':
+        template = 'profiles/edit_review.html'
+    else:
+        template = 'products/edit_review.html'
+
+    return render(request, template, {'form': form})
 
 
 @login_required

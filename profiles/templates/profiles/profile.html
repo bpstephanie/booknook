@@ -112,13 +112,44 @@
                     </div>
                 </div>
                 <div id="userReviews" class="content-section" style="display: none;">
-                    <h2>NEED TO ADD</h2>
-                    <p>FILL THIS IN
-                    </p>
-                    <a class="btn btn-navy rounded-0" href="{% url 'downloads' %}">Challenges</a>
+                    <h2>My Reviews</h2>
+                    <hr>
+                    <div id="edit-review-form-container" style="display: none;">
+                        <h3>Edit Review</h3>
+                        <form method="POST" class="form" action="{% url 'update_review' %}" id="review-form">
+                            {% csrf_token %}
+                            {{ review_form|crispy }}
+                            <input type="hidden" name="review_id" id="review-id">
+                            <input type="hidden" name="product_id" id="product-id">
+                            <input type="hidden" name="next" value="profile">
+                            <button type="submit" class="btn btn-navy rounded-0 mt-3" id="review-submit-btn">Update Review</button>
+                        </form>
+                    </div>
+                    <div class="p-reviews-container">
+                        {% if reviews %}
+                            {% for review in reviews %}
+                                <div class="review-card m-2">
+                                    <p class="text-muted lora">Product Reviewed: <a href="{% url 'product_detail' review.product.id %}" class="text-decoration-none">{{ review.product.friendly_name }}</a></p>
+                                    <h3 class="review-title h4">{{ review.title }}</h3>
+                                    <p class="review-content h4 lora">{{ review.body }}</p>
+                                    <p class="review-meta">Reviewed on: {{ review.created_on }}</p>
+                                    <p>Rating: <span class="review-rating">{{ review.rating }}</span>/5</p>
+                                    <div class="d-flex justify-content-between">
+                                        <a href="#" class="btn btn-success btn-sm rounded-0 edit-review" review_id="{{ review.id }}" product_id="{{ review.product.id }}">Edit Review</a>
+                                        <a href="#" class="btn btn-danger btn-sm rounded-0" data-toggle="modal" data-target="#deleteReviewModal" data-url="{% url 'delete_review' review.id %}">Delete</a>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <h3>You currently don't have any reviews.</h3>
+                        {% endif %}
+                    </div>
+                    <div>
+                    </div>   
                 </div>
                 <div id="myWishlists" class="content-section" style="display: none;">
                     <h2>My Wishlists</h2>
+                    <hr>
                     {% if wishlists %}
                         <div class="wishlist-container d-flex flex-wrap">
                             {% for wishlist in wishlists %}
@@ -163,6 +194,7 @@
                 </div>
                 <div id="mySavedItems" class="content-section" style="display: none;">
                     <h2>Saved for Later</h2>
+                    <hr>
                     {% if saved_items %}
                         <div class="saved-items-container d-flex flex-wrap">
                             {% for saved_item in saved_items %}
@@ -183,6 +215,7 @@
                 </div>
                 <div id="forumInteraction" class="content-section" style="display: none;">
                     <h2>Forum Interactions</h2>
+                    <hr>
                     {% for category in categories %}
                         <div class="category-section">
                             <h2 class="category-header">{{ category.name }}</h2>
@@ -208,6 +241,7 @@
                 </div>
                 <div id="rewardsBenefits" class="content-section" style="display: none;">
                     <h2>Member Benfits</h2>
+                    <hr>
                     <p><strong>Dive into the world of books with our thrilling reading lists and challenges!</strong><br>
                         Whether you're a seasoned bookworm or just starting your literary journey, our curated reading
                         lists offer something for everyone. Explore new genres, discover hidden gems, and connect with
@@ -220,6 +254,7 @@
                 </div>
                 <div id="newsletter" class="content-section" style="display: none;">
                     <h2>BookNook Newsletter</h2>
+                    <hr>
                     {% if newsletter_signup %}
                         <h3 >You are subscribed to the newsletter.</h3>
                         <a class="btn btn-navy rounded-0" href="{% url 'unsubscribe_newsletter' %}?email={{ newsletter_signup.email}}">Unsubscribe</a>
@@ -310,6 +345,53 @@
             var modal = $(this);
             var deleteUrl = "{% url 'delete_thread' 0 %}".replace('0', threadId);
             modal.find('#confirmDeleteButton').attr('href', deleteUrl);
+        });
+    </script>
+    <!-- Edit and Delete Reviews -->
+    <script>
+        $(document).ready(function() {
+            $('.edit-review').on('click', function(event) {
+                event.preventDefault();
+                var reviewId = $(this).attr('review_id');
+                var productId = $(this).attr('product_id');
+                var reviewTitle = $(this).closest('.review-card').find('.review-title').text().trim();
+                var reviewBody = $(this).closest('.review-card').find('.review-content').text().trim();
+                var reviewRating = $(this).closest('.review-card').find('.review-rating').text().trim();
+
+                $('#review-id').val(reviewId);
+                $('#product-id').val(productId);
+                $('#id_title').val(reviewTitle);
+                $('#id_review_body').val(reviewBody);
+                $('#id_rating').val(reviewRating);
+
+                $('#edit-review-form-container').show()
+                $('#review-submit-btn').text('Update Review');
+            });
+
+            $('#deleteReviewModal').on('show.bs.modal', function(event) {
+                var link = $(event.relatedTarget); // Element that triggered the modal
+                var url = link.data('url'); // Extract info from data-* attributes
+                var modal = $(this);
+                modal.find('#confirmDeleteReview').attr('href', url);
+            });
+
+            $('#confirmDeleteReview').on('click', function(event) {
+                event.preventDefault(); // Prevent the default action
+                var url = $(this).attr('href'); // Get the URL from the href attribute
+                $.ajax({
+                    url: url,
+                    type: 'POST',
+                    data: {
+                        csrfmiddlewaretoken: '{{ csrf_token }}'
+                    },
+                    success: function(response) {
+                        window.location.href = "{% url 'profile' %}?section=userReviews";
+                    },
+                    error: function(response) {
+                        alert('Error deleting review.');
+                    }
+                });
+            });
         });
     </script>
 {% endblock %}

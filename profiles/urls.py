@@ -22,4 +22,5 @@ urlpatterns = [
         'thread/<int:thread_id>/delete/',
         views.delete_thread, name='delete_thread'),
      path('downloads/', views.downloads, name='downloads'),
+     path('update-review/', views.update_review, name='update_review'),
      ]
