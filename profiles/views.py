@@ -46,6 +46,7 @@ def profile(request):
     newsletter_signup = NewsletterSignup.objects.filter(
         email=request.user.email
     ).first()
+    unreviewed_products = profile.get_unreviewed_products()
 
     # Filter categories with threads and posts
     categories_with_threads = [
@@ -89,6 +90,7 @@ def profile(request):
         'newsletter_signup': newsletter_signup,
         'reviews': reviews,
         'review_form': review_form,
+        'unreviewed_products': unreviewed_products,
     }
     return render(request, template, context)
 

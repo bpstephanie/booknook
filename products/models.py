@@ -194,3 +194,4 @@ class Review(models.Model):
 
     class Meta:
         ordering = ['-created_on']
+        unique_together = ['author', 'product']

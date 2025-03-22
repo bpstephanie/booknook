@@ -5,7 +5,7 @@ from django.apps import apps
 
 from wishlist.models import Wishlist
 from bag.models import SavedItem
-from products.models import Book
+from products.models import Book, Product
 
 
 # Create your models here.
@@ -39,6 +39,18 @@ class UserProfile(models.Model):
         return OrderLineItem.objects.filter(
             order__user_profile=self, product=product
         ).exists()
+
+    def get_unreviewed_products(self):
+        OrderLineItem = apps.get_model('checkout', 'OrderLineItem')
+        reviewed_products = self.user.reviews.values_list(
+            'product_id', flat=True
+        )
+        purchased_products = OrderLineItem.objects.filter(
+            order__user_profile=self
+        ).exclude(product_id__in=reviewed_products).values_list(
+            'product', flat=True
+        )
+        return Product.objects.filter(id__in=purchased_products)
 
     def __str__(self):
         return self.user.username
