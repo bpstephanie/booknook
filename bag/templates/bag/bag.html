@@ -164,13 +164,41 @@
                                         <p class="my-0">{{ item.product.friendly_name }}</p>
                                     </a>
                                     <p class="card-text">£{{ item.product.price }}</p>
+                                    <form class="form update-form" method="POST" action="{% url 'adjust_saved_item' item.id %}">
+                                        {% csrf_token %}
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <button class="decrement-qty btn btn-navy btn-sm rounded-0"
+                                                        data-item_id="{{ item.id }}" id="decrement-qty_{{ item.id}}">
+                                                        <span>
+                                                            <i class="fas fa-minus fa-sm"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <input class="form-control form-control-sm qty_input" type="number"
+                                                    name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                                    data-item_id="{{ item.id }}"
+                                                    id="id_qty_{{ item.id }}">
+                                                <div class="input-group-append">
+                                                    <button class="increment-qty btn btn-navy btn-sm rounded-0"
+                                                        data-item_id="{{ item.id }}" id="increment-qty_{{ item.id }}">
+                                                        <span>
+                                                            <i class="fas fa-plus fa-sm"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-xs btn-success border-0 mb-2 w-100">Update</button>
+                                    </form>
                                     <a class="move-to-bag btn btn-xs btn-info border-0 w-100 mb-2" href="{% url 'move_to_bag' item.id %}">Move to Bag</a>
-                                    <div class="d-flex justify content-start">
+                                    <div class="d-flex justify-content-start">
                                         <a class="remove-saved text-info me-3 text-small" href="{% url 'remove_saved_item' item.id %}">Remove</a>
                                     </div>
                                 </div>
                             </div>
-                        </div>                                
+                        </div>                     
                     {% endfor %}
                 {% else %}
                 <p class="lead mb-5">You currently don't have any saved items.</p>

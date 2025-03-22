@@ -3,7 +3,6 @@ from django.shortcuts import (
 )
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
 from .models import SavedItem
 from products.models import Product
 
@@ -95,46 +94,41 @@ def save_for_later(request, item_id):
         )
         return redirect(reverse('account_login'))
 
-    product = get_object_or_404(Product, pk=item_id)
-    bag = request.session.get('bag', {})
+    try:
+        product = get_object_or_404(Product, pk=item_id)
+        bag = request.session.get('bag', {})
 
-    if item_id in bag:
-        quantity = bag.pop(item_id)
-        saved_item, created = SavedItem.objects.get_or_create(
-            user=request.user,
-            product=product,
-            quantity=quantity
-        )
-        if created:
-            saved_item.quantity = 1
+        if item_id in bag:
+            quantity = bag.pop(item_id)
+            saved_item, created = SavedItem.objects.get_or_create(
+                user=request.user,
+                product=product,
+                quantity=quantity
+            )
+            if created:
+                saved_item.quantity = quantity
+            else:
+                saved_item.quantity += quantity
             saved_item.save()
             messages.success(
                 request,
                 f'Saved {product.friendly_name} for later'
             )
+            request.session['bag'] = bag
         else:
-            messages.info(
-                request,
-                f'{product.friendly_name} is already in your Saved for Later'
+            saved_item, created = SavedItem.objects.get_or_create(
+                user=request.user,
+                product=product,
             )
-        request.session['bag'] = bag
-    else:
-        saved_item, created = SavedItem.objects.get_or_create(
-            user=request.user,
-            product=product,
-        )
-        if created:
-            saved_item.quantity = 1
-            saved_item.save()
-            messages.success(
-                request,
-                f'Saved {product.friendly_name} for later'
-            )
-        else:
-            messages.info(
-                request,
-                f'{product.friendly_name} is already in your Saved for Later'
-            )
+            if created:
+                saved_item.quantity = 1
+                saved_item.save()
+                messages.success(
+                    request,
+                    f'Saved {product.friendly_name} for later'
+                )
+    except Exception as e:
+        messages.error(request, f'Error saving item: {e}')
     return redirect(reverse('view_bag'))
 
 
@@ -147,9 +141,9 @@ def move_to_bag(request, item_id):
     bag = request.session.get('bag', {})
 
     if product_id in bag:
-        bag[product_id] += 1
+        bag[product_id] += saved_item.quantity
     else:
-        bag[product_id] = 1
+        bag[product_id] = saved_item.quantity
 
     saved_item.delete()
     request.session['bag'] = bag
@@ -170,4 +164,29 @@ def remove_saved_item(request, item_id):
         request,
         f'Removed {saved_item.product.friendly_name} from your saved items'
     )
+    return redirect(reverse('view_bag'))
+
+@login_required
+def adjust_saved_item(request, item_id):
+    """Adjust the quantity of a saved item"""
+    saved_item = get_object_or_404(SavedItem, pk=item_id, user=request.user)
+    quantity = int(request.POST.get('quantity'))
+
+    if quantity > 0:
+        saved_item.quantity = quantity
+        saved_item.save()
+        messages.success(
+            request,
+            (
+                f'Updated {saved_item.product.friendly_name} quantity to '
+                f'{saved_item.quantity}'
+            )
+        )
+    else:
+        saved_item.delete()
+        messages.success(
+            request,
+            f'Removed {saved_item.product.friendly_name} from your saved items'
+        )
+
     return redirect(reverse('view_bag'))

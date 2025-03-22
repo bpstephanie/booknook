@@ -12,4 +12,7 @@ urlpatterns = [
     path('move_to_bag/<int:item_id>/', views.move_to_bag, name='move_to_bag'),
     path('remove_saved_item/<item_id>/', views.remove_saved_item,
          name='remove_saved_item'),
+    path(
+         'adjust_saved_item/<int:item_id>/',
+         views.adjust_saved_item, name='adjust_saved_item'),
 ]
