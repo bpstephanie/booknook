@@ -166,6 +166,7 @@ def remove_saved_item(request, item_id):
     )
     return redirect(reverse('view_bag'))
 
+
 @login_required
 def adjust_saved_item(request, item_id):
     """Adjust the quantity of a saved item"""
@@ -188,5 +189,5 @@ def adjust_saved_item(request, item_id):
             request,
             f'Removed {saved_item.product.friendly_name} from your saved items'
         )
-
-    return redirect(reverse('view_bag'))
+    next_url = request.POST.get('next', reverse('view_bag'))
+    return redirect(next_url)
