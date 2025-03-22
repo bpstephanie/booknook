@@ -1,6 +1,6 @@
 from django import forms
 from .widgets import CustomClearableFileInput
-from .models import Book, Accessory, Genre, Category, Review, ReviewComment
+from .models import Book, Accessory, Genre, Category, Review
 
 
 class BookForm(forms.ModelForm):
@@ -83,21 +83,4 @@ class ReviewForm(forms.ModelForm):
             'title': 'Review Title ',
             'body': 'Your Review ',
             'rating': 'Rating (1-5) ',
-        }
-
-
-class ReviewCommentForm(forms.ModelForm):
-    class Meta:
-        model = ReviewComment
-        fields = ['body']
-        widgets = {
-            'body': forms.Textarea(attrs={
-                'class': 'form-control',
-                'placeholder': 'Add your comment here',
-                'rows': 3,
-            }),
-        }
-        labels = {
-            'body': 'Comment ',
-            'id': 'id_comment_body',
         }

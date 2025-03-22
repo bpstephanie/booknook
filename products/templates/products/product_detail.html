@@ -151,7 +151,7 @@
     {{ block.super }}
     {% include 'products/includes/quantity_input_script.html' %}
     {% include 'products/includes/wishlist_modal_script.html' %}
-    <!-- Confirm delete product jQuery -->
+    <!-- Confirm delete product -->
     <script type="text/javascript">
         $('#deleteModal').on('show.bs.modal', function (event) {
             var link = $(event.relatedTarget);
@@ -160,35 +160,9 @@
             modal.find('#confirmDelete').attr('href', url);
         });
     </script>
-    <!-- Add comment and Comment section toggles -->
+    <!-- Edit Review -->
     <script type="text/javascript">
         $(document).ready(function() {
-            $('.comment-section-toggle').on('click', function(e) {
-                e.preventDefault();
-                var reviewId = $(this).data('review-id');
-                var commentSection = $('.comment-section[data-review-id="' + reviewId + '"]');
-                if (commentSection.is(':visible')) {
-                    commentSection.hide();
-                    $(this).text('See Comments');
-                } else {
-                    commentSection.show();
-                    $(this).text('Hide Comments');
-                }
-            });
-
-            $('.add-comment-btn').on('click', function(e) {
-                e.preventDefault();
-                var reviewId = $(this).data('review-id');
-                var commentFormContainer = $('.comment-form-container[data-review-id="' + reviewId + '"]');
-                if (commentFormContainer.is(':visible')) {
-                    commentFormContainer.hide();
-                    $(this).text('Add Comment');
-                } else {
-                    commentFormContainer.show();
-                    $(this).text('Hide Comment Form');
-                }
-            });
-  
             $('.edit-review').on('click', function(event) {
                 event.preventDefault();
                 var reviewId = $(this).attr('review_id');

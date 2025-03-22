@@ -194,21 +194,3 @@ class Review(models.Model):
 
     class Meta:
         ordering = ['-created_on']
-
-
-class ReviewComment(models.Model):
-    review = models.ForeignKey(
-        'Review', on_delete=models.CASCADE, related_name="comments"
-    )
-    user = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="review_comments"
-    )
-    body = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
-    updated_on = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return f"Comment by {self.user.username}"
-
-    class Meta:
-        ordering = ['created_on']

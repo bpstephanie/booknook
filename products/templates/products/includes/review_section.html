@@ -19,36 +19,6 @@
                 <a href="#" class="text-danger text-decoration-none text-small" data-toggle="modal" data-target="#deleteReviewModal" data-url="{% url 'delete_review' review.id %}">Delete</a>
                 <a href="#" class="text-success edit-review text-decoration-none text-small" review_id="{{ review.id }}">Edit</a>
             {% endif %}
-            <div class="text-right">
-                <a href="#" class="btn btn-sm btn-navy rounded-0 add-comment-btn" data-review-id="{{ review.id }}">Add Comment</a>
-                <a href="#" class="btn btn-sm btn-outline-navy rounded-0 comment-section-toggle" data-review-id="{{ review.id }}">See Comments</a>
-            </div>
-            <div class="comment-form-container" data-review-id="{{ review.id }}" style="display:none">
-                <form method="POST" class="form" action="{% url 'submit_comment' review.id %}">
-                    {% csrf_token %}
-                    {{ comment_form|crispy }}
-                    <input type="hidden" name="review_id" value="{{ review.id }}">
-                    <div class="text-right">
-                        <button type="submit" class="btn btn-navy rounded-0 mt-3">Submit Comment</button>
-                    </div>
-                </form>
-            </div>
-            <!-- Review Comment Section -->
-            <div class="text-right comment-section" data-review-id="{{ review.id }}" style="display:none;">
-                {% for comment in review.comments.all %}
-                    <div class="comment-container">
-                        <p>{{ comment.body }}</p>
-                        <p>{{ comment.user.username }} - {{ comment.created_on|date:"F j, Y H:i" }}</p>
-                        {% if user.is_authenticated and comment.user == user %}
-                            <a class="btn btn-delete" href="#" comment_id="{{ comment.id }}">Delete</a>
-                            <a class="btn btn-edit" href="" comment_id="{{ comment.id }}">Edit</a>
-                        {% endif %}
-                    </div>
-                {% empty %}
-                    <p>No comments yet. Be the first!</p>
-                {% endfor %}
-                
-            </div>
         </div>
     {% empty %}
         <p>No reviews yet. Be the first!</p>

@@ -37,21 +37,6 @@ urlpatterns = [
         views.delete_review,
         name='delete_review'
     ),
-    path(
-        'submit-comment/<int:review_id>/',
-        views.submit_comment,
-        name='submit_comment'
-    ),
-    path(
-        'comment/<int:comment_id>/edit/',
-        views.edit_comment,
-        name='edit_comment'
-    ),
-    path(
-        'comment/<int:comment_id>/delete/',
-        views.delete_comment,
-        name='delete_comment'
-    ),
     path('management/', views.product_management, name='product_management'),
     path('management/add-book/', views.add_book, name='add_book'),
     path(
