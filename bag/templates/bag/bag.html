@@ -218,7 +218,7 @@
 {% block postloadjs %}
     {{ block.super }}
     {% include 'products/includes/quantity_input_script.html' %}
-    <script type="text/javascript">
+    <script>
         $(document).ready(function() {
             // Update quantity on click
             $('.update-link').click(function(e) {
@@ -240,7 +240,7 @@
             });
         });
     </script>
-    <script type="text/javascript">
+    <script>
         $('.st-link').click(function(e) {
             window.scrollTo(0,0)
         })
