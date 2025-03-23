@@ -79,7 +79,7 @@
 
 {% block postloadjs %}
 {{ block.super}}
-<script type="text/javascript">
+<script>
     $(document).ready(function () {
         $('.category-section').each(function () {
             const $carousel = $(this).find('.accessories-carousel');
@@ -133,7 +133,7 @@
         }
     });
 </script>
-<script type="text/javascript">
+<script>
     $('.st-link').click(function(e) {
         window.scrollTo(0,0)
     })

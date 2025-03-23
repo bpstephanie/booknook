@@ -77,7 +77,7 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
+<script>
     $(document).ready(function () {
         $('.genre-section').each(function () {
             const $carousel = $(this).find('.books-carousel');
@@ -131,13 +131,12 @@
         }
     });
 </script>
-
-<script type="text/javascript">
+<script>
     $('.st-link').click(function(e) {
         window.scrollTo(0,0)
     })
 </script>
-<script type="text/javascript">
+<script>
     $('#sort-selector').change(function() {
         var selector = $(this);
         var currentUrl = new URL(window.location);

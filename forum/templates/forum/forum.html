@@ -82,7 +82,7 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Show threads for first category by default
             const defaultCategoryButton = document.getElementById('default-category');
@@ -101,7 +101,7 @@
             document.getElementById(categoryId).style.display = 'block';
         }
     </script>
-    <script type="text/javascript">
+    <script>
         $('#createThreadModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget); // Button that triggered the modal
             var categoryId = button.data('category-id'); // Extract info from data-* attributes
