@@ -21,7 +21,7 @@
     <div class="profile-overlay"></div>
     <div class="container mb-5">
         <h1>{{ user.username }}'s Profile</h1>
-        <p class="text-navy">Member since: {{ profile.data_joined }}</p>
+        <p class="text-navy">Member since: {{ user.profile.data_joined }}</p>
         <hr>
 
         <div class="row">
@@ -396,7 +396,7 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+    <script src="{% static 'profiles/js/countryfield.js' %}"></script>
     <script>
         function showContent(sectionId) {
             // Hide all content sections
@@ -430,7 +430,7 @@
             }
         });
     </script>
-    <script type="text/javascript">
+    <script>
         // Initialize Select2
         $(document).ready(function() {
             $('.select2').select2({
