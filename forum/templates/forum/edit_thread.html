@@ -22,7 +22,7 @@
             {% csrf_token %}
             {{ form|crispy }}
             <input type="hidden" name="next" value="{{ next }}">
-            <button type="submit" class="btn btn-navy rounded-0">Save Changes</button>
+            <button type="submit" class="btn btn-orange rounded-0">Save Changes</button>
         </form>
     </div>
 {% endblock %}

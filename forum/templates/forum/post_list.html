@@ -56,19 +56,19 @@
                     <div class="d-flex justify-content-center">
                         {% if user.is_authenticated %}
                             {% if thread.is_deleted %}
-                                <button class="btn btn-navy rounded-0" type="button" disabled>Reply</button>
+                                <button class="btn btn-orange rounded-0" type="button" disabled>Reply</button>
                             {% else %}
-                                <button class="btn btn-navy rounded-0" type="button" data-toggle="modal" data-target="#replyModal">
+                                <button class="btn btn-orange rounded-0" type="button" data-toggle="modal" data-target="#replyModal">
                                     Reply
                                 </button>
                             {% endif %}
                         {% else %}
-                            <p class="text-navy">Please <a href="{% url 'account_login' %}">login</a> or <a href="{% url 'account_signup' %}">register</a> to interact with our forum.</p>
+                            <p class="text-navy mt-2">Please <a href="{% url 'account_login' %}">login</a> or <a href="{% url 'account_signup' %}">register</a> to interact with our forum.</p>
                         {% endif %}
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row mt-2">
                 <div class="col">
                     <div class="d-flex justify-content-center">
                         <a class="btn btn-outline-navy rounded-0" href="{% url 'forum' %}">Back to Forum</a>
