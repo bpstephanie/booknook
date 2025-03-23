@@ -152,3 +152,10 @@
     height: 130px;
     object-fit: cover;
 }
+
+.order-history-card {
+    border: 1px solid #0b254b;
+    background-color: #fefefe;
+    padding: 5px;
+    margin: 5px;
+}

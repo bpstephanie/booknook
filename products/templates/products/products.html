@@ -44,7 +44,7 @@
                                         {% endif %}
                                     </div>
                                     <div class="card-body pl-2 ml-2 bg-cream pb-0">
-                                        <p class="mb-0 text-left lora h6">{{ product.friendly_name }}</hp>
+                                        <p class="mb-0 text-left lora h6">{{ product.friendly_name }}</p>
                                     </div>
                                     <div class="card-footer bg-cream pl-2 ml-2 border-0 text-left">
                                         <div class="row">
@@ -58,13 +58,13 @@
                                                 <br>
                                                 {% if product.book.genre %}
                                                     <p class="small mt-1 mb-0">
-                                                        <a class="text-muted" href="{% url 'all_books' %}?genre={{ product.book.genre }}">
+                                                        <a class="text-muted" href="{% url 'all_books' %}?genre={{ product.book.genre|urlencode }}">
                                                             <i class="fas fa-tag mr-1"><span class="lora ml-1">{{ product.book.genre }}</span></i>
                                                         </a>
                                                     </p>
                                                 {% elif product.accessory.category %}
                                                 <p class="small mt-1 mb-0">
-                                                    <a class="text-muted" href="{% url 'all_accessories' %}?category={{ product.accessory.category }}">
+                                                    <a class="text-muted" href="{% url 'all_accessories' %}?category={{ product.accessory.category|urlencode }}">
                                                         <i class="fas fa-tag mr-1"><span class="lora ml-1">{{ product.accessory.category }}</span></i>
                                                     </a>
                                                 </p>
@@ -157,7 +157,7 @@
 {% endblock %}
 {% block postloadjs %}
     {{ block.super}}
-    <script type="text/javascript">
+    <script>
         $(document).ready(function () {
             $('#genreButton').click(function () {
                 $('#genreButtonsContainer').toggleClass('hidden');
@@ -171,12 +171,12 @@
             });
         });
     </script>
-    <script type="text/javascript">
+    <script>
         $('.st-link').click(function(e) {
             window.scrollTo(0,0)
         })
     </script>
-    <script type="text/javascript">
+    <script>
         $('#sort-selector').change(function() {
             var selector = $(this);
             var currentUrl = new URL(window.location);
@@ -198,7 +198,7 @@
             }
         })
     </script>  
-    <script type="text/javascript">
+    <script>
         $('#deleteModal').on('show.bs.modal', function (event) {
             var link = $(event.relatedTarget);
             var url = link.data('url');
