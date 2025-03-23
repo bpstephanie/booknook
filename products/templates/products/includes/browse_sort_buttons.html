@@ -13,14 +13,14 @@
             <div class="sub-buttons">
                 <div id="categoryButtonsContainer" class="hidden">
                     {% for category in all_categories %}
-                        <a class="btn btn-blue btn-sm rounded-0 m-1" href="{% url 'all_accessories' %}?category={{ category.friendly_name }}">
+                        <a class="btn btn-blue btn-sm rounded-0 m-1" href="{% url 'all_accessories' %}?category={{ category.friendly_name|urlencode }}">
                             <span class="m-2 p-2">{{ category.friendly_name }}</span>
                         </a>
                     {% endfor %}
                 </div>
                 <div id="genreButtonsContainer" class="hidden">
                     {% for genre in all_genres %}
-                        <a class="btn btn-green btn-sm rounded-0 m-1" href="{% url 'all_books' %}?genre={{ genre.friendly_name }}">
+                        <a class="btn btn-green btn-sm rounded-0 m-1" href="{% url 'all_books' %}?genre={{ genre.friendly_name|urlencode }}">
                             <span class="m-2 p-2">{{ genre.friendly_name }}</span>
                         </a>
                     {% endfor %}
@@ -33,7 +33,7 @@
         </button>
         <div id="genreButtonsContainer" class="hidden">
             {% for genre in all_genres %}
-                    <a class="btn btn-green btn-sm rounded-0 m-1" href="{% url 'all_books' %}?genre={{ genre.friendly_name }}">
+                    <a class="btn btn-green btn-sm rounded-0 m-1" href="{% url 'all_books' %}?genre={{ genre.friendly_name|urlencode }}">
                         <span class="p-2 mt-2">{{ genre.friendly_name }}</span>
                     </a>
             {% endfor %}
@@ -44,7 +44,7 @@
         </button>
         <div id="categoryButtonsContainer" class="hidden">
             {% for category in all_categories %}
-                    <a class="btn btn-blue btn-sm rounded-0 m-1" href="{% url 'all_accessories' %}?category={{ category.friendly_name }}">
+                    <a class="btn btn-blue btn-sm rounded-0 m-1" href="{% url 'all_accessories' %}?category={{ category.friendly_name|urlencode }}">
                         <span class="mt-2 p-2">{{ category.friendly_name }}</span>
                     </a>
             {% endfor %}

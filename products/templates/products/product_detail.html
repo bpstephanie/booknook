@@ -117,13 +117,13 @@
                         </div>
                         {% if product.book.genre %}
                             <p class="small mt-1 mb-0">
-                                <a class="text-muted " href="{% url 'all_books' %}?genre={{ product.book.genre }}">
+                                <a class="text-muted " href="{% url 'all_books' %}?genre={{ product.book.genre|urlencode }}">
                                     <i class="fas fa-tag mr-1"><span class="lora ml-1">{{ product.book.genre }}</span></i>
                                 </a>
                             </p>
                         {% elif product.accessory.category %}
                         <p class="small mt-1 mb-0">
-                            <a class="text-muted" href="{% url 'all_accessories' %}?category={{ product.accessory.category }}">
+                            <a class="text-muted" href="{% url 'all_accessories' %}?category={{ product.accessory.category|urlencode }}">
                                 <i class="fas fa-tag mr-1"><span class="lora ml-1">{{ product.accessory.category }}</span></i>
                             </a>
                         </p>

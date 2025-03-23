@@ -25,7 +25,7 @@
             {% with accessories=category.sorted_accessories %}
             {% if accessories %}
                 <div class="category-section">
-                    <a class="text-decoration-none" href="{% url 'all_accessories' %}?category={{ category.friendly_name }}">
+                    <a class="text-decoration-none" href="{% url 'all_accessories' %}?category={{ category.friendly_name|urlencode }}">
                         <h3 class="category-title text-navy">{{ category.friendly_name}} ({{ category.accessory_count}})</h3>
                     </a>
                     <div class="category-accessories-wrapper row">
