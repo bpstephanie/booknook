@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://bn-booknook-017930c30e2f.herokuapp.com/sitemap.xml

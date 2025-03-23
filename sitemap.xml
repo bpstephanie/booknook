@@ -1,0 +1,977 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/accounts/login/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/all-genres/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/accessories/all-categories/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/forum/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/info/partners/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/info/contact/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/info/about/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/bag/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/?sort=rating&amp;direction=desc</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?sort=price&amp;direction=asc</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?sort=rating&amp;direction=desc</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/accessories/?sort=price&amp;direction=asc</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/accessories/?sort=rating&amp;direction=desc</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/accessories/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/info/faqs/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/info/privacy-policy/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/accessories/?category=Bookmarks</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/accessories/?category=Notepads</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/accessories/?category=Tote%20Bags</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=Adventure</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=Classics</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=Comedy</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=Coming%20of%20Age</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=Cultural</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=Epic</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=Fantasy</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=Fiction</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=Historical%20Fiction</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=History</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=Horror</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=Humor</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=LGBT</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=Memoir</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=Mystery</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=Mythology</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=Nonfiction</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=Romance</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=Science</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=Science%20Fiction</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=Thriller</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=Travel</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=True%20Story</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?genre=Young%20Adult</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/106/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/112/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/111/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/108/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/107/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/109/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/110/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/83/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/103/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/70/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/10/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/79/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/60/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/57/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/56/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/91/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/?page=2</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/?page=3</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/?page=7</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/23/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/74/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/92/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/68/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/24/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/50/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/58/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/33/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/63/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/34/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/93/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/31/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/32/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/30/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/21/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/53/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/65/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/20/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/94/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/5/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/1/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/2/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/4/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/3/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/6/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/7/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/17/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/18/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/88/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/98/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/19/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/101/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/102/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/37/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/38/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/78/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/59/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/39/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/86/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/75/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/100/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/96/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/95/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/66/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/22/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/35/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/28/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/55/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/16/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/77/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/40/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/45/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/73/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/76/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/48/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/71/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/80/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/87/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/69/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/81/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/67/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/64/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/99/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/36/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/85/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/72/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/82/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/84/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/29/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/25/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/26/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/62/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/47/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/27/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/43/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/42/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/41/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/8/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/46/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/89/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/9/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/90/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/44/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/61/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/12/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/11/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/52/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/14/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/15/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/13/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/54/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/97/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/51/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/49/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/forum/category/1/thread/6/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/forum/category/2/thread/1/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/forum/category/2/thread/2/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/forum/category/5/thread/3/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/forum/category/5/thread/5/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?page=2</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?page=3</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?page=7</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/?page=1</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/?page=4</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/?page=5</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/?page=6</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/accounts/login/?next=/forum/thread/6/delete/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/accounts/login/?next=/forum/thread/1/delete/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/accounts/login/?next=/forum/thread/2/delete/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/accounts/login/?next=/forum/thread/3/delete/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/accounts/login/?next=/forum/thread/5/delete/</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?page=1</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?page=4</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?page=5</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/products/books/?page=6</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/accounts/signup/?next=%2Fforum%2Fthread%2F6%2Fdelete%2F</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/accounts/signup/?next=%2Fforum%2Fthread%2F1%2Fdelete%2F</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/accounts/signup/?next=%2Fforum%2Fthread%2F2%2Fdelete%2F</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/accounts/signup/?next=%2Fforum%2Fthread%2F3%2Fdelete%2F</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/accounts/signup/?next=%2Fforum%2Fthread%2F5%2Fdelete%2F</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/accounts/login/?next=%2Fforum%2Fthread%2F6%2Fdelete%2F</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/accounts/login/?next=%2Fforum%2Fthread%2F1%2Fdelete%2F</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/accounts/login/?next=%2Fforum%2Fthread%2F2%2Fdelete%2F</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/accounts/login/?next=%2Fforum%2Fthread%2F3%2Fdelete%2F</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://bn-booknook-017930c30e2f.herokuapp.com/accounts/login/?next=%2Fforum%2Fthread%2F5%2Fdelete%2F</loc>
+  <lastmod>2025-03-23T17:37:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+
+
+</urlset>
