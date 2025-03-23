@@ -99,8 +99,7 @@
     transform: scale(1.05);
 }
 
-.thread-title,
- {
+.thread-title {
     color: #0b254b;
     margin-bottom: 5px;
     word-wrap: break-word;
@@ -127,10 +126,6 @@
     word-wrap: break-word;
     white-space: normal;
     overflow-wrap: break-word;
-}
-
-.post-content {
-    font-family: ;
 }
 
 .thread-meta,

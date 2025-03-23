@@ -62,10 +62,12 @@ def unsubscribe_newsletter(request):
             newsletter_signup.unsubscribe()
             messages.success(
                 request,
-                'You have successfully unsubscribed from the BookNook newsletter.')
+                ('You have successfully unsubscribed from the BookNook '
+                 'newsletter.'))
         except NewsletterSignup.DoesNotExist:
             messages.error(request,
-                           'You are not subscribed to the BookNook newsletter.')
+                           ('You are not subscribed to the BookNook '
+                            'newsletter.'))
     else:
         messages.error(request, 'Invalid email address.')
 

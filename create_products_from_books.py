@@ -1,12 +1,11 @@
 import json
 import os
 import django
+from products.models import Product
 
 # Setup Django environment
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'booknook.settings')
 django.setup()
-
-from products.models import Product
 
 # Path to the book fixtures file
 fixtures_path = os.path.join('products', 'fixtures', 'books.json')
@@ -15,7 +14,8 @@ fixtures_path = os.path.join('products', 'fixtures', 'books.json')
 with open(fixtures_path, 'r', encoding='utf-8') as f:
     books_data = json.load(f)
 
-# Iterate over each book entry and create the corresponding product if it doesn't exist
+# Iterate over each book entry and create the corresponding product
+# if it doesn't exist
 for book in books_data:
     fields = book['fields']
     product, created = Product.objects.get_or_create(

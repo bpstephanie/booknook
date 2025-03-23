@@ -2,11 +2,11 @@ import json
 import os
 import django
 
+from products.models import Product
+
 # Setup Django environment
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'booknook.settings')
 django.setup()
-
-from products.models import Product
 
 # Path to the book fixtures file
 fixtures_path = os.path.join('products', 'fixtures', 'books.json')
