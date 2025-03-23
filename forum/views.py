@@ -100,8 +100,9 @@ def edit_thread(request, thread_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Thread updated successfully!')
-            if 'next' in request.POST:
-                return redirect(request.POST['next'])
+            next_url = request.POST.get('next', '')
+            if next_url:
+                return redirect(next_url)
             return redirect(
                 'post_list',
                 category_id=thread.category.id, thread_id=thread.id)

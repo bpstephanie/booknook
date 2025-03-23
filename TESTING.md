@@ -15,6 +15,22 @@
   * [Known Bugs](<#known-bugs>)
     * [Unresolved Bugs](<#unresolved-bugs>)
 
+## HTML
+
+The [HTML W3C Validator] was used to validate all HTML files. The results are as follows:
+|**Filename**|**Image**|**Pass/Fail**|
+|------------|---------|-------------|
+|index.html|![Homepage](documentation/screenshots/validation/index-html.png)|Pass|
+|products.html|||
+|product-detail.html|![Product Detail](documentation/screenshots/validation/product-detail-html.png)|Pass|
+|all-genres.html||Pass|
+|all-categories.html||Pass|
+|about.html|![About](documentation/screenshots/validation/about.html)|Pass|
+|forum.html|![Forum](documentation/screenshots/validation/forum-html.png)|Pass|
+|post_list.html|||
+|edit_thread.html|
+|partners.html|![Partners](documentation/screenshots/validation/partners-html.png)|Pass|
+
 ## CSS
 The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate all css file. The results are below:
 
