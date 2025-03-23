@@ -16,7 +16,7 @@
     * [Unresolved Bugs](<#unresolved-bugs>)
 
 ## CSS
-The CSS Validator Results:
+The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate all css file. The results are below:
 
 |**Filename**|**Image**|**Pass/Fail**|
 |------------|---------|-------------|
@@ -25,7 +25,7 @@ The CSS Validator Results:
 |profiles.css|![Models](documentation/screenshots/validation/profile-css.png)|Pass|
 
 ## Python and Django
-The CI Python Linter Validator
+The CI Python Linter Validator was used to validate all python files which I created or edited. I corrected mistakes as I went with the VS Code Problems tab.
 
   | **App**     |   **Models**  |   **Urls**  |   **views**  |**Bag Tools**  | **Contexts**  | **Pass/Fail**  |
   |-------------|---------------|-------------|--------------|---------------|---------------|---------------|

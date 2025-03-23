@@ -152,7 +152,7 @@
     {% include 'products/includes/quantity_input_script.html' %}
     {% include 'products/includes/wishlist_modal_script.html' %}
     <!-- Confirm delete product -->
-    <script type="text/javascript">
+    <script>
         $('#deleteModal').on('show.bs.modal', function (event) {
             var link = $(event.relatedTarget);
             var url = link.data('url');
@@ -161,7 +161,7 @@
         });
     </script>
     <!-- Edit Review -->
-    <script type="text/javascript">
+    <script>
         $(document).ready(function() {
             $('.edit-review').on('click', function(event) {
                 event.preventDefault();
@@ -180,7 +180,7 @@
         });
     </script>
     <!-- Confirm delete review -->
-    <script type="text/javascript">
+    <script>
         $(document).ready(function() {
             $('#deleteReviewModal').on('show.bs.modal', function(event) {
                 var link = $(event.relatedTarget); // Element that triggered the modal
