@@ -15,7 +15,17 @@
   * [Known Bugs](<#known-bugs>)
     * [Unresolved Bugs](<#unresolved-bugs>)
 
+## CSS
+The CSS Validator Results:
 
+|**Filename**|**Image**|**Pass/Fail**|
+|------------|---------|-------------|
+|base.css|![base.css](documentation/screenshots/validation/base-css.png)|Pass|
+|forum.css|![forum.css](documentation/screenshots/validation/forum-css.png)|Pass|
+|profiles.css|![Models](documentation/screenshots/validation/profile-css.png)|Pass|
+
+## Python and Django
+The CI Python Linter Validator
 
   | **App**     |   **Models**  |   **Urls**  |   **views**  |**Bag Tools**  | **Contexts**  | **Pass/Fail**  |
   |-------------|---------------|-------------|--------------|---------------|---------------|---------------|
@@ -42,7 +52,7 @@
 
   | **App**     |   **Admin**  |   **Forms**  |   **Models**  | **Urls**   | **views**  | **Pass/Fail**  |
   |-------------|--------------|--------------|---------------|------------|------------|----------------|
-  | **info**    |![Admin](documentation/screenshots/validation/info-admin.png)|[Forms](documentation/screenshots/validation/info-forms.png)|![Models](documentation/screenshots/validation/info-models.png)|![Urls](documentation/screenshots/validation/info-urls.png)|![Views](documentation/screenshots/validation/info-views.png)| All Pass  |
+  | **info**    |![Admin](documentation/screenshots/validation/info-admin.png)|![Forms](documentation/screenshots/validation/info-forms.png)|![Models](documentation/screenshots/validation/info-models.png)|![Urls](documentation/screenshots/validation/info-urls.png)|![Views](documentation/screenshots/validation/info-views.png)| All Pass  |
 
 
   | **App**     |   **Admin**  |   **Forms**  |   **Models**  | **Urls**   | **Views**  | **Widgets** | **Pass/Fail**  |
