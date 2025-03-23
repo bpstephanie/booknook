@@ -20,20 +20,19 @@ def all_products(request, type=None):
     product_type = type if type else request.GET.get('type', 'all')
     query = request.GET.get('q') if 'q' in request.GET else None
     current_category = None
-    # genres = None
     sort = None
     direction = None
     current_genre = None
 
     # Initialize the products queryset based on type
     if product_type == 'books':
-        products = Book.objects.all().order_by('name')
+        products = Book.objects.all()
         page_title = 'All Books'
     elif product_type == 'accessories':
-        products = Accessory.objects.all().order_by('name')
+        products = Accessory.objects.all()
         page_title = 'All Accessories'
     else:
-        products = Product.objects.all().order_by('name')
+        products = Product.objects.all()
         page_title = 'All Products'
 
     if request.GET:
