@@ -34,7 +34,7 @@
         <div id="genreButtonsContainer" class="hidden">
             {% for genre in all_genres %}
                     <a class="btn btn-green btn-sm rounded-0 m-1" href="{% url 'all_books' %}?genre={{ genre.friendly_name }}">
-                        <span class="p-2 mt-2 badge badge-white text-navy rounded-0 border border-navy">{{ genre.friendly_name }}</span>
+                        <span class="p-2 mt-2">{{ genre.friendly_name }}</span>
                     </a>
             {% endfor %}
         </div>
@@ -45,7 +45,7 @@
         <div id="categoryButtonsContainer" class="hidden">
             {% for category in all_categories %}
                     <a class="btn btn-blue btn-sm rounded-0 m-1" href="{% url 'all_accessories' %}?category={{ category.friendly_name }}">
-                        <span class="mt-2 rounded-0">{{ category.friendly_name }}</span>
+                        <span class="mt-2 p-2">{{ category.friendly_name }}</span>
                     </a>
             {% endfor %}
         </div>
