@@ -247,6 +247,9 @@ a {
     color: #fefefe;
     border: 1px solid #dc8a3f;
     background-color: #dc8a3f;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
 }
 
 .btn-orange:hover,
