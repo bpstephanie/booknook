@@ -92,7 +92,6 @@
               </div>
             </form>
           </div>
-
           <div class="col-6 col-lg-4 d-flex gap-4 align-items-center justify-content-center justify-content-sm-end order-3">
             <ul class="d-flex justify-content-end list-unstyled m-0 icon-list">
               <li class="list-inline-item dropdown base-icons">
@@ -100,11 +99,10 @@
                   <div class="text-center">
                     <div>
                       <i class="fa-solid fa-user fa-lg"></i>
-                      <p class="lora">
                       {% if request.user.is_authenticated %}
-                        Hi {{ request.user.username }}
+                        <p class="lora text-small">Hi {{ request.user.username }}</p>
                       {% else %}
-                        Account 
+                        <p class="lora">Account</p> 
                       {% endif %}
                       </p>
                     </div>
