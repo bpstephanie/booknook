@@ -58,20 +58,18 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-      <div class="">
-        <div class="text-center bg-navy text-cream">
-            <div class="banner-item text-uppercase">FREE DELIVERY ON ORDERS OVER £{{ free_delivery_threshold }}</div>
-        </div>
+      <div class="text-center bg-navy text-cream">
+          <div class="banner-item text-uppercase">FREE DELIVERY ON ORDERS OVER £{{ free_delivery_threshold }}</div>
       </div>
       <div>
-        <div class="row pt-3 bg-cream align-items-center order-1">
-          <div class="col-6 col-lg-2 text-center text-lg-start d-flex justify-content-between jalign-items-center">
-            <div class="d-flex align-items-center my-3 my-sm-0">
+        <div class="row bg-cream align-items-center order-1">
+          <div class="col-6 col-lg-2 text-center text-lg-start d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center my-2 my-sm-0 p-0">
               <a href="{% url 'home' %}">
                 <img src="{{ MEDIA_URL }}booknook-logo-no-bg.webp" class="d-inline-block align-top logo" alt="BookNook logo">
               </a>
-              <div class="d-flex my-5 col-sm-1 d-block d-lg-none">
-                <div class="text-center border p-2 mx-5">
+              <div class="d-flex my-2 col-sm-1 d-block d-lg-none p-0">
+                <div class="text-center border pl-2 pr-2 mx-5">
                     <a class="pull-bs-canvas-left text-navy text-decoration-none d-block" href="#">
                       <span class="h3">&#9776;</span>
                     </a>
@@ -95,20 +93,18 @@
             </form>
           </div>
 
-          <div class="col-6 col-lg-4 d-flex gap-5 align-items-center justify-content-center justify-content-sm-end order-3">
+          <div class="col-6 col-lg-4 d-flex gap-4 align-items-center justify-content-center justify-content-sm-end order-3">
             <ul class="d-flex justify-content-end list-unstyled m-0 icon-list">
               <li class="list-inline-item dropdown base-icons">
                 <a class="text-navy nav-link" href="" id="account-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <div class="text-center">
                     <div>
                       <i class="fa-solid fa-user fa-lg"></i>
-                      <p class="lora">
-                        {% if request.user.is_authenticated %}
-                          Hi {{ request.user.username }}
-                        {% else %}
-                          Account
-                        {% endif %}
-                      </p>
+                      {% if request.user.is_authenticated %}
+                      <p class="lora text-small">Hi {{ request.user.username }}</p>
+                      {% else %}
+                      <p class="lora">Account</p>  
+                      {% endif %}
                     </div>
                   </div>
                 </a>
