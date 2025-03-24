@@ -117,7 +117,6 @@ The CI Python Linter Validator was used to validate all python files which I cre
 
   |**Page**     |**Image**         | **Pass/Fail** |
   |-------------|------------------|---------------|
-
   |all_categories.html|![All Categories JS](documentation/screenshots/validation/all-categories-js.png)|Pass|
 
   |all_genres.html|![All Genres JS](documentation/screenshots/validation/all-genres-js.png)|Pass|
