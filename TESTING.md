@@ -21,15 +21,28 @@ The [HTML W3C Validator] was used to validate all HTML files. The results are as
 |**Filename**|**Image**|**Pass/Fail**|
 |------------|---------|-------------|
 |index.html|![Homepage](documentation/screenshots/validation/index-html.png)|Pass|
-|products.html|||
-|product-detail.html|![Product Detail](documentation/screenshots/validation/product-detail-html.png)|Pass|
-|all-genres.html||Pass|
-|all-categories.html||Pass|
+|products.html|![Products Page](documentation/screenshots/validation/products-html.png)|Pass|
+|product_detail.html|![Product Detail](documentation/screenshots/validation/product-detail-html.png)|Pass|
+|all_genres.html|[Books by Genre](documentation/screenshots/validation/all-genres-html.png)|Pass|
+|all_categories.html|[Accessories by Category](documentation/screenshots/validation/all-categories-html.png)|Pass|
+|product_management.html|||
+|edit_book.html|||
+|edit_accessory.html|||
 |about.html|![About](documentation/screenshots/validation/about.html)|Pass|
-|forum.html|![Forum](documentation/screenshots/validation/forum-html.png)|Pass|
-|post_list.html|||
-|edit_thread.html|
+|contact.html|![Contact Us Page](documentation/screenshots/validation/contact-html.png)|Pass|
+|contact_success.html|![Contact Us Success](documentation/screenshots/validation/contact-success-html.png)|Pass|
+|faqs.html|![FAQs](documentation/screenshots/validation/faqs-html.png)||
 |partners.html|![Partners](documentation/screenshots/validation/partners-html.png)|Pass|
+|privacy_policy.html|![Privacy Policy Page](documentation/screenshots/validation/privacy-policy-html.png)|Pass|
+|forum.html|![Forum](documentation/screenshots/validation/forum-html.png)|Pass|
+|post_list.html|[Full Thread Page](documentation/screenshots/validation/post-list-html.png)|Pass|
+|edit_thread.html|
+|edit_post.html|||
+|bag.html|![Bag](documentation/screenshots/validation/bag-html.png)|Pass|
+|checkout.html|![Checkout](documentation/screenshots/validation/checkout-html.png)|Pass|
+|checkout_success.html|![Checkout](documentation/screenshots/validation/checkout-success-html.png)|Pass|
+|profile.html|||
+|downloads.html|||
 
 ## CSS
 The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate all css file. The results are below:

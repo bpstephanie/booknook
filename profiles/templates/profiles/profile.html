@@ -21,7 +21,6 @@
     <div class="profile-overlay"></div>
     <div class="container mb-5">
         <h1>{{ user.username }}'s Profile</h1>
-        <p class="text-navy">Member since: {{ user.profile.data_joined }}</p>
         <hr>
 
         <div class="row">
@@ -201,8 +200,6 @@
                                     </li>
                                 {% endfor %}
                             </ul>
-                        {% else %}
-                            <h3>You have reviewed all your purchased items.</h3>
                         {% endif %}
                     </div>   
                 </div>
