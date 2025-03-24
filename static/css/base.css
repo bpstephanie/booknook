@@ -541,6 +541,10 @@ a {
     cursor: pointer;
 }
 /* ---------------------------------------- Containers */
+.header-container {
+    padding-top: 174px;
+}
+
 .container-bn {
     font-family: 'Roboto', sans-serif;
     position: relative;
@@ -898,7 +902,11 @@ allauth-form-inner-content p {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 124px;
+    }
+
     .search-bar-wrapper {
        display: none;
     }
