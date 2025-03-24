@@ -18,7 +18,7 @@
     <div class="container mb-5">
         <h1>Edit Thread</h1>
         <hr>
-        <form method="POST" action="{% url 'edit_thread' thread.id %}">
+        <form method="POST" action="{% url 'edit_thread' thread.id %}" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form|crispy }}
             <input type="hidden" name="next" value="{{ next }}">
