@@ -60,7 +60,6 @@ class PersonalInfoForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         placeholders = {
             'bio': 'Biography',
-            'favourite_books': 'Favourite Books',
         }
 
         for field in self.fields:

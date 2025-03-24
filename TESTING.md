@@ -43,7 +43,7 @@ The [HTML W3C Validator] was used to validate all HTML files. The results are as
 |checkout.html|![Checkout](documentation/screenshots/validation/checkout-html.png)|Pass|
 |checkout_success.html|![Checkout](documentation/screenshots/validation/checkout-success-html.png)|Pass|
 |profile.html|||
-|downloads.html|||
+|downloads.html|![Downloads](documentation/screenshots/validation/downloads-html.png)|Pass|
 https://www.aliciaramirez.com/closing-tags-checker/
 
 ## CSS
