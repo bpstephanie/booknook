@@ -447,7 +447,7 @@
     });
     </script>
     <!-- Confirm Wishlist Deletion -->
-    <script type="text/javascript">
+    <script>
         $(document).ready(function() {
             $('#confirmDeleteWishlistModal').on('show.bs.modal', function(event) {
                 var button = $(event.relatedTarget); // This will be the button
@@ -459,7 +459,7 @@
         });
     </script>
     <!-- Confirm Thread Deletion -->
-    <script type="text/javascript">
+    <script>
         $('#deleteModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget); // Button that triggered the modal
             var threadId = button.data('thread-id'); // Extract info from data-* attributes
@@ -516,7 +516,7 @@
         });
     </script>
     <!-- Confirm Post Deletion-->
-     <script type="text/javascript">
+     <script>
         $('#deletePostModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget); // Button that triggered the modal
             var url = button.data('url'); // Extract info from data-* attributes
@@ -527,7 +527,7 @@
         });
     </script>
     <!-- Saved For Later Update -->
-    <script type="text/javascript">
+    <script>
         $(document).ready(function() {
             // Remove item and reload on click
             $('.remove-saved').click(function(e) {
