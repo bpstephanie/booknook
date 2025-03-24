@@ -31,7 +31,8 @@
         <div class="row">
             {% for pdf in pdfs %}
             <div class="col-sm-12 col-md-4 py-2 d-flex justify-content-center">
-                <a class="btn btn-orange rounded-0" href="{{ pdf.pdf.url}}" download>{{ pdf.title }}</a>
+                <a class="btn btn-orange rounded-0" href="{{ pdf.pdf.url}}" target="_blank"
+                rel="noopener noreferrer" aria-label="Opens BookNook reading challenge pdf" download>{{ pdf.title }}</a>
             </div>
             {% endfor %}
         </div>
