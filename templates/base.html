@@ -180,11 +180,12 @@
     {% block page_header %}
     {% endblock %}
 
+    <main class="flex-grow-1">
+      {% block content %}
+      {% endblock %}
+    </main>
     
-    {% block content %}
-    {% endblock %}
-    
-
+    {% block footer %}
     <!-- Footer -->
     <footer class="bg-navy text-cream text center pt-1 w-100" id="footer">
       <div>
@@ -279,6 +280,7 @@
         </div>
       </div>
     </footer>
+    {% endblock %}
 
 
     {% block postloadjs %}
