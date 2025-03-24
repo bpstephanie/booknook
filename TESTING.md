@@ -7,7 +7,6 @@
   * [Lighthouse](<#lighthouse>)
   * [Browser Compatibility](<#browser-compatibility>)
   * [Manual Testing](<#manual-testing>)
-  * [Automated Testing](<#automated-testing>)
   * [Testing User Stories](<#testing-user-stories>)
   * [Additional Testing](<#additional-testing>)
     * [Wave](<#wave>)
@@ -45,6 +44,7 @@ The [HTML W3C Validator] was used to validate all HTML files. The results are as
 |checkout_success.html|![Checkout](documentation/screenshots/validation/checkout-success-html.png)|Pass|
 |profile.html|||
 |downloads.html|||
+https://www.aliciaramirez.com/closing-tags-checker/
 
 ## CSS
 The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate all css file. The results are below:
@@ -140,3 +140,184 @@ The CI Python Linter Validator was used to validate all python files which I cre
 
 |**Page**|**Desktop**|**Mobile**|
 |--------|-----------|----------|
+|Homepage|![Homepage Desktop](documentation/screenshots/validation/lighthouse/homepage-desktop.png)|![Homepage Mobile](documentation/screenshots/validation/lighthouse/homepage-mobile.png)|
+|All Products Page|![Products Desktop](documentation/screenshots/validation/lighthouse/products-desktop.png)|![Products Mobile](documentation/screenshots/validation/lighthouse/products-mobile.png)|
+|All Genres Page|![All Genres Desktop](documentation/screenshots/validation/lighthouse/all-genres-desktop.png)|![All Genres Mobile](documentation/screenshots/validation/lighthouse/all-genres-mobile.png)|
+|All Categories Page|![All Categories Desktop](documentation/screenshots/validation/lighthouse/all-categories-desktop.png)|![All Categories Mobile](documentation/screenshots/validation/lighthouse/all-categories-mobile.png)|
+|Product Detail Page|![Product Detail Desktop](documentation/screenshots/validation/lighthouse/product-detail-desktop.png)|![Product Detail Mobile](documentation/screenshots/validation/lighthouse/product-detail-mobile.png)|
+|Edit Book Page|![Edit Book Desktop](documentation/screenshots/validation/lighthouse/edit-book-desktop.png)|![Edit Book Mobile](documentation/screenshots/validation/lighthouse/edit-book-mobile.png)|
+|Edit Accessory Page|![Edit Accessory Desktop](documentation/screenshots/validation/lighthouse/edit-accessory-desktop.png)|![Edit Accessory Mobile](documentation/screenshots/validation/lighthouse/edit-accessory-mobile.png)|
+|Product Management Page|![Product Management Desktop](documentation/screenshots/validation/lighthouse/product-management-desktop.png)|![Product Management Mobile](documentation/screenshots/validation/lighthouse/product-management-mobile.png)|
+|About Us Page|![About Us Desktop](documentation/screenshots/validation/lighthouse/about-desktop.png)|![About Us Mobile](documentation/screenshots/validation/lighthouse/about-mobile.png)|
+|Contact Us Page|![Contact Us Desktop](documentation/screenshots/validation/lighthouse/contact-desktop.png)|![Contact Us Mobile](documentation/screenshots/validation/lighthouse/contact-mobile.png)|
+|Contact Sucess Page|![Contact Success Desktop](documentation/screenshots/validation/lighthouse/contact-success-desktop.png)|![Contact Success Mobile](documentation/screenshots/validation/lighthouse/contact-success-mobile.png)|
+|FAQs|![FAQs Desktop](documentation/screenshots/validation/lighthouse/faqs-desktop.png)|![FAQs Mobile](documentation/screenshots/validation/lighthouse/faqs=mobile.png)|
+|Privacy Policy|![Privacy Policy Desktop](documentation/screenshots/validation/lighthouse/privacy-policy-desktop.png)|![Privacy Policy Mobile](documentation/screenshots/validation/lighthouse/privacy-policy-mobile.png)|
+|Partners Page|![Partners Desktop](documentation/screenshots/validation/lighthouse/partners-desktop.png)|![Partners Mobile](documentation/screenshots/validation/lighthouse/partners-mobile.png)|
+|Forum|![Forum Desktop](documentation/screenshots/validation/lighthouse/forum-desktop.png)|![Forum Mobile](documentation/screenshots/validation/lighthouse/forum-mobile.png)|
+|Post List Page|![Post List Desktop]((documentation/screenshots/validation/lighthouse/post-list-desktop.png))|![Post List Mobile](documentation/screenshots/validation/lighthouse/post-list-mobile.png)|
+|Profile Page|![Profile Desktop](documentation/screenshots/validation/lighthouse/profile-desktop.png)|![Profile Mobile](documentation/screenshots/validation/lighthouse/profile-mobile.png)|
+|Bag|![Bag Desktop](documentation/screenshots/validation/lighthouse/bag-desktop.png)|![Bag Mobile](documentation/screenshots/validation/lighthouse/bag-mobile.png)|
+|Checkout Page|![Checkout Desktop](documentation/screenshots/validation/lighthouse/checkout-desktop.png)|![Checkout Mobile](documentation/screenshots/validation/lighthouse/checkout-mobile2.png)|
+|Checkout Success|![Checkout Success Desktop](documentation/screenshots/validation/lighthouse/checkout-success-desktop.png)|![Checkout Success Mobile](documentation/screenshots/validation/lighthouse/checkout-success-mobile.png)|
+|Login|![Login Desktop](documentation/screenshots/validation/lighthouse/login-desktop.png)|![Login Mobile](documentation/screenshots/validation/lighthouse/login-mobile.png)|
+|Logout|![Logout Desktop](documentation/screenshots/validation/lighthouse/logout-desktop.png)|![Logout Mobile](documentation/screenshots/validation/lighthouse/logout-mobile.png)|
+|Register|![Register Desktop](documentation/screenshots/validation/lighthouse/register-desktop.png)|![Register Mobile](documentation/screenshots/validation/lighthouse/register-mobile.png)|
+|Forgot Password|![Forgot Password Desktop](documentation/screenshots/validation/lighthouse/forgot-desktop.png)|![Forgot Password Mobile](documentation/screenshots/validation/lighthouse/forgot-mobile.png)|
+
+
+On Chrome when auditing the 'Checkout' page for mobile - message appeared stating I should try in incognit mode. The results are below.
+<details><summary>Checkout Mobile - Incognito Mode</summary>
+
+![Checkout Mobile - Incognito Mode](documentation/screenshots/validation/lighthouse/checkout-mobile.png)
+
+</details>
+
+Best Practices should be higher, however it is lower due to the presence of third party cookies due to Stripe.
+
+# Browser Compatibility
+
+
+# Manual Testing
+## Home Page
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+
+## All Products Page
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+
+## By Genre Page (All Genres)
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+## By Category Page (All Categories)
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+## Product Detail
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+## Edit Book Page
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+## Edit Accessory Page
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+## Search
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+## About Us Page
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+## Contact Us Page
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+## Contact Us Success Page
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+## FAQs Page
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+## Privacy Policy Page
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+## Partners Page
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+## Forum
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+## Post List Page
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+## Profile Page
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+## Bag
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+## Checkout Page
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+## Checkout Success Page
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+## Login
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+## Logout
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+## Register
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+## Forgot Password
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+
+
+
+# Testing User Stories
+
+|**User Story**|**Pass/Fail**|**Comments**|
+|--------------|-------------|------------|
+
+# Additional Testing
+## Wave
+## Responsive Testing
+
+
+# Bugs
+
+## Fixed Bugs
+
+## Unresolved Bugs
+
+
+
