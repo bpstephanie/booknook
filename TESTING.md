@@ -115,7 +115,8 @@ The CI Python Linter Validator was used to validate all python files which I cre
 
   [JS Hint]() was used to validate JavaScript code.
 
-  |**Page**|**Image**|**Pass/Fail**|
+  |**Page**     |**Image**         | **Pass/Fail** |
+  |-------------|------------------|---------------|
 
   |all_categories.html|![All Categories JS](documentation/screenshots/validation/all-categories-js.png)|Pass|
 
@@ -133,3 +134,9 @@ The CI Python Linter Validator was used to validate all python files which I cre
   |quantity_input_script.html|![Quantity Input Script JS](documentation/screenshots/validation/quantity-input-script-js.png)|Pass|
   |stripe_elements.js|![Stripe Elements JS](documentation/screenshots/validation/stripe-elements-js.png)| Pass|
   |wishlist_modal_script.html|![Wishlist Modal Script JS](documentation/screenshots/validation/wishlist-modal-script-js.png)
+
+
+# Lighthouse testing
+
+|**Page**|**Desktop**|**Mobile**|
+|--------|-----------|----------|
