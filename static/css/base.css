@@ -347,22 +347,6 @@ a {
 }
 
 /* ---------------------------------------- Toasts */
-/*
-.toast {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;
-    position: fixed;
-    top: 120px;
-    right: 15px;
-    z-index: 9999999999999999;
-}
-
-.show {
-    visibility: visible;
-    opacity: 1;
-}
-*/
 .custom-toast {
     overflow: visible;
 }

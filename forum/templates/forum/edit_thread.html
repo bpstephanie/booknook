@@ -14,15 +14,15 @@
 {% endblock %}
 
 {% block content %}
-    <div class="full-overlay"></div>
-    <div class="container mb-5">
-        <h1>Edit Thread</h1>
-        <hr>
-        <form method="POST" action="{% url 'edit_thread' thread.id %}">
-            {% csrf_token %}
-            {{ form|crispy }}
-            <input type="hidden" name="next" value="{{ next }}">
-            <button type="submit" class="btn btn-orange rounded-0">Save Changes</button>
-        </form>
-    </div>
+        <div class="full-overlay"></div>
+        <div class="container mb-5">
+            <h1>Edit Thread</h1>
+            <hr>
+            <form method="POST" action="{% url 'edit_thread' thread.id %}">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <input type="hidden" name="next" value="{{ next }}">
+                <button type="submit" class="btn btn-orange rounded-0">Save Changes</button>
+            </form>
+        </div>
 {% endblock %}

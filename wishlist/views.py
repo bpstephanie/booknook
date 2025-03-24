@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, resolve_url
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Wishlist, WishlistItem
@@ -8,14 +8,8 @@ from products.models import Product
 # Create your views here.
 @login_required
 def wishlists(request):
-    wishlists = Wishlist.objects.filter(user=request.user).prefetch_related(
-        'wishlistitem_set__product'
-    )
-
-    context = {
-        'wishlists': wishlists,
-    }
-    return render(request, "wishlists/wishlist.html", context)
+    # Redirect to the profile page section for wishlists
+    return redirect(resolve_url('profile') + '?section=myWishlists')
 
 
 @login_required
