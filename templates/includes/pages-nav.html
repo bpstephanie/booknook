@@ -1,62 +1,62 @@
-<div class="collapse navbar-collapse" id="pages-nav">
-    <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item dropdown">
-            <a class="text-uppercase font-weight-bold nav-link green-link text-navy mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Products
-            </a>
-            <div class="dropdown-menu no-border bg-cream" aria-labelledby="all-products-link">
-                <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">By Price</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">By Rating</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
-            </div>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="text-uppercase font-weight-bold nav-link green-link text-navy mr-5" href="{% url 'all_books' %}" id="all-books-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Books
-            </a>
-            <div class="dropdown-menu no-border bg-cream" aria-labelledby="all-books-link">
-                <a class="dropdown-item" href="{% url 'all_books' %}?sort=price&direction=asc">By Price</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'all_books' %}?sort=rating&direction=desc">By Rating</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'all_genres' %}">By Genre</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'all_books' %}">All Books</a>
-            </div>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="text-uppercase font-weight-bold nav-link green-link text-navy mr-5" href="#" id="accessories-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Accessories
-            </a>
-            <div class="dropdown-menu no-border bg-cream" aria-labelledby="accessories-link">
-                <a class="dropdown-item" href="{% url 'all_accessories' %}?sort=price&direction=asc">By Price</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'all_accessories' %}?sort=rating&direction=desc">By Rating</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'all_categories' %}">By Category</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'all_accessories' %}">All Accessories</a>
-            </div>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="text-uppercase font-weight-bold nav-link orange-link text-navy mr-5" href="#" id="community-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Community
-            </a>
-            <div class="dropdown-menu no-border bg-cream" aria-labelledby="community-link">
-                <a class="dropdown-item" href="{% url 'partners' %}">Partners</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'forum' %}">Forum</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'about' %}">About Us</a>
+                <div class="collapse navbar-collapse" id="pages-nav">
+                    <ul class="navbar-nav w-auto mx-auto">
+                        <li class="nav-item dropdown">
+                            <a class="text-uppercase font-weight-bold nav-link green-link text-navy mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                All Products
+                            </a>
+                            <div class="dropdown-menu no-border bg-cream" aria-labelledby="all-products-link">
+                                <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">By Price</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">By Rating</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="text-uppercase font-weight-bold nav-link green-link text-navy mr-5" href="{% url 'all_books' %}" id="all-books-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Books
+                            </a>
+                            <div class="dropdown-menu no-border bg-cream" aria-labelledby="all-books-link">
+                                <a class="dropdown-item" href="{% url 'all_books' %}?sort=price&direction=asc">By Price</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{% url 'all_books' %}?sort=rating&direction=desc">By Rating</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{% url 'all_genres' %}">By Genre</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{% url 'all_books' %}">All Books</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="text-uppercase font-weight-bold nav-link green-link text-navy mr-5" href="#" id="accessories-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Accessories
+                            </a>
+                            <div class="dropdown-menu no-border bg-cream" aria-labelledby="accessories-link">
+                                <a class="dropdown-item" href="{% url 'all_accessories' %}?sort=price&direction=asc">By Price</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{% url 'all_accessories' %}?sort=rating&direction=desc">By Rating</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{% url 'all_categories' %}">By Category</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{% url 'all_accessories' %}">All Accessories</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="text-uppercase font-weight-bold nav-link orange-link text-navy mr-5" href="#" id="community-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Community
+                            </a>
+                            <div class="dropdown-menu no-border bg-cream" aria-labelledby="community-link">
+                                <a class="dropdown-item" href="{% url 'partners' %}">Partners</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{% url 'forum' %}">Forum</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{% url 'about' %}">About Us</a>
 
-            </div>
-        </li>
-        <li>
-            <a class="text-uppercase font-weight-bold nav-link orange-link text-navy mr-5" href="{% url 'contact' %}">
-                Contact Us
-            </a>
-        </li>
-    </ul>
-</div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="text-uppercase font-weight-bold nav-link orange-link text-navy mr-5" href="{% url 'contact' %}">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>

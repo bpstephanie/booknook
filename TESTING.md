@@ -15,6 +15,8 @@
   * [Known Bugs](<#known-bugs>)
     * [Unresolved Bugs](<#unresolved-bugs>)
 
+# Validator Testing
+
 ## HTML
 
 The [HTML W3C Validator] was used to validate all HTML files. The results are as follows:
@@ -107,3 +109,27 @@ The CI Python Linter Validator was used to validate all python files which I cre
   |Custom Storages|![Custom Storages](documentation/screenshots/validation/custom-storages.png)| Pass|
   |Download Images|![Download Images](documentation/screenshots/validation/download-images.png)|Pass|
   |Update product|![Update Product](documentation/screenshots/validation/update-product.png)|Pass|
+
+
+  ## JavaScript
+
+  [JS Hint]() was used to validate JavaScript code.
+
+  |**Page**|**Image**|**Pass/Fail**|
+
+  |all_categories.html|![All Categories JS](documentation/screenshots/validation/all-categories-js.png)|Pass|
+
+  |all_genres.html|![All Genres JS](documentation/screenshots/validation/all-genres-js.png)|Pass|
+  |bag.html|![Bag JS](documentation/screenshots/validation/bag-js.png)|Pass|
+  |countryfield.js|![Country Field JS](documentation/screenshots/validation/country-field-js.png)|Pass|
+  |edit_accessory.html|![Edit Accessory JS](documentation/screenshots/validation/edit-accessory-js.png)|Pass|
+  |edit_book.html|![Edit Book JS](documentation/screenshots/validation/edit-book-js.png)|Pass|
+  |forum.html|![Forum JS](documentation/screenshots/validation/forum-js.png)|Pass|
+  |post_list.html|![Post List JS](documentation/screenshots/validation/post-list-js.png)|Pass|
+  |product_detail.html|![Product Detail JS](documentation/screenshots/validation/product-detail-js.png)|Pass|
+  |product_management.html|![Product Management JS](documentation/screenshots/validation/product-management-js.png)|Pass|
+  |products.html|![Products JS](documentation/screenshots/validation/products-js.png)|Pass|
+  |profile.html|![Profile JS](documentation/screenshots/validation/profile-js.png)|Pass|
+  |quantity_input_script.html|![Quantity Input Script JS](documentation/screenshots/validation/quantity-input-script-js.png)|Pass|
+  |stripe_elements.js|![Stripe Elements JS](documentation/screenshots/validation/stripe-elements-js.png)| Pass|
+  |wishlist_modal_script.html|![Wishlist Modal Script JS](documentation/screenshots/validation/wishlist-modal-script-js.png)
