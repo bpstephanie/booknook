@@ -350,6 +350,19 @@ Best Practices should be higher, however it is lower due to the presence of thir
 ||Display extra information|Check for add to wishlist/save for later|Pass||
 |Create purchases total|Display running total|Add items to bag to check total|Pass||
 ||Update in real time|Verify rela time updates|Pass||
+|Add to wishlists - logged in user|'Add to wishlist' adds item|Check wishlist for added item|Pass||
+||Only logged-in users can add items|Check product detail as guest|Pass||
+|View wishlists|Accessible from navbar or profile|Check profile/Click navbar icon|Pass||
+||Displays images/names/prices|Check wishlist view|Pass||
+||'No item' message if empty|Check wishlist views|Fail|It was decided not to include this, as the wishlist visibly has no wishlist items in and instead has a delete wishlist button. If user no longer desires to keep said wishlist they can delete it.
+||Items link to product page|Click item name|Pass||
+|Deleting wishlist items|Able item deletion|Delete item|Pass|
+||Confirmation message appears|Check message|Pass||
+||Instant view update|Check view|Pass||
+|Deleting wishlists|Able wishlist deletion|
+||Confirmation message appears|Check message|Pass||
+||Instant view update|Check view|Pass||
+
 
 
 [Back To Top](<#testing-contents>)
@@ -367,6 +380,9 @@ Best Practices should be higher, however it is lower due to the presence of thir
 |Password recovery|Visible 'forgot password' button|Check visibility of button|Pass||
 ||Receive instructions|Test password recovery process|Pass||
 ||Simple but secure process|Verify recovery functionality|Pass||
+|Create user profile|Able to view profile|Click account icon|Pass||
+||Displays all information|View profile page|Pass||
+||Has CRUD functionality|Check all content on profile page|Pass||
 
 
 [Back To Top](<#testing-contents>)
@@ -383,15 +399,34 @@ Best Practices should be higher, however it is lower due to the presence of thir
 ||Sort reviews by recent|Verify sorting functionality|Pass||
 |Update/Delete reviews|Edit or delete reviews|Test edit/delete review|Pass||
 ||Reflect changes in real-time|Verify real-time updates|Pass||
+|Newsletter signup|Form on profile/home page|Check respective pages|Pass||
+||Has name/username fields|Check forms|Pass||
+||Has 'submit' button|Check forms|Pass||
+||Invalid input displays error message|Enter invalid input|Pass||
+||Success message upon valid submission|Enter valid input|Pass||
+||Confirmation email reception|Check junk folder|Pass||
+||Unsubscription on profile and email|Attempt on profile and by email|Pass/Fail|Users can unsubscribe from the profile, however I haven't been able to get the email link to work as of yet|
 
 
 [Back To Top](<#testing-contents>)
 
 ## Shopping Bag and Save for Later
 
-# Additional Testing
-## Wave
-## Responsive Testing
+|**User Story**|**Acceptance Criteria**|**Testing Method**|**Pass/Fail**|**Comments**|
+|--------------|-----------------------|------------------|-------------|------------|
+|View shopping bag|
+||
+|View saved items|
+||
+|Save items for later|
+||
+||
+|Move saved items to bag|
+||
+||
+|Remove saved items|
+||
+||
 
 
 # Bugs
