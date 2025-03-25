@@ -435,6 +435,58 @@ Best Practices should be higher, however it is lower due to the presence of thir
 
 |**User Story**|**Acceptance Criteria**|**Testing Method**|**Pass/Fail**|**Comments**|
 |--------------|-----------------------|------------------|-------------|------------|
+|Proceed to checkout|Enter payment details|Test checkout process|Pass||
+||Confirm order and provide number|Verify order confirmation|Pass||
+|Order confirmation page display|Redirect to confirmation page|Test redirection|Pass||
+||Display order details|Verify order details|Pass||
+|Order confirmation email|Confirmation email reception|Verify email receipt|Pass||
+||Include order details|Check email content|Pass||
+
+
+[Back To Top](<#testing-contents>)
+
+# User Profile
+
+|**User Story**|**Acceptance Criteria**|**Testing Method**|**Pass/Fail**|**Comments**|
+|--------------|-----------------------|------------------|-------------|------------|
+|Update delivery details|Update phone, address, etc.|Test update functionality|	Pass||
+||Save and display correctly|	Verify saved details|Pass||
+|Update personal bio|Update bio and favorite books|Test update functionality|Pass||
+||Save and display correctly|Verify saved details|Pass||
+|Rewards and benefits|View rewards and benefits|Navigate to rewards section|Pass||
+||Display relevant details|Verify reward details|Pass||
+|Editing threads|'Edit thread' button under each thread|Verify button visibility|Pass||
+||Upon click, user redirected thread page with prefilled form|Test redirection and prefilled content|Pass||
+||After submission, user redirected to forum section|Verify updated content in profile|Pass||
+|Deleting threads|'Delete' under each thread|Verify button visibility|Pass||
+||Upon click, confirmation modal appears|Test modal functionality|Pass||
+|Viewing thread list|Thread titles are clickable links|Verify link|Pass||
+||User redirected to post list upon click|Test redirection|Pass||
+
+
+[Back To Top](<#testing-contents>)
+
+# Forum
+
+|**User Story**|**Acceptance Criteria**|**Testing Method**|**Pass/Fail**|**Comments**|
+|--------------|-----------------------|------------------|-------------|------------|
+|View forum categories|List all categories|Navigate to forum|Pass||
+||Display name and description|Verify category details|Pass||
+|View threads in a category|View threads in selected category|Navigate forum|Pass||
+||Display title, creator, date|Verify thread details|Pass||
+|Create a new thread|Access "Create New Thread" button|Test button functionality|Pass||
+||Enter title and content|Verify form fields|Pass||
+||Submit form to create thread|Test submission process|Pass||
+||Display new thread in category|Verify thread appearance|Pass||
+|Posts in threads|View posts in thread|Navigate to thread page|Pass||
+|Display content, creator, date|Verify post details|Pass||
+|Reply to thread|Access 'reply' button|Verify button visibility|Pass||
+||Can enter reply|Test reply form|Pass||
+||Can submit form|Test form submission|Pass||
+||Reply appears in thread|Verify reply visible|Pass||
+
+
+[Back To Top](<#testing-contents>)
 
 
 # Bugs
