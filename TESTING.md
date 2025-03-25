@@ -6,7 +6,6 @@
     * [Python and Django](<#python-and-django>)
     * [JavaScript](<#javascript>)
   * [Lighthouse](<#lighthouse>)
-  * [Browser Compatibility](<#browser-compatibility>)
   * [Manual Testing](<#manual-testing>)
   * [User Story Testing](<#user-story-testing>)
   * [Known Bugs](<#known-bugs>)
@@ -158,7 +157,7 @@ The CI Python Linter Validator was used to validate all python files which I cre
 |About Us Page|![About Us Desktop](documentation/screenshots/validation/lighthouse/about-desktop.png)|![About Us Mobile](documentation/screenshots/validation/lighthouse/about-mobile.png)|
 |Contact Us Page|![Contact Us Desktop](documentation/screenshots/validation/lighthouse/contact-desktop.png)|![Contact Us Mobile](documentation/screenshots/validation/lighthouse/contact-mobile.png)|
 |Contact Sucess Page|![Contact Success Desktop](documentation/screenshots/validation/lighthouse/contact-success-desktop.png)|![Contact Success Mobile](documentation/screenshots/validation/lighthouse/contact-success-mobile.png)|
-|FAQs|![FAQs Desktop](documentation/screenshots/validation/lighthouse/faqs-desktop.png)|![FAQs Mobile](documentation/screenshots/validation/lighthouse/faqs=mobile.png)|
+|FAQs|![FAQs Desktop](documentation/screenshots/validation/lighthouse/faqs-desktop.png)|![FAQs Mobile](documentation/screenshots/validation/lighthouse/faqs-mobile.png)|
 |Privacy Policy|![Privacy Policy Desktop](documentation/screenshots/validation/lighthouse/privacy-policy-desktop.png)|![Privacy Policy Mobile](documentation/screenshots/validation/lighthouse/privacy-policy-mobile.png)|
 |Partners Page|![Partners Desktop](documentation/screenshots/validation/lighthouse/partners-desktop.png)|![Partners Mobile](documentation/screenshots/validation/lighthouse/partners-mobile.png)|
 |Forum|![Forum Desktop](documentation/screenshots/validation/lighthouse/forum-desktop.png)|![Forum Mobile](documentation/screenshots/validation/lighthouse/forum-mobile.png)|
@@ -182,10 +181,6 @@ On Chrome when auditing the 'Checkout' page for mobile - message appeared statin
 
 Best Practices should be higher, however it is lower due to the presence of third party cookies due to Stripe.
 
-
-[Back To Top](<#testing-contents>)
-
-# Browser Compatibility
 
 [Back To Top](<#testing-contents>)
 
