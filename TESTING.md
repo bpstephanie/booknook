@@ -7,7 +7,7 @@
   * [Lighthouse](<#lighthouse>)
   * [Browser Compatibility](<#browser-compatibility>)
   * [Manual Testing](<#manual-testing>)
-  * [Testing User Stories](<#testing-user-stories>)
+  * [User Story Testing](<#user-story-testing>)
   * [Additional Testing](<#additional-testing>)
     * [Wave](<#wave>)
     * [Responsiveness Testing](<#responsiveness-testing>)
@@ -44,7 +44,9 @@ The [HTML W3C Validator] was used to validate all HTML files. The results are as
 |checkout_success.html|![Checkout](documentation/screenshots/validation/checkout-success-html.png)|Pass|
 |profile.html|||
 |downloads.html|![Downloads](documentation/screenshots/validation/downloads-html.png)|Pass|
-https://www.aliciaramirez.com/closing-tags-checker/
+
+
+[Back To Top](<#testing-contents>)
 
 ## CSS
 The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate all css file. The results are below:
@@ -54,6 +56,9 @@ The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to valida
 |base.css|![base.css](documentation/screenshots/validation/base-css.png)|Pass|
 |forum.css|![forum.css](documentation/screenshots/validation/forum-css.png)|Pass|
 |profiles.css|![Models](documentation/screenshots/validation/profile-css.png)|Pass|
+
+
+[Back To Top](<#testing-contents>)
 
 ## Python and Django
 The CI Python Linter Validator was used to validate all python files which I created or edited. I corrected mistakes as I went with the VS Code Problems tab.
@@ -111,7 +116,9 @@ The CI Python Linter Validator was used to validate all python files which I cre
   |Update product|![Update Product](documentation/screenshots/validation/update-product.png)|Pass|
 
 
-  ## JavaScript
+[Back To Top](<#testing-contents>)
+  
+## JavaScript
 
   [JS Hint]() was used to validate JavaScript code.
 
@@ -133,6 +140,8 @@ The CI Python Linter Validator was used to validate all python files which I cre
   |stripe_elements.js|![Stripe Elements JS](documentation/screenshots/validation/stripe-elements-js.png)| Pass|
   |wishlist_modal_script.html|![Wishlist Modal Script JS](documentation/screenshots/validation/wishlist-modal-script-js.png)
 
+
+[Back To Top](<#testing-contents>)
 
 # Lighthouse testing
 
@@ -163,7 +172,6 @@ The CI Python Linter Validator was used to validate all python files which I cre
 |Register|![Register Desktop](documentation/screenshots/validation/lighthouse/register-desktop.png)|![Register Mobile](documentation/screenshots/validation/lighthouse/register-mobile.png)|
 |Forgot Password|![Forgot Password Desktop](documentation/screenshots/validation/lighthouse/forgot-desktop.png)|![Forgot Password Mobile](documentation/screenshots/validation/lighthouse/forgot-mobile.png)|
 
-
 On Chrome when auditing the 'Checkout' page for mobile - message appeared stating I should try in incognit mode. The results are below.
 <details><summary>Checkout Mobile - Incognito Mode</summary>
 
@@ -173,8 +181,12 @@ On Chrome when auditing the 'Checkout' page for mobile - message appeared statin
 
 Best Practices should be higher, however it is lower due to the presence of third party cookies due to Stripe.
 
+
+[Back To Top](<#testing-contents>)
+
 # Browser Compatibility
 
+[Back To Top](<#testing-contents>)
 
 # Manual Testing
 ## Home Page
@@ -300,11 +312,45 @@ Best Practices should be higher, however it is lower due to the presence of thir
 |---------------|-------------------|-------------|------------|
 
 
+[Back To Top](<#testing-contents>)
 
-# Testing User Stories
+# User Story Testing
 
-|**User Story**|**Pass/Fail**|**Comments**|
-|--------------|-------------|------------|
+## BookNook Planning and Design
+
+|**User Story**|**Acceptance Criteria**|**Testing Method**|**Pass/Fail**|**Comments**|
+|--------------|-----------------------|------------------|-------------|------------|
+|Create epics and user stories|Create epic and story templates|Verify templates are created|Pass||
+||Add epics to project board|Check project board for epics|Pass||
+||Assign stories to epics|Verify stories are assigned to epics|Pass||
+|Create wireframes|Plan comprehensive design|Review wireframes|Pass||
+||Clear reference for coding|Verify wireframes are clear and usable|Pass||
+|Design ERD|Use LucidChart to plan database|Check ERD in LucidChart|Pass||
+||Display relationships accurately|Verify relationships in ERD|Pass||
+||Include tables, keys, relationships|Review ERD|Pass||
+|Write Business Plan|Include condept, mission, vision|Review business plan in README|Pass||
+||Analyze target market|Verify market analysis in README|Pass||
+||Detail marketing strategy|Check marketing strategy in README|Pass||
+||Include future development|Verify business model and future features sections in README|Pass||
+
+
+[Back To Top](<#testing-contents>)
+
+## Viewing and Navigation
+
+|**User Story**|**Acceptance Criteria**|**Testing Method**|**Pass/Fail**|**Comments**|
+|--------------|-----------------------|------------------|-------------|------------|
+|Browsing products|View list of products|Navigate to products page|Pass|
+||List displayed clearly|Verify product list clarity|Pass|
+||Click to individual page|Navigate to product page|Pass|
+|Create product detail|View individual product page|Navigate to product detail|Pass||
+||Accurate and clear details|Verify product details|Pass||
+||Display extra information|Check for add to wishlist/save for later|Pass||
+|Create purchases total|Display running total|Add items to bag to check total|Pass||
+||Update in real time|Verify rela time updates|Pass||
+
+
+[Back To Top](<#testing-contents>)
 
 # Additional Testing
 ## Wave
