@@ -423,7 +423,7 @@
             if (section) {
                 showContent(section);
             } else {
-                showContent('deliveryDetails'); // Default section
+                showContent('deliveryDetails');
             }
         });
     </script>
@@ -449,19 +449,17 @@
     <script>
         $(document).ready(function() {
             $('#confirmDeleteWishlistModal').on('show.bs.modal', function(event) {
-                var button = $(event.relatedTarget); // This will be the button
+                var button = $(event.relatedTarget);
                 var wishlistId = button.data('wishlist-id');
-                console.log('Wishlist ID:', wishlistId); // Debugging statement
                 $('#confirmDeleteWishlistForm').attr('action', "{% url 'remove_wishlist' 0 %}".replace('0', wishlistId));
-                console.log('Form Action:', $('#confirmDeleteWishlistForm').attr('action')); // Debugging statement
             });
         });
     </script>
     <!-- Confirm Thread Deletion -->
     <script>
         $('#deleteModal').on('show.bs.modal', function (event) {
-            var button = $(event.relatedTarget); // Button that triggered the modal
-            var threadId = button.data('thread-id'); // Extract info from data-* attributes
+            var button = $(event.relatedTarget);
+            var threadId = button.data('thread-id'); 
             var modal = $(this);
             var deleteUrl = "{% url 'delete_thread' 0 %}".replace('0', threadId);
             modal.find('#confirmDeleteButton').attr('href', deleteUrl);
@@ -489,15 +487,15 @@
             });
 
             $('#deleteReviewModal').on('show.bs.modal', function(event) {
-                var link = $(event.relatedTarget); // Element that triggered the modal
-                var url = link.data('url'); // Extract info from data-* attributes
+                var link = $(event.relatedTarget);
+                var url = link.data('url');
                 var modal = $(this);
                 modal.find('#confirmDeleteReview').attr('href', url);
             });
 
             $('#confirmDeleteReview').on('click', function(event) {
-                event.preventDefault(); // Prevent the default action
-                var url = $(this).attr('href'); // Get the URL from the href attribute
+                event.preventDefault();
+                var url = $(this).attr('href');
                 $.ajax({
                     url: url,
                     type: 'POST',
@@ -517,9 +515,9 @@
     <!-- Confirm Post Deletion-->
      <script>
         $('#deletePostModal').on('show.bs.modal', function (event) {
-            var button = $(event.relatedTarget); // Button that triggered the modal
-            var url = button.data('url'); // Extract info from data-* attributes
-            var next = button.data('next'); // Extract next URL
+            var button = $(event.relatedTarget);
+            var url = button.data('url');
+            var next = button.data('next');
             var modal = $(this);
             modal.find('#deletePostForm').attr('action', url);
             modal.find('#deletePostNext').val(next);

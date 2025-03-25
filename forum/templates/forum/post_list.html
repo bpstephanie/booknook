@@ -84,9 +84,9 @@
     {{ block.super }}
     <script>
         $('#deletePostModal').on('show.bs.modal', function (event) {
-            var button = $(event.relatedTarget); // Button that triggered the modal
-            var url = button.data('url'); // Extract info from data-* attributes
-            var next = button.data('next'); // Extract next URL
+            var button = $(event.relatedTarget);
+            var url = button.data('url');
+            var next = button.data('next');
             var modal = $(this);
             modal.find('#deletePostForm').attr('action', url);
             modal.find('#deletePostNext').val(next);

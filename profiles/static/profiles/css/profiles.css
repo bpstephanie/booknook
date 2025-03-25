@@ -23,10 +23,6 @@
     flex-direction: column;
 }
 
-/*.profile-wishlist {
-    width: auto;
-}*/
-
 .order-history {
     max-height: 416px;
     overflow-y: auto;

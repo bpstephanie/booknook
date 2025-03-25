@@ -86,8 +86,8 @@ def all_products(request, type=None):
 
     current_sorting = f'{sort}_{direction}'
 
-    categories = Category.objects.all()  # All categories
-    genres = Genre.objects.all()  # All genres
+    categories = Category.objects.all()
+    genres = Genre.objects.all()
 
     user_wishlists = []
     wishlist_items = []

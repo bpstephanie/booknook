@@ -312,16 +312,16 @@ a {
 
 .bs-canvas-content {
     overflow-y: auto;
-    color: #fefefe; /* Visible text */
+    color: #fefefe;
     padding: 20px;
-    visibility: visible; /* Ensure content is visible */
+    visibility: visible;
 }
 
 .bs-canvas-content a {
-    color: #0b254b; /* Adjust as needed */
-    text-decoration: none; /* Optional styling */
-    pointer-events: auto; /* Ensure the link has a clickable pointer */
-    z-index: 11300; /* Ensure above the overlay */
+    color: #0b254b;
+    text-decoration: none; 
+    pointer-events: auto; 
+    z-index: 11300;
     position: relative;
 }
 
@@ -332,7 +332,7 @@ a {
 }
 
 .bs-canvas.ml-0 {
-    transform: translateX(0); /* Slide into view */
+    transform: translateX(0);
 }
 
 .bs-canvas-overlay {
@@ -832,7 +832,6 @@ allauth-form-inner-content p {
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	/* btn */
 	display: inline-block;
     font-weight: 400;
     color: #fefefe;
@@ -849,7 +848,6 @@ allauth-form-inner-content p {
     line-height: 1.5;
     border-radius: 0;
 
-    /* standard bootstrap btn transitions */
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
