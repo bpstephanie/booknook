@@ -429,6 +429,14 @@ Best Practices should be higher, however it is lower due to the presence of thir
 ||
 
 
+[Back To Top](<#testing-contents>)
+
+# Checkout
+
+|**User Story**|**Acceptance Criteria**|**Testing Method**|**Pass/Fail**|**Comments**|
+|--------------|-----------------------|------------------|-------------|------------|
+
+
 # Bugs
 
 ## Fixed Bugs
