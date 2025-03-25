@@ -414,19 +414,19 @@ Best Practices should be higher, however it is lower due to the presence of thir
 
 |**User Story**|**Acceptance Criteria**|**Testing Method**|**Pass/Fail**|**Comments**|
 |--------------|-----------------------|------------------|-------------|------------|
-|View shopping bag|
-||
-|View saved items|
-||
-|Save items for later|
-||
-||
-|Move saved items to bag|
-||
-||
-|Remove saved items|
-||
-||
+|View shopping bag|Add, update, remove items|Test shopping bag functionality|Pass||
+||Display total priceVerify total price display|Pass||
+|View saved items|Access saved items section|Navigate to saved items|Pass||
+||Display name, image, price|Verify item details|Pass|| 
+|Save items for later|Save items from product page/bag|Test save functionality|Pass||
+||Show confirmation message|Check for notification|Pass||
+||Store items in accounts|Verify item storage|Pass||
+|Move saved items to bag|Move items with single click|Test 'move' functionality|Pass||
+||Show confirmation message|Check for notification|Pass||
+||Item no longer in 'Saved'|Verify item absence|Pass||
+|Remove saved items |Delete items from saved list|Test remove functionality|Pass||
+||Show confirmation message|Check for notification|Pass||
+||Deleted from saved items|Verify item deletion|Pass||
 
 
 [Back To Top](<#testing-contents>)
