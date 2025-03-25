@@ -1,3 +1,4 @@
+# Testing Contents
 * [**Testing Contents**](<#testing-contents>)
   * [Validator Testing](<#validator-testing>)
     * [HTML](<#html>)
@@ -171,6 +172,7 @@ The CI Python Linter Validator was used to validate all python files which I cre
 |Logout|![Logout Desktop](documentation/screenshots/validation/lighthouse/logout-desktop.png)|![Logout Mobile](documentation/screenshots/validation/lighthouse/logout-mobile.png)|
 |Register|![Register Desktop](documentation/screenshots/validation/lighthouse/register-desktop.png)|![Register Mobile](documentation/screenshots/validation/lighthouse/register-mobile.png)|
 |Forgot Password|![Forgot Password Desktop](documentation/screenshots/validation/lighthouse/forgot-desktop.png)|![Forgot Password Mobile](documentation/screenshots/validation/lighthouse/forgot-mobile.png)|
+|Change Password|![Change Password Desktop](documentation/screenshots/validation/lighthouse/change-password-desktop.png)|![Change Password Mobile](documentation/screenshots/validation/lighthouse/change-password-mobile.png)
 
 On Chrome when auditing the 'Checkout' page for mobile - message appeared stating I should try in incognit mode. The results are below.
 <details><summary>Checkout Mobile - Incognito Mode</summary>
@@ -351,6 +353,41 @@ Best Practices should be higher, however it is lower due to the presence of thir
 
 
 [Back To Top](<#testing-contents>)
+
+## Registration and User Accounts
+
+|**User Story**|**Acceptance Criteria**|**Testing Method**|**Pass/Fail**|**Comments**|
+|--------------|-----------------------|------------------|-------------|------------|
+|Account registration|Display registration button|Check visibility of button|Pass||
+||Register with email/password|Test registration process|Pass||
+||Receive confirmation email|Verify email receipt|Pass||
+|Account login/logout|Display login/logout buttons|Check visibility of buttons|Pass||
+||Simple but secure process|Test login/logout functionality|Pass||
+||Access profile after login|Verify profile access|Pass||
+|Password recovery|Visible 'forgot password' button|Check visibility of button|Pass||
+||Receive instructions|Test password recovery process|Pass||
+||Simple but secure process|Verify recovery functionality|Pass||
+
+
+[Back To Top](<#testing-contents>)
+
+## User Engagement
+
+|**User Story**|**Acceptance Criteria**|**Testing Method**|**Pass/Fail**|**Comments**|
+|--------------|-----------------------|------------------|-------------|------------|
+|Leaving reviews|Leave reviews for purchased products|Test review submission|Pass||
+||Include rating and text|Verify review from fields|Pass||
+||Show success message|Check for success notification|Pass||
+||Save reviews to database|Verify database entry|Pass||
+|Viewing reviews|Display reviews on product page|Navigate to product page|Pass||
+||Sort reviews by recent|Verify sorting functionality|Pass||
+|Update/Delete reviews|Edit or delete reviews|Test edit/delete review|Pass||
+||Reflect changes in real-time|Verify real-time updates|Pass||
+
+
+[Back To Top](<#testing-contents>)
+
+## Shopping Bag and Save for Later
 
 # Additional Testing
 ## Wave
