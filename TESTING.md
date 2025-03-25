@@ -488,6 +488,56 @@ Best Practices should be higher, however it is lower due to the presence of thir
 
 [Back To Top](<#testing-contents>)
 
+# Administration and Moderation
+
+|**User Story**|**Acceptance Criteria**|**Testing Method**|**Pass/Fail**|**Comments**|
+|--------------|-----------------------|------------------|-------------|------------|
+|Add products to store|Access user-friendly interface|Test interface usability|Pass||
+||Separate forms by product type|Verify form fields|Pass||
+||Display added product to users/admin|Check product visibility|Pass||
+|Editing products|Display 'Edit' buttons to staff|Verify button visibility|Pass||
+||Redirect to edit interface|Test redirection|Pass||
+||Pre-fill current product details|Verify form fields|Pass||
+||Correspond fields to product type|Check field accuracy|Pass||
+|Deleting products|Display 'Delete' buttons|Verify button visibility|Pass||
+||Show confirmation modal|Test modal functionality|Pass||
+||Remove product from store|Verify product removal|Pass||
+
+
+[Back To Top](<#testing-contents>)
+
+# Website Informational Pages
+
+|**User Story**|**Acceptance Criteria**|**Testing Method**|**Pass/Fail**|**Comments**|
+|--------------|-----------------------|------------------|-------------|------------|
+|Send enquiry|Accessible contact form|Navigate to contact page|Pass||
+||Include name, email, message fields|Verify form fields|Pass||
+|Display validation error|Test error handling|Pass||
+|View BookNook's contact information|Display phone number and email|Verify contact details|Pass||
+|Enquiry confirmation|Redirect to success page|Test redirection|Pass||
+||Display thank you message|Verify success message|Pass||
+||Inform user of message receipt|Check notification|Pass||
+||Provide link to products/forum|Verify link functionality|Pass||
+|View about us page|Include company history|Navigate to about us page|Pass||
+||Include mission and values|Verify content|Pass||
+||Well-organized and easy to read|Check readability|Pass||
+|View privacy policy|Include comprehensive policy|Navigate to privacy policy|Pass||
+||Clear, concise, easy to understand|Verify content clarity|Pass||
+||Cover data collection, usage, sharing, rights|Check policy completeness|Pass||
+|Contact company about privacy|Provide contact information|Verify contact details|Pass||
+||Easily accessible and prominently displayed|Check visibility|Pass||
+
+
+[Back To Top](<#testing-contents>)
+
+# Website Informational Pages
+
+|**User Story**|**Acceptance Criteria**|**Testing Method**|**Pass/Fail**|**Comments**|
+|--------------|-----------------------|------------------|-------------|------------|
+|Create and manage social media presence|BookNook Facebook page created|Verify Facebook page creation|Pass||
+||BookNook's logo as profile picture|Check profile picture|Pass||
+||Regular posts uploaded|Verify content|Pass?Fail|This is a future feature and was intended as an ongoing plan|
+||Comments and messages are monitored and responded to|Test message responses|Pass/Fail|This is a future feature and was intended as an ongoing plan|
 
 # Bugs
 
