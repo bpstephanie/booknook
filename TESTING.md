@@ -9,9 +9,6 @@
   * [Browser Compatibility](<#browser-compatibility>)
   * [Manual Testing](<#manual-testing>)
   * [User Story Testing](<#user-story-testing>)
-  * [Additional Testing](<#additional-testing>)
-    * [Wave](<#wave>)
-    * [Responsiveness Testing](<#responsiveness-testing>)
   * [Known Bugs](<#known-bugs>)
     * [Unresolved Bugs](<#unresolved-bugs>)
 
@@ -43,8 +40,10 @@ The [HTML W3C Validator] was used to validate all HTML files. The results are as
 |bag.html|![Bag](documentation/screenshots/validation/bag-html.png)|Pass||
 |checkout.html|![Checkout](documentation/screenshots/validation/checkout-html.png)|Pass||
 |checkout_success.html|![Checkout Success](documentation/screenshots/validation/checkout-success-html.png)|Pass||
-|profile.html|![Profile Page](documentation/screenshots/validation/profile-html.png)|Fail|
+|profile.html|![Profile Page](documentation/screenshots/validation/profile-html.png)|Fail|I have scoured my code trying to find unclosed divs but could not find any. I checked to see if anything was misaligned but once again couldn't find anything. I used a [closing tag checker](https://www.aliciaramirez.com/closing-tags-checker/) which initially showed my of an unclosed <p> tag but once corrected it said there were no unclosed elements. !(documentation/screenshots/validation/profile-html-checker.png)|
 |downloads.html|![Downloads](documentation/screenshots/validation/downloads-html.png)|Pass||
+
+In the future, I plan to find solutions for all the errors, however at this point I have not been able to.
 
 
 [Back To Top](<#testing-contents>)
@@ -195,123 +194,332 @@ Best Practices should be higher, however it is lower due to the presence of thir
 
 |**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
 |---------------|-------------------|-------------|------------|
+|Click on logo|Redirects to Home page|Pass||
+|Click on shop now button|Redirects to Products page|Pass|
+|Fill in newsletter sign up with valid information|Displays success message and email confirmation received|Pass||
+|Fill in newsletter sign up with invalid information|Displays error message|Pass||
 
+[Back To Top](<#testing-contents>)
+
+## Navigation Bar
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+|Click on All Products link in navbar/off canvas menu|Redirects to Products page|Pass||
+|Click on By Price in navbar|Redirects to Products page|Pass|Shows products from low to high|Pass||
+|Click on By Rating in navbar|Redirects to Products page|Pass|Shows products from high to low|Pass||
+|Click on All Books link in navbar/off canvas menu|Redirects to Books page|Pass||
+|Click on By Price in navbar|Redirects to Books page|Pass|Shows products from low to high|Pass||
+|Click on By Rating in navbar|Redirects to Books page|Pass|Shows products from high to low|Pass||
+|Click on By Genre in navbar/off canvas menu|Redirects to Book Genres page|Pass||
+|Click on All Accessories link in navbar/off canvas menu|Redirects to Accessories page|Pass||
+|Click on By Price in navbar|Redirects to Accessories page|Pass|Shows products from low to high|
+|Click on By Rating in navbar|Redirects to Accessories page|Pass|Shows products from high to low|
+|Click on By Category in navbar/off canvas menu|Redirects to Accessory Categories page|Pass||
+|Click on Partners in navbar/off canvas menu|Redirects to Partners page|Pass||
+|Click on Forum in navbar/off canvas menu|Redirects to Forum page|Pass||
+|Click on About Us in navbar/off canvas menu|Redirects to About Us page|Pass||
+|Click on Contact Us in navbar/off canvas menu|Redirects to Contact Us page|Pass||
+|Guest user clicks on Account in navbar|Shows Login/Register buttons|Pass||
+|Guest user clicks on Login in navbar|Redirects to Login|Pass||
+|Guest user clicks on Register in navbar|Redirects to Register|Pass||
+|Logged in user clicks on "Account"/Hi username in navbar|Shows Profile/Log out buttons|Pass||
+|Logged in user clicks on Profile in navbar/off canvas menu|redirects to Profile|Pass||
+|Logged in user clicks on Sign out in navbar/off canvas menu|redirects to Sign out page|Pass||
+|Logged in user clicks on Wishlists in navbar/off canvas menu|Redirects to wishlist section on profile|Pass||
+|Click on Bag|Redirects user to Bag page|Pass||
+|Logged in staff clicks on "Account"/Hi username in navbar|Shows Product Management/Profile/Log out buttons|Pass||
+|Query search bar|Shows products which match query|Pass||
+|Search bar empty when querying|Displays error message|Pass||
+|Search doesn't match any product|Displays error message|Pass||
+
+[Back To Top](<#testing-contents>)
 
 ## All Products Page
 
 |**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
 |---------------|-------------------|-------------|------------|
+|Click on Browse by Accessory Category|Displays category buttons|Pass||
+|Click on Browse by Book Genre|Displays genre buttons|Pass||
+|Click on sort by filter|sorts by rating (high to low, vice versa), by price(high to low, vice versa), by name (A to Z, vice versa)|Pass||
+|Click on product|Redirects to product detail page|Pass||
+|Click on scroll to top arrow|Scrolls to top|Pass||
+|Click on pagination buttons|Takes user to selected page or next/previous page|Pass||
 
+[Back To Top](<#testing-contents>)
 
-## By Genre Page (All Genres)
+## By Genre Page (All Genres) / By Category Page (All Categories)
 
 |**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
 |---------------|-------------------|-------------|------------|
+|Click on sort by filter|sorts by rating (high to low, vice versa), by price(high to low, vice versa), by name (A to Z, vice versa)|Pass||
+|Click on product|Redirects to product detail page|Pass||
+|Click on scroll to top arrow|Scrolls to top|Pass||
+|Click on pagination buttons|Takes user to selected page or next/previous page|Pass||
+|Click on left/right arrows with categories/genres|Products move left/right|Pass||
 
-## By Category Page (All Categories)
-
-|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
-|---------------|-------------------|-------------|------------|
+[Back To Top](<#testing-contents>)
 
 ## Product Detail
 
 |**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
 |---------------|-------------------|-------------|------------|
+|Click Add to bag|Displays success message/Shows bag with item in/Bag icon changes colour and shows grand total|Pass||
+|Click Add to Wishlist|Modal opens for user to choose a wishlist or create a new one|Pass||
+|Click Add to Wishlist in modal|Adds to wishlist/Success message shown/pink heart shown on top left corner of product image|Pass||
+|Click Remove from wishlist|Success message shown/Pink heart disappears from image|Pass||
+|Click Save for Later|Adds Save for later/Success message shown/redirects to bag/saved section|Pass||
+|Staff clicks Edit|Redirects to edit page, book or accessory depending on product|Pass||
+|Staff clicks Delete|Modal opens confirming deletion|Pass||
+|Staff clicks Delete in modal|Item is deleted|Pass||
+|Scroll to review form|Only displays form to users who have purchased said item|Pass||
+|Submit review with valid input|Success message/ user sees review waiting for approval|Pass||
+|Click Edit on review|Review content prefills form|Pass||
+|Submit edited review|Displays success message/ review is updated|Pass|
+|Click Delete on review|Modal opens confirming deletion|Pass||
+|Click Delete in modal|Review is deleted|Pass||
+|Click + quantity button|Quantity increases until 99|Pass||
+|Click - quantity button|Quantity decreases until 1|Pass||
 
-## Edit Book Page
+[Back To Top](<#testing-contents>)
+
+## Edit Book Page / Edit Accessory Page
 
 |**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
 |---------------|-------------------|-------------|------------|
+|Navigate to Edit Book/Accessory page|Info message displays name of product being edited|Pass||
+|Click Select Image|Staff computer image file opens|Pass||
+|Invalid input entered|Error message displayed|Pass||
+|Valid input entered|Succes message displayed/Redirected to product detail|Pass||
 
-## Edit Accessory Page
-
-|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
-|---------------|-------------------|-------------|------------|
-
-## Search
-
-|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
-|---------------|-------------------|-------------|------------|
+[Back To Top](<#testing-contents>)
 
 ## About Us Page
 
 |**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
 |---------------|-------------------|-------------|------------|
+|Click Shop button|Redirected to Products page|Pass||
+|Click Forum button|Redirected to Forum page|Pass||
+
+[Back To Top](<#testing-contents>)
 
 ## Contact Us Page
 
 |**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
 |---------------|-------------------|-------------|------------|
+|Enters invalid input|Error message shown|Pass||
+|Enters valid input|Success message shown/ redirects to Success page|Pass||
+
+[Back To Top](<#testing-contents>)
 
 ## Contact Us Success Page
 
 |**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
 |---------------|-------------------|-------------|------------|
+|Click Shop button|Redirected to Products page|Pass||
+|Click Forum button|Redirected to Forum page|Pass||
+
+[Back To Top](<#testing-contents>)
 
 ## FAQs Page
 
 |**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
 |---------------|-------------------|-------------|------------|
+|Click FAQs link in footer|Redirects to FAQs page|Pass||
+|Click questions|Opens answer below|Pass||
+|Click Contact Us button|Redirected to Contact Us page|Pass||
+
+[Back To Top](<#testing-contents>)
 
 ## Privacy Policy Page
 
 |**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
 |---------------|-------------------|-------------|------------|
+|Click Privacy Policy link in footer|Redirects to privacy policy page|Pass||
+|Click Email Address link|Opens email account|Pass||
+|Click Contact link|Redirects to Contact Us page|Pass||
+
+[Back To Top](<#testing-contents>)
 
 ## Partners Page
 
 |**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
 |---------------|-------------------|-------------|------------|
+|Click Charity links|Opens links in new tab|Pass||
+|Click Contact link|Redirects to Contact Us page|Pass||
+
+[Back To Top](<#testing-contents>)
 
 ## Forum
 
 |**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
 |---------------|-------------------|-------------|------------|
+|Click Category buttons|Opens corresponding category thread list|Pass||
+|Staff clicks add category|Modal opens|Pass||
+|Staff fills in name, description add submits|Success message is shown|Pass||
+|Click Create New Thread|Modal opens|Pass||
+|Invalid input entered|Fill in reminders shown/form cannot be submitted|Pass||
+|Valid input entered|Form submitted/Success message shown/thread added to gategory|Pass||
+|Click on thread title|Redirected to thread(post list) page|Pass||
+
+[Back To Top](<#testing-contents>)
 
 ## Post List Page
 
 |**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
 |---------------|-------------------|-------------|------------|
+|Click Reply button|Modal opens|Pass||
+|Invalid input entered|Fill in reminders shown/form cannot be submitted|Pass||
+|Valid input entered|Form submitted/Success message shown/post added to thread|Pass||
+|Click Edit Post|Redirected to Edit Post page|Pass||
+|Invalid input entered|Fill in reminders shown/form cannot be submitted|Pass||
+|Valid input entered|Form submitted/Success message shown/post updated|Pass||
+|Click Delete on Post|Modal opens confirming deletion|Pass||
+|Click Delete in modal|Post is deleted|Pass||
+|Click Edit Thread|Redirected to Edit Thread page|Pass||
+|Invalid input entered|Fill in reminders shown/form cannot be submitted|Pass||
+|Valid input entered|Form submitted/Success message shown/thread updated|Pass||
+|Click Back to Forum|Redirected to Forum|Pass||
+|Click Delete on Thread|Modal opens confirming deletion|Pass||
+|Click Delete in modal|Thread is deleted|Pass||
+
+[Back To Top](<#testing-contents>)
 
 ## Profile Page
 
 |**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
 |---------------|-------------------|-------------|------------|
+|Click Delivery Details|Delivery Details section is shown|Pass||
+|Click Update Delivery Details|Form is shown|Pass||
+|Invalid input entered|Fill in reminders shown/form cannot be submitted|Pass||
+|Valid input entered|Form submitted/Success message shown/details updated|Pass||
+|Click Personal Bio|Personal Bio section is shown|Pass||
+|Click Update Personal Bio|Form is shown|Pass||
+|Invalid input entered|Fill in reminders shown/form cannot be submitted|Pass||
+|Valid input entered|Form submitted/Success message shown/bio updated|Pass||
+|Click Order History|Past orders shown|Pass||
+|Click Order Number|Redirected to Order Confirmation Page|Pass||
+|Click My Reviews |Reviews shown|Pass||
+|Click Edit Review|Form shown above|Pass||
+|Invalid input entered|Fill in reminders shown/form cannot be submitted|Pass||
+|Valid input entered|Form submitted/Success message shown/review updated|Pass||
+|Click Delete|Modal opens confirming deletion|Pass||
+|Click Delete in modal|Review is deleted|Pass||
+|Click Review Product|Redirects to product page|Pass||
+|Click My Wishlists|Wishlists shown|Pass||
+|Click Remove|Modal opens|Pass||
+|Click Delete in modal|Wishlist item is deleted|Pass||
+|Click Delete Wishlist|Modal opens|Pass||
+|Click Delete in modal|Entire Wishlist is deleted|Pass||
+|Click My Saved Items |Saved Items shown|Pass||
+|Click + quantity button|Quantity increases until 99|Pass||
+|Click - quantity button|Quantity decreases until 1|Pass||
+|Click Move To Bag|Redirects to bag|Pass||
+|Click Remove|Modal opens|Pass||
+|Click Delete in modal|Saved item is deleted|Pass||
+|Click Forum Interaction |Forum Interaction shown|Pass||
+|Click Threads Button|Threads shown|Pass|
+|Click Edit Thread|Redirects to Edit Thread page|Pass||
+|Invalid input entered|Fill in reminders shown/form cannot be submitted|Pass||
+|Valid input entered|Form submitted/Success message shown/thread updated|Pass||
+|Click Delete on Thread|Modal opens confirming deletion|Pass||
+|Click Delete in modal|Thread is deleted|Pass||
+|Click Edit Post|Redirects to Edit Post page|Pass||
+|Invalid input entered|Fill in reminders shown/form cannot be submitted|Pass||
+|Valid input entered|Form submitted/Success message shown/post updated|Pass||
+|Click Delete on Post|Modal opens confirming deletion|Pass||
+|Click Delete in modal|Post is deleted|Pass||
+|Click Got to Forum|Redirects to Forum|Pass||
+|Click Rewards and Benefits |Rewards and Benefits section shown|Pass||
+|Click Challenges| Redirects to Downloads Page|Pass||
+|Click Newsletter |Newsletter section shown|Pass||
+|Click Unsubscribe|Success message shown/User is unsubscribed|Pass||
+|Invalid input entered|Fill in reminders shown/form cannot be submitted|Pass||
+|Valid input entered|Form submitted/Success message shown/Subscribed|Pass||
+
+[Back To Top](<#testing-contents>)
+
+## Downloads
+
+|**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
+|---------------|-------------------|-------------|------------|
+|Click PDF buttons|Opens in new tab|Pass||
+|Click Back to Profile|Redirects to Profile|Pass||
+
+[Back To Top](<#testing-contents>)
 
 ## Bag
 
 |**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
 |---------------|-------------------|-------------|------------|
+|Alter quantity, click Update|Quantity updates|Pass||
+|Click Remove|Item is removed from bag/success message|Pass||
+|Click Save For later|Item moes to Saved for later|Pass||
+|Click Secure Checkout|Redirects to Checkout page|Pass||
+|Click Keep Shopping|Redirects to Products page|Pass||
+
+[Back To Top](<#testing-contents>)
 
 ## Checkout Page
 
 |**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
 |---------------|-------------------|-------------|------------|
+|Invalid input entered|Fill in reminders shown/form cannot be submitted|Pass||
+|Valid input entered|Form submists/Redirects to Order Confirmation page|Pass||
+|Click Adjust Bag|Redirects to Bag page|Pass||
+
+[Back To Top](<#testing-contents>)
 
 ## Checkout Success Page
 
 |**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
 |---------------|-------------------|-------------|------------|
+|Order completed|Success message shown/ Email is sent|Pass||
+|Click Profile button|Rredirects to Profile|Pass||
+|Click Our Shop button|Rredirects to Products page|Pass||
+|Click Forum button|Rredirects to Forum|Pass||
+
+[Back To Top](<#testing-contents>)
 
 ## Login
 
 |**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
 |---------------|-------------------|-------------|------------|
+|Invalid input entered|Fill in reminders shown/form cannot be submitted|Pass||
+|Valid input entered|Form submitted/Success message shown/user logged in|Pass||
+
+[Back To Top](<#testing-contents>)
 
 ## Logout
 
 |**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
 |---------------|-------------------|-------------|------------|
+|Click Confirm Logout button|Redirects to Home Page|Pass||
+
+[Back To Top](<#testing-contents>)
 
 ## Register
 
 |**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
 |---------------|-------------------|-------------|------------|
+|Click Register button under account in navbar|Redirects to Sign Up Page|Pass||	
+|Enter valid email address|Field only accepts email address format|Pass||
+|Invalid input entered|Fill in reminders shown/form cannot be submitted|Pass||
+|Valid input entered|Form submitted/Success message shown/confirmation email sent|Pass||
 
-## Forgot Password
+[Back To Top](<#testing-contents>)
+
+## Footer
 
 |**User Action**|**Expected Result**|**Pass/Fail**|**Comments**|
 |---------------|-------------------|-------------|------------|
+|Click Contact Us|Redirects to Contact page|Pass||
+|Click FAQs|Redirects to FAQs page|Pass||
+|Click Twitter|Opens Twitter in new tab|Pass||
+|Click Facebook|Opens BookNook Facebook page in new tab|Pass||
+|Click Instagram|Opens BookNook Instagram page in new tab|Pass||
+|Click TikTok|Opens TikTok in new tab|Pass||
+|Click Privacy Policy|Redirects to Privacy Policy page|Pass||
 
 
 [Back To Top](<#testing-contents>)
