@@ -613,7 +613,7 @@ Best Practices should be higher, however it is lower due to the presence of thir
 ||Invalid input displays error message|Enter invalid input|Pass||
 ||Success message upon valid submission|Enter valid input|Pass||
 ||Confirmation email reception|Check junk folder|Pass||
-||Unsubscription on profile and email|Attempt on profile and by email|Pass/Fail|Users can unsubscribe from the profile, however I haven't been able to get the email link to work as of yet|
+||Unsubscription on profile and email|Attempt on profile and by email|Pass/Fail|Users can unsubscribe from the profile, however I haven't been able to get the email link to work as of yet||
 
 
 [Back To Top](<#testing-contents>)
@@ -747,11 +747,36 @@ Best Practices should be higher, however it is lower due to the presence of thir
 ||Regular posts uploaded|Verify content|Pass?Fail|This is a future feature and was intended as an ongoing plan|
 ||Comments and messages are monitored and responded to|Test message responses|Pass/Fail|This is a future feature and was intended as an ongoing plan|
 
-# Bugs
 
+
+[Back To Top](<#testing-contents>)
+
+# Bugs
 ## Fixed Bugs
+During the 'Added checkout logic, order summary and loading overlay' commit. I realised there was a typo in my .gitignore file and my env.py file had been puched to GitHub. I had accidentally written .env.py. i subsequently deleted the env.py from the repository. I also created a new .gitignore file as the previous was corrupted. I then typed the following command:
+
+  `git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch env.py" HEAD`
+
+I followed the steps in [daily dev tips](https://dev.to/dailydevtips1/removing-a-env-file-from-git-history-3gao).
+
+On the products page, when items were being sorted by name, there were first being sorted by product type then by name. This was an issue as I already had respective pages to see books and accessories by theirselves. The bug came from the view file, where I had sorted products by name. I removed this code, then the products mixed and sorted by name not by product then name.
+
+Email confirmations were not being sent. I went through all corresponding checkout code but couldn't find where the issue was. After a very long time of searching for the issue, I saw on slack that others had had this same problem. I had to update my allauth and Django to version 4.2. After this the problem was fixed.
+
+The Order History section on the profile was not responsive on mobile. I added new html to show on smaller screen sizes and left the original for larger screen sizes.
+
+Users who had pruchased items could leave as many reviews as they wanted on the same product. I changed the relationship to One to One. This does mean that if a customer were to buy the same product more than once, they would not be able to leave another review. I don't see this as a bug because I intend it to be that way until BookNook becomes more popular and I can see there is a need to chnage it.
+
+
+[Back To Top](<#testing-contents>)
 
 ## Unresolved Bugs
+I set up newsletter signup emails through my code which work perfectly, however the 'Unsubscribe' link in the email does not work. I tried a coupl of different ways but could not get it working in time.
 
+Adding product to wishlist, or save for later shows the add to bag toast. I had hoped to troubleshoot this and fix it however I had to prioritise the most important components to get done first and I ran out of time. I will solve it in the future.
+
+Whilst asking family to test my project, my mum signed up for the wishlist for the first time, but an error message showed up saying that email was already signed up(which it wasn't), this however did get logged to the backend as a new newsletter signup. I tried to recreate this scenario, however I never got that error message again. I checked my code and didn't see there the issue was. Also I am not sure whether this is a bug or if that was a glitch. 
+
+[Back To Top](<#testing-contents>)
 
 
