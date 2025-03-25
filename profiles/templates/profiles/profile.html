@@ -319,7 +319,7 @@
                                                 <h3 class="thread-title roboto">
                                                     <a href="{% url 'post_list' category.id thread.id %}" class="text-decoration-none">{{ thread.title }}</a>
                                                 </h3>
-                                                <p class="thread-content">{{ thread.content|truncatewords:30 }}<p>
+                                                <p class="thread-content">{{ thread.content|truncatewords:30 }}</p>
                                                 <p class="thread-meta">Started by: {{ thread.created_by.username }} on {{ thread.created_at }}</p>
                                                 <div class="d-flex justify-content-between">
                                                     <a href="{% url 'edit_thread' thread.id %}?next={% url 'profile' %}?section=forumInteraction" class="btn btn-success btn-sm rounded-0">Edit Thread</a>
