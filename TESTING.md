@@ -764,6 +764,17 @@ Users who had pruchased items could leave as many reviews as they wanted on the 
 
 On the weekend I tried adding new products to the store through the Heroku deployed site. I had never had any problems through the production site. I kept getting Integrity Error as the reason as to why I couldn't add any products. I searched everywhere for the solution and was about to follow some code about entering PostgreSQL and changing the Max Id of products to where it should be. The problem was that every time I tried to add a product, it would try to give the new product a low id, which I knew was already taken. I tried a couple more times, then I realised that with every Integrity Error I got, the id got higher. I proceeded to do this 100 more times until the id was at max value and I could add new products to the store.
 
+I changed ‘genre’ in the Books model to a ForeignKey field instead of manytomany field as the latter was creating duplicates in the database.
+
+The off canvas menu wasn’t working on all_categories and all_genres pages due to an extra {{ block.super }}.
+
+On certain genre pages, all the items would get bunched up together on one row.
+
+The links on the off canvas menu were not working until I added ‘pointer-events: none;’ to the .bs-canvas-overlay in base.css.
+
+When users deleted threads from profile, they were redirected to the forum not the forumInteraction section in the profile.
+
+
 
 
 [Back To Top](<#testing-contents>)
@@ -776,6 +787,8 @@ Adding product to wishlist, or save for later shows the add to bag toast. I had 
 Whilst asking family to test my project, my mum signed up for the wishlist for the first time, but an error message showed up saying that email was already signed up(which it wasn't), this however did get logged to the backend as a new newsletter signup. I tried to recreate this scenario, however I never got that error message again. I checked my code and didn't see there the issue was. Also I am not sure whether this is a bug or if that was a glitch. 
 
 I just found another bug in my code, I have written about it in the existing features section, in the Saved Items section of the profile: Unfortunately, at the time of writing this I have just seen a slight bug and it is too late to change this. The functionality is there, however the '+' and '-' buttons serve as sort of enter keys. So a user can enter a number with a keyboard or use the arrows inside of input rectangle and save it by pressing the plus or minus button. Aside from that a user can remove and Shared Item by pressing the remove button.
+
+After a review is edited it’s not text-muted.
 
 [Back To Top](<#testing-contents>)
 
